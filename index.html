@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clique Seguro - Aprenda Sem Medo</title>
+    <style>
+        /* Cores de alto contraste e fontes grandes para acessibilidade */
+        :root {
+            --cor-fundo: #F8F9FA;
+            --cor-texto: #1A1A1A;
+            --cor-primaria: #0056B3;
+            --cor-fundo-menu: #FFFFFF;
+            --cor-azul-escuro: #002B5C;
+            --cor-sucesso: #28A745;
+            --cor-alerta: #DC3545;
+            --cor-laranja: #FD7E14;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: var(--cor-fundo);
+            color: var(--cor-texto);
+            font-size: 20px;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+
+            /* Centraliza o bloco do celular SOMENTE na área restante da tela */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        /* BARRA DE NAVEGAÇÃO SUPERIOR (MENU HEADER ACESSÍVEL) */
+        .barra-navegacao {
+            background-color: var(--cor-azul-escuro);
+            padding: 15px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+            width: 100%;
+            box-sizing: border-box;
+            flex-wrap: wrap; /* Quebra linha em celulares menores */
+            gap: 15px;
+        }
+
+        .menu-logo {
+            color: white;
+            font-weight: bold;
+            font-size: 28px;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .menu-links {
+            display: flex;
+            gap: 15px;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            flex-wrap: wrap;
+        }
+
+        .menu-item {
+            background-color: var(--cor-primaria);
+            color: white;
+            padding: 12px 20px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 18px;
+            border-radius: 8px;
+            border: 2px solid #003D82;
+            box-shadow: 0 4px 0 #003D82;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            transition: all 0.1s ease-in-out;
+        }
+
+        .menu-item:hover {
+            background-color: #0069D9;
+        }
+
+        .menu-item:active {
+            transform: translateY(3px);
+            box-shadow: 0 1px 0 #003D82;
+        }
+
+        /* Mantém o header como antes (largura total da página) */
+        header.boas-vindas-painel {
+            width: 100%;
+            align-self: stretch;
+        }
+
+        /* Painel de Boas-Vindas */
+        .boas-vindas-painel {
+            text-align: center;
+            background: linear-gradient(135deg, var(--cor-primaria) 0%, var(--cor-azul-escuro) 100%);
+            color: white;
+            padding: 40px 20px;
+            border-radius: 0 0 30px 30px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            margin-bottom: 40px;
+            box-sizing: border-box;
+        }
+
+        h1 {
+            font-size: 42px;
+            color: white;
+            margin: 0;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 400px;
+            margin: 0 auto;
+            padding: 0 20px 40px 20px;
+
+            /* Centraliza verticalmente o celular entre o fim do header e o fim da tela */
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-sizing: border-box;
+        }
+
+        .container main {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+        }
+
+        /* Transformando a área principal na tela de um Celular Real */
+        .tela-celular-home {
+            width: 330px;
+            height: 580px;
+            background: linear-gradient(180deg, #E3F2FD 0%, #FFFFFF 100%);
+            border: 12px solid #333;
+            border-radius: 40px;
+            /* Centraliza APENAS o celular (não o header) */
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            padding: 20px 15px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+            box-sizing: border-box;
+        }
+
+        /* Barra do topo do celular (Bateria, Hora, Wifi) */
+        .barra-status {
+            display: flex;
+            justify-content: space-between;
+            font-size: 14px;
+            color: #333;
+            font-weight: bold;
+            padding-bottom: 15px;
+            border-bottom: 1px solid rgba(0,0,0,0.05);
+            margin-bottom: 10px;
+        }
+
+        /* Grade de apps ajustada para a largura do celular (3 colunas) */
+        .grade-apps {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px 10px;
+            padding: 5px 0;
+            text-align: center;
+        }
+
+        .app-item {
+            text-decoration: none;
+            color: var(--cor-texto);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 6px;
+            font-weight: bold;
+            font-size: 14px;
+            transition: transform 0.2s;
+        }
+
+        .app-item:hover {
+            transform: scale(1.05);
+        }
+
+        .app-icone {
+            width: 65px;
+            height: 65px;
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 32px;
+            color: white;
+            box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- BARRA DE NAVEGAÇÃO SUPERIOR (HEADER MENU ADICIONADO) -->
+    <nav class="barra-navegacao">
+        <a href="index.html" class="menu-logo">Clique Seguro 👵👴</a>
+        
+    </nav>
+
+    <header class="boas-vindas-painel">
+        <h1>Clique Seguro!</h1>
+        <p style="margin: 10px 0 0 0; font-size: 22px; opacity: 0.9;">Toque no aplicativo que você deseja aprender a usar hoje.</p>
+    </header>
+
+    <div class="container">
+        <main>
+            <!-- O simulador agora começa diretamente na carcaça do smartphone -->
+            <div class="tela-celular-home">
+                <div class="barra-status">
+                    <span>14:30 ⏰</span>
+                    <span>📶 🪫 100%</span>
+                </div>
+                <div class="grade-apps">
+                    <a href="simulador.html?tema=youtube" class="app-item">
+                        <div class="app-icone" style="background: #FF0000;">▶️</div>
+                        <span>YouTube</span>
+                    </a>
+                    <a href="simulador.html?tema=whatsapp" class="app-item">
+                        <div class="app-icone" style="background: #25D366;">💬</div>
+                        <span>WhatsApp</span>
+                    </a>
+                    <a href="simulador.html?tema=pix" class="app-item">
+                        <div class="app-icone" style="background: #005ca9;">🏦</div>
+                        <span>Banco CAIXA</span>
+                    </a>
+                    <a href="simulador.html?tema=uber" class="app-item">
+                        <div class="app-icone" style="background: #000000;">🚖</div>
+                        <span>Uber / 99</span>
+                    </a>
+                    <a href="simulador.html?tema=ifood" class="app-item">
+                        <div class="app-icone" style="background: #EA1D2C;">🍔</div>
+                        <span>iFood</span>
+                    </a>
+                    <a href="simulador.html?tema=mercado" class="app-item">
+                        <div class="app-icone" style="background: #FFF159;">📦</div>
+                        <span style="color: #333;">M. Livre</span>
+                    </a>
+                    <a href="simulador.html?tema=inss" class="app-item">
+                        <div class="app-icone" style="background: #003366;">👴</div>
+                        <span>Meu INSS</span>
+                    </a>
+                    <!-- CORREÇÃO DA TAG DO GOOGLE MAPS QUE ESTAVA CORTADA -->
+                    <a href="simulador.html?tema=maps" class="app-item">
+                        <div class="app-icone" style="background: #34A853;">🗺️</div>
+                        <span>Maps</span>
+                    </a>
+                </div>
+            </div>
+        </main>
+    </div>
+
+</body>
+</html>
