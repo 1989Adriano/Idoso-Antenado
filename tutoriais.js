@@ -8,7 +8,17 @@ import { maps } from './maps.js';
 import { mercado } from './mercado.js';
 import { youtube } from './youtube.js';
 
+// Novas importações exclusivas para cada item do computador
+import { comp_internet } from './comp_internet.js';
+import { comp_email } from './comp_email.js';
+import { comp_texto } from './comp_texto.js';
+import { comp_arquivos } from './comp_arquivos.js';
+import { comp_imprimir } from './comp_imprimir.js';
+import { comp_basico } from './comp_basico.js';
+import { comp_seguranca } from './comp_seguranca.js';
+
 export const tutoriais = {
+    // Celular
     pix,  
     whatsapp,   
     golpes,
@@ -17,5 +27,14 @@ export const tutoriais = {
     uber,
     maps,    
     mercado,
-    youtube
+    youtube,
+    
+    // Computador (Mapeamento Cirúrgico)
+    comp_internet,
+    comp_email,
+    comp_texto,
+    comp_arquivos,
+    comp_imprimir,
+    comp_basico,
+    comp_seguranca
 };

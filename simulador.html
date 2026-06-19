@@ -232,28 +232,27 @@
         }
     </style>
 </head>
-
 <body>
 
-    <body>
-
-    <!-- NOVA BARRA DE NAVEGAÇÃO SUPERIOR RECACHUTUTADA -->
+    <!-- BARRA DE NAVEGAÇÃO SUPERIOR -->
     <nav class="barra-navegacao">
         <div style="display: flex; align-items: center; gap: 20px;">
             <a href="index.html" style="text-decoration: none; background: rgba(255,255,255,0.15); color: white; font-weight: bold; font-size: 16px; padding: 10px 18px; border-radius: 20px; transition: all 0.2s; box-shadow: 0 2px 4px rgba(0,0,0,0.1); border: 1px solid rgba(255,255,255,0.2);">⬅️ Voltar</a>
             <span class="menu-logo">🌐 Conecta Idade</span>
         </div>
-        <!-- Etiqueta Amigável de Segurança -->
         <div style="background: #0284C7; color: white; font-size: 14px; font-weight: bold; padding: 8px 16px; border-radius: 30px; display: flex; align-items: center; gap: 8px; border: 1px solid rgba(255,255,255,0.2); box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
             <span>🔰</span> Espaço de Treino Seguro
         </div>
     </nav>
 
-    <!-- Estrutura de Portal Unificada: Menu e Celular 100% Esticados -->
+    <!-- Estrutura de Portal Unificada -->
     <div class="layout-portal">
         
-        <!-- Menu Lateral Reutilizado e Esticado até a base -->
+        <!-- Menu Lateral Completo (Celular e Computador Integrados) -->
         <aside class="menu-lateral">
+            <!-- SEÇÃO CELULAR -->
+            <div style="color: #0056B3; font-size: 13px; font-weight: 900; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 5px; border-bottom: 2px solid #E2E8F0; padding-bottom: 4px;">📱 Treinos de Celular</div>
+            
             <div class="categoria-secao">
                 <div class="categoria-titulo">🏥 Saúde e Serviços</div>
                 <div class="lista-links">
@@ -271,32 +270,40 @@
             </div>
             
             <div class="categoria-secao">
-                <div class="categoria-titulo">📱 Comunicação</div>
+                <div class="categoria-titulo">📱 Comunicação e Apps</div>
                 <div class="lista-links">
                     <a href="simulador.html?tema=whatsapp" id="link-whatsapp" class="menu-link"><span>💬</span> Usar WhatsApp</a>
+                    <a href="simulador.html?tema=uber" id="link-uber" class="menu-link"><span>🚖</span> Pedir Uber / 99</a>
+                    <a href="simulador.html?tema=maps" id="link-maps" class="menu-link"><span>🗺️</span> Google Maps</a>
+                    <a href="simulador.html?tema=mercado" id="link-mercado" class="menu-link"><span>📦</span> Mercado Livre</a>
+                    <a href="simulador.html?tema=youtube" id="link-youtube" class="menu-link"><span style="color: #EF4444 !important; font-size: 16px;">▶</span> YouTube</a>
+                </div>
+            </div>
+
+            <!-- NOVA SEÇÃO COMPUTADOR REAL E INTEGRADA -->
+            <div style="color: #0A7A4C; font-size: 13px; font-weight: 900; letter-spacing: 1px; text-transform: uppercase; margin-top: 15px; margin-bottom: 5px; border-bottom: 2px solid #E2E8F0; padding-bottom: 4px;">💻 Treinos de Computador</div>
+            
+            <div class="categoria-secao">
+                <div class="categoria-titulo">💻 Programas Básicos</div>
+                <div class="lista-links">
+                    <a href="simulador.html?tema=comp_basico" id="link-comp_basico" class="menu-link"><span>🖱️</span> Conhecer o PC</a>
+                    <a href="simulador.html?tema=comp_texto" id="link-comp_texto" class="menu-link"><span>📝</span> Digitar Textos</a>
+                    <a href="simulador.html?tema=comp_arquivos" id="link-comp_arquivos" class="menu-link"><span>📁</span> Minhas Pastas</a>
+                    <a href="simulador.html?tema=comp_imprimir" id="link-comp_imprimir" class="menu-link"><span>🖨️</span> Imprimir Arquivo</a>
                 </div>
             </div>
 
             <div class="categoria-secao">
-                <div class="categoria-titulo">🚗 Mobilidade</div>
+                <div class="categoria-titulo">🌐 Internet e Segurança</div>
                 <div class="lista-links">
-                    <a href="simulador.html?tema=uber" id="link-uber" class="menu-link"><span>🚖</span> Pedir Uber ou 99</a>
-                    <a href="simulador.html?tema=maps" id="link-maps" class="menu-link"><span>🗺️</span> Google Maps</a>
-                </div>
-            </div>
-            
-            <div class="categoria-secao">
-                <div class="categoria-titulo">🛒 Conteúdo e Compras</div>
-                <div class="lista-links">
-                    <a href="simulador.html?tema=mercado" id="link-mercado" class="menu-link"><span>📦</span> Mercado Livre</a>
-                    <a href="simulador.html?tema=youtube" id="link-youtube" class="menu-link">
-                        <span style="color: #EF4444 !important; font-size: 16px;">▶</span> YouTube
-                    </a>
+                    <a href="simulador.html?tema=comp_internet" id="link-comp_internet" class="menu-link"><span>🌐</span> Navegar na Web</a>
+                    <a href="simulador.html?tema=comp_email" id="link-comp_email" class="menu-link"><span>✉️</span> Usar E-mail</a>
+                    <a href="simulador.html?tema=comp_seguranca" id="link-comp_seguranca" class="menu-link"><span>🛡️</span> Antivírus PC</a>
                 </div>
             </div>
         </aside>
 
-        <!-- Área Central com Fundo Destacado para o Celular -->
+        <!-- Área Central Útil -->
         <main class="conteudo-principal">
             <div class="simulador-caixa">
                 <div class="instrucao" id="texto-instrucao"></div>
@@ -306,9 +313,7 @@
         </main>
     </div>
 
-
-
-       <!-- CARREGAMENTO DE TODOS OS COMPONENTES DO PORTAL -->
+    <!-- CARREGAMENTO DE TODOS OS COMPONENTES DO PORTAL -->
     <script src="./inss.js"></script>
     <script src="./evitar_golpes.js"></script>
     <script src="./whatsapp.js"></script>
@@ -318,6 +323,15 @@
     <script src="./maps.js"></script>
     <script src="./uber.js"></script>
     <script src="./youtube.js"></script>
+    
+    <!-- ARQUIVOS DE INTELIGÊNCIA EXCLUSIVOS DO COMPUTADOR -->
+    <script src="./comp_basico.js"></script>
+    <script src="./comp_texto.js"></script>
+    <script src="./comp_arquivos.js"></script>
+    <script src="./comp_imprimir.js"></script>
+    <script src="./comp_internet.js"></script>
+    <script src="./comp_email.js"></script>
+    <script src="./comp_seguranca.js"></script>
 
     <script>
         const urlParams = new URLSearchParams(window.location.search);
@@ -347,6 +361,7 @@
             // MAPEAMENTO COMPLETO DE VARIÁVEIS COM SISTEMA ANTI-TRAVAMENTO
             let listaAtual = null;
             try {
+                // Rotas do Celular
                 if (tutorialAtivo === 'inss' && typeof inss !== 'undefined') listaAtual = inss;
                 if (tutorialAtivo === 'golpes' && typeof golpes !== 'undefined') listaAtual = golpes;
                 if (tutorialAtivo === 'whatsapp' && typeof whatsapp !== 'undefined') listaAtual = whatsapp;
@@ -356,6 +371,15 @@
                 if (tutorialAtivo === 'maps' && typeof maps !== 'undefined') listaAtual = maps;
                 if (tutorialAtivo === 'uber' && typeof uber !== 'undefined') listaAtual = uber;
                 if (tutorialAtivo === 'youtube' && typeof youtube !== 'undefined') listaAtual = youtube;
+
+                // Novas Rotas do Computador
+                if (tutorialAtivo === 'comp_basico' && typeof comp_basico !== 'undefined') listaAtual = comp_basico;
+                if (tutorialAtivo === 'comp_texto' && typeof comp_texto !== 'undefined') listaAtual = comp_texto;
+                if (tutorialAtivo === 'comp_arquivos' && typeof comp_arquivos !== 'undefined') listaAtual = comp_arquivos;
+                if (tutorialAtivo === 'comp_imprimir' && typeof comp_imprimir !== 'undefined') listaAtual = comp_imprimir;
+                if (tutorialAtivo === 'comp_internet' && typeof comp_internet !== 'undefined') listaAtual = comp_internet;
+                if (tutorialAtivo === 'comp_email' && typeof comp_email !== 'undefined') listaAtual = comp_email;
+                if (tutorialAtivo === 'comp_seguranca' && typeof comp_seguranca !== 'undefined') listaAtual = comp_seguranca;
             } catch (e) {
                 console.error("Erro ao ler variáveis dos arquivos locais:", e);
             }
@@ -368,7 +392,7 @@
                         <span style="font-size: 48px;">⚙️</span>
                         <p style="font-weight: bold; font-size: 16px; margin-top: 15px; color: #002B5C; margin-bottom: 5px;">Módulo Identificado!</p>
                         <p style="font-size: 13px; color: #666; line-height: 1.4; margin: 0;">
-                            A tela para o tema <strong>"${tutorialAtivo}"</strong> está criada e aguarda a inclusão do arquivo <code>${tutorialAtivo}.js</code> na pasta do projeto.
+                            A tela para o tema <strong>"${tutorialAtivo}"</strong> está criada e aguarda a inclusão do arquivo <code>${tutorialAtivo}.js</code> na pasta do projeto ou o mapeamento de importação.
                         </p>
                     </div>`;
                 return;
@@ -390,13 +414,14 @@
         window.mostrarErro = function(tipo) {
             const msg = document.getElementById('mensagem-feedback');
             if (msg) {
-                msg.innerHTML = `<span class='erro'>⚠️ Cuidado! Isso pode ser perigoso ou um golpe. No mundo real, evite essa option.</span>`;
+                msg.innerHTML = `<span class='erro'>⚠️ Cuidado! Isso pode ser perigoso ou um golpe. No mundo real, evite essa opção.</span>`;
             }
         }
 
         window.avancarPasso = function() {
             let listaAtual = null;
             try {
+                // Validação de Avanço para Celular
                 if (tutorialAtivo === 'inss' && typeof inss !== 'undefined') listaAtual = inss;
                 if (tutorialAtivo === 'golpes' && typeof golpes !== 'undefined') listaAtual = golpes;
                 if (tutorialAtivo === 'whatsapp' && typeof whatsapp !== 'undefined') listaAtual = whatsapp;
@@ -406,6 +431,15 @@
                 if (tutorialAtivo === 'maps' && typeof maps !== 'undefined') listaAtual = maps;
                 if (tutorialAtivo === 'uber' && typeof uber !== 'undefined') listaAtual = uber;
                 if (tutorialAtivo === 'youtube' && typeof youtube !== 'undefined') listaAtual = youtube;
+
+                // Validação de Avanço para Computador
+                if (tutorialAtivo === 'comp_basico' && typeof comp_basico !== 'undefined') listaAtual = comp_basico;
+                if (tutorialAtivo === 'comp_texto' && typeof comp_texto !== 'undefined') listaAtual = comp_texto;
+                if (tutorialAtivo === 'comp_arquivos' && typeof comp_arquivos !== 'undefined') listaAtual = comp_arquivos;
+                if (tutorialAtivo === 'comp_imprimir' && typeof comp_imprimir !== 'undefined') listaAtual = comp_imprimir;
+                if (tutorialAtivo === 'comp_internet' && typeof comp_internet !== 'undefined') listaAtual = comp_internet;
+                if (tutorialAtivo === 'comp_email' && typeof comp_email !== 'undefined') listaAtual = comp_email;
+                if (tutorialAtivo === 'comp_seguranca' && typeof comp_seguranca !== 'undefined') listaAtual = comp_seguranca;
             } catch (e) {
                 console.error("Erro no avanço de passos:", e);
             }
@@ -429,7 +463,7 @@
             }
 
             if (passoAtual < listaAtual.length) {
-                setTimeout(window.renderizarPasso, 4500); // 4.5 segundos para leitura confortável
+                setTimeout(window.renderizarPasso, 4500); // Mantém os 4.5 segundos confortáveis
             }
         }
 
@@ -438,3 +472,5 @@
     </script>
 </body>
 </html>
+
+<a href="simulador.html?tema=comp_basico" id="link-comp_basico" class="menu-link"><span>🖱️</span> Conhecer o PC</a>
