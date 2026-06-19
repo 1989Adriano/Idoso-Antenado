@@ -288,7 +288,7 @@
         </div>
     </nav>
 
-    <!-- Estrutura de Portal Unificada -->
+        <!-- Estrutura de Portal Unificada -->
     <div class="layout-portal">
         
         <!-- Menu Lateral Completo (Celular e Computador Integrados) -->
@@ -339,7 +339,7 @@
             <div class="categoria-secao">
                 <div class="categoria-titulo">🌐 Internet e Segurança</div>
                 <div class="lista-links">
-                                        <!-- LINK DO GOOGLE CHROME COM LOGO REDONDO EM CORES NO MENU -->
+                    <!-- LINK DO GOOGLE CHROME COM LOGO REDONDO EM CORES NO MENU -->
                     <a href="simulador.html?tema=comp_internet" id="link-comp_internet" class="menu-link">
                         <span style="border-radius: 50% !important; background: white !important; font-size: 14px; position: relative; display: inline-flex; align-items: center; justify-content: center; width: 32px; height: 32px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); border: 1px solid #CBD5E1;">
                             <div style="width: 100%; height: 100%; border-radius: 50%; background: linear-gradient(135deg, #4285F4 0%, #34A853 50%, #FBBC05 50%, #EA4335 100%); display: flex; align-items: center; justify-content: center;">
@@ -348,24 +348,12 @@
                         </span>
                         Google Chrome
                     </a>
-
                     <a href="simulador.html?tema=comp_email" id="link-comp_email" class="menu-link"><span>✉️</span> Usar E-mail</a>
                 </div>
             </div>
         </aside>
 
-        <!-- Área Central Útil -->
-        <main class="conteudo-principal">
-            <div class="simulador-caixa">
-                <div class="instrucao" id="texto-instrucao"></div>
-                <div class="tela-celular" id="tela-treino"></div>
-                <div class="feedback" id="mensagem-feedback"></div>
-            </div>
-        </main>
-    </div>
-
-    <!-- CARREGAMENTO DE TODOS OS COMPONENTES DO PORTAL -->
-           <!-- Área Central Útil (Com suporte a Celular e Computador) -->
+        <!-- Área Central Útil Corrigida (Apenas uma caixinha e um celular na tela) -->
         <main class="conteudo-principal">
             <div class="simulador-caixa">
                 <div class="instrucao" id="texto-instrucao"></div>
@@ -383,6 +371,7 @@
             </div>
         </main>
     </div>
+
 
     <!-- CARREGAMENTO DE TODOS OS COMPONENTES DO PORTAL -->
     <script src="./inss.js"></script>
@@ -404,7 +393,7 @@
     <script src="./comp_email.js"></script>
     <script src="./comp_seguranca.js"></script>
 
-    <script>
+        <script>
         const urlParams = new URLSearchParams(window.location.search);
         const tutorialAtivo = urlParams.get('tema');
         let passoAtual = parseInt(urlParams.get('passo')) || 0;
@@ -415,7 +404,7 @@
             if (linkAtivo) { linkAtivo.classList.add('ativo'); }
         }
 
-        // FUNÇÃO DE RENDERIZAÇÃO ADAPTÁVEL E ORGANIZADA
+        // FUNÇÃO DE RENDERIZAÇÃO ADAPTÁVEL E ORGANIZADA (CORRIGIDA E ÚNICA)
         window.renderizarPasso = function() {
             const textoInstrucao = document.getElementById('texto-instrucao');
             const telaTreino = document.getElementById('tela-treino');
@@ -461,6 +450,20 @@
                 if (tutorialAtivo === 'comp_seguranca' && typeof comp_seguranca !== 'undefined') listaAtual = comp_seguranca;
             } catch (e) {
                 console.error("Erro ao ler variáveis:", e);
+            }
+
+            // Tratamento caso a lista não exista na pasta do projeto
+            if (!listaAtual) {
+                textoInstrucao.innerHTML = 'Módulo em Desenvolvimento';
+                telaTreino.innerHTML = `
+                    <div style="padding: 25px 15px; text-align: center; font-family: sans-serif; color: #333; height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; box-sizing: border-box; background: #F4F7FA;">
+                        <span style="font-size: 48px;">⚙️</span>
+                        <p style="font-weight: bold; font-size: 16px; margin-top: 15px; color: #002B5C; margin-bottom: 5px;">Módulo Identificado!</p>
+                        <p style="font-size: 13px; color: #666; line-height: 1.4; margin: 0;">
+                            A tela para o tema <strong>"${tutorialAtivo}"</strong> está criada e aguarda a inclusão do arquivo correspondente na pasta do projeto.
+                        </p>
+                    </div>`;
+                return;
             }
 
             const dados = listaAtual[passoAtual];
@@ -535,7 +538,3 @@
     </script>
 </body>
 </html>
-
-
-<a href="simulador.html?tema=comp_basico" id="link-comp_basico" class="menu-link"><span>🖱️</span> Conhecer o PC</a>
-<a href="simulador.html?tema=comp_internet" id="link-comp_internet" class="menu-link"><span>🌐</span> Google Chrome</a>
