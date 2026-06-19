@@ -110,14 +110,19 @@
         .simulador-caixa {
             background-color: #FFFFFF;
             border: 1px solid #E2E8F0;
-            border-radius: 20px; /* Cantos arredondados acolhedores */
+            border-radius: 20px;
             padding: 30px;
             text-align: center;
             box-shadow: 0 10px 25px -5px rgba(0,0,0,0.05), 0 8px 10px -6px rgba(0,0,0,0.05);
-            max-width: 600px;
-            width: 100%;
+            /* MUDANÇA AQUI: De max-width 600px para 800px para dar espaço de respiro ao PC */
+            max-width: 800px;
+            width: fit-content; /* Faz a caixa branca se moldar perfeitamente ao tamanho do aparelho ativo */
+            min-width: 400px; /* Garante que ela não fique espremida no celular */
+            margin: auto;
             box-sizing: border-box;
+            transition: all 0.3s ease; /* Faz a expansão do fundo branco ser suave junto com o aparelho */
         }
+
 
         .menu-link {
             display: flex;
@@ -164,13 +169,14 @@
             line-height: 1.5;
         }
 
+                /* CASCA 1: ESTILO PADRÃO DO CELULAR (EM PÉ) */
         .tela-celular {
             width: 340px;
             height: 490px;
             background-color: #FFFFFF;
-            border: 12px solid #1E293B; /* Capinha realista do smartphone */
-            border-radius: 36px;
-            margin: 15px auto;
+            border: 14px solid #1E293B; /* Capinha escura do smartphone */
+            border-radius: 40px;
+            margin: 20px auto;
             display: flex;
             flex-direction: column;
             justify-content: flex-start;
@@ -178,8 +184,45 @@
             overflow-x: hidden;
             padding: 0;
             align-items: stretch;
-            box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1), inset 0 0 10px rgba(0,0,0,0.05);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.15), inset 0 0 10px rgba(0,0,0,0.05);
+            position: relative;
+            transition: all 0.3s ease; /* Transição suave de tamanho */
         }
+
+        /* CASCA 2: NOVA TRANSFORMAÇÃO PARA MONITOR DE COMPUTADOR (DEITADO) */
+        .tela-computador-simulada {
+            width: 540px !important; /* Mais largo e deitado */
+            height: 360px !important;
+            border: 16px solid #1E1E1E !important; /* Moldura de monitor de mesa */
+            border-radius: 12px !important; /* Cantos levemente quadrados de monitor */
+            box-shadow: 0 20px 40px rgba(0,0,0,0.25) !important;
+            background-color: #2A4365; /* Fundo padrão de sistema operacional */
+        }
+
+        /* SUPORTE DO MONITOR: Aparece magicamente abaixo do computador */
+        .pe-computador {
+            display: none; /* Fica escondido no celular */
+            flex-direction: column;
+            align-items: center;
+            margin-top: -21px;
+            margin-bottom: 10px;
+        }
+        .pe-computador .haste {
+            width: 70px;
+            height: 40px;
+            background: #334155;
+            box-shadow: inset 0 5px 10px rgba(0,0,0,0.3);
+            border-left: 2px solid #475569;
+            border-right: 2px solid #475569;
+        }
+        .pe-computador .base {
+            width: 180px;
+            height: 12px;
+            background: #1E293B;
+            border-radius: 6px 6px 0 0;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+        }
+
 
         .botao-grande {
             background-color: var(--cor-primaria);
@@ -296,9 +339,17 @@
             <div class="categoria-secao">
                 <div class="categoria-titulo">🌐 Internet e Segurança</div>
                 <div class="lista-links">
-                    <a href="simulador.html?tema=comp_internet" id="link-comp_internet" class="menu-link"><span>🌐</span> Navegar na Web</a>
+                                        <!-- LINK DO GOOGLE CHROME COM LOGO REDONDO EM CORES NO MENU -->
+                    <a href="simulador.html?tema=comp_internet" id="link-comp_internet" class="menu-link">
+                        <span style="border-radius: 50% !important; background: white !important; font-size: 14px; position: relative; display: inline-flex; align-items: center; justify-content: center; width: 32px; height: 32px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); border: 1px solid #CBD5E1;">
+                            <div style="width: 100%; height: 100%; border-radius: 50%; background: linear-gradient(135deg, #4285F4 0%, #34A853 50%, #FBBC05 50%, #EA4335 100%); display: flex; align-items: center; justify-content: center;">
+                                <div style="width: 12px; height: 12px; background: #1A73E8; border: 2px solid white; border-radius: 50%;"></div>
+                            </div>
+                        </span>
+                        Google Chrome
+                    </a>
+
                     <a href="simulador.html?tema=comp_email" id="link-comp_email" class="menu-link"><span>✉️</span> Usar E-mail</a>
-                    <a href="simulador.html?tema=comp_seguranca" id="link-comp_seguranca" class="menu-link"><span>🛡️</span> Antivírus PC</a>
                 </div>
             </div>
         </aside>
@@ -308,6 +359,26 @@
             <div class="simulador-caixa">
                 <div class="instrucao" id="texto-instrucao"></div>
                 <div class="tela-celular" id="tela-treino"></div>
+                <div class="feedback" id="mensagem-feedback"></div>
+            </div>
+        </main>
+    </div>
+
+    <!-- CARREGAMENTO DE TODOS OS COMPONENTES DO PORTAL -->
+           <!-- Área Central Útil (Com suporte a Celular e Computador) -->
+        <main class="conteudo-principal">
+            <div class="simulador-caixa">
+                <div class="instrucao" id="texto-instrucao"></div>
+                
+                <!-- A casca onde o treino acontece -->
+                <div class="tela-celular" id="tela-treino"></div>
+                
+                <!-- O Pé de apoio físico do monitor (Ativado apenas no PC) -->
+                <div class="pe-computador" id="suporte-monitor">
+                    <div class="haste"></div>
+                    <div class="base"></div>
+                </div>
+
                 <div class="feedback" id="mensagem-feedback"></div>
             </div>
         </main>
@@ -349,8 +420,9 @@
             const textoInstrucao = document.getElementById('texto-instrucao');
             const telaTreino = document.getElementById('tela-treino');
             const msgFeedback = document.getElementById('mensagem-feedback');
+            const suporteMonitor = document.getElementById('suporte-monitor');
 
-            if (!textoInstrucao || !telaTreino || !msgFeedback) return;
+            if (!textoInstrucao || !telaTreino || !msgFeedback || !suporteMonitor) return;
 
             if (!tutorialAtivo) {
                 textoInstrucao.innerHTML = 'Escolha um tutorial.';
@@ -358,10 +430,18 @@
                 return;
             }
 
+            // MUDANÇA DINÂMICA DE CASCA: Verifica se é um tema de computador (começa com 'comp_')
+            if (tutorialAtivo.startsWith('comp_')) {
+                telaTreino.classList.add('tela-computador-simulada');
+                suporteMonitor.style.display = 'flex';
+            } else {
+                telaTreino.classList.remove('tela-computador-simulada');
+                suporteMonitor.style.display = 'none';
+            }
+
             // MAPEAMENTO COMPLETO DE VARIÁVEIS COM SISTEMA ANTI-TRAVAMENTO
             let listaAtual = null;
             try {
-                // Rotas do Celular
                 if (tutorialAtivo === 'inss' && typeof inss !== 'undefined') listaAtual = inss;
                 if (tutorialAtivo === 'golpes' && typeof golpes !== 'undefined') listaAtual = golpes;
                 if (tutorialAtivo === 'whatsapp' && typeof whatsapp !== 'undefined') listaAtual = whatsapp;
@@ -372,7 +452,6 @@
                 if (tutorialAtivo === 'uber' && typeof uber !== 'undefined') listaAtual = uber;
                 if (tutorialAtivo === 'youtube' && typeof youtube !== 'undefined') listaAtual = youtube;
 
-                // Novas Rotas do Computador
                 if (tutorialAtivo === 'comp_basico' && typeof comp_basico !== 'undefined') listaAtual = comp_basico;
                 if (tutorialAtivo === 'comp_texto' && typeof comp_texto !== 'undefined') listaAtual = comp_texto;
                 if (tutorialAtivo === 'comp_arquivos' && typeof comp_arquivos !== 'undefined') listaAtual = comp_arquivos;
@@ -381,21 +460,7 @@
                 if (tutorialAtivo === 'comp_email' && typeof comp_email !== 'undefined') listaAtual = comp_email;
                 if (tutorialAtivo === 'comp_seguranca' && typeof comp_seguranca !== 'undefined') listaAtual = comp_seguranca;
             } catch (e) {
-                console.error("Erro ao ler variáveis dos arquivos locais:", e);
-            }
-
-            // Se o idoso clicar em um botão que ainda não tem arquivo criado na pasta
-            if (!listaAtual) {
-                textoInstrucao.innerHTML = 'Módulo em Desenvolvimento';
-                telaTreino.innerHTML = `
-                    <div style="padding: 25px 15px; text-align: center; font-family: sans-serif; color: #333; height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; box-sizing: border-box; background: #F4F7FA;">
-                        <span style="font-size: 48px;">⚙️</span>
-                        <p style="font-weight: bold; font-size: 16px; margin-top: 15px; color: #002B5C; margin-bottom: 5px;">Módulo Identificado!</p>
-                        <p style="font-size: 13px; color: #666; line-height: 1.4; margin: 0;">
-                            A tela para o tema <strong>"${tutorialAtivo}"</strong> está criada e aguarda a inclusão do arquivo <code>${tutorialAtivo}.js</code> na pasta do projeto ou o mapeamento de importação.
-                        </p>
-                    </div>`;
-                return;
+                console.error("Erro ao ler variáveis:", e);
             }
 
             const dados = listaAtual[passoAtual];
@@ -421,7 +486,6 @@
         window.avancarPasso = function() {
             let listaAtual = null;
             try {
-                // Validação de Avanço para Celular
                 if (tutorialAtivo === 'inss' && typeof inss !== 'undefined') listaAtual = inss;
                 if (tutorialAtivo === 'golpes' && typeof golpes !== 'undefined') listaAtual = golpes;
                 if (tutorialAtivo === 'whatsapp' && typeof whatsapp !== 'undefined') listaAtual = whatsapp;
@@ -432,7 +496,6 @@
                 if (tutorialAtivo === 'uber' && typeof uber !== 'undefined') listaAtual = uber;
                 if (tutorialAtivo === 'youtube' && typeof youtube !== 'undefined') listaAtual = youtube;
 
-                // Validação de Avanço para Computador
                 if (tutorialAtivo === 'comp_basico' && typeof comp_basico !== 'undefined') listaAtual = comp_basico;
                 if (tutorialAtivo === 'comp_texto' && typeof comp_texto !== 'undefined') listaAtual = comp_texto;
                 if (tutorialAtivo === 'comp_arquivos' && typeof comp_arquivos !== 'undefined') listaAtual = comp_arquivos;
@@ -463,7 +526,7 @@
             }
 
             if (passoAtual < listaAtual.length) {
-                setTimeout(window.renderizarPasso, 4500); // Mantém os 4.5 segundos confortáveis
+                setTimeout(window.renderizarPasso, 4500);
             }
         }
 
@@ -473,4 +536,6 @@
 </body>
 </html>
 
+
 <a href="simulador.html?tema=comp_basico" id="link-comp_basico" class="menu-link"><span>🖱️</span> Conhecer o PC</a>
+<a href="simulador.html?tema=comp_internet" id="link-comp_internet" class="menu-link"><span>🌐</span> Google Chrome</a>
