@@ -1,6 +1,6 @@
 import { pix } from './pix.js';
-import { pagar_conta } from './pagar_conta.js';
 import { whatsapp } from './whatsapp.js';
+import { golpes } from './evitar_golpes.js';
 import { inss } from './inss.js';
 import { carteira } from './carteira.js';
 import { uber } from './uber.js';
@@ -10,10 +10,10 @@ import { youtube } from './youtube.js';
 
 export const tutoriais = {
     pix,  
-    pagar_conta,
     whatsapp,   
+    golpes,
     inss,
-    carteira,
+    documentos: carteira, 
     uber,
     maps,    
     mercado,

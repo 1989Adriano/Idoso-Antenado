@@ -1,4 +1,4 @@
-export const mercado = [
+const mercado = [
     {
         instrucao: "Passo 1: Toque na barra amarela de pesquisa no topo para procurar um produto.",
         conteudo: `

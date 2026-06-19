@@ -1,4 +1,4 @@
-export const youtube = [
+const youtube = [
     {
         instrucao: "Passo 1: Para começar, toque na lupa (pesquisa) na parte de cima.",
         conteudo: `

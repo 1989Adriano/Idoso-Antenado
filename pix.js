@@ -1,5 +1,5 @@
 // PARTE 1 DE 6 - CLONE CIRÚRGICO DO APP CAIXA ECONOMICA FEDERAL
-export const pix = [
+const pix = [
     {
         // PASSO 1 (ÍNDICE 0): TELA DE LOGIN IDÊNTICA AO APP CAIXA REAL
         instrucao: "📱 Passo 1: Abra o aplicativo da CAIXA e toque no botão laranja 'Acessar minha conta'.",

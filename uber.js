@@ -1,5 +1,5 @@
 // PARTE 1 - LAYOUT CIRÚRGICO DO APLICATIVO UBER (CONECTA IDADE)
-export const uber = [
+const uber = [
     {
         // PASSO 1 (ÍNDICE 0): TELA INICIAL DA UBER
         instrucao: "Passo 1: Para iniciar a sua viagem, toque na barra cinza central escrita '🔍 Para onde?'.",

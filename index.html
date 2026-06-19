@@ -4,17 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Clique Seguro - Aprenda Sem Medo</title>
-    <style>
+        <style>
         /* Cores de alto contraste e fontes grandes para acessibilidade */
         :root {
-            --cor-fundo: #F8F9FA;
+            --cor-fundo: #EBF1F7; /* Um tom de fundo ligeiramente azulado, mais moderno e confortável para a leitura */
             --cor-texto: #1A1A1A;
-            --cor-primaria: #0056B3;
+            --cor-primaria: #0066CC; /* Azul um pouco mais vivo e nítido */
             --cor-fundo-menu: #FFFFFF;
-            --cor-azul-escuro: #002B5C;
-            --cor-sucesso: #28A745;
-            --cor-alerta: #DC3545;
-            --cor-laranja: #FD7E14;
+            --cor-azul-escuro: #002347; /* Tom mais escuro para aumentar ainda mais o contraste */
+            --cor-sucesso: #248A3D;
+            --cor-alerta: #C82333;
+            --cor-laranja: #E06300;
         }
 
         body {
@@ -36,25 +36,27 @@
         /* BARRA DE NAVEGAÇÃO SUPERIOR (MENU HEADER ACESSÍVEL) */
         .barra-navegacao {
             background-color: var(--cor-azul-escuro);
-            padding: 15px 20px;
+            padding: 18px 24px; /* Aumentado ligeiramente para melhor espaçamento e toque */
             display: flex;
             justify-content: space-between;
             align-items: center;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.25); /* Sombra mais destacada */
             width: 100%;
             box-sizing: border-box;
             flex-wrap: wrap; /* Quebra linha em celulares menores */
             gap: 15px;
+            border-bottom: 4px solid var(--cor-laranja); /* Linha laranja marcante que delimita o topo com elegância */
         }
 
         .menu-logo {
             color: white;
             font-weight: bold;
-            font-size: 28px;
+            font-size: 30px; /* Um pouco maior para leitura instantânea */
             text-decoration: none;
             display: flex;
             align-items: center;
             gap: 10px;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.5); /* Sombra no texto para máxima nitidez */
         }
 
         .menu-links {
@@ -69,13 +71,13 @@
         .menu-item {
             background-color: var(--cor-primaria);
             color: white;
-            padding: 12px 20px;
+            padding: 14px 22px; /* Botões maiores e mais fáceis de clicar */
             text-decoration: none;
             font-weight: bold;
-            font-size: 18px;
-            border-radius: 8px;
-            border: 2px solid #003D82;
-            box-shadow: 0 4px 0 #003D82;
+            font-size: 19px;
+            border-radius: 12px; /* Cantos um pouco mais arredondados e amigáveis */
+            border: 2px solid #004C99;
+            box-shadow: 0 5px 0 #003D82, 0 8px 15px rgba(0,0,0,0.2); /* Efeito 3D realçado com sombra projetada */
             display: flex;
             align-items: center;
             gap: 8px;
@@ -83,11 +85,11 @@
         }
 
         .menu-item:hover {
-            background-color: #0069D9;
+            background-color: #0077EE;
         }
 
         .menu-item:active {
-            transform: translateY(3px);
+            transform: translateY(4px); /* Simula afundar o botão de verdade ao clicar */
             box-shadow: 0 1px 0 #003D82;
         }
 
@@ -102,26 +104,28 @@
             text-align: center;
             background: linear-gradient(135deg, var(--cor-primaria) 0%, var(--cor-azul-escuro) 100%);
             color: white;
-            padding: 40px 20px;
-            border-radius: 0 0 30px 30px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            padding: 45px 20px;
+            border-radius: 0 0 35px 35px; /* Curvatura levemente mais suave */
+            box-shadow: 0 6px 20px rgba(0,0,0,0.3); /* Sombra mais imponente */
             margin-bottom: 40px;
             box-sizing: border-box;
+            border-bottom: 3px solid rgba(255, 255, 255, 0.2);
         }
 
         h1 {
-            font-size: 42px;
+            font-size: 46px; /* Maior e com excelente leitura */
             color: white;
             margin: 0;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.4);
+            letter-spacing: 0.5px;
         }
 
+               /* CONTAINER PRINCIPAL DO CELULAR */
         .container {
             width: 100%;
             max-width: 400px;
             margin: 0 auto;
             padding: 0 20px 40px 20px;
-
-            /* Centraliza verticalmente o celular entre o fim do header e o fim da tela */
             flex: 1;
             display: flex;
             align-items: center;
@@ -135,83 +139,162 @@
             justify-content: center;
         }
 
-        /* Transformando a área principal na tela de um Celular Real */
+        /* CORPO REALISTA DO SMARTPHONE */
         .tela-celular-home {
-            width: 330px;
-            height: 580px;
-            background: linear-gradient(180deg, #E3F2FD 0%, #FFFFFF 100%);
-            border: 12px solid #333;
-            border-radius: 40px;
-            /* Centraliza APENAS o celular (não o header) */
+            width: 350px;
+            height: 620px; /* Aumentado levemente para acomodar as 3 fileiras com respiro real */
+            background: #F4F7FA; /* Cor sólida de fundo de sistema (iOS/Android limpo) */
+            border: 14px solid #1E1E1E;
+            border-radius: 45px;
             margin: 0 auto;
             display: flex;
             flex-direction: column;
-            padding: 20px 15px;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+            padding: 25px 18px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.3);
             box-sizing: border-box;
+            position: relative;
+            overflow: hidden; /* Garante que nada vaze da tela do celular */
         }
 
-        /* Barra do topo do celular (Bateria, Hora, Wifi) */
+        /* DETALHE DA CÂMERA/ALTO-FALANTE */
+        .tela-celular-home::before {
+            content: "";
+            position: absolute;
+            top: 8px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 55px;
+            height: 6px;
+            background-color: #1E1E1E;
+            border-radius: 4px;
+            z-index: 10;
+        }
+
+        /* BARRA DO TOPO (SISTEMA) */
         .barra-status {
             display: flex;
             justify-content: space-between;
-            font-size: 14px;
-            color: #333;
-            font-weight: bold;
-            padding-bottom: 15px;
-            border-bottom: 1px solid rgba(0,0,0,0.05);
-            margin-bottom: 10px;
+            font-size: 13px;
+            color: #222222;
+            font-weight: 600;
+            padding-bottom: 14px;
+            margin-bottom: 25px;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
         }
 
-        /* Grade de apps ajustada para a largura do celular (3 colunas) */
+        /* GRADE DE APLICATIVOS IDENTICA AO ANDROID/IOS */
         .grade-apps {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
-            gap: 20px 10px;
-            padding: 5px 0;
+            gap: 24px 14px; /* Espaçamento idêntico às telas iniciais de smartphones */
+            padding: 0;
             text-align: center;
         }
 
+        /* ITEM DO APLICATIVO (ÍCONE + TEXTO) */
         .app-item {
             text-decoration: none;
-            color: var(--cor-texto);
+            color: #222222; /* Texto escuro e nítido de sistema */
             display: flex;
             flex-direction: column;
             align-items: center;
-            gap: 6px;
-            font-weight: bold;
-            font-size: 14px;
-            transition: transform 0.2s;
+            gap: 6px; /* Espaço milimétrico padrão entre o ícone e a legenda */
+            transition: transform 0.15s ease-in-out;
+            -webkit-tap-highlight-color: transparent; /* Remove o quadrado cinza ao tocar no celular */
         }
 
+        /* Efeito ao arrastar ou passar o mouse (Suave) */
         .app-item:hover {
-            transform: scale(1.05);
+            transform: scale(1.04);
+        }
+        
+        /* Efeito de toque realista: o ícone dá um leve "zoom out" simulando a pressão do dedo */
+        .app-item:active {
+            transform: scale(0.92);
         }
 
+        /* O ÍCONE DO APP REAL */
         .app-icone {
-            width: 65px;
-            height: 65px;
-            border-radius: 16px;
+            width: 68px; /* Tamanho proporcional perfeito para telas de 3 colunas */
+            height: 68px;
+            border-radius: 18px; /* Curvatura padrão "Squircle" de apps modernos */
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 32px;
+            font-size: 36px;
             color: white;
-            box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+            /* Sombra suave projetada para baixo (Drop Shadow de interface mobile real) */
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.12), 0 2px 4px rgba(0, 0, 0, 0.08);
+            border: 1px solid rgba(255, 255, 255, 0.15); /* Brilho sutil na borda superior */
+            position: relative;
         }
+
+        /* LEGENDA DO APP EMBAIXO */
+        .app-item span {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            font-weight: 600; /* Peso médio/grosso para leitura sem poluir */
+            font-size: 13px; /* Tamanho exato das legendas de celular */
+            line-height: 1.2;
+            display: block;
+            width: 100%;
+            white-space: nowrap; /* Impede que o texto quebre em duas linhas bagunçadas */
+            overflow: hidden;
+            text-overflow: ellipsis; /* Se o texto for muito grande, põe "..." igual ao celular real */
+        }
+  
+
     </style>
 </head>
 <body>
+    <!-- TELA INICIAL DE BOAS-VINDAS (SPLASH SCREEN ACESSÍVEL) -->
+    <div id="tela-abertura" style="
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(135deg, #0056B3 0%, #002B5C 100%);
+        z-index: 9999;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        padding: 20px;
+        box-sizing: border-box;
+        transition: opacity 0.5s ease, visibility 0.5s;
+    ">
+        <div style="font-size: 90px; margin-bottom: 20px; animation: flutuar 3s ease-in-out infinite;">👵👴✨</div>
+        <h1 style="font-size: 48px; color: white; margin-bottom: 10px; text-shadow: 2px 2px 4px rgba(0,0,0,0.4);">Clique Seguro</h1>
+        <p style="color: white; font-size: 24px; opacity: 0.9; max-width: 400px; margin-bottom: 40px; font-weight: bold;">
+            O seu guia para aprender a mexer no celular sem medo e com total segurança!
+        </p>
+        
+        <!-- Botão Gigante de Entrada -->
+        <button onclick="iniciarApp()" style="
+            background-color: #FD7E14;
+            color: white;
+            font-size: 26px;
+            font-weight: bold;
+            padding: 20px 45px;
+            border: none;
+            border-radius: 50px;
+            box-shadow: 0 8px 0 #C45A00, 0 15px 25px rgba(0,0,0,0.3);
+            cursor: pointer;
+            transition: all 0.1s ease;
+        ">
+            COMEÇAR AGORA
+        </button>
+    </div>
 
     <!-- BARRA DE NAVEGAÇÃO SUPERIOR (HEADER MENU ADICIONADO) -->
     <nav class="barra-navegacao">
         <a href="index.html" class="menu-logo">Clique Seguro 👵👴</a>
-        
     </nav>
 
     <header class="boas-vindas-painel">
         <h1>Clique Seguro!</h1>
-        <p style="margin: 10px 0 0 0; font-size: 22px; opacity: 0.9;">Toque no aplicativo que você deseja aprender a usar hoje.</p>
+        <p style="margin: 12px 0 0 0; font-size: 24px; font-weight: bold; opacity: 0.95; text-shadow: 1px 1px 2px rgba(0,0,0,0.3);">Toque no aplicativo que você deseja aprender a usar hoje.</p>
     </header>
 
     <div class="container">
@@ -224,42 +307,59 @@
                 </div>
                 <div class="grade-apps">
                     <a href="simulador.html?tema=youtube" class="app-item">
-                        <div class="app-icone" style="background: #FF0000;">▶️</div>
+                        <!-- Trocamos o emoji pelo triângulo branco real de texto (&#9654;) -->
+                        <div class="app-icone" style="background: #FF0000 !important; font-size: 28px; color: white !important;">&#9654;</div>
                         <span>YouTube</span>
                     </a>
+
                     <a href="simulador.html?tema=whatsapp" class="app-item">
-                        <div class="app-icone" style="background: #25D366;">💬</div>
+                        <div class="app-icone" style="background: #25D366 !important;">💬</div>
                         <span>WhatsApp</span>
                     </a>
                     <a href="simulador.html?tema=pix" class="app-item">
-                        <div class="app-icone" style="background: #005ca9;">🏦</div>
-                        <span>Banco CAIXA</span>
+                        <div class="app-icone" style="background: #00B1A7 !important;">💸</div>
+                        <span>Pagar com Pix</span>
+                    </a>
+                    <a href="simulador.html?tema=golpes" class="app-item">
+                        <div class="app-icone" style="background: #C82333 !important;">🛡️</div>
+                        <span>Evitar Golpes</span>
                     </a>
                     <a href="simulador.html?tema=uber" class="app-item">
-                        <div class="app-icone" style="background: #000000;">🚖</div>
-                        <span>Uber / 99</span>
-                    </a>
-                    <a href="simulador.html?tema=ifood" class="app-item">
-                        <div class="app-icone" style="background: #EA1D2C;">🍔</div>
-                        <span>iFood</span>
+                        <div class="app-icone" style="background: #000000 !important;">🚖</div>
+                        <span>Pedir Uber / 99</span>
                     </a>
                     <a href="simulador.html?tema=mercado" class="app-item">
-                        <div class="app-icone" style="background: #FFF159;">📦</div>
-                        <span style="color: #333;">M. Livre</span>
+                        <div class="app-icone" style="background: #FFF159 !important;">📦</div>
+                        <span style="color: #1A1A1A;">M. Livre</span>
+                    </a>
+                    <a href="simulador.html?tema=maps" class="app-item">
+                        <div class="app-icone" style="background: #34A853 !important;">🗺️</div>
+                        <span>Google Maps</span>
+                    </a>
+                    <a href="simulador.html?tema=documentos" class="app-item">
+                        <div class="app-icone" style="background: #E65100 !important;">🪪</div>
+                        <span>Docs Digitais</span>
                     </a>
                     <a href="simulador.html?tema=inss" class="app-item">
-                        <div class="app-icone" style="background: #003366;">👴</div>
+                        <div class="app-icone" style="background: #003366 !important;">🏛️</div>
                         <span>Meu INSS</span>
                     </a>
-                    <!-- CORREÇÃO DA TAG DO GOOGLE MAPS QUE ESTAVA CORTADA -->
-                    <a href="simulador.html?tema=maps" class="app-item">
-                        <div class="app-icone" style="background: #34A853;">🗺️</div>
-                        <span>Maps</span>
-                    </a>
                 </div>
+
+
             </div>
         </main>
     </div>
 
+    <!-- Script simples para fazer a tela sumir ao clicar -->
+    <script>
+        function iniciarApp() {
+            const tela = document.getElementById('tela-abertura');
+            tela.style.opacity = '0';
+            setTimeout(() => {
+                tela.style.visibility = 'hidden';
+            }, 500); // Aguarda o fim da animação de transição para ocultar o elemento
+        }
+    </script>
 </body>
 </html>

@@ -1,171 +1,250 @@
-export const whatsapp = [
+// whatsapp.js - PARTE 1
+const whatsapp = [
     {
-        instrucao: "Cenário 1: Um número desconhecido usa a foto de um parente e pede dinheiro. O que você faz?",
+        // PASSO 1: SIMULADOR DE SALVAR CONTATO NA AGENDA
+        instrucao: "Passo 1: Antes de conversar, precisamos salvar o número. Toque no botão verde '➕ Salvar Novo Contato' para adicionar seu neto.",
         conteudo: `
-            <div style="height: 100%; display: flex; flex-direction: column; background: #E5DDD5;">
-                <div style="background:#075E54; color:white; padding:10px; text-align:left; font-weight:bold;">💬 WhatsApp</div>
-                <div style="flex:1; padding:15px; display:flex; flex-direction:column; gap:10px;">
-                    <div style="background:white; padding:10px; border-radius:8px; align-self:flex-start; max-width:80%; font-size:16px;">
-                        Oi pai, troquei de número. Me faz um Pix de R$ 200 pra pagar uma conta urgente? 
+            <div style="background:#F4F4F4; height:100%; display:flex; flex-direction:column; font-family:sans-serif; box-sizing:border-box; user-select:none;">
+                <div style="background:#007AFF; color:white; padding:15px; text-align:center; font-weight:bold; font-size:18px; box-shadow:0 2px 4px rgba(0,0,0,0.1);">
+                    👤 Contatos do Celular
+                </div>
+                <div style="flex:1; padding:25px 15px; display:flex; flex-direction:column; gap:15px; justify-content:center;">
+                    <div style="text-align:left; background:white; padding:15px; border-radius:12px; border:1px solid #DDD; box-shadow:0 2px 5px rgba(0,0,0,0.05);">
+                        <label style="font-weight:bold; font-size:14px; color:#666; display:block; margin-bottom:5px;">NOME DO CONTATO:</label>
+                        <input type="text" value="Neto Querido ❤️" disabled style="width:100%; padding:10px; font-size:18px; font-weight:bold; border:1px solid #CCC; border-radius:6px; background:#F9F9F9; box-sizing:border-box; color:#333;">
+                        
+                        <label style="font-weight:bold; font-size:14px; color:#666; display:block; margin-top:15px; margin-bottom:5px;">NÚMERO DE TELEFONE:</label>
+                        <input type="text" value="(11) 99999-8888" disabled style="width:100%; padding:10px; font-size:18px; font-weight:bold; border:1px solid #CCC; border-radius:6px; background:#F9F9F9; box-sizing:border-box; color:#333;">
                     </div>
                 </div>
-                <div style="padding:15px; display:flex; flex-direction:column; gap:12px; align-items: center; width: 100%; box-sizing: border-box;">
-                    <button class="botao-grande botao-alerta" onclick="mostrarErro('whatsapp')">Responder e Ajudar</button>
-                    <button class="botao-grande botao-sucesso" onclick="avancarPasso()">Bloquear e Ligar no Fixo</button>
+                <div style="padding:20px 15px; display:flex; justify-content:center; background:white; border-top:1px solid #EEE;">
+                    <button class="botao-grande botao-sucesso" onclick="avancarPasso()" style="background:#248A3D !important; box-shadow:0 6px 0 #185E29 !important;">➕ Salvar Novo Contato</button>
                 </div>
             </div>`,
-        feedback: "✅ Excelente! Sempre ligue para o número antigo para confirmar."
+        feedback: "🎉 Lindo! O contato do seu neto foi salvo na agenda com sucesso."
     },
     {
-        instrucao: "Cenário 2: Você recebeu um SMS dizendo que sua conta do banco será bloqueada. O que fazer?",
+        // NOVO PASSO INTERMEDIÁRIO: BUSCAR O CONTATO NA LISTA
+        instrucao: "Passo 2: Vamos procurar o contato dele para abrir a conversa. Toque na barra de pesquisa branca escrita '🔍 Procurar: Neto Querido'.",
         conteudo: `
-            <div style="height: 100%; display: flex; flex-direction: column; background: #E5DDD5;">
-                <div style="background:#333; color:white; padding:10px; text-align:left; font-weight:bold;">✉️ SMS</div>
-                <div style="flex:1; padding:20px;">
-                    <div style="background: #E1E1E1; padding: 20px; border-radius: 10px; font-size: 18px; text-align: left; border: 1px solid #CCC;">
-                        <strong>✉️ SMS:</strong> "Segurança Banco: Sua conta será bloqueada hoje. Evite multas em: http://banco-seguro.net"
+            <div style="background:#FFFFFF; height:100%; display:flex; flex-direction:column; font-family:sans-serif; box-sizing:border-box; user-select:none;">
+                <!-- Cabeçalho de Lista de Conversas -->
+                <div style="background:#075E54; color:white; padding:15px; text-align:left; font-weight:bold; font-size:20px; box-shadow:0 2px 4px rgba(0,0,0,0.1);">
+                    💬 WhatsApp
+                </div>
+                <!-- Corpo da Lista com Barra de Busca Alvo -->
+                <div style="flex:1; padding:15px; background:#F4F4F4; display:flex; flex-direction:column; gap:15px;">
+                    <!-- BOTÃO ALVO (CORRETO) -->
+                    <div onclick="avancarPasso()" style="background:white; padding:14px 18px; border-radius:30px; text-align:left; font-size:16px; color:#333; cursor:pointer; font-weight:bold; box-shadow:0 2px 5px rgba(0,0,0,0.08); border:2px solid #075E54; display:flex; justify-content:between; align-items:center;">
+                        <span>🔍 Procurar: Neto Querido</span>
+                    </div>
+                    <!-- Contatos Recentes Falsos -->
+                    <div onclick="mostrarErro()" style="background:white; padding:12px; border-radius:12px; text-align:left; cursor:pointer; display:flex; align-items:center; gap:12px; opacity:0.6;">
+                        <span style="font-size:28px;">👵</span>
+                        <div><strong style="font-size:15px; color:#075E54;">Maria Vizinha</strong><br><span style="font-size:12px; color:#777;">Tudo bem, até amanhã!</span></div>
                     </div>
                 </div>
-                <div style="display:flex; flex-direction:column; gap:12px; align-items: center; width: 100%; box-sizing: border-box; padding: 15px;">
-                    <button class="botao-grande botao-alerta" onclick="mostrarErro('sms')">Clicar no Link</button>
-                    <button class="botao-grande botao-sucesso" onclick="avancarPasso()">Apagar Mensagem</button>
-                </div>
             </div>`,
-        feedback: "✅ Perfeito! Bancos nunca enviam links por SMS."
+        feedback: "✅ Perfeito! O aplicativo filtrou a sua lista e encontrou o contato correto."
     },
     {
-        instrucao: "Cenário 3: Uma mensagem diz que você ganhou um prêmio, mas pede dados. O que fazer?",
+        // PASSO 3: ABERTURA DO CHAT DO WHATSAPP (MENSAGEM DE TEXTO)
+        instrucao: "Passo 3: Agora toque no campo de texto branco embaixo escrito '⌨️ Digitar mensagem' para abrir as letras.",
         conteudo: `
-            <div style="height: 100%; display: flex; flex-direction: column; background: #E5DDD5;">
-                <div style="background:#075E54; color:white; padding:10px; text-align:left; font-weight:bold;">💬 WhatsApp</div>
-                <div style="flex:1; padding:15px;">
-                    <div style="background:white; padding:10px; border-radius:8px; font-size:16px;">
-                        Parabéns! Você ganhou R$ 5.000! Clique: http://premio-falso.net
+            <div style="height: 100%; display: flex; flex-direction: column; background: #ECE5DD; font-family: sans-serif;">
+                <div style="background:#075E54; color:white; padding:12px 15px; text-align:left; font-weight:bold; font-size:18px; display:flex; align-items:center; gap:10px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+                    <span style="font-size:22px;">❤️</span> 
+                    <div style="line-height:1.1;">
+                        <span style="display:block; font-size:16px;">Neto Querido</span>
+                        <span style="font-size:11px; color:#AFAFAF; font-weight:normal;">online</span>
                     </div>
                 </div>
-                <div style="padding:15px; display:flex; flex-direction:column; gap:12px; align-items: center; width: 100%; box-sizing: border-box;">
-                    <button class="botao-grande botao-alerta" onclick="mostrarErro('link')">Clicar no Link</button>
-                    <button class="botao-grande botao-sucesso" onclick="avancarPasso()">Denunciar e Apagar</button>
-                </div>
-            </div>`,
-        feedback: "✅ Isso mesmo! Prêmios fáceis demais costumam ser golpes."
-    },
-    {
-        instrucao: "Cenário 4: Alguém pede um código de 6 dígitos que chegou por SMS no seu celular. O que você faz?",
-        conteudo: `
-            <div style="height: 100%; display: flex; flex-direction: column; background: #E5DDD5;">
-                <div style="background:#075E54; color:white; padding:10px; text-align:left; font-weight:bold;">💬 WhatsApp</div>
-                <div style="flex:1; padding:15px; display:flex; flex-direction:column; gap:10px;">
-                    <div style="background:white; padding:10px; border-radius:8px; align-self:flex-start; font-size:16px;">
-                        Oi! Sem querer mandei um código pro seu celular. Pode me passar os 6 números por favor?
+                <div style="flex:1; padding:20px 15px; display:flex; flex-direction:column; justify-content:flex-end;">
+                    <div style="background:#FFF9C4; padding:8px 12px; border-radius:8px; font-size:12px; text-align:center; align-self:center; max-width:90%; color:#555; box-shadow:0 1px 1px rgba(0,0,0,0.05); margin-bottom:15px; font-weight:bold;">
+                        🔒 As mensagens são protegidas.
                     </div>
                 </div>
-                <div style="padding:15px; display:flex; flex-direction:column; gap:12px; align-items: center; width: 100%; box-sizing: border-box;">
-                    <button class="botao-grande botao-alerta" onclick="mostrarErro('codigo')">Passar o Código</button>
-                    <button class="botao-grande botao-sucesso" onclick="avancarPasso()">Não passar e Bloquear</button>
+                <div style="padding:10px; display:flex; align-items:center; gap:8px; background:transparent; box-sizing:border-box; margin-bottom:10px;">
+                    <div onclick="avancarPasso()" style="flex:1; background:white; padding:12px 15px; border-radius:25px; text-align:left; font-size:16px; color:#999; cursor:pointer; font-weight:bold; box-shadow:0 1px 3px rgba(0,0,0,0.1); border:2px solid #075E54;">
+                        ⌨️ Digitar mensagem...
+                    </div>
+                    <div onclick="mostrarErro()" style="width:45px; height:45px; background:#075E54; border-radius:50%; display:flex; align-items:center; justify-content:center; color:white; font-size:20px; cursor:pointer; box-shadow:0 1px 3px rgba(0,0,0,0.2);">🎙️</div>
                 </div>
             </div>`,
-        feedback: "✅ Excelente! Esse código serve para clonar seu WhatsApp. Nunca o compartilhe!"
+        feedback: "Muito bem! O teclado do celular se abriria na tela para começar a escrita de textos."
     },
     {
-        instrucao: "Cenário 5: Você recebe uma mensagem sobre 'dinheiro esquecido' para receber do governo. O que fazer?",
+        // PASSO 4: BOTÃO DE ENVIAR (SETA VERDE)
+        instrucao: "Passo 4: A mensagem 'Oi neto, tudo bem?' já está escrita! Agora toque no botão verde redondo com a '➡️ Seta' para enviar o texto.",
         conteudo: `
-            <div style="height: 100%; display: flex; flex-direction: column; background: #E5DDD5;">
-                <div style="background:#075E54; color:white; padding:10px; text-align:left; font-weight:bold;">💬 WhatsApp</div>
-                <div style="flex:1; padding:15px; display:flex; flex-direction:column; gap:10px;">
-                    <div style="background:white; padding:10px; border-radius:8px; align-self:flex-start; font-size:16px;">
-                        CONSULTA PÚBLICA: Você tem R$ 1.250,30 disponíveis para saque imediato. Veja como receber: http://gov-saque.org
+            <div style="height: 100%; display: flex; flex-direction: column; background: #ECE5DD; font-family: sans-serif;">
+                <div style="background:#075E54; color:white; padding:12px 15px; text-align:left; font-weight:bold; font-size:18px; display:flex; align-items:center; gap:10px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+                    <span style="font-size:22px;">❤️</span> 
+                    <div style="line-height:1.1;">
+                        <span style="display:block; font-size:16px;">Neto Querido</span>
+                        <span style="font-size:11px; color:#AFAFAF; font-weight:normal;">online</span>
                     </div>
                 </div>
-                <div style="padding:15px; display:flex; flex-direction:column; gap:12px; align-items: center; width: 100%; box-sizing: border-box;">
-                    <button class="botao-grande botao-alerta" onclick="mostrarErro('gov')">Acessar para Receber</button>
-                    <button class="botao-grande botao-sucesso" onclick="avancarPasso()">Ignorar e Apagar</button>
+                <div style="flex:1; padding:20px 15px; display:flex; flex-direction:column; justify-content:flex-end;"></div>
+                <div style="padding:10px; display:flex; align-items:center; gap:8px; background:transparent; box-sizing:border-box; margin-bottom:10px;">
+                    <div onclick="mostrarErro()" style="flex:1; background:white; padding:12px 15px; border-radius:25px; text-align:left; font-size:16px; color:#333; cursor:pointer; font-weight:bold; box-shadow:0 1px 3px rgba(0,0,0,0.1);">
+                        Oi neto, tudo bem?
+                    </div>
+                    <div onclick="avancarPasso()" style="width:48px; height:48px; background:#00A884; border-radius:50%; display:flex; align-items:center; justify-content:center; color:white; font-size:22px; cursor:pointer; box-shadow:0 2px 5px rgba(0,0,0,0.2); border:2px solid #054D41;">➡️</div>
                 </div>
             </div>`,
-        feedback: "✅ Correto! O governo não envia links de saque ou benefícios por WhatsApp."
+        feedback: "Parabéns! Sua mensagem foi enviada. Repare que ela ganharia os dois risquinhos na tela do WhatsApp."
     },
     {
-        instrucao: "Cenário 6: Uma proposta de emprego oferece R$ 500 por dia para avaliar produtos de casa, mas pede um pagamento inicial de 'treinamento'. O que fazer?",
+        // PASSO 5: TOQUE NO BOTÃO DA CÂMERA DO CHAT
+        instrucao: "Passo 5: Agora vamos mandar uma foto! Toque no ícone redondo preto com a '📷 Câmera' que fica na barra de digitação.",
         conteudo: `
-            <div style="height: 100%; display: flex; flex-direction: column; background: #E5DDD5;">
-                <div style="background:#075E54; color:white; padding:10px; text-align:left; font-weight:bold;">💬 WhatsApp</div>
-                <div style="flex:1; padding:15px; display:flex; flex-direction:column; gap:10px;">
-                    <div style="background:white; padding:10px; border-radius:8px; align-self:flex-start; font-size:16px;">
-                        Vaga Home Office Renda Extra! Ganhe avaliando marcas parceiras. Taxa de inscrição promocional hoje: R$ 29,90.
+            <div style="height: 100%; display: flex; flex-direction: column; background: #ECE5DD; font-family: sans-serif;">
+                <div style="background:#075E54; color:white; padding:12px 15px; text-align:left; font-weight:bold; font-size:18px; display:flex; align-items:center; gap:10px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+                    <span style="font-size:22px;">❤️</span> 
+                    <div style="line-height:1.1;">
+                        <span style="display:block; font-size:16px;">Neto Querido</span>
+                        <span style="font-size:11px; color:#AFAFAF; font-weight:normal;">online</span>
                     </div>
                 </div>
-                <div style="padding:15px; display:flex; flex-direction:column; gap:12px; align-items: center; width: 100%; box-sizing: border-box;">
-                    <button class="botao-grande botao-alerta" onclick="mostrarErro('emprego')">Pagar Taxa e Começar</button>
-                    <button class="botao-grande botao-sucesso" onclick="avancarPasso()">Ignorar Vaga Falsa</button>
-                </div>
-            </div>`,
-        feedback: "✅ Exatamente! Empresas sérias nunca cobram taxas para você começar a trabalhar."
-    },
-    {
-        instrucao: "Cenário 7: Um suposto entregador liga dizendo que tem um presente para você, mas cobra uma taxa de R$ 5,00 de entrega na maquininha. O que fazer?",
-        conteudo: `
-            <div style="height: 100%; display: flex; flex-direction: column; background: #E5DDD5;">
-                <div style="background:#333; color:white; padding:10px; text-align:left; font-weight:bold;">📦 Entrega de Encomenda</div>
-                <div style="flex:1; padding:20px; text-align:center;">
-                    <div style="font-size:40px;">🎁</div>
-                    <strong>Entregador:</strong> "Trouxe um presente surpresa para o senhor, só falta passar R$ 5,00 de taxa de entrega."
-                </div>
-                <div style="padding:15px; display:flex; flex-direction:column; gap:12px; align-items: center; width: 100%; box-sizing: border-box;">
-                    <button class="botao-grande botao-alerta" onclick="mostrarErro('maquininha')">Pagar Taxa no Cartão</button>
-                    <button class="botao-grande botao-sucesso" onclick="avancarPasso()">Recusar a Entrega</button>
-                </div>
-            </div>`,
-        feedback: "✅ Perfeito! Esse é o golpe da maquininha de entrega, alterando o valor real ou clonando cartões."
-    },
-    {
-        instrucao: "Cenário 8: Uma mensagem urgente diz que seu CPF está irregular na Receita Federal e dá um link para resolver. O que fazer?",
-        conteudo: `
-            <div style="height: 100%; display: flex; flex-direction: column; background: #E5DDD5;">
-                <div style="background:#075E54; color:white; padding:10px; text-align:left; font-weight:bold;">💬 WhatsApp</div>
-                <div style="flex:1; padding:15px; display:flex; flex-direction:column; gap:10px;">
-                    <div style="background:white; padding:10px; border-radius:8px; align-self:flex-start; font-size:16px;">
-                        AVISO DA RECEITA: Seu CPF será cancelado em 24h por pendências. Regularize agora no portal: http://receita-regularizar.top
+                <div style="flex:1; padding:20px 15px; display:flex; flex-direction:column; justify-content:flex-end; gap:10px;">
+                    <div style="background:#DCF8C6; padding:10px 14px; border-radius:12px 0 12px 12px; align-self:flex-end; max-width:85%; font-size:17px; font-weight:600; box-shadow: 0 1px 2px rgba(0,0,0,0.15); color:#222;">
+                        Oi neto, tudo bem? ✔️✔️
                     </div>
                 </div>
-                <div style="padding:15px; display:flex; flex-direction:column; gap:12px; align-items: center; width: 100%; box-sizing: border-box;">
-                    <button class="botao-grande botao-alerta" onclick="mostrarErro('receita')">Acessar e Preencher</button>
-                    <button class="botao-grande botao-sucesso" onclick="avancarPasso()">Bloquear e Apagar</button>
+                <div style="padding:10px; display:flex; align-items:center; gap:8px; background:transparent; box-sizing:border-box; margin-bottom:10px;">
+                    <div onclick="mostrarErro()" style="flex:1; background:white; padding:12px 15px; border-radius:25px; text-align:left; font-size:16px; color:#999; cursor:pointer; font-weight:bold; box-shadow:0 1px 3px rgba(0,0,0,0.1); display:flex; justify-content:space-between; align-items:center;">
+                        <span>Digite uma mensagem...</span>
+                        <span onclick="event.stopPropagation(); avancarPasso();" style="font-size:24px; padding:0 5px; cursor:pointer; color:#075E54; font-weight:bold;">📷</span>
+                    </div>
+                    <div onclick="mostrarErro()" style="width:45px; height:45px; background:#075E54; border-radius:50%; display:flex; align-items:center; justify-content:center; color:white; font-size:20px; cursor:pointer; box-shadow:0 1px 3px rgba(0,0,0,0.2);">🎙️</div>
                 </div>
             </div>`,
-        feedback: "✅ Excelente! Órgãos públicos nunca notificam cancelamento de documentos por redes sociais ou chats."
+        feedback: "✅ Perfeito! Você ativou a câmera do WhatsApp para tirar uma foto na hora."
     },
     {
-        instrucao: "Cenário 9: Uma pessoa desconhecida liga desesperada dizendo ser seu sobrinho, que o carro quebrou e precisa de um Pix urgente para o guincho. O que fazer?",
+        // PASSO 6: ENVIAR A FOTO RECENTE DA FLOR
+        instrucao: "Passo 6: A foto da flor foi tirada! Toque no botão verde redondo com a '➡️ Seta' para mandar a imagem para ele.",
         conteudo: `
-            <div style="height: 100%; display: flex; flex-direction: column; background: #E5DDD5;">
-                <div style="background:#A71D2A; color:white; padding:15px; text-align:center; font-weight:bold; border-radius:8px 8px 0 0;">
-                    📞 Ligação Recebida: Número Oculto
+            <div style="background:#000; height:100%; display:flex; flex-direction:column; font-family:sans-serif; box-sizing:border-box; user-select:none; position:relative;">
+                <div style="flex:1; display:flex; flex-direction:column; align-items:center; justify-content:center; background:#111;">
+                    <span style="font-size:100px;">🌹</span>
                 </div>
-                <div style="flex:1; padding:20px; text-align:center;">
-                    <p style="font-size:16px;">"Tio! Meu carro quebrou na estrada, estou sem sinal de banco aqui, paga o guincho para mim?!"</p>
-                </div>
-                <div style="padding:15px; display:flex; flex-direction:column; gap:12px; align-items: center; width: 100%; box-sizing: border-box;">
-                    <button class="botao-grande botao-alerta" onclick="mostrarErro('parente')">Fazer o Pix Urgente</button>
-                    <button class="botao-grande botao-sucesso" onclick="avancarPasso()">Desligar e ligar pro parente real</button>
+                <div style="background:rgba(0,0,0,0.6); padding:10px 15px; display:flex; align-items:center; box-sizing:border-box; width:100%; position:absolute; bottom:0; left:0; min-height:80px; gap:10px; border-top:1px solid rgba(255,255,255,0.1);">
+                    <div style="flex:1; background:rgba(255,255,255,0.15); padding:12px 15px; border-radius:25px; text-align:left; font-size:16px; color:#EEE; font-weight:bold;">
+                        Adicione uma legenda...
+                    </div>
+                    <div onclick="avancarPasso()" style="width:54px; height:54px; background:#00A884; border-radius:50%; display:flex; align-items:center; justify-content:center; color:white; font-size:24px; cursor:pointer; box-shadow:0 3px 8px rgba(0,0,0,0.5); border:2px solid #054D41;">➡️</div>
                 </div>
             </div>`,
-        feedback: "✅ Certinho! Diante de ligações de emergência familiares, desligue e ligue você mesmo para confirmar o fato."
+        feedback: "✅ Excelente! A foto foi enviada com sucesso no chat."
     },
     {
-        instrucao: "Cenário 10: O 'gerente do banco' entra em contato por chat avisando que há uma compra suspeita no seu cartão e pede para você confirmar seus dados e senha. O que fazer?",
+        // PASSO 7: OUVIR MENSAGEM DE ÁUDIO RECEBIDA
+        instrucao: "Passo 7: Seu neto respondeu com um áudio! Toque no botão azul com formato de '▶️ Triângulo' dentro do balão verde para escutar a voz dele.",
         conteudo: `
-            <div style="height: 100%; display: flex; flex-direction: column; background: #E5DDD5;">
-                <div style="background:#003366; color:white; padding:10px; text-align:left; font-weight:bold;">🏦 Chat Bancário</div>
-                <div style="flex:1; padding:15px; display:flex; flex-direction:column; gap:10px;">
-                    <div style="background:white; padding:10px; border-radius:8px; font-size:16px; color:#333;">
-                        Detectamos uma compra de R$ 3.500 nas Lojas Americanas. Caso não reconheça, digite sua senha de 4 dígitos para cancelar.
+            <div style="height: 100%; display: flex; flex-direction: column; background: #ECE5DD; font-family: sans-serif;">
+                <div style="background:#075E54; color:white; padding:12px 15px; text-align:left; font-weight:bold; font-size:18px; display:flex; align-items:center; gap:10px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+                    <span style="font-size:22px;">❤️</span> 
+                    <div style="line-height:1.1;">
+                        <span style="display:block; font-size:16px;">Neto Querido</span>
+                        <span style="font-size:11px; color:#AFAFAF; font-weight:normal;">online</span>
                     </div>
                 </div>
-                <div style="padding:15px; display:flex; flex-direction:column; gap:12px; align-items: center; width: 100%; box-sizing: border-box;">
-                    <button class="botao-grande botao-alerta" onclick="mostrarErro('banco')">Digitar Senha para Cancelar</button>
-                    <button class="botao-grande botao-sucesso" onclick="avancarPasso()">Ignorar e ligar no número do cartão</button>
+                <div style="flex:1; padding:20px 15px; display:flex; flex-direction:column; justify-content:flex-end; gap:12px;">
+                    <div style="background:#DCF8C6; padding:8px; border-radius:12px 0 12px 12px; align-self:flex-end; max-width:50%; box-shadow: 0 1px 2px rgba(0,0,0,0.15);"><span style="font-size:40px;">🌹</span></div>
+                    <div style="background:#FFFFFF; padding:12px 14px; border-radius:14px 14px 14px 0; align-self:flex-start; width:80%; font-size:16px; box-shadow: 0 1px 2px rgba(0,0,0,0.15); display:flex; align-items:center; gap:12px; color:#222;">
+                        <div onclick="avancarPasso()" style="width:36px; height:36px; background:#34B7F1; border-radius:50%; display:flex; align-items:center; justify-content:center; color:white; font-size:14px; cursor:pointer; font-weight:bold; box-shadow:0 2px 4px rgba(0,0,0,0.1);">▶️</div>
+                        <div style="flex:1; height:6px; background:#DDD; border-radius:3px; position:relative;">
+                            <div style="width:0%; height:100%; background:#34B7F1; border-radius:3px;"></div>
+                        </div>
+                        <span style="font-size:12px; color:#666; font-weight:bold;">0:12</span>
+                    </div>
+                </div>
+                <div style="padding:10px; display:flex; align-items:center; gap:8px; background:transparent; box-sizing:border-box; margin-bottom:10px;">
+                    <div onclick="mostrarErro()" style="flex:1; background:white; padding:12px 15px; border-radius:25px; text-align:left; font-size:16px; color:#999; cursor:pointer; box-shadow:0 1px 3px rgba(0,0,0,0.1);">Digite uma mensagem...</div>
+                    <div onclick="mostrarErro()" style="width:45px; height:45px; background:#075E54; border-radius:50%; display:flex; align-items:center; justify-content:center; color:white; font-size:20px; cursor:pointer; box-shadow:0 1px 3px rgba(0,0,0,0.2);">🎙️</div>
                 </div>
             </div>`,
-        feedback: "✅ Fantástico! Nenhuma instituição financeira pede senhas ou dados confidenciais por mensagens ou ligações."
+        feedback: "🔊 Maravilhoso! O áudio começou a tocar e o triângulo viraria duas barrinhas de pausar (⏸️)."
+    },
+    {
+        // PASSO 8: ENVIAR UM ÁUDIO PRÓPRIO (BOTÃO DO MICROFONE)
+        instrucao: "Passo 8: Agora responda gravando um áudio! Toque no botão redondo verde com o '🎙️ Microfone' no canto inferior direito.",
+        conteudo: `
+            <div style="height: 100%; display: flex; flex-direction: column; background: #ECE5DD; font-family: sans-serif;">
+                <div style="background:#075E54; color:white; padding:12px 15px; text-align:left; font-weight:bold; font-size:18px; display:flex; align-items:center; gap:10px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+                    <span style="font-size:22px;">❤️</span> 
+                    <div style="line-height:1.1;"><span style="display:block; font-size:16px;">Neto Querido</span><span style="font-size:11px; color:#AFAFAF; font-weight:normal;">online</span></div>
+                </div>
+                <div style="flex:1; padding:20px 15px; display:flex; flex-direction:column; justify-content:flex-end; gap:12px;">
+                    <div style="background:#FFFFFF; padding:12px 14px; border-radius:14px 14px 14px 0; align-self:flex-start; width:80%; font-size:16px; box-shadow: 0 1px 2px rgba(0,0,0,0.15); display:flex; align-items:center; gap:12px; color:#222;">
+                        <div style="width:36px; height:36px; background:#00A884; border-radius:50%; display:flex; align-items:center; justify-content:center; color:white; font-size:14px;">⏸️</div>
+                        <div style="flex:1; height:6px; background:#DDD; border-radius:3px; position:relative;"><div style="width:100%; height:100%; background:#00A884; border-radius:3px;"></div></div>
+                        <span style="font-size:12px; color:#666; font-weight:bold;">0:12</span>
+                    </div>
+                </div>
+                <div style="padding:10px; display:flex; align-items:center; gap:8px; background:transparent; box-sizing:border-box; margin-bottom:10px;">
+                    <div onclick="mostrarErro()" style="flex:1; background:white; padding:12px 15px; border-radius:25px; text-align:left; font-size:16px; color:#999; cursor:pointer; box-shadow:0 1px 3px rgba(0,0,0,0.1);">Digite uma mensagem...</div>
+                    <div onclick="avancarPasso()" style="width:48px; height:48px; background:#00A884; border-radius:50%; display:flex; align-items:center; justify-content:center; color:white; font-size:22px; cursor:pointer; box-shadow:0 2px 5px rgba(0,0,0,0.2); border:2px solid #054D41;">🎙️</div>
+                </div>
+            </div>`,
+        feedback: "🎙️ Perfeito! No mundo real, basta segurar esse botão para falar e soltá-lo para enviar a sua voz automaticamente."
+    },
+    {
+        // PASSO 9: SIMULADOR DE CHAMADA DE VÍDEO (ÍCONE DA CÂMERA DE VÍDEO)
+        instrucao: "Passo 9: Que tal ver o rosto do seu neto? Toque no ícone da '📹 Câmera de Vídeo' que fica no topo direito do cabeçalho.",
+        conteudo: `
+            <div style="height: 100%; display: flex; flex-direction: column; background: #ECE5DD; font-family: sans-serif;">
+                <div style="background:#075E54; color:white; padding:12px 15px; text-align:left; font-weight:bold; font-size:18px; display:flex; align-items:center; justify-content:space-between; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+                    <div style="display:flex; align-items:center; gap:10px;">
+                        <span style="font-size:22px;">❤️</span> 
+                        <div style="line-height:1.1;">
+                            <span style="display:block; font-size:16px;">Neto Querido</span>
+                            <span style="font-size:11px; color:#AFAFAF; font-weight:normal;">online</span>
+                        </div>
+                    </div>
+                    <div style="display:flex; gap:20px; align-items:center; padding-right:5px;">
+                        <span onclick="avancarPasso()" style="font-size:24px; cursor:pointer; font-weight:bold; color:white; background:rgba(255,255,255,0.15); padding:4px 8px; border-radius:8px;">📹</span>
+                        <span onclick="mostrarErro()" style="font-size:22px; cursor:pointer; color:white; opacity:0.6;">📞</span>
+                    </div>
+                </div>
+                <div style="flex:1; padding:20px 15px; display:flex; flex-direction:column; justify-content:flex-end; gap:12px;">
+                    <div style="background:#DCF8C6; padding:12px 14px; border-radius:12px 0 12px 12px; align-self:flex-end; width:60%; box-shadow: 0 1px 2px rgba(0,0,0,0.15); display:flex; align-items:center; gap:10px;">
+                        <span style="color:#00A884; font-size:16px;">🎙️ Áudio enviado</span>
+                    </div>
+                </div>
+                <div style="padding:10px; display:flex; align-items:center; gap:8px; background:transparent; box-sizing:border-box; margin-bottom:10px;">
+                    <div onclick="mostrarErro()" style="flex:1; background:white; padding:12px 15px; border-radius:25px; text-align:left; font-size:16px; color:#999; cursor:pointer; box-shadow:0 1px 3px rgba(0,0,0,0.1);">
+                        Digite uma mensagem...
+                    </div>
+                    <div onclick="mostrarErro()" style="width:45px; height:45px; background:#075E54; border-radius:50%; display:flex; align-items:center; justify-content:center; color:white; font-size:20px; cursor:pointer; box-shadow:0 1px 3px rgba(0,0,0,0.2);">🎙️</div>
+                </div>
+            </div>`,
+        feedback: "📲 Excelente! A tela mudaria para cheia, chamando o seu familiar em vídeo em tempo real."
+    },
+    {
+        // PASSO 10: MANDAR UMA FIGURINHA (STICKER)
+        instrucao: "Passo 10: Para terminar com alegria, mande uma figurinha carinhosa! Toque no emoji de '🥰 Carinha Sorridente' no canto esquerdo da barra.",
+        conteudo: `
+            <div style="height: 100%; display: flex; flex-direction: column; background: #ECE5DD; font-family: sans-serif;">
+                <div style="background:#075E54; color:white; padding:12px 15px; text-align:left; font-weight:bold; font-size:18px; display:flex; align-items:center; gap:10px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+                    <span style="font-size:22px;">❤️</span> 
+                    <span style="font-size:16px;">Neto Querido</span>
+                </div>
+                <div style="flex:1; padding:20px 15px; display:flex; flex-direction:column; justify-content:flex-end;">
+                    <div style="background:rgba(255,255,255,0.7); padding:6px 12px; border-radius:20px; font-size:12px; text-align:center; align-self:center; color:#555; font-weight:bold; margin-bottom:15px;">
+                        📹 Chamada de vídeo encerrada (03:15)
+                    </div>
+                </div>
+                <div style="padding:10px; display:flex; align-items:center; gap:8px; background:transparent; box-sizing:border-box; margin-bottom:10px;">
+                    <div style="flex:1; background:white; padding:12px 15px; border-radius:25px; text-align:left; font-size:16px; color:#999; box-shadow:0 1px 3px rgba(0,0,0,0.1); display:flex; align-items:center; gap:10px;">
+                        <span onclick="avancarPasso()" style="font-size:24px; cursor:pointer; font-weight:bold; padding:2px; background:#EBF1F7; border-radius:50%; box-shadow:0 2px 4px rgba(0,0,0,0.1);">🥰</span>
+                        <span onclick="mostrarErro()" style="cursor:pointer; flex:1;">Digite uma mensagem...</span>
+                    </div>
+                    <div onclick="mostrarErro()" style="width:45px; height:45px; background:#075E54; border-radius:50%; display:flex; align-items:center; justify-content:center; color:white; font-size:20px; cursor:pointer; box-shadow:0 1px 3px rgba(0,0,0,0.2);">🎙️</div>
+                </div>
+            </div>`,
+        feedback: "Parabéns! Módulo concluído! Você aprendeu a salvar contatos, procurar pessoas na lista, mandar mensagens, usar a câmera, ouvir áudios e fazer chamadas no WhatsApp! 👵👴🎉"
     }
 ];

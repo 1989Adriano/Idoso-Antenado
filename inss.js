@@ -1,5 +1,5 @@
-// PARTE 1 - MEU INSS TOTALMENTE FUNCIONAL E EXPLICATIVO
-export const inss = [
+// inss.js - PARTE 1
+const inss = [
     {
         // PASSO 1: TELA INICIAL COMPLETA (GRADE DE BOTÕES)
         instrucao: "Passo 1: Para conferir o extrato e a data de pagamento do seu benefício, toque no botão '💵 Extrato de Pagamento'.",
@@ -24,24 +24,24 @@ export const inss = [
                     <div style="display:grid; grid-template-columns: 1fr 1fr; gap:10px; margin-top:2px;">
                         
                         <!-- BOTÃO ALVO (CORRETO) -->
-                        <div onclick="avancarPasso()" style="background:white; border:2px solid #0056B3; padding:12px; border-radius:8px; text-align:center; cursor:pointer; box-shadow:0 2px 4px rgba(0,0,0,0.05); display:flex; flex-direction:column; align-items:center; gap:5px;">
-                            <span style="font-size:26px;">💵</span>
+                        <div onclick="avancarPasso()" style="background:white; border:2px solid #0056B3; padding:12px; border-radius:12px; text-align:center; cursor:pointer; box-shadow:0 4px 6px rgba(0,0,0,0.08); display:flex; flex-direction:column; align-items:center; gap:5px;">
+                            <span style="font-size:28px;">💵</span>
                             <strong style="font-size:13px; color:#002F6C; line-height:1.2;">Extrato de<br>Pagamento</strong>
                         </div>
                         
                         <!-- BOTÕES ERRADOS (EDUCATIVOS) -->
-                        <div onclick="mostrarErro()" style="background:white; border:1px solid #ccc; padding:12px; border-radius:8px; text-align:center; cursor:pointer; display:flex; flex-direction:column; align-items:center; gap:5px;">
-                            <span style="font-size:26px;">📅</span>
+                        <div onclick="mostrarErro()" style="background:white; border:1px solid #ccc; padding:12px; border-radius:12px; text-align:center; cursor:pointer; display:flex; flex-direction:column; align-items:center; gap:5px; box-shadow:0 2px 4px rgba(0,0,0,0.04);">
+                            <span style="font-size:28px;">📅</span>
                             <strong style="font-size:13px; color:#002F6C; line-height:1.2;">Pedir<br>Aposentadoria</strong>
                         </div>
                         
-                        <div onclick="mostrarErro()" style="background:white; border:1px solid #ccc; padding:12px; border-radius:8px; text-align:center; cursor:pointer; display:flex; flex-direction:column; align-items:center; gap:5px;">
-                            <span style="font-size:26px;">📋</span>
+                        <div onclick="mostrarErro()" style="background:white; border:1px solid #ccc; padding:12px; border-radius:12px; text-align:center; cursor:pointer; display:flex; flex-direction:column; align-items:center; gap:5px; box-shadow:0 2px 4px rgba(0,0,0,0.04);">
+                            <span style="font-size:28px;">📋</span>
                             <strong style="font-size:13px; color:#002F6C; line-height:1.2;">Resultado de<br>Perícia</strong>
                         </div>
                         
-                        <div onclick="mostrarErro()" style="background:white; border:1px solid #ccc; padding:12px; border-radius:8px; text-align:center; cursor:pointer; display:flex; flex-direction:column; align-items:center; gap:5px;">
-                            <span style="font-size:26px;">🪪</span>
+                        <div onclick="mostrarErro()" style="background:white; border:1px solid #ccc; padding:12px; border-radius:12px; text-align:center; cursor:pointer; display:flex; flex-direction:column; align-items:center; gap:5px; box-shadow:0 2px 4px rgba(0,0,0,0.04);">
+                            <span style="font-size:28px;">🪪</span>
                             <strong style="font-size:13px; color:#002F6C; line-height:1.2;">Carteira do<br>Beneficiário</strong>
                         </div>
                     </div>
@@ -55,12 +55,10 @@ export const inss = [
         conteudo: `
             <div style="background:#002F6C; height:100%; display:flex; flex-direction:column; font-family:Arial, sans-serif; box-sizing:border-box; user-select:none;">
                 <div style="background:#002F6C; padding:12px 15px; display:flex; align-items:center; gap:10px; flex-shrink:0;">
-                    <!-- Botão de voltar funcional para avançar o passo -->
-                    <span onclick="avancarPasso()" style="color:white; font-size:20px; cursor:pointer; font-weight:bold; background:#1351B4; padding:4px 10px; border-radius:6px;">⬅️ Voltar</span>
+                    <span onclick="avancarPasso()" style="color:white; font-size:16px; cursor:pointer; font-weight:bold; background:#1351B4; padding:6px 12px; border-radius:8px; box-shadow: 0 2px 4px rgba(0,0,0,0.2);">⬅️ Voltar</span>
                     <span style="font-weight:bold; font-size:18px; color:white;">Meu Extrato</span>
                 </div>
                 
-                <!-- Conteúdo do recibo detalhado -->
                 <div style="padding:15px; flex:1; background:#FFF; display:flex; flex-direction:column; gap:12px; box-sizing:border-box; overflow-y:auto; color:#333;">
                     <div style="border-bottom:2px solid #002F6C; padding-bottom:8px; text-align:left;">
                         <span style="font-size:13px; color:#666; font-weight:bold;">COMPROVANTE DE RENDIMENTOS</span>
@@ -73,11 +71,10 @@ export const inss = [
                         <p style="margin:3px 0 0 0;"><strong>Situação:</strong> Ativo / Pago</p>
                     </div>
                     
-                    <!-- Tabela de valores realista -->
                     <div style="text-align:left; font-size:15px; display:flex; flex-direction:column; gap:6px; border:1px solid #ddd; padding:10px; border-radius:6px;">
-                        <div style="display:flex; justify-content:between;"><span>(+) Valor Bruto:</span><strong>R$ 1.412,00</strong></div>
-                        <div style="display:flex; justify-content:between; color:red;"><span>(-) Descontos:</span><strong>R$ 0,00</strong></div>
-                        <div style="display:flex; justify-content:between; border-top:1px solid #eee; padding-top:4px; font-size:16px; color:#002F6C;"><span>(=) Valor Líquido:</span><strong>R$ 1.412,00</strong></div>
+                        <div style="display:flex; justify-content:space-between;"><span>(+) Valor Bruto:</span><strong>R$ 1.412,00</strong></div>
+                        <div style="display:flex; justify-content:space-between; color:red;"><span>(-) Descontos:</span><strong>R$ 0,00</strong></div>
+                        <div style="display:flex; justify-content:space-between; border-top:1px solid #eee; padding-top:4px; font-size:16px; color:#002F6C;"><span>(=) Valor Líquido:</span><strong>R$ 1.412,00</strong></div>
                     </div>
                     
                     <div style="text-align:left; font-size:14px; color:#28A745; font-weight:bold; background:#E8F5E9; padding:8px; border-radius:6px;">
@@ -89,46 +86,24 @@ export const inss = [
     },
     {
         // PASSO 3: VOLTA À TELA INICIAL PARA PROVA DE VIDA
-        instrucao: "Passo 3: Excelente! Agora vamos simular a Prova de Vida. Toque no botão redondo escrito '👤 Prova de Vida'.",
+        instrucao: "Passo 3: Excelente! Agora vamos simular a Prova de Vida. Toque no botão azul escrito '👤 Prova de Vida'.",
         conteudo: `
             <div style="background:#002F6C; height:100%; display:flex; flex-direction:column; font-family:Arial, sans-serif; box-sizing:border-box; user-select:none;">
-                <div style="background:#002F6C; padding:12px 15px; display:flex; align-items:center; justify-content:space-between; flex-shrink:0;">
+                <div style="background:#002F6C; padding:12px 15px; display:flex; align-items:center; justify-content:space-between; flex-shrink:0; border-bottom:1px solid rgba(255,255,255,0.1);">
                     <span style="font-weight:bold; font-size:20px; color:white;">Meu INSS</span>
                     <div style="background:#1351B4; color:white; font-size:12px; padding:4px 8px; border-radius:4px; font-weight:bold;">gov.br</div>
                 </div>
                 
-                <div style="padding:12px; flex:1; background:#F4F6F9; display:flex; flex-direction:column; gap:10px; box-sizing:border-box; overflow-y:auto;">
-                    <!-- Lista de Serviços Verticais onde a Prova de Vida fica no App Real -->
-                    <p style="margin:5px 0 0 0; font-size:14px; font-weight:bold; color:#444; text-align:left;">📋 Outros Serviços do Aplicativo:</p>
+                <div style="padding:15px; flex:1; background:#F4F6F9; display:flex; flex-direction:column; gap:15px; box-sizing:border-box;">
+                    <p style="margin:5px 0 0 0; font-size:14px; font-weight:bold; color:#444; text-align:left;">🎯 Outros Recursos Importantes:</p>
                     
-                    <!-- BOTÃO ALVO (CORRETO) -->
-                    <div onclick="avancarPasso()" style="background:white; border:2px solid #0056B3; padding:15px; border-radius:8px; display:flex; align-items:center; justify-content:space-between; cursor:pointer; box-shadow:0 2px 4px rgba(0,0,0,0.05);">
-                        <div style="display:flex; align-items:center; gap:12px;">
-                            <span style="font-size:24px;">👤</span>
-                            <strong style="font-size:16px; color:#002F6C;">Prova de Vida</strong>
-                        </div>
-                        <span style="color:#0056B3; font-weight:bold;">❯</span>
-                    </div>
-
-                    <!-- BOTÕES ERRADOS (EDUCATIVOS) -->
-                    <div onclick="mostrarErro()" style="background:white; border:1px solid #ccc; padding:15px; border-radius:8px; display:flex; align-items:center; justify-content:space-between; cursor:pointer; opacity:0.7;">
-                        <div style="display:flex; align-items:center; gap:12px;">
-                            <span style="font-size:24px;">📅</span>
-                            <strong style="font-size:16px; color:#002F6C;">Consultar Pedidos</strong>
-                        </div>
-                        <span style="color:#aaa;">❯</span>
-                    </div>
-
-                    <div onclick="mostrarErro()" style="background:white; border:1px solid #ccc; padding:15px; border-radius:8px; display:flex; align-items:center; justify-content:space-between; cursor:pointer; opacity:0.7;">
-                        <div style="display:flex; align-items:center; gap:12px;">
-                            <span style="font-size:24px;">📝</span>
-                            <strong style="font-size:16px; color:#002F6C;">Agendar Perícia</strong>
-                        </div>
-                        <span style="color:#aaa;">❯</span>
+                    <div onclick="avancarPasso()" style="background:white; border:2px solid #0056B3; padding:16px; border-radius:12px; text-align:center; cursor:pointer; box-shadow:0 4px 6px rgba(0,0,0,0.08); display:flex; flex-direction:column; align-items:center; gap:8px;">
+                        <span style="font-size:32px;">👤</span>
+                        <strong style="font-size:15px; color:#002F6C;">Prova de Vida</strong>
                     </div>
                 </div>
             </div>`,
-        feedback: "Muito bem! O aplicativo vai iniciar as instruções de segurança para abrir a câmera."
+        feedback: "Excelente escolha! Vamos iniciar a conferência de dados da Prova de Vida."
     },
     {
         // PASSO 4: TELA DA CÂMERA (RECONHECIMENTO FACIAL GOV.BR)
@@ -140,9 +115,7 @@ export const inss = [
                     <span style="font-size:14px; color:#FFF3CD;">Mire no centro 📷</span>
                 </div>
                 
-                <!-- Área simulada da câmera com a oval de enquadramento -->
                 <div style="flex:1; display:flex; flex-direction:column; align-items:center; justify-content:center; padding:15px; position:relative; background:#222;">
-                    
                     <!-- BOTÃO OVAL DA CÂMERA (CORRETO) -->
                     <div onclick="avancarPasso()" style="width:200px; height:260px; border:4px dashed #0056B3; border-radius:50% / 50%; display:flex; flex-direction:column; align-items:center; justify-content:center; cursor:pointer; background:rgba(0,86,179,0.1); box-shadow:0 0 15px rgba(0,86,179,0.3); transition:all 0.2s;">
                         <span style="font-size:50px;">👵👴</span>
@@ -167,7 +140,6 @@ export const inss = [
                 <div style="padding:12px; flex:1; background:#F4F6F9; display:flex; flex-direction:column; gap:10px; box-sizing:border-box; overflow-y:auto;">
                     <p style="margin:5px 0 0 0; font-size:14px; font-weight:bold; color:#444; text-align:left;">📋 Outros Serviços do Aplicativo:</p>
                     
-                    <!-- BOTÃO ERRADO (EDUCATIVO) -->
                     <div onclick="mostrarErro()" style="background:white; border:1px solid #ccc; padding:15px; border-radius:8px; display:flex; align-items:center; justify-content:space-between; cursor:pointer; opacity:0.6;">
                         <div style="display:flex; align-items:center; gap:12px;">
                             <span style="font-size:24px;">👤</span>
@@ -194,7 +166,6 @@ export const inss = [
         conteudo: `
             <div style="background:white; height:100%; display:flex; flex-direction:column; font-family:Arial, sans-serif; box-sizing:border-box; padding:20px; align-items:center; justify-content:center;">
                 <div style="background:#E6F0FA; width:100%; padding:20px 15px; border-radius:12px; text-align:center; box-sizing:border-box; box-shadow:0 4px 15px rgba(0,0,0,0.15); border:3px solid #002F6C; display:flex; flex-direction:column; align-items:center;">
-                    <!-- Selo gov.br realista -->
                     <div style="background:#002F6C; color:white; font-weight:bold; padding:5px 15px; font-size:14px; border-radius:4px; margin-bottom:12px; letter-spacing:0.5px;">gov.br</div>
                     
                     <div style="width:60px; height:60px; background:#E8F5E9; color:#00A650; font-size:32px; display:flex; align-items:center; justify-content:center; border-radius:50%; margin-bottom:12px;">✓</div>

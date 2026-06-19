@@ -159,41 +159,56 @@
             box-shadow: inset 0 0 10px rgba(0,0,0,0.2);
         }
 
-        .botao-grande {
+              .botao-grande {
             background-color: var(--cor-primaria);
             color: white !important;
-            font-size: 22px;
+            font-size: 24px; /* Ligeiramente maior para leitura fácil */
             font-weight: bold;
-            padding: 20px 40px;
-            border: none;
-            border-radius: 10px;
+            padding: 18px 30px;
+            border: 2px solid rgba(0,0,0,0.1);
+            border-radius: 14px;
             cursor: pointer;
-            box-shadow: 0 5px 0 #003D82;
+            box-shadow: 0 6px 0 #003D82, 0 8px 15px rgba(0,0,0,0.15); /* Relevo 3D nítido */
             width: 90%;
+            transition: all 0.1s ease;
+            display: inline-block;
         }
 
         .botao-grande:active {
-            transform: translateY(4px);
-            box-shadow: 0 1px 0 #003D82;
+            transform: translateY(4px); /* Faz o botão afundar de verdade ao clicar */
+            box-shadow: 0 2px 0 #003D82;
         }
 
-        .botao-alerta { background-color: var(--cor-alerta); box-shadow: 0 5px 0 #A71D2A; }
-        .botao-sucesso { background-color: var(--cor-sucesso); box-shadow: 0 5px 0 #1E7E34; }
+        .botao-alerta { background-color: var(--cor-alerta); box-shadow: 0 6px 0 #8B141F; }
+        .botao-alerta:active { box-shadow: 0 2px 0 #8B141F; }
+
+        .botao-sucesso { background-color: var(--cor-sucesso); box-shadow: 0 6px 0 #185E29; }
+        .botao-sucesso:active { box-shadow: 0 2px 0 #185E29; }
 
         .feedback {
             font-size: 22px;
             font-weight: bold;
-            margin-top: 20px;
-            min-height: 35px;
+            margin-top: 25px;
+            min-height: 40px;
+            line-height: 1.4;
         }
-        .sucesso { color: var(--cor-sucesso); }
-        .erro { color: var(--cor-alerta); }
+        .sucesso { color: var(--cor-sucesso); background-color: #E6F4EA; padding: 12px; border-radius: 8px; display: block; }
+        .erro { color: var(--cor-alerta); background-color: #FCE8E6; padding: 12px; border-radius: 8px; display: block; }
+
+        /* Correção para os emojis não herdarem cores estranhas de link */
+        .menu-link span {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 30px;
+            height: 30px;
+        }
     </style>
 </head>
 <body>
 
     <nav class="barra-navegacao">
-        <a href="index.html" class="menu-logo"> Voltar para o Início</a>
+        <a href="index.html" class="menu-logo">⬅️ Voltar para o Início</a>
     </nav>
 
     <div class="layout-portal">
@@ -202,17 +217,26 @@
             <div class="categoria-secao">
                 <div class="categoria-titulo">🏥 Saúde e Serviços</div>
                 <div class="lista-links">
-                    <a href="simulador.html?tema=inss" id="link-inss" class="menu-link"><span>👴</span> Meu INSS</a>
-                    <a href="simulador.html?tema=carteira" id="link-carteira" class="menu-link"><span>🪪</span> Documentos Digitais</a>
+                    <a href="simulador.html?tema=inss" id="link-inss" class="menu-link"><span>🏛️</span> Meu INSS</a>
+                    <a href="simulador.html?tema=documentos" id="link-documentos" class="menu-link"><span>🪪</span> Docs Digitais</a>
+                </div>
+            </div>
+                        <div class="categoria-secao">
+                <div class="categoria-titulo">💰 Finanças e Segurança</div>
+                <div class="lista-links">
+                    <a href="simulador.html?tema=pix" id="link-pix" class="menu-link"><span>💸</span> Pagar com Pix</a>
+                    <!-- ALTERADO DE TEMA=WHATSAPP PARA TEMA=GOLPES -->
+                    <a href="simulador.html?tema=golpes" id="link-golpes" class="menu-link"><span>🛡️</span> Evitar Golpes</a>
                 </div>
             </div>
             <div class="categoria-secao">
-                <div class="categoria-titulo">💰 Finanças e Segurança</div>
+                <div class="categoria-titulo">📱 Comunicação</div>
                 <div class="lista-links">
-                    <a href="simulador.html?tema=pagar_conta" id="link-pagar_conta" class="menu-link"><span>🧾</span> Banco CAIXA: Contas</a>
-                    <a href="simulador.html?tema=whatsapp" id="link-whatsapp" class="menu-link"><span>🛡️</span> Evitar Golpes</a>
+                    <!-- BOTÃO DO WHATSAPP REAL AGORA SEPARADO -->
+                    <a href="simulador.html?tema=whatsapp" id="link-whatsapp" class="menu-link"><span>💬</span> Usar WhatsApp</a>
                 </div>
             </div>
+
             <div class="categoria-secao">
                 <div class="categoria-titulo">🚗 Mobilidade</div>
                 <div class="lista-links">
@@ -221,54 +245,97 @@
                 </div>
             </div>
             <div class="categoria-secao">
-                <div class="categoria-titulo">🛒 Compras Diárias</div>
+                <div class="categoria-titulo">🛒 Conteúdo e Compras</div>
                 <div class="lista-links">
                     <a href="simulador.html?tema=mercado" id="link-mercado" class="menu-link"><span>📦</span> Mercado Livre</a>
-                    <a href="simulador.html?tema=youtube" id="link-youtube" class="menu-link"><span>▶️</span> YouTube</a>
+                    <a href="simulador.html?tema=youtube" id="link-youtube" class="menu-link">
+                        <span style="color: #FF0000 !important; font-size: 16px;">▶</span> YouTube
+                    </a>
                 </div>
             </div>
         </aside>
 
-        <!-- Área do Simulador Isolada -->
+               <!-- Área do Simulador Isolada -->
         <main class="conteudo-principal">
             <div class="simulador-caixa">
                 <div class="instrucao" id="texto-instrucao"></div>
                 <div class="tela-celular" id="tela-treino"></div>
                 <div class="feedback" id="mensagem-feedback"></div>
             </div>
-        </main> <!-- CORRIGIDO: Tag alterada de </div> para </main> -->
+        </main>
     </div>
 
-        <script type="module">
-        import { tutoriais } from './tutoriais.js';
+    <!-- CARREGAMENTO DE TODOS OS COMPONENTES DO PORTAL -->
+    <script src="./inss.js"></script>
+    <script src="./evitar_golpes.js"></script>
+    <script src="./whatsapp.js"></script>
+    <script src="./carteira.js"></script>
+    <script src="./pix.js"></script>
+    <script src="./mercado.js"></script>
+    <script src="./maps.js"></script>
+    <script src="./uber.js"></script>
+    <script src="./youtube.js"></script>
 
+    <script>
         const urlParams = new URLSearchParams(window.location.search);
         const tutorialAtivo = urlParams.get('tema');
         let passoAtual = parseInt(urlParams.get('passo')) || 0;
 
-        // Destaca visualmente no menu lateral qual tutorial está aberto
+        // Destaca o menu lateral ativo baseado no tema real da URL
         if (tutorialAtivo) {
             const linkAtivo = document.getElementById(`link-${tutorialAtivo}`);
-            if (linkAtivo) {
-                linkAtivo.classList.add('ativo');
-            }
+            if (linkAtivo) { linkAtivo.classList.add('ativo'); }
         }
 
-        // Criamos a função de renderizar de forma segura
+        // FUNÇÃO DE RENDERIZAÇÃO ADAPTÁVEL E ORGANIZADA
         window.renderizarPasso = function() {
-            // Checagem segura: se o tema não existir no arquivo tutoriais.js, avisa o usuário de forma amigável
-            if (!tutorialAtivo || !tutoriais[tutorialAtivo]) {
-                document.getElementById('texto-instrucao').innerHTML = 'Escolha um tutorial.';
-                document.getElementById('mensagem-feedback').innerHTML = "<span class='erro'>⚠️ Selecione uma das opções no menu lateral para começar a treinar!</span>";
-                return; // Para a função aqui sem quebrar o resto do site
+            const textoInstrucao = document.getElementById('texto-instrucao');
+            const telaTreino = document.getElementById('tela-treino');
+            const msgFeedback = document.getElementById('mensagem-feedback');
+
+            if (!textoInstrucao || !telaTreino || !msgFeedback) return;
+
+            if (!tutorialAtivo) {
+                textoInstrucao.innerHTML = 'Escolha um tutorial.';
+                msgFeedback.innerHTML = "<span class='erro'>⚠️ Selecione uma das opções no menu lateral para começar a treinar!</span>";
+                return;
             }
 
-            const dados = tutoriais[tutorialAtivo][passoAtual];
-            
+            // MAPEAMENTO COMPLETO DE VARIÁVEIS COM SISTEMA ANTI-TRAVAMENTO
+            let listaAtual = null;
+            try {
+                if (tutorialAtivo === 'inss' && typeof inss !== 'undefined') listaAtual = inss;
+                if (tutorialAtivo === 'golpes' && typeof golpes !== 'undefined') listaAtual = golpes;
+                if (tutorialAtivo === 'whatsapp' && typeof whatsapp !== 'undefined') listaAtual = whatsapp;
+                if (tutorialAtivo === 'documentos' && typeof carteira !== 'undefined') listaAtual = carteira;
+                if (tutorialAtivo === 'pix' && typeof pix !== 'undefined') listaAtual = pix;
+                if (tutorialAtivo === 'mercado' && typeof mercado !== 'undefined') listaAtual = mercado;
+                if (tutorialAtivo === 'maps' && typeof maps !== 'undefined') listaAtual = maps;
+                if (tutorialAtivo === 'uber' && typeof uber !== 'undefined') listaAtual = uber;
+                if (tutorialAtivo === 'youtube' && typeof youtube !== 'undefined') listaAtual = youtube;
+            } catch (e) {
+                console.error("Erro ao ler variáveis dos arquivos locais:", e);
+            }
+
+            // Se o idoso clicar em um botão que ainda não tem arquivo criado na pasta
+            if (!listaAtual) {
+                textoInstrucao.innerHTML = 'Módulo em Desenvolvimento';
+                telaTreino.innerHTML = `
+                    <div style="padding: 25px 15px; text-align: center; font-family: sans-serif; color: #333; height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; box-sizing: border-box; background: #F4F7FA;">
+                        <span style="font-size: 48px;">⚙️</span>
+                        <p style="font-weight: bold; font-size: 16px; margin-top: 15px; color: #002B5C; margin-bottom: 5px;">Módulo Identificado!</p>
+                        <p style="font-size: 13px; color: #666; line-height: 1.4; margin: 0;">
+                            A tela para o tema <strong>"${tutorialAtivo}"</strong> está criada e aguarda a inclusão do arquivo <code>${tutorialAtivo}.js</code> na pasta do projeto.
+                        </p>
+                    </div>`;
+                return;
+            }
+
+            const dados = listaAtual[passoAtual];
             if (dados) {
-                document.getElementById('texto-instrucao').innerHTML = dados.instrucao;
-                document.getElementById('tela-treino').innerHTML = dados.conteudo;
-                document.getElementById('mensagem-feedback').innerHTML = "";
+                textoInstrucao.innerHTML = dados.instrucao;
+                telaTreino.innerHTML = dados.conteudo;
+                msgFeedback.innerHTML = "";
             }
         }
         
@@ -279,36 +346,52 @@
 
         window.mostrarErro = function(tipo) {
             const msg = document.getElementById('mensagem-feedback');
-            msg.innerHTML = `<span class='erro'>⚠️ Cuidado! Isso pode ser perigoso ou um golpe. No mundo real, evite essa opção.</span>`;
+            if (msg) {
+                msg.innerHTML = `<span class='erro'>⚠️ Cuidado! Isso pode ser perigoso ou um golpe. No mundo real, evite essa opção.</span>`;
+            }
         }
 
         window.avancarPasso = function() {
-            if (!tutoriais[tutorialAtivo] || !tutoriais[tutorialAtivo][passoAtual]) return;
+            let listaAtual = null;
+            try {
+                if (tutorialAtivo === 'inss' && typeof inss !== 'undefined') listaAtual = inss;
+                if (tutorialAtivo === 'golpes' && typeof golpes !== 'undefined') listaAtual = golpes;
+                if (tutorialAtivo === 'whatsapp' && typeof whatsapp !== 'undefined') listaAtual = whatsapp;
+                if (tutorialAtivo === 'documentos' && typeof carteira !== 'undefined') listaAtual = carteira;
+                if (tutorialAtivo === 'pix' && typeof pix !== 'undefined') listaAtual = pix;
+                if (tutorialAtivo === 'mercado' && typeof mercado !== 'undefined') listaAtual = mercado;
+                if (tutorialAtivo === 'maps' && typeof maps !== 'undefined') listaAtual = maps;
+                if (tutorialAtivo === 'uber' && typeof uber !== 'undefined') listaAtual = uber;
+                if (tutorialAtivo === 'youtube' && typeof youtube !== 'undefined') listaAtual = youtube;
+            } catch (e) {
+                console.error("Erro no avanço de passos:", e);
+            }
 
-            const feedback = tutoriais[tutorialAtivo][passoAtual].feedback;
+            if (!listaAtual || !listaAtual[passoAtual]) return;
+
+            const feedback = listaAtual[passoAtual].feedback;
             passoAtual++;
 
-            if(feedback) {
+            const msgFeedback = document.getElementById('mensagem-feedback');
+            if (feedback && msgFeedback) {
                 let feedbackHTML = `<span class='sucesso'>${feedback}</span>`;
                 
-                // Se for o último passo do tutorial, adiciona o botão de finalizar
-                if (passoAtual === tutoriais[tutorialAtivo].length) {
+                if (passoAtual === listaAtual.length) {
                     feedbackHTML += `
                         <div style="margin-top: 25px; display:flex; justify-content:center;">
                             <button class="botao-grande botao-sucesso" onclick="window.location.href='index.html'">Finalizar Tutorial</button>
                         </div>`;
                 }
-                document.getElementById('mensagem-feedback').innerHTML = feedbackHTML;
+                msgFeedback.innerHTML = feedbackHTML;
             }
 
-            if (passoAtual < tutoriais[tutorialAtivo].length) {
-                setTimeout(window.renderizarPasso, 1500); // Dá um tempo para o idoso ler o feedback
+            if (passoAtual < listaAtual.length) {
+                setTimeout(window.renderizarPasso, 4500); // 4.5 segundos para leitura confortável
             }
         }
 
-        // Executa o desenho da tela imediatamente após o mapeamento das funções
+        // Executa imediatamente
         window.renderizarPasso();
     </script>
-
 </body>
 </html>
