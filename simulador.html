@@ -1,92 +1,101 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-BR" style="height: 100%; margin: 0; padding: 0;">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Simulador - Conecta Idade</title>
     <style>
         :root {
-            --cor-fundo: #F8F9FA;
-            --cor-texto: #1A1A1A;
-            --cor-primaria: #0056B3;
+            --cor-fundo: #F8FAFC; /* Fundo mais claro e moderno */
+            --cor-texto: #0F172A; /* Cinza escuro premium confortável para ler */
+            --cor-primaria: #0284C7; /* Azul celeste acolhedor */
             --cor-fundo-menu: #FFFFFF;
-            --cor-azul-escuro: #002B5C;
-            --cor-sucesso: #28A745;
-            --cor-alerta: #DC3545;
-            --cor-laranja: #FD7E14;
+            --cor-azul-escuro: #0F172A;
+            --cor-sucesso: #10B981;
+            --cor-alerta: #EF4444;
+            --cor-laranja: #F97316;
         }
 
         body {
-            font-family: Arial, Helvetica, sans-serif;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
             background-color: var(--cor-fundo);
             color: var(--cor-texto);
             font-size: 20px;
             margin: 0;
             padding: 0;
+            height: 100%; /* OBRIGA O CORPO A OCUPAR TODA A TELA */
+            display: flex;
+            flex-direction: column;
         }
 
         .barra-navegacao {
             background-color: var(--cor-azul-escuro);
-            padding: 15px 20px;
+            padding: 15px 24px;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+            z-index: 50;
+            height: 70px;
+            box-sizing: border-box;
         }
 
         .menu-logo {
             color: white;
-            font-weight: bold;
-            font-size: 26px;
+            font-weight: 700;
+            font-size: 24px;
             text-decoration: none;
         }
 
-        /* Estrutura de Site Real com Menu Lateral */
+        /* ESTRUTURA BLINDADA: Junta o menu e a área do celular preenchendo a tela toda */
         .layout-portal {
             display: flex;
-            min-height: calc(100vh - 66px);
-            max-width: none;
-            /* Coloca a sidebar colada no canto esquerdo da tela */
+            height: calc(100% - 70px); /* Ocupa exatamente o espaço que resta do monitor */
+            width: 100%;
             margin: 0;
+            padding: 0;
+            box-sizing: border-box;
         }
 
+        /* FIXAÇÃO DO MENU ATÉ O CHÃO DO SITE */
         .menu-lateral {
             width: 320px;
             background-color: var(--cor-fundo-menu);
-            border-right: 3px solid #E2E8F0;
-            padding: 20px;
+            border-right: 2px solid #E2E8F0;
+            padding: 24px 16px;
             box-sizing: border-box;
             flex-shrink: 0;
-
-            /* Garante que ela fique alinhada ao topo sob a barra */
-            align-self: flex-start;
+            height: 100%; /* FORÇA O MENU IR ATÉ O FINAL DA TELA REAL */
+            overflow-y: auto; /* Adiciona rolagem elegante se o monitor for pequeno */
         }
 
+
+                /* ÁREA ÚTIL DO CELULAR QUE PREENCHE TODO O RESTANTE DA TELA */
         .conteudo-principal {
             flex: 1;
-            padding: 40px 30px;
+            height: 100%; /* Força a área a acompanhar a altura total do portal */
+            padding: 30px;
             box-sizing: border-box;
-
-            /* Usa toda a largura do conteúdo e centraliza o simulador dentro */
-            width: 100%;
-            max-width: none;
-
             display: flex;
             justify-content: center;
-            align-items: flex-start;
+            align-items: center; /* Centraliza verticalmente o celular na tela */
+            overflow-y: auto; /* Permite rolar apenas essa área se necessário */
+            background-color: #F1F5F9; /* Fundo suave de contraste para destacar o celular */
         }
 
         .categoria-secao {
-            margin-bottom: 25px;
+            margin-bottom: 24px;
         }
 
         .categoria-titulo {
-            font-size: 18px;
-            font-weight: bold;
-            color: var(--cor-azul-escuro);
-            margin-bottom: 10px;
-            padding-bottom: 5px;
-            border-bottom: 2px solid #EDF2F7;
+            font-size: 15px;
+            font-weight: 700;
+            color: #64748B; /* Cinza moderno estilo painel profissional */
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 12px;
+            padding-bottom: 6px;
+            border-bottom: 2px solid #F1F5F9;
             display: flex;
             align-items: center;
             gap: 8px;
@@ -100,14 +109,14 @@
 
         .simulador-caixa {
             background-color: #FFFFFF;
-            border: 4px solid var(--cor-primaria);
-            border-radius: 12px;
+            border: 1px solid #E2E8F0;
+            border-radius: 20px; /* Cantos arredondados acolhedores */
             padding: 30px;
             text-align: center;
-            box-shadow: 0 6px 15px rgba(0,0,0,0.1);
-
-            /* Reforça o alinhamento horizontal */
-            margin: 0 auto;
+            box-shadow: 0 10px 25px -5px rgba(0,0,0,0.05), 0 8px 10px -6px rgba(0,0,0,0.05);
+            max-width: 600px;
+            width: 100%;
+            box-sizing: border-box;
         }
 
         .menu-link {
@@ -117,38 +126,51 @@
             padding: 12px 16px;
             background: #F8FAFC;
             border: 2px solid #E2E8F0;
-            border-radius: 10px;
+            border-radius: 12px;
             text-decoration: none;
-            color: var(--cor-texto);
-            font-weight: bold;
-            font-size: 18px;
-            transition: all 0.2s;
+            color: #475569;
+            font-weight: 700;
+            font-size: 17px;
+            transition: all 0.2s ease;
             cursor: pointer;
+            box-sizing: border-box;
         }
 
-        .menu-link:hover, .menu-link.ativo {
-            background-color: #E7F1FF;
+        .menu-link:hover {
+            background-color: #F1F5F9;
+            border-color: #CBD5E1;
+            color: #0F172A;
+            transform: translateX(4px); /* Deslizamento suave interativo */
+        }
+
+        .menu-link.ativo {
+            background-color: #E0F2FE; /* Destaque azul claro */
             border-color: var(--cor-primaria);
-            color: var(--cor-primaria);
+            color: #0369A1;
+            box-shadow: 0 4px 12px rgba(2, 132, 199, 0.1);
+            transform: translateX(4px);
         }
 
         .instrucao {
-            font-weight: bold;
-            font-size: 24px;
+            font-weight: 700;
+            font-size: 22px;
             margin-bottom: 20px;
-            background-color: #FFF3CD;
-            padding: 15px;
-            border-left: 6px solid #FFC107;
-            border-radius: 4px;
+            background-color: #FEF3C7; /* Amarelo pastel suave amigável */
+            color: #78350F;
+            padding: 16px;
+            border-left: 6px solid #F59E0B;
+            border-radius: 8px;
+            text-align: left;
+            line-height: 1.5;
         }
 
         .tela-celular {
-            width: 330px;
-            height: 480px;
+            width: 340px;
+            height: 490px;
             background-color: #FFFFFF;
-            border: 12px solid #333;
-            border-radius: 35px;
-            margin: 20px auto;
+            border: 12px solid #1E293B; /* Capinha realista do smartphone */
+            border-radius: 36px;
+            margin: 15px auto;
             display: flex;
             flex-direction: column;
             justify-content: flex-start;
@@ -156,63 +178,72 @@
             overflow-x: hidden;
             padding: 0;
             align-items: stretch;
-            box-shadow: inset 0 0 10px rgba(0,0,0,0.2);
+            box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1), inset 0 0 10px rgba(0,0,0,0.05);
         }
 
-              .botao-grande {
+        .botao-grande {
             background-color: var(--cor-primaria);
             color: white !important;
-            font-size: 24px; /* Ligeiramente maior para leitura fácil */
-            font-weight: bold;
-            padding: 18px 30px;
-            border: 2px solid rgba(0,0,0,0.1);
+            font-size: 22px;
+            font-weight: 700;
+            padding: 16px 28px;
+            border: 1px solid rgba(0,0,0,0.1);
             border-radius: 14px;
             cursor: pointer;
-            box-shadow: 0 6px 0 #003D82, 0 8px 15px rgba(0,0,0,0.15); /* Relevo 3D nítido */
+            box-shadow: 0 6px 0 #0369A1, 0 8px 15px rgba(0,0,0,0.1);
             width: 90%;
             transition: all 0.1s ease;
             display: inline-block;
+            font-family: inherit;
         }
 
         .botao-grande:active {
-            transform: translateY(4px); /* Faz o botão afundar de verdade ao clicar */
-            box-shadow: 0 2px 0 #003D82;
+            transform: translateY(4px);
+            box-shadow: 0 2px 0 #0369A1;
         }
 
-        .botao-alerta { background-color: var(--cor-alerta); box-shadow: 0 6px 0 #8B141F; }
-        .botao-alerta:active { box-shadow: 0 2px 0 #8B141F; }
+        .botao-alerta { background-color: var(--cor-alerta); box-shadow: 0 6px 0 #DC2626; }
+        .botao-alerta:active { box-shadow: 0 2px 0 #DC2626; }
 
-        .botao-sucesso { background-color: var(--cor-sucesso); box-shadow: 0 6px 0 #185E29; }
-        .botao-sucesso:active { box-shadow: 0 2px 0 #185E29; }
+        .botao-sucesso { background-color: var(--cor-sucesso); box-shadow: 0 6px 0 #059669; }
+        .botao-sucesso:active { box-shadow: 0 2px 0 #059669; }
 
         .feedback {
-            font-size: 22px;
-            font-weight: bold;
-            margin-top: 25px;
+            font-size: 20px;
+            font-weight: 700;
+            margin-top: 20px;
             min-height: 40px;
             line-height: 1.4;
         }
-        .sucesso { color: var(--cor-sucesso); background-color: #E6F4EA; padding: 12px; border-radius: 8px; display: block; }
-        .erro { color: var(--cor-alerta); background-color: #FCE8E6; padding: 12px; border-radius: 8px; display: block; }
+        
+        .sucesso { color: #065F46; background-color: #D1FAE5; padding: 14px; border-radius: 10px; display: block; border: 1px solid #A7F3D0; text-align: left; }
+        .erro { color: #991B1B; background-color: #FEE2E2; padding: 14px; border-radius: 10px; display: block; border: 1px solid #FCA5A5; text-align: left; }
 
-        /* Correção para os emojis não herdarem cores estranhas de link */
         .menu-link span {
             display: inline-flex;
             align-items: center;
             justify-content: center;
-            width: 30px;
-            height: 30px;
+            width: 32px;
+            height: 32px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.04);
+            font-size: 18px;
         }
     </style>
 </head>
+
 <body>
 
+    <!-- Barra de Navegação Superior Integrada -->
     <nav class="barra-navegacao">
         <a href="index.html" class="menu-logo">⬅️ Voltar para o Início</a>
     </nav>
 
+    <!-- Estrutura de Portal: Menu e Conteúdo lado a lado até a base da tela -->
     <div class="layout-portal">
-        <!-- Menu Lateral Reutilizado no Simulador -->
+        
+        <!-- Menu Lateral Reutilizado e Corrigido (Estica 100%) -->
         <aside class="menu-lateral">
             <div class="categoria-secao">
                 <div class="categoria-titulo">🏥 Saúde e Serviços</div>
@@ -221,18 +252,18 @@
                     <a href="simulador.html?tema=documentos" id="link-documentos" class="menu-link"><span>🪪</span> Docs Digitais</a>
                 </div>
             </div>
-                        <div class="categoria-secao">
+            
+            <div class="categoria-secao">
                 <div class="categoria-titulo">💰 Finanças e Segurança</div>
                 <div class="lista-links">
                     <a href="simulador.html?tema=pix" id="link-pix" class="menu-link"><span>💸</span> Pagar com Pix</a>
-                    <!-- ALTERADO DE TEMA=WHATSAPP PARA TEMA=GOLPES -->
                     <a href="simulador.html?tema=golpes" id="link-golpes" class="menu-link"><span>🛡️</span> Evitar Golpes</a>
                 </div>
             </div>
+            
             <div class="categoria-secao">
                 <div class="categoria-titulo">📱 Comunicação</div>
                 <div class="lista-links">
-                    <!-- BOTÃO DO WHATSAPP REAL AGORA SEPARADO -->
                     <a href="simulador.html?tema=whatsapp" id="link-whatsapp" class="menu-link"><span>💬</span> Usar WhatsApp</a>
                 </div>
             </div>
@@ -244,6 +275,7 @@
                     <a href="simulador.html?tema=maps" id="link-maps" class="menu-link"><span>🗺️</span> Google Maps</a>
                 </div>
             </div>
+            
             <div class="categoria-secao">
                 <div class="categoria-titulo">🛒 Conteúdo e Compras</div>
                 <div class="lista-links">
@@ -255,7 +287,7 @@
             </div>
         </aside>
 
-               <!-- Área do Simulador Isolada -->
+        <!-- Área Central de Treinamento com o Smartphone -->
         <main class="conteudo-principal">
             <div class="simulador-caixa">
                 <div class="instrucao" id="texto-instrucao"></div>
@@ -265,7 +297,8 @@
         </main>
     </div>
 
-    <!-- CARREGAMENTO DE TODOS OS COMPONENTES DO PORTAL -->
+
+       <!-- CARREGAMENTO DE TODOS OS COMPONENTES DO PORTAL -->
     <script src="./inss.js"></script>
     <script src="./evitar_golpes.js"></script>
     <script src="./whatsapp.js"></script>
@@ -347,7 +380,7 @@
         window.mostrarErro = function(tipo) {
             const msg = document.getElementById('mensagem-feedback');
             if (msg) {
-                msg.innerHTML = `<span class='erro'>⚠️ Cuidado! Isso pode ser perigoso ou um golpe. No mundo real, evite essa opção.</span>`;
+                msg.innerHTML = `<span class='erro'>⚠️ Cuidado! Isso pode ser perigoso ou um golpe. No mundo real, evite essa option.</span>`;
             }
         }
 
