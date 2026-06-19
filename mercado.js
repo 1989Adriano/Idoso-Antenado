@@ -1,158 +1,184 @@
+// mercado.js - PARTE 1 (PASSOS DE 1 A 4)
 const mercado = [
     {
-        instrucao: "Passo 1: Toque na barra amarela de pesquisa no topo para procurar um produto.",
+        // PASSO 1: ABRIR O SITE NA ÁREA DE TRABALHO DO MONITOR
+        instrucao: "📦 Passo 1: Vamos aprender a fazer compras online com entrega na sua casa! Dê um clique esquerdo no ícone amarelo escrito 'Mercado Livre' para abrir a página de compras.",
         conteudo: `
-            <div style="background:#FFF159; height:100%; display:flex; flex-direction:column; font-family:Arial, sans-serif; box-sizing:border-box;">
-                <!-- Barra amarela icônica do Mercado Livre -->
-                <div style="padding:10px 15px; display:flex; align-items:center; gap:10px; flex-shrink:0;">
-                    <span style="font-size:24px; font-weight:bold; color:#333;">☰</span>
-                    <div onclick="avancarPasso()" style="flex:1; background:white; padding:8px 15px; border-radius:20px; display:flex; align-items:center; gap:10px; box-shadow:0 1px 3px rgba(0,0,0,0.1); cursor:pointer; border:2px dashed #3483FA;">
-                        <span style="font-size:18px; color:#999;">🔍 Buscar no Mercado Livre</span>
-                    </div>
-                    <span style="font-size:22px;">🛒</span>
-                </div>
-                <!-- Corpo da tela com fundo amarelo suave integrado -->
-                <div style="padding:12px; flex:1; background:#FFF159; text-align:center;">
-                    <div style="width:100%; height:130px; background:linear-gradient(135deg, #3483FA 0%, #005ca9 100%); border-radius:8px; display:flex; align-items:center; justify-content:center; color:white; font-weight:bold; font-size:18px; padding:10px; box-sizing:border-box; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
-                        ⚡ Ofertas do Dia <br> Até 40% de Desconto!
+            <div style="background:#2A4365; height:100%; display:flex; flex-direction:column; justify-content:flex-end; font-family:sans-serif; box-sizing:border-box; user-select:none; position:relative;">
+                <!-- Área de Trabalho do Computador -->
+                <div style="flex:1; padding:25px; display:grid; grid-template-columns: repeat(4, 1fr); gap:20px; align-content: start; text-align:center;">
+                    <!-- BOTÃO ALVO MERCADO LIVRE (CORRETO) -->
+                    <div onclick="avancarPasso()" style="cursor:pointer; display:flex; flex-direction:column; align-items:center; gap:4px; border:2px dashed #FFF; padding:6px; border-radius:10px; background:rgba(255,255,255,0.1); animation: pulsarFundo 1.5s infinite;">
+                        <div style="width:58px; height:58px; border-radius:14px; background:#FFF159; font-size:30px; display:flex; align-items:center; justify-content:center; box-shadow:0 4px 6px rgba(0,0,0,0.2);">📦</div>
+                        <span style="color:white; text-shadow:1px 1px 3px black; font-size:12px; font-weight:bold;">Mercado Livre</span>
                     </div>
                 </div>
+                <!-- Barra de Tarefas Inferior -->
+                <div style="background:#1E293B; height:36px; border-top:1px solid rgba(255,255,255,0.1); display:flex; align-items:center; padding:0 12px; box-sizing:border-box;">
+                    <div style="background:#0066CC; color:white; font-weight:bold; font-size:12px; padding:3px 10px; border-radius:4px; opacity:0.7;">🪟 Iniciar</div>
+                </div>
+                <style>@keyframes pulsarFundo { 0%, 100% { background:rgba(255,255,255,0.1); } 50% { background:rgba(255,255,255,0.25); } }</style>
             </div>`,
-        feedback: "Excelente! A barra amarela é onde começamos qualquer busca."
+        feedback: "✓ Muito bem! A página inicial oficial do Mercado Livre carregou no seu navegador."
     },
+
     {
-        instrucao: "Passo 2: O site digitou 'Ventilador'. Toque na foto ou no nome do produto para escolhê-lo.",
+        // PASSO 2: CLICAR NA BARRA DE BUSCA DO SITE
+        instrucao: "🔍 Passo 2: Para procurar o produto que deseja comprar, dê um clique esquerdo no meio da grande 'Barra de Pesquisa Branca' no topo do site.",
         conteudo: `
-            <div style="background:#FFF159; height:100%; display:flex; flex-direction:column; font-family:Arial, sans-serif; box-sizing:border-box;">
-                <div style="background:#FFF159; padding:10px 15px; display:flex; align-items:center; gap:10px; flex-shrink:0; border-bottom:1px solid rgba(0,0,0,0.05);">
-                    <span style="font-size:20px;">←</span>
-                    <div style="flex:1; background:white; padding:6px 15px; border-radius:20px; font-size:16px; font-weight:bold; color:#333;">Ventilador Silencioso</div>
-                </div>
-                <!-- Card de produto se destaca em branco sobre o fundo amarelo -->
-                <div style="flex:1; background:#FFF159; padding-top:10px;">
-                    <div onclick="avancarPasso()" style="background:white; margin:0 12px; padding:12px; border-radius:8px; display:flex; gap:12px; cursor:pointer; border:3px dashed #28A745; box-shadow:0 4px 8px rgba(0,0,0,0.1);">
-                        <div style="width:90px; height:90px; background:#e0e0e0; border-radius:6px; flex-shrink:0; display:flex; align-items:center; justify-content:center; font-size:40px;"><b>🌀</b></div>
-                        <div style="text-align:left;">
-                            <div style="font-weight:bold; font-size:16px; color:#333; line-height:1.2;">Ventilador de Mesa Silencioso 30cm Potente</div>
-                            <div style="font-size:22px; font-weight:bold; color:#333; margin-top:5px;">R$ 149,90</div>
-                            <div style="font-size:13px; color:#00A650; font-weight:bold; margin-top:2px;">Frete Grátis ⚡</div>
-                        </div>
-                    </div>
-                </div>
-            </div>`,
-        feedback: "Muito bem! Sempre toque no anúncio para ver os detalhes antes de comprar."
-    },
-    {
-        instrucao: "Passo 3: PARE E CONFIRA! Veja se o vendedor tem a barra Verde de boa reputação antes de clicar em comprar.",
-        conteudo: `
-            <div style="background:#FFF159; height:100%; display:flex; flex-direction:column; font-family:Arial, sans-serif; box-sizing:border-box; overflow-y:auto;">
-                <!-- Conteúdo principal do produto em branco para leitura clara -->
-                <div style="background:white; padding:12px; text-align:left; border-bottom:1px solid #eee;">
-                    <span style="font-size:14px; color:#00A650; font-weight:bold;">Novo | +10 mil vendidos</span>
-                    <h2 style="font-size:18px; margin:5px 0; color:#333;">Ventilador de Mesa Silencioso 30cm Potente</h2>
-                    <div style="font-size:26px; font-weight:bold; color:#333;">R$ 149,90</div>
-                </div>
-                <!-- Área de reputação amarela integrada perfeitamente ao fundo -->
-                <div style="background:#FFF159; padding:5px 0; flex:1;">
-                    <div style="padding:12px; text-align:left; background:#FFF; border:3px solid #00A650; margin:10px; border-radius:8px; box-shadow:0 4px 6px rgba(0,0,0,0.05);">
-                        <div style="font-weight:bold; font-size:15px; color:#333; margin-bottom:5px;">🏅 Informações sobre o vendedor</div>
-                        <div style="display:flex; gap:3px; margin:8px 0;">
-                            <div style="flex:1; height:8px; background:#FF4545;"></div>
-                            <div style="flex:1; height:8px; background:#FF9A45;"></div>
-                            <div style="flex:1; height:8px; background:#FFCC45;"></div>
-                            <div style="flex:1; height:8px; background:#9AFF45;"></div>
-                            <div style="flex:1; height:8px; background:#00A650; box-shadow:0 0 5px #00A650;"></div>
-                        </div>
-                        <div style="font-size:14px; color:#00A650; font-weight:bold;">🟩 MercadoLíder Platinum (Vendedor Seguro)</div>
-                    </div>
-                </div>
-                <!-- Botão de compra fixado no rodapé amarelo -->
-                <div style="padding:10px 15px; text-align:center; background:#FFF159; flex-shrink:0;">
-                    <button onclick="avancarPasso()" style="background:#3483FA; color:white; border:none; padding:12px 0; width:100%; border-radius:6px; font-size:18px; font-weight:bold; cursor:pointer; box-shadow:0 4px 0 #005ca9;">Comprar Agora</button>
-                </div>
-            </div>`,
-        feedback: "Excelente! Conferir a barra verde te protege de golpes na internet."
-    },
-     {
-        instrucao: "Passo 4: Escolha como quer pagar. Toque na opção 'Pix' ou na opção 'Cartão de Crédito'.",
-        conteudo: `
-            <div style="background:#FFF159; height:100%; display:flex; flex-direction:column; font-family:Arial, sans-serif; box-sizing:border-box;">
-                <div style="background:white; padding:15px; border-bottom:1px solid #eee; text-align:left; flex-shrink:0;">
-                    <h2 style="font-size:18px; margin:0; color:#333;">Como você prefere pagar?</h2>
-                </div>
-                <!-- Ambas as opções principais agora são clicáveis e avançam o treino -->
-                <div style="padding:12px; display:flex; flex-direction:column; gap:10px; flex:1; background:#FFF159;">
-                    <div onclick="avancarPasso()" style="background:white; padding:15px; border-radius:8px; display:flex; align-items:center; gap:12px; cursor:pointer; border:3px dashed #3483FA; box-shadow:0 4px 8px rgba(0,0,0,0.1);">
-                        <span style="font-size:24px; color:#00A650;">⚡</span>
-                        <div style="text-align:left;">
-                            <div style="font-weight:bold; font-size:16px; color:#333;">Pix</div>
-                            <div style="font-size:13px; color:#606060;">Aprovação imediata e segura</div>
-                        </div>
-                    </div>
-                    <!-- CORRIGIDO: Cartão de Crédito agora é interativo e clicável -->
-                    <div onclick="avancarPasso()" style="background:white; padding:15px; border-radius:8px; display:flex; align-items:center; gap:12px; cursor:pointer; border:3px dashed #3483FA; box-shadow:0 4px 8px rgba(0,0,0,0.1);">
-                        <span style="font-size:24px; color:#3483FA;">💳</span>
-                        <div style="text-align:left;">
-                            <div style="font-weight:bold; font-size:16px; color:#333;">Cartão de Crédito</div>
-                            <div style="font-size:13px; color:#606060;">Em até 12 vezes sem juros</div>
-                        </div>
-                    </div>
-                    <div style="background:white; padding:15px; border-radius:8px; display:flex; align-items:center; gap:12px; opacity:0.5;">
-                        <span style="font-size:24px; color:#333;">📄</span>
-                        <div style="text-align:left;">
-                            <div style="font-weight:bold; font-size:16px; color:#333;">Boleto Bancário</div>
-                            <div style="font-size:13px; color:#606060;">Leva até 2 dias para aprovar</div>
-                        </div>
-                    </div>
-                </div>
-            </div>`,
-        feedback: "Ótimo! Escolher Pix ou Cartão te leva para a conferência final dos valores."
-    },
-    {
-        instrucao: "Passo 5: REVISÃO FINAL! Confira o valor de R$ 149,90 e clique no botão azul 'Confirmar Compra'.",
-        conteudo: `
-            <div style="background:#FFF159; height:100%; display:flex; flex-direction:column; font-family:Arial, sans-serif; box-sizing:border-box;">
-                <div style="background:white; padding:12px 15px; border-bottom:1px solid #eee; text-align:left; flex-shrink:0;">
-                    <h2 style="font-size:18px; margin:0; color:#333;">Revise a sua compra</h2>
-                </div>
-                <div style="padding:12px; flex:1; display:flex; flex-direction:column; gap:10px; background:#FFF159;">
-                    <div style="background:white; padding:12px; border-radius:8px; display:flex; gap:10px; align-items:center; box-shadow:0 2px 4px rgba(0,0,0,0.05);">
-                        <span style="font-size:30px;">🌀</span>
-                        <div style="text-align:left;">
-                            <div style="font-weight:bold; font-size:14px; color:#333;">Ventilador de Mesa Silencioso</div>
-                            <div style="font-size:13px; color:#606060;">Quantidade: 1 unidade</div>
-                        </div>
-                    </div>
-                    <div style="background:white; padding:12px; border-radius:8px; text-align:left; box-shadow:0 2px 4px rgba(0,0,0,0.05);">
-                        <div style="display:flex; justify-content:space-between; font-size:14px; margin-bottom:5px;"><span>Produto:</span><span>R$ 149,90</span></div>
-                        <div style="display:flex; justify-content:space-between; font-size:14px; margin-bottom:5px; color:#00A650;"><span>Frete:</span><span>Grátis</span></div>
-                        <div style="display:flex; justify-content:space-between; font-weight:bold; font-size:18px; border-top:1px solid #eee; padding-top:5px; margin-top:5px; color:#333;"><span>Total a pagar:</span><span>R$ 149,90</span></div>
-                    </div>
-                </div>
-                <div style="padding:10px 15px; background:#FFF159; text-align:center; flex-shrink:0;">
-                    <button onclick="avancarPasso()" style="background:#3483FA; color:white; border:none; padding:12px 0; width:100%; border-radius:6px; font-size:18px; font-weight:bold; cursor:pointer; box-shadow:0 4px 0 #005ca9;">Confirmar Compra</button>
-                </div>
-            </div>`,
-        feedback: "Parabéns! No mundo real, sua compra seria processada com total segurança."
-    },
-    {
-        instrucao: "Passo 6: Pronto! Sua compra foi aprovada. Toque no botão para simular o rastreio do pacote.",
-        conteudo: `
-            <div style="background:#FFF159; height:100%; display:flex; flex-direction:column; font-family:Arial, sans-serif; box-sizing:border-box; padding:15px; align-items:center; justify-content:center;">
-                <div style="background:white; width:100%; padding:25px 15px; border-radius:12px; text-align:center; box-sizing:border-box; box-shadow:0 4px 15px rgba(0,0,0,0.15); display:flex; flex-direction:column; align-items:center;">
-                    <div style="width:70px; height:70px; background:#E8F5E9; color:#00A650; font-size:40px; display:flex; align-items:center; justify-content:center; border-radius:50%; margin-bottom:15px;">✓</div>
-                    <h2 style="font-size:20px; color:#00A650; margin:0 0 15px 0; font-weight:bold;">Sua compra chegou!</h2>
+            <div style="background:#FFF159; height:100%; display:flex; flex-direction:column; font-family:sans-serif; box-sizing:border-box; user-select:none; color:#333; text-align:left;">
+                <!-- Cabeçalho Amarelo Tradicional do Mercado Livre -->
+                <div style="padding:15px; display:flex; align-items:center; justify-content:center; gap:20px; border-bottom:1px solid #E5D74E; flex-shrink:0;">
+                    <strong style="color:#2D3277; font-size:20px;">mercado livre</strong>
                     
-                    <div style="background:#F5F5F5; width:100%; padding:15px; border-radius:8px; text-align:left; box-sizing:border-box; border-left:5px solid #3483FA; margin-bottom:20px;">
-                        <div style="font-weight:bold; font-size:15px; color:#333; margin-bottom:5px;">🚚 Status do Envio:</div>
-                        <p style="margin:0; font-size:14px; color:#606060; line-height:1.3;">O caminhãozinho do Mercado Livre já entregou o seu pacote no seu endereço com segurança.</p>
+                    <!-- BOTÃO BARRA DE BUSCA ALVO (CORRETO) -->
+                    <div onclick="avancarPasso()" style="flex:1; max-width:320px; background:white; padding:8px 15px; border-radius:4px; box-shadow:0 1px 2px rgba(0,0,0,0.1); cursor:pointer; color:#999; font-size:13px; border:2px solid #1A73E8;">
+                        Buscar produtos, marcas e muito mais...
                     </div>
-                    <button onclick="avancarPasso()" style="background:#1A1A1A; color:white; border:none; padding:12px 24px; border-radius:20px; font-size:16px; font-weight:bold; cursor:pointer; width:100%;">Entendido!</button>
+                </div>
+                <div style="flex:1; background:#F5F5F5; display:flex; align-items:center; justify-content:center; color:#999; font-size:14px;">Aguardando pesquisa...</div>
+            </div>`,
+        feedback: "✓ Excelente! A caixa de texto está pronta para receber o nome do produto."
+    },
+
+    {
+        // PASSO 3: CONFIRMAR O PRODUTO E CLICAR NA LUPA DE BUSCA
+        instrucao: "⌨️ Passo 3: Imagine que você digitou 'Cafeteira Elétrica'. Agora, use o mouse e dê um clique esquerdo na '🔍 Lupa Azul' ou aperte a tecla Enter para o site listar os modelos.",
+        conteudo: `
+            <div style="background:#FFF159; height:100%; display:flex; flex-direction:column; font-family:sans-serif; box-sizing:border-box; user-select:none; color:#333; text-align:left;">
+                <div style="padding:15px; display:flex; align-items:center; justify-content:center; gap:20px; border-bottom:1px solid #E5D74E; flex-shrink:0;">
+                    <strong style="color:#2D3277; font-size:20px;">mercado livre</strong>
+                    
+                    <!-- Barra Preenchida com o Botão de Lupa Alvo -->
+                    <div style="flex:1; max-width:320px; background:white; display:flex; border-radius:4px; box-shadow:0 1px 2px rgba(0,0,0,0.1); overflow:hidden; border:2px solid #1A73E8;">
+                        <span style="padding:8px 12px; font-size:13px; color:#1A1A1A; font-weight:bold; flex:1;">Cafeteira Elétrica</span>
+                        <!-- BOTÃO ALVO LUPA (CORRETO) -->
+                        <div onclick="avancarPasso()" style="background:#E2E8F0; width:40px; display:flex; align-items:center; justify-content:center; cursor:pointer; font-size:14px; border-left:1px solid #ddd; font-weight:bold;">🔍</div>
+                    </div>
+                </div>
+                <div style="flex:1; background:#F5F5F5;"></div>
+            </div>`,
+        feedback: "✓ Perfeito! O site listou as melhores ofertas de cafeteiras disponíveis na plataforma."
+    },
+
+    {
+        // PASSO 4: BOTÃO AZUL DE COMPRAR AGORA
+        instrucao: "🛒 Passo 4: Você selecionou o modelo perfeito de R$ 120,00! Para iniciar o pagamento, use o mouse e dê um clique esquerdo no botão azul 'Comprar Agora'.",
+        conteudo: `
+            <div style="background:#F5F5F5; height:100%; display:flex; flex-direction:column; font-family:sans-serif; box-sizing:border-box; user-select:none; color:#333; text-align:left;">
+                <!-- Cabeçalho Superior Fixo -->
+                <div style="background:#FFF159; padding:10px 15px; display:flex; align-items:center; gap:15px; border-bottom:1px solid #E5D74E; flex-shrink:0;">
+                    <strong style="color:#2D3277; font-size:16px;">mercado livre</strong>
+                </div>
+                
+                <!-- Página do Produto Selecionado -->
+                <div style="flex:1; background:white; padding:15px; display:flex; flex-direction:column; justify-content:space-between; box-sizing:border-box; overflow-y:auto;">
+                    <div>
+                        <span style="color:#00a650; font-size:11px; font-weight:bold; display:block; margin-bottom:4px;">⚡ MAIS VENDIDO</span>
+                        <h3 style="margin:0 0 6px 0; font-size:15px; font-weight:bold; line-height:1.2;">Cafeteira Elétrica Premium 15 Xícaras</h3>
+                        <div style="font-size:22px; font-weight:bold; color:#111;">R$ 120,00</div>
+                        <small style="color:#00a650; font-weight:bold; display:block; margin-top:2px;">🚚 Frete grátis para sua região</small>
+                    </div>
+                    
+                    <!-- BOTÃO ALVO COMPRAR AGORA (CORRETO) -->
+                    <button onclick="avancarPasso()" style="background:#3483FA; color:white; font-weight:bold; font-size:15px; border:2px dashed #002B5C; padding:12px; border-radius:6px; cursor:pointer; width:100%; box-sizing:border-box; box-shadow:0 3px 6px rgba(52,131,250,0.2); margin-top:15px;">Comprar Agora 🛒</button>
                 </div>
             </div>`,
-        feedback: "Treino do Mercado Livre finalizado com sucesso! 🎉"
+        feedback: "✓ Excelente! O sistema direcionou você para a escolha do método de pagamento."
+    },
+
+    {
+        // PASSO 5: COPIAR O CÓDIGO PIX (NOVO E REALISTA)
+        instrucao: "💸 Passo 5: Você escolheu pagar com Pix! O site gerou um código seguro. Para pagar no aplicativo do seu banco, use o mouse e dê um clique esquerdo no botão azul '📋 Copiar Código Pix'.",
+        conteudo: `
+            <div style="background:#F5F5F5; height:100%; display:flex; flex-direction:column; font-family:sans-serif; box-sizing:border-box; user-select:none; color:#333; text-align:left;">
+                <div style="background:#FFF159; padding:10px 15px; display:flex; align-items:center; border-bottom:1px solid #E5D74E; flex-shrink:0;">
+                    <strong style="color:#2D3277; font-size:15px;">Finalizar Compra</strong>
+                </div>
+                
+                <div style="flex:1; background:white; padding:15px; display:flex; flex-direction:column; gap:12px; box-sizing:border-box; justify-content:center; align-items:center;">
+                    <span style="font-size:32px; margin-bottom:4px;">💸</span>
+                    <strong style="font-size:15px; text-align:center; color:#111;">Pague R$ 120,00 via Pix</strong>
+                    <p style="font-size:12px; color:#666; text-align:center; margin:0 0 10px 0; line-height:1.4;">Copie o código abaixo e use a opção 'Pix Copia e Cola' no aplicativo do seu banco para pagar.</p>
+                    
+                    <!-- Código fictício em caixinha cinza -->
+                    <div style="background:#F1F5F9; border:1px solid #E2E8F0; padding:8px; font-size:11px; font-family:monospace; color:#475569; border-radius:6px; width:100%; box-sizing:border-box; text-align:center; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;">mercadolivre.pix.compra15674839201938574832...</div>
+                    
+                    <!-- BOTÃO ALVO COPIAR PIX (CORRETO) -->
+                    <button onclick="avancarPasso()" style="background:#3483FA; color:white; font-weight:bold; font-size:14px; border:2px dashed #002B5C; padding:10px; border-radius:6px; cursor:pointer; width:100%; box-shadow:0 3px 6px rgba(52,131,250,0.2); margin-top:5px; animation: pulsarBorda 1.5s infinite;">📋 Copiar Código Pix</button>
+                </div>
+                <style>@keyframes pulsarBorda { 0%, 100% { border-color:transparent; } 50% { border-color:#002B5C; } }</style>
+            </div>`,
+        feedback: "✓ Excelente! O código foi copiado para a memória. No mundo real, agora bastaria abrir o app do banco e colar lá para fazer o Pix."
+    },
+
+    {
+        // PASSO 6: TELA DE PAGAMENTO CONFIRMADO
+        instrucao: "✔️ Passo 6: O pagamento foi identificado pelo Mercado Livre! Use o mouse e dê um clique esquerdo no botão azul '📦 Ver Meus Pedidos' para avançar para a área de rastreamento.",
+        conteudo: `
+            <div style="background:#F5F5F5; height:100%; display:flex; flex-direction:column; font-family:sans-serif; box-sizing:border-box; user-select:none; color:#333; text-align:left;">
+                <div style="background:#FFF159; padding:10px 15px; display:flex; align-items:center; border-bottom:1px solid #E5D74E; flex-shrink:0;">
+                    <strong style="color:#2D3277; font-size:15px;">Sucesso</strong>
+                </div>
+                
+                <div style="flex:1; background:white; padding:20px; display:flex; flex-direction:column; gap:15px; justify-content:center; align-items:center; box-sizing:border-box;">
+                    <div style="width:50px; height:50px; background:#DEF7EC; color:#03543F; font-size:26px; display:flex; align-items:center; justify-content:center; border-radius:50%;">✓</div>
+                    <h4 style="margin:0; font-size:18px; color:#03543F; font-weight:bold; text-align:center;">¡Pagamento Aprovado!</h4>
+                    <p style="margin:0 0 10px 0; font-size:13px; color:#666; text-align:center; line-height:1.4;">Já avisamos o vendedor e ele está preparando o embrulho da sua cafeteira.</p>
+                    
+                    <!-- BOTÃO ALVO VER PEDIDOS (CORRETO) -->
+                    <button onclick="avancarPasso()" style="background:#3483FA; color:white; font-weight:bold; font-size:14px; border:none; padding:12px; border-radius:6px; cursor:pointer; width:100%; box-shadow:0 3px 6px rgba(52,131,250,0.2);">📦 Ver Meus Pedidos</button>
+                </div>
+            </div>`,
+        feedback: "✓ Perfeito! O site registrou sua compra e abriu o seu painel pessoal de controle."
+    },
+
+    {
+        // PASSO 7: ACOMPANHAR A COMPRA / RASTREAMENTO (NOVO E REALISTA)
+        instrucao: "🚚 Passo 7: Esta é a tela de rastreamento! Ela mostra onde o pacote está viajando. Dê um clique esquerdo no botão verde 'Acompanhar Compra' para simular que você conferiu a rota de entrega.",
+        conteudo: `
+            <div style="background:#F5F5F5; height:100%; display:flex; flex-direction:column; font-family:sans-serif; box-sizing:border-box; user-select:none; color:#333; text-align:left;">
+                <div style="background:#FFF159; padding:10px 15px; display:flex; align-items:center; border-bottom:1px solid #E5D74E; flex-shrink:0;">
+                    <strong style="color:#2D3277; font-size:15px;">Minhas Compras</strong>
+                </div>
+                
+                <div style="flex:1; background:white; padding:15px; display:flex; flex-direction:column; gap:10px; box-sizing:border-box; justify-content:space-between;">
+                    <div style="border:1px solid #E5E7EB; border-radius:8px; padding:12px; background:#F9FAFB; display:flex; gap:12px; align-items:center;">
+                        <span style="font-size:28px;">📦</span>
+                        <div>
+                            <strong style="font-size:13px; color:#111; display:block;">Cafeteira Elétrica Premium</strong>
+                            <span style="font-size:12px; color:#00a650; font-weight:bold;">🚚 Chegará amanhã na sua casa!</span>
+                        </div>
+                    </div>
+                    
+                    <!-- LINHA DO TEMPO DO ENVIO (ILUSTRATIVA REALISTA) -->
+                    <div style="padding:10px 5px; display:flex; flex-direction:column; gap:10px; font-size:12px; color:#555; background:#FAFAFA; border-radius:6px; border:1px solid #eee;">
+                        <div>🟢 <strong>14:10</strong> - Pacote enviado pelo vendedor</div>
+                        <div style="color:#00a650; font-weight:bold;">🟡 <strong>16:30</strong> - O caminhão saiu do centro de distribuição rumo à sua cidade</div>
+                    </div>
+                    
+                    <!-- BOTÃO ALVO ACOMPANHAR (CORRETO) -->
+                    <button onclick="avancarPasso()" style="background:#00a650; color:white; font-weight:bold; font-size:14px; border:2px dashed #004D26; padding:12px; border-radius:6px; cursor:pointer; width:100%; box-shadow:0 3px 6px rgba(0,166,80,0.2);">Confirmar e Acompanhar Compra ✔️</button>
+                </div>
+            </div>`,
+        feedback: "✓ Excelente! Saber ler esse mapa de envio te dá total segurança de que o produto está a caminho do seu endereço."
+    },
+    
+    {
+        // PASSO 8: TELA FINAL DE SUCESSO (VITÓRIA)
+        instrucao: "Treino Concluído! Você aprendeu com perfeição a abrir o Mercado Livre, pesquisar produtos, usar o Pix Copia e Cola e rastrear suas encomendas com total segurança.",
+        conteudo: `
+            <div style="background:white; height:100%; display:flex; flex-direction:column; padding:20px; align-items:center; justify-content:center; box-sizing:border-box; user-select:none;">
+                <div style="background:#FFFDF0; width:100%; padding:20px 15px; border-radius:12px; text-align:center; box-sizing:border-box; box-shadow:0 4px 15px rgba(0,0,0,0.1); border:3px solid #FFF159; display:flex; flex-direction:column; align-items:center;">
+                    <div style="background:#FFF159; color:#2D3277; font-weight:bold; padding:5px 15px; font-size:14px; border-radius:4px; margin-bottom:12px; letter-spacing:0.5px; box-shadow:0 1px 2px rgba(0,0,0,0.1);">MERCADO LIVRE</div>
+                    <div style="width:60px; height:60px; background:#FEFCDD; color:#DBAA00; font-size:32px; display:flex; align-items:center; justify-content:center; border-radius:50%; margin-bottom:12px;">🏆</div>
+                    <h2 style="font-size:20px; color:#2D3277; margin:0 0 10px 0; font-weight:bold; line-height:1.2;">Compra Segura!</h2>
+                    <p style="margin:0 0 20px 0; font-size:14px; color:#555; line-height:1.4; text-align:center;">Parabéns! Encontrar mercadorias, fazer pagamentos modernos e rastrear os pacotes pela internet agora ficou simples. Você já domina as compras online com total autonomia!</p>
+                    
+                    <!-- Encerra o simulador e volta para o index.html -->
+                    <button onclick="avancarPasso()" style="background:#3483FA; color:white; border:none; padding:12px 24px; border-radius:20px; font-size:16px; font-weight:bold; cursor:pointer; width:100%; box-shadow:0 4px 0 #002B5C;">Finalizar e Sair</button>
+                </div>
+            </div>`,
+        feedback: "Parabéns! Módulo de Compras no Mercado Livre finalizado com sucesso! 📦🎉"
     }
 ];
-
-
-

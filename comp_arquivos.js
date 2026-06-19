@@ -220,7 +220,7 @@ const comp_arquivos = [
 
     {
         // PASSO 9: TELA FINAL DE SUCESSO (VITÓRIA REESTRUTURADA)
-        instrucao: "Treino Concluído! Você aprendeu com perfeição a abrir o explorador, dar cliques duplos, criar pastas no Windows 11 e arrastar arquivos com total independência.",
+        instrucao: "Treino Concluído! Você aprendeu com perfeição a abrir o explorador, dar cliques duplos, criar pastas no Windows e arrastar arquivos com total independência.",
         conteudo: `
             <div style="background:white; height:100%; display:flex; flex-direction:column; padding:20px; align-items:center; justify-content:center; box-sizing:border-box; user-select:none;">
                 <div style="background:#FFFDF5; width:100%; padding:20px 15px; border-radius:12px; text-align:center; box-sizing:border-box; box-shadow:0 4px 15px rgba(0,0,0,0.1); border:3px solid #FBBC05; display:flex; flex-direction:column; align-items:center;">
