@@ -235,15 +235,24 @@
 
 <body>
 
-    <!-- Barra de Navegação Superior Integrada -->
+    <body>
+
+    <!-- NOVA BARRA DE NAVEGAÇÃO SUPERIOR RECACHUTUTADA -->
     <nav class="barra-navegacao">
-        <a href="index.html" class="menu-logo">⬅️ Voltar para o Início</a>
+        <div style="display: flex; align-items: center; gap: 20px;">
+            <a href="index.html" style="text-decoration: none; background: rgba(255,255,255,0.15); color: white; font-weight: bold; font-size: 16px; padding: 10px 18px; border-radius: 20px; transition: all 0.2s; box-shadow: 0 2px 4px rgba(0,0,0,0.1); border: 1px solid rgba(255,255,255,0.2);">⬅️ Voltar</a>
+            <span class="menu-logo">🌐 Conecta Idade</span>
+        </div>
+        <!-- Etiqueta Amigável de Segurança -->
+        <div style="background: #0284C7; color: white; font-size: 14px; font-weight: bold; padding: 8px 16px; border-radius: 30px; display: flex; align-items: center; gap: 8px; border: 1px solid rgba(255,255,255,0.2); box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+            <span>🔰</span> Espaço de Treino Seguro
+        </div>
     </nav>
 
-    <!-- Estrutura de Portal: Menu e Conteúdo lado a lado até a base da tela -->
+    <!-- Estrutura de Portal Unificada: Menu e Celular 100% Esticados -->
     <div class="layout-portal">
         
-        <!-- Menu Lateral Reutilizado e Corrigido (Estica 100%) -->
+        <!-- Menu Lateral Reutilizado e Esticado até a base -->
         <aside class="menu-lateral">
             <div class="categoria-secao">
                 <div class="categoria-titulo">🏥 Saúde e Serviços</div>
@@ -281,13 +290,13 @@
                 <div class="lista-links">
                     <a href="simulador.html?tema=mercado" id="link-mercado" class="menu-link"><span>📦</span> Mercado Livre</a>
                     <a href="simulador.html?tema=youtube" id="link-youtube" class="menu-link">
-                        <span style="color: #FF0000 !important; font-size: 16px;">▶</span> YouTube
+                        <span style="color: #EF4444 !important; font-size: 16px;">▶</span> YouTube
                     </a>
                 </div>
             </div>
         </aside>
 
-        <!-- Área Central de Treinamento com o Smartphone -->
+        <!-- Área Central com Fundo Destacado para o Celular -->
         <main class="conteudo-principal">
             <div class="simulador-caixa">
                 <div class="instrucao" id="texto-instrucao"></div>
@@ -296,6 +305,7 @@
             </div>
         </main>
     </div>
+
 
 
        <!-- CARREGAMENTO DE TODOS OS COMPONENTES DO PORTAL -->
