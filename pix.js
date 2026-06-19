@@ -92,17 +92,17 @@ const pix = [
                 <div style="padding:15px; display:flex; flex-direction:column; gap:10px; box-sizing:border-box; flex:1;">
                     <!-- ROTA 1: AVANÇA DIRETO PARA O PASSO 6 (COPIA E COLA) -->
                     <div onclick="window.irParaPasso(5)" style="background:white; border:2px solid #0056B3; padding:12px; border-radius:10px; display:flex; align-items:center; gap:10px; cursor:pointer; font-size:13px; font-weight:bold; color:#0056B3;">
-                        <span style="font-size:18px;">📋</span> 1. Rota Pix Copia e Cola
+                        <span style="font-size:18px;">📋</span> 1. Pix Copia e Cola
                     </div>
                     
                     <!-- ROTA 2: PULA PARA O PASSO 10 (QR CODE COM CÂMERA) -->
                     <div onclick="window.irParaPasso(9)" style="background:white; border:2px solid #4ADE80; padding:12px; border-radius:10px; display:flex; align-items:center; gap:10px; cursor:pointer; font-size:13px; font-weight:bold; color:#16A34A;">
-                        <span style="font-size:18px;">📷</span> 2. Rota Ler QR Code com Câmera
+                        <span style="font-size:18px;">📷</span> 2. Ler QR Code com Câmera
                     </div>
                     
                     <!-- ROTA 3: PULA PARA O PASSO 14 (CHAVE MANUAL) -->
                     <div onclick="window.irParaPasso(14)" style="background:white; border:2px solid #F97316; padding:12px; border-radius:10px; display:flex; align-items:center; gap:10px; cursor:pointer; font-size:13px; font-weight:bold; color:#EA580C;">
-                        <span style="font-size:18px;">🔑</span> 3. Rota Chave Manual (Celular)
+                        <span style="font-size:18px;">🔑</span> 3.Chave Manual (Celular, CPF ou Email)
                     </div>
                 </div>
             </div>`,
