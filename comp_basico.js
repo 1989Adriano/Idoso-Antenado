@@ -1,4 +1,3 @@
-// comp_basico.js - PARTE 1 (PASSOS DE 1 A 4 CORRIGIDOS)
 const comp_basico = [
     {
         // PASSO 1: APERTAR O BOTÃO FÍSICO DE LIGAR NO TOPO DO GABINETE
@@ -27,6 +26,7 @@ const comp_basico = [
             </div>`,
         feedback: "✓ Excelente! Você apertou o botão físico de energia no topo da CPU. Agora precisamos ligar a tela."
     },
+
     {
         // PASSO 2: LIGAR O BOTÃO FÍSICO DO MONITOR
         instrucao: "🖥️ Passo 2: O monitor, as vezes precisa ser ligado separadamente!<br>Use o seu dedo e aperte o botão com o '⭕ Desenho de Ligar' que fica escondido na borda inferior da tela.",
@@ -46,6 +46,7 @@ const comp_basico = [
             </div>`,
         feedback: "✓ Perfeito! A tela acendeu. No mundo real, lembre-se: a CPU e o Monitor possuem cabos e botões de ligar totalmente separados!"
     },
+
     {
         // PASSO 3: CONECTAR O PLUGUE COM FOCO NO SÍMBOLO DE FONE NA CPU
         instrucao: "🎧 Passo 3: Onde conectar o som? No gabinete da CPU, procure pelo desenho gravado de um '🎧 Fone de Ouvido' ou pela cor VERDE. Dê um clique esquerdo na 'Entrada Verde com o Desenho do Fone' para plugar o cabo de som.",
@@ -70,6 +71,7 @@ const comp_basico = [
             </div>`,
         feedback: "✓ Espetacular! Olhar o símbolo gravado do fone (🎧) na carcaça da CPU impede que você plugue o som na entrada rosa do microfone por engano."
     },
+
     {
         // PASSO 4: ENTENDER O CLIQUE ESQUERDO DO MOUSE (SELEÇÃO)
         instrucao: "🖱️ Passo 4: Agora vamos usar o mouse na tela! O botão esquerdo (azul) serve para selecionar, abrir programas e clicar. Dê um clique esquerdo no 'Botão Esquerdo Azul' para treinar o movimento.",
@@ -84,6 +86,7 @@ const comp_basico = [
             </div>`,
         feedback: "✓ Muito bem! Esse é o clique principal que você usará quase todo o tempo no computador."
     },
+
     {
         // PASSO 5: CLIQUE DIREITO DO MOUSE (OPÇÕES)
         instrucao: "🖱️ Passo 5: Agora vamos conhecer o outro lado! O botão direito (laranja) serve para abrir menus de opções escondidas na tela. Dê um clique esquerdo no 'Botão Direito Laranja' para testar.",
@@ -99,7 +102,8 @@ const comp_basico = [
                 </div>
             </div>`,
         feedback: "✓ Excelente! O botão direito abre caixas cheias de opções extras na tela, como copiar, colar ou excluir arquivos."
-    }, 
+    },
+
     {
         // PASSO 6: CONHECER A TECLA ENTER E SUAS VARIAÇÕES VISUAIS
         instrucao: "⌨️ Passo 6: Vamos conhecer o Teclado! A tecla mais importante é o 'ENTER'. Atenção: em alguns teclados ela tem a palavra escrita, mas em outros ela vem apenas com uma 'setinha fina apontando para a esquerda'. Ela serve para confirmar ações. Aperte o 'ENTER Laranja'.",
@@ -142,7 +146,7 @@ const comp_basico = [
         feedback: "✓ Perfeito! Guarde esse nome: Backspace significa 'apagar para trás'. Ela remove a última letra digitada para você corrigir erros sem sustos."
     },
 
-        {
+    {
         // PASSO 8 (NOVO): ATIVAR O TECLADO NUMÉRICO (TECLA NUM LOCK)
         instrucao: "⌨️ Passo 8: Cuidado com a pegadinha! Se tentar digitar números no teclado lateral e não funcionar, a luz está apagada. Use o mouse e dê um clique esquerdo na 'Tecla Num Lock Laranja' para acender a luz e liberar os números.",
         conteudo: `
@@ -168,6 +172,7 @@ const comp_basico = [
             </div>`,
         feedback: "✓ Perfeito! A luz acendeu. Lembre-se sempre: se a luz do NumLock estiver apagada, os números do teclado lateral ficam totalmente travados!"
     },
+
     {
         // PASSO 9 (NOVO): DIFERENÇA DE NOTEBOOK (BATERIA E CARREGADOR)
         instrucao: "💻 Passo 9: E se for um Notebook? Notebooks são computadores portáteis e deitados. Eles juntam a tela, o teclado e a CPU em uma peça só. Toque no '⭕ Botão Ligar do Notebook' acima do teclado para entender onde aperta.",
@@ -198,7 +203,6 @@ const comp_basico = [
         feedback: "✓ Excelente! Notebooks rodam direto na bateria e guardam o botão de ligar perto das teclas do teclado, eliminando aquela torre grande do gabinete de mesa."
     },
 
-
     {
         // PASSO 10: AJUSTAR O VOLUME DO SOM DO FONE CONECTADO
         instrucao: "🔊 Passo 10: O fone está plugado, mas o som do computador está muito baixo! Para conseguir ouvir, dê um clique esquerdo no botão azul '🔊 Aumentar (+)' ao lado do alto-falante na barra de tarefas.",
@@ -228,6 +232,7 @@ const comp_basico = [
             </div>`,
         feedback: "✓ Fantástico! O som subiu para 80%. Agora os vídeos e mensagens de voz do fone ficarão totalmente nítidos."
     },
+
     {
         // PASSO 11: DESLIGAR O COMPUTADOR COM SEGURANÇA
         instrucao: "🔌 Passo 11: Para terminar o treino, vamos aprender a desligar a máquina da forma correta. Use o clique esquerdo e aperte o botão vermelho '📥 Desligar o PC'.",
@@ -255,6 +260,7 @@ const comp_basico = [
             </div>`,
         feedback: "✓ Excelente! Nunca puxe o computador direto da tomada. Desligar pelo sistema avisa as peças para cortarem a energia sem queimar nada."
     },
+    
     {
         // PASSO 12: TELA FINAL DE SUCESSO (VITÓRIA ABSOLUTA)
         instrucao: "Treino Concluído! Você aprendeu a ligar os botões físicos corretos, conectar plugues usando os símbolos da CPU, ajustar volumes e usar o mouse com total independência.",
