@@ -169,35 +169,72 @@
             line-height: 1.5;
         }
 
-                /* CASCA 1: ESTILO PADRÃO DO CELULAR (EM PÉ) */
+       .instrucao {
+            font-weight: 700;
+            font-size: 20px; /* Reduzido um pouquinho para caber mais texto sem apertar */
+            margin-bottom: 20px;
+            background-color: #FEF3C7; /* Amarelo pastel suave amigável */
+            color: #78350F;
+            padding: 16px 20px;
+            border-left: 6px solid #F59E0B;
+            border-radius: 8px;
+            line-height: 1.5;
+            text-align: justify;
+            box-sizing: border-box;
+            
+            /* CORREÇÃO DEFINITIVA DO CORTE DE TEXTO: */
+            display: flex;
+            align-items: center; 
+            min-height: 110px; /* Garante um tamanho base firme para textos de 1 ou 2 linhas */
+            height: auto; /* PERMITE CRESCER SOZINHA se o texto tiver 3, 4 ou mais linhas! */
+        }
+
+  
         .tela-celular {
             width: 340px;
             height: 490px;
             background-color: #FFFFFF;
-            border: 14px solid #1E293B; /* Capinha escura do smartphone */
-            border-radius: 40px;
-            margin: 20px auto;
+            border-radius: 30px;
+            margin: 40px auto;
             display: flex;
             flex-direction: column;
             justify-content: flex-start;
+            overflow: hidden !important;
             overflow-y: auto;
             overflow-x: hidden;
             padding: 0;
             align-items: stretch;
-            box-shadow: 0 15px 35px rgba(0,0,0,0.15), inset 0 0 10px rgba(0,0,0,0.05);
             position: relative;
-            transition: all 0.3s ease; /* Transição suave de tamanho */
+            transition: all 0.3s ease;
+            
+            /* Capinha escura perfeita feita com sombra espessa */
+            box-shadow: 0 0 0 12px #1E293B, 0 15px 35px rgba(0,0,0,0.3);
+
+            /* AS TRÊS LINHAS QUE RESOLVEM O BUG DO NAVEGADOR DE VEZ: */
+            border: 1px solid transparent; /* Força o alinhamento de subpixel */
+            isolation: isolate; /* Cria uma camada independente de desenho */
+            transform: translateZ(0); /* Ativa a GPU para renderizar a curva sem serrilhar */
         }
 
-        /* CASCA 2: NOVA TRANSFORMAÇÃO PARA MONITOR DE COMPUTADOR (DEITADO) */
+        /* CASCA 2: MONITOR DE COMPUTADOR (DEITADO) - BLINDADO CONTRA VAZAMENTO */
         .tela-computador-simulada {
-            width: 540px !important; /* Mais largo e deitado */
+            width: 540px !important;
             height: 360px !important;
-            border: 16px solid #1E1E1E !important; /* Moldura de monitor de mesa */
-            border-radius: 12px !important; /* Cantos levemente quadrados de monitor */
-            box-shadow: 0 20px 40px rgba(0,0,0,0.25) !important;
-            background-color: #2A4365; /* Fundo padrão de sistema operacional */
+            border-radius: 12px !important;
+            background-color: #2A4365;
+            overflow: hidden !important;
+            
+            /* Moldura do monitor feita com sombra espessa */
+            box-shadow: 0 0 0 16px #1E1E1E, 0 20px 40px rgba(0,0,0,0.4) !important;
+
+            /* Ativa as mesmas travas de segurança gráfica para o monitor */
+            border: 1px solid transparent !important;
+            isolation: isolate !important;
+            transform: translateZ(0) !important;
         }
+
+
+
 
         /* SUPORTE DO MONITOR: Aparece magicamente abaixo do computador */
         .pe-computador {
