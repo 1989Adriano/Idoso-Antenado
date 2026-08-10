@@ -3,372 +3,134 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Clique Seguro - Aprenda Sem Medo</title>
+    <title>IA Idoso Antenado. - Bem-vindo</title>
     <style>
-        /* Cores de alto contraste e fontes grandes para acessibilidade */
-        :root {
-            --cor-fundo: #EBF1F7;
-            --cor-texto: #1A1A1A;
-            --cor-primaria: #0066CC;
-            --cor-fundo-menu: #FFFFFF;
-            --cor-azul-escuro: #002347;
-            --cor-sucesso: #248A3D;
-            --cor-alerta: #C82333;
-            --cor-laranja: #E06300;
-            --cor-computador: #0A7A4C; /* Cor verde para identificar a seção de computador */
-        }
-
-        body {
-            font-family: Arial, Helvetica, sans-serif;
-            background-color: var(--cor-fundo);
-            color: var(--cor-texto);
-            font-size: 20px;
-            line-height: 1.6;
+        body, html {
             margin: 0;
             padding: 0;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            min-height: 100vh;
-        }
-
-        /* BARRA DE NAVEGAÇÃO SUPERIOR ACCESSIBLE */
-        .barra-navegacao {
-            background-color: var(--cor-azul-escuro);
-            padding: 18px 24px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.25);
             width: 100%;
-            box-sizing: border-box;
-            flex-wrap: wrap;
-            gap: 15px;
-            border-bottom: 4px solid var(--cor-laranja);
-        }
-
-        .menu-logo {
-            color: white;
-            font-weight: bold;
-            font-size: 30px;
-            text-decoration: none;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
-        }
-
-        /* Painel de Boas-Vindas */
-        .boas-vindas-painel {
-            text-align: center;
-            background: linear-gradient(135deg, var(--cor-primaria) 0%, var(--cor-azul-escuro) 100%);
-            color: white;
-            padding: 45px 20px;
-            border-radius: 0 0 35px 35px;
-            box-shadow: 0 6px 20px rgba(0,0,0,0.3);
-            margin-bottom: 40px;
-            box-sizing: border-box;
-            border-bottom: 3px solid rgba(255, 255, 255, 0.2);
-            width: 100%;
-            align-self: stretch;
-        }
-
-        /* LAYOUT FLEXÍVEL LADO A LADO PARA CELULAR E COMPUTADOR */
-        .portal-flex-layout {
-            display: flex;
-            flex-direction: row;
-            justify-content: center;
-            align-items: flex-start;
-            gap: 40px;
-            width: 100%;
-            max-width: 1200px;
-            padding: 0 20px 40px 20px;
-            box-sizing: border-box;
-            flex-wrap: wrap;
-        }
-
-        /* CORPO REALISTA DO SMARTPHONE */
-        .tela-celular-home {
-            width: 350px;
-            height: 620px;
-            background: #F4F7FA;
-            border: 14px solid #1E1E1E;
-            border-radius: 45px;
-            margin: 0 auto;
-            display: flex;
-            flex-direction: column;
-            padding: 25px 18px;
-            box-shadow: 0 20px 40px rgba(0,0,0,0.3);
-            box-sizing: border-box;
-            position: relative;
+            height: 100%;
+            font-family: Arial, Helvetica, sans-serif;
             overflow: hidden;
         }
 
-        /* DETALHE DA CÂMERA DO SMARTPHONE */
-        .tela-celular-home::before {
-            content: "";
-            position: absolute;
-            top: 8px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 55px;
-            height: 6px;
-            background-color: #1E1E1E;
-            border-radius: 4px;
-            z-index: 10;
-        }
-
-        /* BARRA DE STATUS DO CELULAR */
-        .barra-status {
-            display: flex;
-            justify-content: space-between;
-            font-size: 13px;
-            color: #222222;
-            font-weight: 600;
-            padding-bottom: 14px;
-            margin-bottom: 25px;
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-        }
-
-        /* GRADE DE APLICATIVOS DO CELULAR */
-        .grade-apps {
+                .tela-abertura-container {
+            width: 100%;
+            height: 100%;
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 24px 14px;
-            padding: 0;
+            grid-template-rows: 3fr auto auto auto 1fr;
+            align-items: center;
+            justify-items: center;
             text-align: center;
-        }
-
-        /* ITEM DO APLICATIVO DO SMARTPHONE */
-        .app-item {
-            text-decoration: none;
-            color: #222222;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 6px;
-            transition: transform 0.15s ease-in-out;
-            -webkit-tap-highlight-color: transparent;
-        }
-
-        .app-item:hover { transform: scale(1.04); }
-        .app-item:active { transform: scale(0.92); }
-
-        /* DESIGN DO ÍCONE SQUIRCLE REALISTA */
-        .app-icone {
-            width: 68px;
-            height: 68px;
-            border-radius: 18px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 36px;
-            color: white;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.12), 0 2px 4px rgba(0, 0, 0, 0.08);
-            border: 1px solid rgba(255, 255, 255, 0.15);
-            position: relative;
-        }
-
-        /* LEGENDA DO APP */
-        .app-item span {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-            font-weight: 600;
-            font-size: 13px;
-            line-height: 1.2;
-            display: block;
-            width: 100%;
-            white-space: nowrap;
-            overflow: hidden;
-            text-overflow: ellipsis;
-        }
-    </style>
-</head>
-<body>
-    <!-- TELA INICIAL DE BOAS-VINDAS (SPLASH SCREEN ACESSÍVEL) -->
-    <div id="tela-abertura" style="
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: linear-gradient(135deg, #0056B3 0%, #002B5C 100%);
-        z-index: 9999;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        text-align: center;
-        padding: 20px;
-        box-sizing: border-box;
-        transition: opacity 0.5s ease, visibility 0.5s;
-    ">
-        <div style="font-size: 90px; margin-bottom: 20px; animation: flutuar 3s ease-in-out infinite;">👵👴✨</div>
-        <h1 style="font-size: 48px; color: white; margin-bottom: 10px; text-shadow: 2px 2px 4px rgba(0,0,0,0.4);">Clique Seguro</h1>
-        <p style="color: white; font-size: 24px; opacity: 0.9; max-width: 400px; margin-bottom: 40px; font-weight: bold;">
-            O seu guia para aprender a mexer no celular e no computador sem medo e com total segurança!
-        </p>
+            padding: 70px;
+            box-sizing: border-box;
         
-        <!-- Botão Gigante de Entrada -->
-        <button onclick="iniciarApp()" style="
+            background-color: transparent;
+            background-image: url('img/fundo_principal.jpeg');
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: 115% auto;   
+            
+            /* Mantém apenas a calibração de iluminação e nitidez nativa */
+            filter: brightness(0.70) contrast(1.05);
+        }
+
+
+        /* Alinhamento dos itens nas linhas do Grid */
+        .splash-emojis { grid-row: 2; }
+        .splash-titulo { grid-row: 3; }
+        .splash-subtitulo { grid-row: 4; }
+        .btn-splash-entrada { grid-row: 5; align-self: start; }
+
+        /* Fontes responsivas com técnicas de alto contraste */
+        .splash-emojis {
+            font-size: min(15vw, 100px); 
+            margin-bottom: 10px; 
+            animation: flutuar 3s ease-in-out infinite;
+        }
+
+        .splash-titulo {
+            font-size: min(10vw, 52px); 
+            color: #FFFFFF; 
+            margin: 0 0 15px 0; 
+            font-weight: 900;
+            text-shadow: 
+                -2px -2px 0 #000,  
+                 2px -2px 0 #000,
+                -2px  2px 0 #000,
+                 2px  2px 0 #000,
+                 3px  5px 15px rgba(0, 0, 0, 0.9);
+        }
+
+        .splash-subtitulo {
+            color: #FFFFFF; 
+            font-size: min(4.5vw, 24px); 
+            opacity: 1; 
+            max-width: 600px; 
+            margin: 0 0 30px 0; 
+            font-weight: bold;
+            line-height: 1.6;
+            text-shadow: 
+                -1.5px -1.5px 0 #000,  
+                 1.5px -1.5px 0 #000,
+                -1.5px  1.5px 0 #000,
+                 1.5px  1.5px 0 #000,
+                 3px  4px 12px rgba(0, 0, 0, 0.95);
+        }
+
+        .btn-splash-entrada {
             background-color: #FD7E14;
             color: white;
-            font-size: 26px;
+            font-size: min(5.5vw, 26px);
             font-weight: bold;
-            padding: 20px 45px;
+            padding: 18px 44px;
             border: none;
             border-radius: 50px;
-            box-shadow: 0 8px 0 #C45A00, 0 15px 25px rgba(0,0,0,0.3);
+            box-shadow: 0 6px 0 #C45A00, 0 10px 20px rgba(0,0,0,0.4);
             cursor: pointer;
-            transition: all 0.1s ease;
-        ">
-            COMEÇAR AGORA
+            display: inline-block;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+            
+            /* Transição suave para o efeito hover não dar um tranco visual */
+            transition: background-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        /* EFEITO HOVER AO PASSAR O MOUSE */
+        .btn-splash-entrada:hover {
+            background-color: #b35803; /* Laranja mais claro e chamativo */
+            transform: scale(1.03); /* Aumenta o tamanho do botão discretamente em 3% */
+            box-shadow: 0 6px 0 #D96A00, 0 12px 25px rgba(253, 126, 20, 0.4); /* Sombra com brilho laranja */
+        }
+
+        .btn-splash-entrada:active {
+            transform: translateY(3px) scale(0.98); /* Mantém o clique físico simulado */
+            box-shadow: 0 3px 0 #C45A00, 0 5px 10px rgba(0,0,0,0.4);
+        }
+
+        @keyframes flutuar {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+   </style>
+</head>
+<body>
+
+    <div class="tela-abertura-container">        
+        <div class="splash-emojis"></div>
+        <h1 class="splash-titulo">Idoso Antenado</h1>
+        <p class="splash-subtitulo">
+            O seu guia para aprender <br>a mexer no celular e no computador<br>sem medo e com total segurança!
+        </p>
+        
+        <button onclick="irParaMenu()" class="btn-splash-entrada">
+           👵 APRENDER AGORA 👴
         </button>
     </div>
 
-    <!-- BARRA DE NAVEGAÇÃO SUPERIOR -->
-    <nav class="barra-navegacao">
-        <a href="index.html" class="menu-logo">Clique Seguro 👵👴</a>
-        <div style="background: #248A3D; color: white; font-size: 15px; font-weight: bold; padding: 8px 16px; border-radius: 30px; display: flex; align-items: center; gap: 8px; border: 1px solid rgba(255,255,255,0.2);">
-            <span>🛡️</span> Espaço de Treinamento 
-    </nav>
-
-    <header class="boas-vindas-painel">
-        <h1>Clique Seguro!</h1>
-        <p style="margin: 12px 0 0 0; font-size: 24px; font-weight: bold; opacity: 0.95; text-shadow: 1px 1px 2px rgba(0,0,0,0.3);">Escolha o que você deseja aprender a usar hoje.</p>
-    </header>
-
-    <!-- CONTAINER FLEXÍVEL LADO A LADO -->
-    <div class="portal-flex-layout">
-        
-        <!-- SEÇÃO COLUNA 1: APRENDIZADO DE CELULAR (GARANTIDO) -->
-        <div style="display: flex; flex-direction: column; align-items: center; gap: 15px;">
-            <div style="background: var(--cor-primaria); color: white; padding: 8px 24px; border-radius: 20px; font-weight: bold; font-size: 16px; box-shadow: 0 3px 6px rgba(0,0,0,0.1);">Treinar no Celular 📱</div>
-            
-            <div class="tela-celular-home">
-                <div class="barra-status">
-                    <span>14:30 ⏰</span>
-                    <span>📶 🪫 100%</span>
-                </div>
-                <div class="grade-apps">
-                    <a href="simulador.html?tema=youtube" class="app-item">
-                        <div class="app-icone" style="background: #FF0000 !important; font-size: 28px; color: white !important;">▶</div>
-                        <span>YouTube</span>
-                    </a>
-                    <a href="simulador.html?tema=whatsapp" class="app-item">
-                        <div class="app-icone" style="background: #25D366 !important;">💬</div>
-                        <span>WhatsApp</span>
-                    </a>
-                    <a href="simulador.html?tema=pix" class="app-item">
-                        <div class="app-icone" style="background: #00B1A7 !important;">💸</div>
-                        <span>Pagar com Pix</span>
-                    </a>
-                    <a href="simulador.html?tema=golpes" class="app-item">
-                        <div class="app-icone" style="background: #C82333 !important;">🛡️</div>
-                        <span>Evitar Golpes</span>
-                    </a>
-                    <a href="simulador.html?tema=uber" class="app-item">
-                        <div class="app-icone" style="background: #000000 !important;">🚖</div>
-                        <span>Pedir Uber / 99</span>
-                    </a>
-                    <a href="simulador.html?tema=mercado" class="app-item">
-                        <div class="app-icone" style="background: #FFF159 !important;">📦</div>
-                        <span style="color: #1A1A1A;">M. Livre</span>
-                    </a>
-                    <a href="simulador.html?tema=maps" class="app-item">
-                        <div class="app-icone" style="background: #34A853 !important;">🗺️</div>
-                        <span>Google Maps</span>
-                    </a>
-                    <a href="simulador.html?tema=documentos" class="app-item">
-                        <div class="app-icone" style="background: #E65100 !important;">🪪</div>
-                        <span>Docs Digitais</span>
-                    </a>
-                    <a href="simulador.html?tema=inss" class="app-item">
-                        <div class="app-icone" style="background: #003366 !important;">🏛️</div>
-                        <span>Meu INSS</span>
-                    </a>
-                </div>
-            </div>
-        </div>
-
-        <!-- SEÇÃO COLUNA 2: APRENDIZADO DE COMPUTADOR -->        
-        <div style="display: flex; flex-direction: column; align-items: center; gap: 15px; margin-top: 5px;">
-            <div style="background: var(--cor-computador); color: white; padding: 8px 24px; border-radius: 20px; font-weight: bold; font-size: 16px; box-shadow: 0 3px 6px rgba(0,0,0,0.1);">Treinar no Computador 💻</div>
-            
-            <!-- DESIGN REALISTA DE UM MONITOR DE MESA DEITADO -->
-            <div style="display: flex; flex-direction: column; align-items: center;">
-                <!-- Tela do Monitor (Horizontal / Widescreen) -->
-                <div style="width: 520px; height: 340px; background: #2A4365; border: 16px solid #1E1E1E; border-radius: 12px; box-shadow: 0 20px 40px rgba(0,0,0,0.3); box-sizing: border-box; display: flex; flex-direction: column; justify-content: space-between; overflow: hidden; position: relative;">
-                    
-                    <!-- Área de Trabalho do PC (7 Programas Clássicos e Úteis) -->
-                    <div class="grade-apps" style="flex: 1; grid-template-columns: repeat(4, 1fr); gap: 20px 10px; padding: 25px 15px; align-content: start;">                                          
-                        <a href="simulador.html?tema=comp_internet" class="app-item">
-                            <!-- Ícone Redondo Oficial do Google Chrome em Código -->
-                            <div class="app-icone" style="width: 58px; height: 58px; border-radius: 50% !important; background: white !important; font-size: 32px; position: relative; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 6px rgba(0,0,0,0.2);">
-                                <div style="width: 100%; height: 100%; border-radius: 50%; background: linear-gradient(135deg, #4285F4 0%, #34A853 50%, #FBBC05 50%, #EA4335 100%); display: flex; align-items: center; justify-content: center;">
-                                    <!-- Círculo Azul Central do Logotipo do Chrome -->
-                                    <div style="width: 24px; height: 24px; background: #1A73E8; border: 4px solid white; border-radius: 50%;"></div>
-                                </div>
-                            </div>
-                            <span style="color: white; text-shadow: 1px 1px 3px black; font-size: 12px;">Google Chrome</span>
-                        </a>
-
-                        <!-- EMAIL -->
-                        <a href="simulador.html?tema=comp_email" class="app-item">
-                            <div class="app-icone" style="width: 58px; height: 58px; border-radius: 14px; background: #EA4335 !important; font-size: 30px;">✉️</div>
-                            <span style="color: white; text-shadow: 1px 1px 3px black; font-size: 12px;">E-mail</span>
-                        </a>
-                        <!-- DIGITAR TEXTOS (WORD) -->
-                        <a href="simulador.html?tema=comp_texto" class="app-item">
-                            <div class="app-icone" style="width: 58px; height: 58px; border-radius: 14px; background: #1F4E96 !important; font-size: 30px;">📝</div>
-                            <span style="color: white; text-shadow: 1px 1px 3px black; font-size: 12px;">Digitar Textos</span>
-                        </a>
-                        <!-- MEUS ARQUIVOS / PASTAS -->
-                        <a href="simulador.html?tema=comp_arquivos" class="app-item">
-                            <div class="app-icone" style="width: 58px; height: 58px; border-radius: 14px; background: #FBBC05 !important; font-size: 30px;">📁</div>
-                            <span style="color: white; text-shadow: 1px 1px 3px black; font-size: 12px;">Minhas Pastas</span>
-                        </a>
-                        <!-- IMPRIMIR DOCUMENTOS -->
-                        <a href="simulador.html?tema=comp_imprimir" class="app-item">
-                            <div class="app-icone" style="width: 58px; height: 58px; border-radius: 14px; background: #757575 !important; font-size: 30px;">🖨️</div>
-                            <span style="color: white; text-shadow: 1px 1px 3px black; font-size: 12px;">Imprimir</span>
-                        </a>
-                        
-                        <!-- NOVO MÓDULO: CONHECER O PC (MOUSE E GABINETE/CPU) -->
-                        <a href="simulador.html?tema=comp_basico" class="app-item">
-                            <div class="app-icone" style="width: 58px; height: 58px; border-radius: 14px; background: #E06300 !important; font-size: 30px;">🖱️</div>
-                            <span style="color: white; text-shadow: 1px 1px 3px black; font-size: 12px;">Conhecer o PC</span>
-                        </a>
-                                               
-                    </div>
-                    
-                    <!-- Barra de Tarefas Inferior -->
-                    <div style="background: rgba(15, 23, 42, 0.95); height: 36px; border-top: 1px solid rgba(255,255,255,0.1); display: flex; align-items: center; justify-content: space-between; padding: 0 12px; box-sizing: border-box; font-family: sans-serif; flex-shrink: 0;">
-                        <div style="background: #0066CC; color: white; font-weight: bold; font-size: 12px; padding: 3px 10px; border-radius: 4px; box-shadow: 0 1px 2px rgba(0,0,0,0.3); border: 1px solid rgba(255,255,255,0.1);">🪟 Iniciar</div>
-                        <span style="color: white; font-size: 12px; font-weight: bold; opacity: 0.9;">14:30 💻</span>
-                    </div>
-                </div>
-                
-                <!-- Suporte/Pé de Apoio Central de Metal -->
-                <div style="width: 70px; height: 50px; background: #334155; margin-top: -1px; box-shadow: inset 0 5px 10px rgba(0,0,0,0.3); border-left: 2px solid #475569; border-right: 2px solid #475569;"></div>
-                <!-- Base do Monitor na Mesa -->
-                <div style="width: 180px; height: 12px; background: #1E293B; border-radius: 6px 6px 0 0; box-shadow: 0 4px 10px rgba(0,0,0,0.2);"></div>
-            </div>
-        </div>
-
-    </div> <!-- Fecha a div portal-flex-layout -->
-
-    <!-- Script de ativação da tela de abertura -->
     <script>
-        function iniciarApp() {
-            const tela = document.getElementById('tela-abertura');
-            if (tela) {
-                tela.style.opacity = '0';
-                setTimeout(() => {
-                    tela.style.visibility = 'hidden';
-                }, 500);
-            }
+        function irParaMenu() {
+            window.location.href = "menu.html";
         }
     </script>
 </body>
 </html>
-
