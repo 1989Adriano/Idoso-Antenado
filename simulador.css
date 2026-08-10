@@ -1,0 +1,386 @@
+/* ==========================================================================
+   1. VARIÁVEIS DE CORES E CONFIGURAÇÃO DO BODY
+   ========================================================================== */
+:root {
+    --cor-fundo: #F8FAFC; 
+    --cor-texto: #0F172A; 
+    --cor-primaria: #0284C7; 
+    --cor-fundo-menu: #FFFFFF;
+    --cor-azul-escuro: #0F172A;
+    --cor-sucesso: #10B981;
+    --cor-alerta: #EF4444;
+    --cor-laranja: #F97316;
+}
+
+body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto);
+    font-size: 20px;
+    margin: 0;
+    padding: 0;
+    height: 100%; 
+    display: flex;
+    flex-direction: column;
+}
+
+/* ==========================================================================
+   2. ESTRUTURA DE CORPO E EIXO DE PORTAL (MONITOR)
+   ========================================================================== */
+.barra-navegacao {
+    background-color: var(--cor-azul-escuro);
+    padding: 15px 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    z-index: 50;
+    height: 70px;
+    box-sizing: border-box;
+}
+
+.menu-logo {
+    color: white;
+    font-weight: 700;
+    font-size: 24px;
+    text-decoration: none;
+}
+
+.layout-portal {
+    display: flex;
+    height: calc(100% - 70px); 
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* ==========================================================================
+   3. MENU LATERAL DE NAVEGAÇÃO INTERNA
+   ========================================================================== */
+.menu-lateral {
+    width: 320px;
+    background-color: var(--cor-fundo-menu);
+    border-right: 2px solid #E2E8F0;
+    padding: 24px 16px;
+    box-sizing: border-box;
+    flex-shrink: 0;
+    height: 100%; 
+    overflow-y: auto; 
+}
+
+.categoria-secao {
+    margin-bottom: 24px;
+}
+
+.categoria-titulo {
+    font-size: 15px;
+    font-weight: 700;
+    color: #64748B; 
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 12px;
+    padding-bottom: 6px;
+    border-bottom: 2px solid #F1F5F9;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.lista-links {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.menu-link {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 16px;
+    background: #F8FAFC;
+    border: 2px solid #E2E8F0;
+    border-radius: 12px;
+    text-decoration: none;
+    color: #475569;
+    font-weight: 700;
+    font-size: 17px;
+    transition: all 0.2s ease;
+    cursor: pointer;
+    box-sizing: border-box;
+}
+
+.menu-link:hover {
+    background-color: #F1F5F9;
+    border-color: #CBD5E1;
+    color: #0F172A;
+    transform: translateX(4px); 
+}
+
+.menu-link.ativo {
+    background-color: #E0F2FE; 
+    border-color: var(--cor-primaria);
+    color: #0369A1;
+    box-shadow: 0 4px 12px rgba(2, 132, 199, 0.1);
+    transform: translateX(4px);
+}
+
+/* ==========================================================================
+   4. CONTEÚDO DA ÁREA DO APARELHO E CAIXA DE SIMULAÇÃO
+   ========================================================================== */
+.conteudo-principal {
+    flex: 1;
+    height: 100%; 
+    padding: 30px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    overflow-y: auto; 
+    background-color: #F1F5F9; 
+}
+
+.simulador-caixa {
+    background-color: #FFFFFF;
+    border: 1px solid #E2E8F0;
+    border-radius: 20px;
+    padding: 30px;
+    text-align: center;
+    box-shadow: 0 10px 25px -5px rgba(0,0,0,0.05), 0 8px 10px -6px rgba(0,0,0,0.05);
+    max-width: 800px;
+    width: fit-content; 
+    min-width: 400px; 
+    margin: auto;
+    box-sizing: border-box;
+    transition: all 0.3s ease; 
+}
+
+/* ==========================================================================
+   5. CAIXA DE TEXTO DE INSTRUÇÃO ACESSÍVEL (BOX AMARELO)
+   ========================================================================== */
+.instrucao {
+    font-weight: 700;
+    font-size: 20px; 
+    margin-bottom: 20px;
+    background-color: #FEF3C7; 
+    color: #78350F;
+    padding: 16px 20px;
+    border-left: 6px solid #F59E0B;
+    border-radius: 8px;
+    line-height: 1.5;
+    text-align: justify;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center; 
+    min-height: 110px; 
+    height: auto; 
+}
+/* ==========================================================================
+   6. CASCA 1: SMARTPHONE (CELULAR) - DESIGN E SEGURANÇA GRÁFICA
+   ========================================================================== */
+.tela-celular {
+    width: 340px;
+    height: 490px;
+    background-color: #FFFFFF;
+    border-radius: 30px;
+    margin: 40px auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    overflow: hidden !important;
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding: 0;
+    align-items: stretch;
+    position: relative;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 0 12px #1E293B, 0 15px 35px rgba(0,0,0,0.3);
+    border: 1px solid transparent; 
+    isolation: isolate; 
+    transform: translateZ(0); 
+}
+
+/* ==========================================================================
+   7. CASCA 2: MONITOR DE COMPUTADOR - BLINDADO CONTRA VAZAMENTO
+   ========================================================================== */
+.tela-computador-simulada {
+    width: 540px !important;
+    height: 360px !important;
+    border-radius: 12px !important;
+    background-color: #2A4365;
+    overflow: hidden !important;
+    box-shadow: 0 0 0 16px #1E1E1E, 0 20px 40px rgba(0,0,0,0.4) !important;
+    border: 1px solid transparent !important;
+    isolation: isolate !important;
+    transform: translateZ(0) !important;
+}
+
+/* SUPORTE DO MONITOR: Aparece abaixo do computador */
+.pe-computador {
+    display: none; 
+    flex-direction: column;
+    align-items: center;
+    margin-top: -21px;
+    margin-bottom: 10px;
+}
+
+.pe-computador .haste {
+    width: 70px;
+    height: 40px;
+    background: #334155;
+    box-shadow: inset 0 5px 10px rgba(0,0,0,0.3);
+    border-left: 2px solid #475569;
+    border-right: 2px solid #475569;
+}
+
+.pe-computador .base {
+    width: 180px;
+    height: 12px;
+    background: #1E293B;
+    border-radius: 6px 6px 0 0;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+/* ==========================================================================
+   8. BOTÕES ACESSÍVEIS (EFEITO 3D DE AFUNDAMENTO)
+   ========================================================================== */
+.botao-grande {
+    background-color: var(--cor-primaria);
+    color: white !important;
+    font-size: 22px;
+    font-weight: 700;
+    padding: 16px 28px;
+    border: 1px solid rgba(0,0,0,0.1);
+    border-radius: 14px;
+    cursor: pointer;
+    box-shadow: 0 6px 0 #0369A1, 0 8px 15px rgba(0,0,0,0.1);
+    width: 90%;
+    transition: all 0.1s ease;
+    display: inline-block;
+    font-family: inherit;
+}
+
+.botao-grande:active {
+    transform: translateY(4px);
+    box-shadow: 0 2px 0 #0369A1;
+}
+
+.botao-alerta { background-color: var(--cor-alerta); box-shadow: 0 6px 0 #DC2626; }
+.botao-alerta:active { box-shadow: 0 2px 0 #DC2626; }
+
+.botao-sucesso { background-color: var(--cor-sucesso); box-shadow: 0 6px 0 #059669; }
+.botao-sucesso:active { box-shadow: 0 2px 0 #059669; }
+
+/* ==========================================================================
+   9. FEEDBACKS E EMBLEMAS DO MENU (ALTO CONTRASTE)
+   ========================================================================== */
+.feedback {
+    font-size: 20px;
+    font-weight: 700;
+    margin-top: 20px;
+    min-height: 40px;
+    line-height: 1.4;
+}
+
+.sucesso { 
+    color: #065F46; 
+    background-color: #D1FAE5; 
+    padding: 14px; 
+    border-radius: 10px; 
+    display: block; 
+    border: 1px solid #A7F3D0; 
+    text-align: left; 
+}
+
+.erro { 
+    color: #991B1B; 
+    background-color: #FEE2E2; 
+    padding: 14px; 
+    border-radius: 10px; 
+    display: block; 
+    border: 1px solid #FCA5A5; 
+    text-align: left; 
+}
+
+.menu-link span {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.04);
+    font-size: 18px;
+}
+
+/* ==========================================================================
+   10. MELHORIAS: CONTROLE DINÂMICO DO MENU LATERAL (TOTALMENTE ARREDONDADO)
+   ========================================================================== */
+.menu-lateral.escondido {
+    width: 0 !important;
+    padding: 0 !important;
+    border-right: none !important;
+    overflow: hidden !important;
+}
+
+.btn-controle-menu {
+    background: rgba(255, 255, 255, 0.15);
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    
+    /* MUDANÇA AQUI: Bordas totalmente arredondadas igual ao botão de voltar */
+    border-radius: 25px; 
+    padding: 0 24px; /* Aumentado levemente para acomodar as bordas ovais com folga */
+    
+    height: 54px; 
+    font-size: 17px; 
+    font-weight: bold;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px; 
+    
+    /* Efeito de profundidade 3D suave combinando com o topo do site */
+    box-shadow: 0 3px 6px rgba(0,0,0,0.15);
+    box-sizing: border-box;
+    white-space: nowrap; 
+    transition: all 0.2s ease;
+}
+
+.btn-controle-menu:hover {
+    background: rgba(255, 255, 255, 0.25);
+    border-color: white;
+    transform: scale(1.02); 
+}
+
+/* Efeito físico ao clicar no botão de opções */
+.btn-controle-menu:active {
+    transform: translateY(2px);
+    box-shadow: 0 1px 3px rgba(0,0,0,0.15);
+}
+
+.menu-lateral {
+    transition: width 0.3s ease, padding 0.3s ease, border-color 0.3s ease !important;
+}
+
+/* ==========================================================================
+   11. COMPORTAMENTO RESPONSIVO DA BARRA DE NAVEGAÇÃO SUPERIOR
+   ========================================================================== */
+@media (max-width: 1024px) {
+    /* Diminui levemente a fonte da nota em notebooks ou tablets para economizar espaço */
+    .caixa-nota-aparelho p {
+        font-size: 14px !important;
+    }
+}
+
+@media (max-width: 768px) {
+    /* Em telas menores ou celulares deitados, oculta a nota central para dar espaço total aos botões */
+    .caixa-nota-aparelho {
+        display: none !important;
+    }
+    .barra-navegacao {
+        justify-content: space-between !important;
+        padding: 15px 20px !important;
+    }
+}

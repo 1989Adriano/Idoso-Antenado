@@ -3,348 +3,68 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Simulador - Conecta Idade</title>
-    <style>
-        :root {
-            --cor-fundo: #F8FAFC; /* Fundo mais claro e moderno */
-            --cor-texto: #0F172A; /* Cinza escuro premium confortável para ler */
-            --cor-primaria: #0284C7; /* Azul celeste acolhedor */
-            --cor-fundo-menu: #FFFFFF;
-            --cor-azul-escuro: #0F172A;
-            --cor-sucesso: #10B981;
-            --cor-alerta: #EF4444;
-            --cor-laranja: #F97316;
-        }
-
-        body {
-            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            background-color: var(--cor-fundo);
-            color: var(--cor-texto);
-            font-size: 20px;
-            margin: 0;
-            padding: 0;
-            height: 100%; /* OBRIGA O CORPO A OCUPAR TODA A TELA */
-            display: flex;
-            flex-direction: column;
-        }
-
-        .barra-navegacao {
-            background-color: var(--cor-azul-escuro);
-            padding: 15px 24px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-            z-index: 50;
-            height: 70px;
-            box-sizing: border-box;
-        }
-
-        .menu-logo {
-            color: white;
-            font-weight: 700;
-            font-size: 24px;
-            text-decoration: none;
-        }
-
-        /* ESTRUTURA BLINDADA: Junta o menu e a área do celular preenchendo a tela toda */
-        .layout-portal {
-            display: flex;
-            height: calc(100% - 70px); /* Ocupa exatamente o espaço que resta do monitor */
-            width: 100%;
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        /* FIXAÇÃO DO MENU ATÉ O CHÃO DO SITE */
-        .menu-lateral {
-            width: 320px;
-            background-color: var(--cor-fundo-menu);
-            border-right: 2px solid #E2E8F0;
-            padding: 24px 16px;
-            box-sizing: border-box;
-            flex-shrink: 0;
-            height: 100%; /* FORÇA O MENU IR ATÉ O FINAL DA TELA REAL */
-            overflow-y: auto; /* Adiciona rolagem elegante se o monitor for pequeno */
-        }
-
-
-                /* ÁREA ÚTIL DO CELULAR QUE PREENCHE TODO O RESTANTE DA TELA */
-        .conteudo-principal {
-            flex: 1;
-            height: 100%; /* Força a área a acompanhar a altura total do portal */
-            padding: 30px;
-            box-sizing: border-box;
-            display: flex;
-            justify-content: center;
-            align-items: center; /* Centraliza verticalmente o celular na tela */
-            overflow-y: auto; /* Permite rolar apenas essa área se necessário */
-            background-color: #F1F5F9; /* Fundo suave de contraste para destacar o celular */
-        }
-
-        .categoria-secao {
-            margin-bottom: 24px;
-        }
-
-        .categoria-titulo {
-            font-size: 15px;
-            font-weight: 700;
-            color: #64748B; /* Cinza moderno estilo painel profissional */
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            margin-bottom: 12px;
-            padding-bottom: 6px;
-            border-bottom: 2px solid #F1F5F9;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-        }
-
-        .lista-links {
-            display: flex;
-            flex-direction: column;
-            gap: 8px;
-        }
-
-        .simulador-caixa {
-            background-color: #FFFFFF;
-            border: 1px solid #E2E8F0;
-            border-radius: 20px;
-            padding: 30px;
-            text-align: center;
-            box-shadow: 0 10px 25px -5px rgba(0,0,0,0.05), 0 8px 10px -6px rgba(0,0,0,0.05);
-            /* MUDANÇA AQUI: De max-width 600px para 800px para dar espaço de respiro ao PC */
-            max-width: 800px;
-            width: fit-content; /* Faz a caixa branca se moldar perfeitamente ao tamanho do aparelho ativo */
-            min-width: 400px; /* Garante que ela não fique espremida no celular */
-            margin: auto;
-            box-sizing: border-box;
-            transition: all 0.3s ease; /* Faz a expansão do fundo branco ser suave junto com o aparelho */
-        }
-
-
-        .menu-link {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            padding: 12px 16px;
-            background: #F8FAFC;
-            border: 2px solid #E2E8F0;
-            border-radius: 12px;
-            text-decoration: none;
-            color: #475569;
-            font-weight: 700;
-            font-size: 17px;
-            transition: all 0.2s ease;
-            cursor: pointer;
-            box-sizing: border-box;
-        }
-
-        .menu-link:hover {
-            background-color: #F1F5F9;
-            border-color: #CBD5E1;
-            color: #0F172A;
-            transform: translateX(4px); /* Deslizamento suave interativo */
-        }
-
-        .menu-link.ativo {
-            background-color: #E0F2FE; /* Destaque azul claro */
-            border-color: var(--cor-primaria);
-            color: #0369A1;
-            box-shadow: 0 4px 12px rgba(2, 132, 199, 0.1);
-            transform: translateX(4px);
-        }
-
-        .instrucao {
-            font-weight: 700;
-            font-size: 22px;
-            margin-bottom: 20px;
-            background-color: #FEF3C7; /* Amarelo pastel suave amigável */
-            color: #78350F;
-            padding: 16px;
-            border-left: 6px solid #F59E0B;
-            border-radius: 8px;
-            text-align: left;
-            line-height: 1.5;
-        }
-
-       .instrucao {
-            font-weight: 700;
-            font-size: 20px; /* Reduzido um pouquinho para caber mais texto sem apertar */
-            margin-bottom: 20px;
-            background-color: #FEF3C7; /* Amarelo pastel suave amigável */
-            color: #78350F;
-            padding: 16px 20px;
-            border-left: 6px solid #F59E0B;
-            border-radius: 8px;
-            line-height: 1.5;
-            text-align: justify;
-            box-sizing: border-box;
-            
-            /* CORREÇÃO DEFINITIVA DO CORTE DE TEXTO: */
-            display: flex;
-            align-items: center; 
-            min-height: 110px; /* Garante um tamanho base firme para textos de 1 ou 2 linhas */
-            height: auto; /* PERMITE CRESCER SOZINHA se o texto tiver 3, 4 ou mais linhas! */
-        }
-
-  
-        .tela-celular {
-            width: 340px;
-            height: 490px;
-            background-color: #FFFFFF;
-            border-radius: 30px;
-            margin: 40px auto;
-            display: flex;
-            flex-direction: column;
-            justify-content: flex-start;
-            overflow: hidden !important;
-            overflow-y: auto;
-            overflow-x: hidden;
-            padding: 0;
-            align-items: stretch;
-            position: relative;
-            transition: all 0.3s ease;
-            
-            /* Capinha escura perfeita feita com sombra espessa */
-            box-shadow: 0 0 0 12px #1E293B, 0 15px 35px rgba(0,0,0,0.3);
-
-            /* AS TRÊS LINHAS QUE RESOLVEM O BUG DO NAVEGADOR DE VEZ: */
-            border: 1px solid transparent; /* Força o alinhamento de subpixel */
-            isolation: isolate; /* Cria uma camada independente de desenho */
-            transform: translateZ(0); /* Ativa a GPU para renderizar a curva sem serrilhar */
-        }
-
-        /* CASCA 2: MONITOR DE COMPUTADOR (DEITADO) - BLINDADO CONTRA VAZAMENTO */
-        .tela-computador-simulada {
-            width: 540px !important;
-            height: 360px !important;
-            border-radius: 12px !important;
-            background-color: #2A4365;
-            overflow: hidden !important;
-            
-            /* Moldura do monitor feita com sombra espessa */
-            box-shadow: 0 0 0 16px #1E1E1E, 0 20px 40px rgba(0,0,0,0.4) !important;
-
-            /* Ativa as mesmas travas de segurança gráfica para o monitor */
-            border: 1px solid transparent !important;
-            isolation: isolate !important;
-            transform: translateZ(0) !important;
-        }
-
-
-
-
-        /* SUPORTE DO MONITOR: Aparece magicamente abaixo do computador */
-        .pe-computador {
-            display: none; /* Fica escondido no celular */
-            flex-direction: column;
-            align-items: center;
-            margin-top: -21px;
-            margin-bottom: 10px;
-        }
-        .pe-computador .haste {
-            width: 70px;
-            height: 40px;
-            background: #334155;
-            box-shadow: inset 0 5px 10px rgba(0,0,0,0.3);
-            border-left: 2px solid #475569;
-            border-right: 2px solid #475569;
-        }
-        .pe-computador .base {
-            width: 180px;
-            height: 12px;
-            background: #1E293B;
-            border-radius: 6px 6px 0 0;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-        }
-
-
-        .botao-grande {
-            background-color: var(--cor-primaria);
-            color: white !important;
-            font-size: 22px;
-            font-weight: 700;
-            padding: 16px 28px;
-            border: 1px solid rgba(0,0,0,0.1);
-            border-radius: 14px;
-            cursor: pointer;
-            box-shadow: 0 6px 0 #0369A1, 0 8px 15px rgba(0,0,0,0.1);
-            width: 90%;
-            transition: all 0.1s ease;
-            display: inline-block;
-            font-family: inherit;
-        }
-
-        .botao-grande:active {
-            transform: translateY(4px);
-            box-shadow: 0 2px 0 #0369A1;
-        }
-
-        .botao-alerta { background-color: var(--cor-alerta); box-shadow: 0 6px 0 #DC2626; }
-        .botao-alerta:active { box-shadow: 0 2px 0 #DC2626; }
-
-        .botao-sucesso { background-color: var(--cor-sucesso); box-shadow: 0 6px 0 #059669; }
-        .botao-sucesso:active { box-shadow: 0 2px 0 #059669; }
-
-        .feedback {
-            font-size: 20px;
-            font-weight: 700;
-            margin-top: 20px;
-            min-height: 40px;
-            line-height: 1.4;
-        }
-        
-        .sucesso { color: #065F46; background-color: #D1FAE5; padding: 14px; border-radius: 10px; display: block; border: 1px solid #A7F3D0; text-align: left; }
-        .erro { color: #991B1B; background-color: #FEE2E2; padding: 14px; border-radius: 10px; display: block; border: 1px solid #FCA5A5; text-align: left; }
-
-        .menu-link span {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            width: 32px;
-            height: 32px;
-            background: white;
-            border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.04);
-            font-size: 18px;
-        }
-    </style>
+    <title>Simulador - Conecta Idade</title>   
+    <link rel="stylesheet" href="simulador.css">
 </head>
-<body>
-
-     <!-- BARRA DE NAVEGAÇÃO SUPERIOR EXPANDIDA E DE ALTO CONTRASTE -->
-    <nav class="barra-navegacao" style="height: auto; min-height: 100px; padding: 20px 30px; display: flex; align-items: center; justify-content: space-between; gap: 25px; flex-wrap: wrap; box-sizing: border-box;">
+<body style="height: 100%; margin: 0; padding: 0;">
+    
+    <nav class="barra-navegacao" style="background-color: var(--cor-azul-escuro) !important; 
+        height: auto; min-height: 100px; 
+        padding: 20px 30px; display: flex; 
+        align-items: center; 
+        justify-content: space-between; 
+        gap: 20px; 
+        box-sizing: border-box; border-bottom: 4px solid var(--cor-laranja); 
+        width: 100%; overflow: hidden;">
         
-        <!-- Bloco do Logotipo e Voltar -->
-        <div style="display: flex; align-items: center; gap: 24px; flex-shrink: 0;">
-            <a href="index.html" style="text-decoration: none; background: rgba(255,255,255,0.18); color: white; font-weight: bold; font-size: 18px; padding: 12px 24px; border-radius: 25px; transition: all 0.2s; box-shadow: 0 3px 6px rgba(0,0,0,0.15); border: 1px solid rgba(255,255,255,0.25);">⬅️ Voltar</a>
-            <span class="menu-logo" style="font-size: 28px; letter-spacing: -0.5px;">🌐 Conecta Idade</span>
+        <!-- 1. BOTÃO DE CONTROLE COM ÍCONE E TEXTO (Extrema Esquerda) -->
+        <div style="flex-shrink: 0;">
+            <button onclick="alternarMenuLateral()" class="btn-controle-menu" title="Ocultar ou Mostrar o Menu Lateral">
+                <span style="font-size: 22px;">📋</span> Menu Treinamentos
+            </button>
         </div>
 
-        <!-- MENSAGEM EXPANDIDA: Ocupa a maior área central da Nav com destaque total -->
-        <div style="flex: 1; min-width: 320px; max-width: 1350px; background: rgba(255, 255, 255, 0.08); padding: 12px 20px; border-radius: 14px; border-left: 5px solid #F97316; box-sizing: border-box; box-shadow: inset 0 1px 3px rgba(0,0,0,0.2);">
-            <p style="margin: 0; color: #F1F5F9; font-size: 16px; font-weight: 700; line-height: 1.5; text-align: justify; font-family: system-ui, sans-serif;">
-                💡 <span style="color: #F97316; text-transform: uppercase; font-size: 13px; letter-spacing: 0.5px; display: inline-block; margin-bottom: 2px;">Nota sobre o seu aparelho:</span><br>
+        <!-- 2. MENSAGEM CENTRALIZADA COM TRAVA ANTI-VAZAMENTO -->
+        <!-- O uso de flex: 1 1 0% e min-width: 0 impede fisicamente o elemento de estourar a largura do Nav -->
+        <div class="caixa-nota-aparelho" style="flex: 1 1 0%; min-width: 0; max-width: 850px; background: rgba(255, 255, 255, 0.06); 
+                    padding: 12px 20px; border-radius: 14px; border-left: 5px solid #F97316; box-sizing: border-box; box-shadow: inset 0 1px 3px rgba(0,0,0,0.2);">
+            <p style="margin: 0; color: #F1F5F9; font-size: 15px; font-weight: 700; line-height: 1.5; text-align: justify; font-family: system-ui, sans-serif; 
+                      white-space: normal; overflow: hidden; text-overflow: ellipsis;">
+                💡 <span style="color: #F97316; 
+                        text-transform: uppercase;
+                        font-size: 12px; letter-spacing: 0.5px; 
+                        display: inline-block; 
+                        margin-bottom: 2px;">Nota sobre o seu aparelho:
+                    </span><br>
                 As telas abaixo servem como modelo! O formato, a posição ou a cor dos botões reais podem mudar um pouquinho dependendo da marca do seu celular ou computador.
             </p>
         </div>
 
-        <!-- Etiqueta de Segurança Lateral -->
-        <div style="background: #0284C7; color: white; font-size: 16px; font-weight: bold; padding: 12px 22px; border-radius: 35px; display: flex; align-items: center; gap: 10px; border: 1px solid rgba(255,255,255,0.3); box-shadow: 0 4px 10px rgba(0,0,0,0.15); flex-shrink: 0;">
-            <span style="font-size: 20px;">🔰</span> Espaço de Treino Seguro
+        <!-- 3. BOTÃO DE VOLTAR AO MENU (Extrema Direita) -->
+        <div style="flex-shrink: 0;">
+            <a href="menu.html" style="text-decoration: none; 
+                background: #FD7E14; color: white; 
+                font-weight: bold; font-size: 18px; 
+                padding: 12px 24px; border-radius: 25px;
+                transition: all 0.2s; box-shadow: 0 4px 0 #C45A00, 0 6px 10px rgba(0,0,0,0.15); 
+                display: inline-block; white-space: nowrap;"> Voltar ao Menu
+            </a>
         </div>
     </nav>
 
-
-        <!-- Estrutura de Portal Unificada -->
+    <!-- Estrutura de Portal Unificada: Agrupa o menu esquerdo e a área útil à direita -->
     <div class="layout-portal">
         
-        <!-- Menu Lateral Completo (Celular e Computador Integrados) -->
-        <aside class="menu-lateral">
-            <!-- SEÇÃO CELULAR -->
-            <div style="color: #0056B3; font-size: 13px; font-weight: 900; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 5px; border-bottom: 2px solid #E2E8F0; padding-bottom: 4px;">📱 Treinos de Celular</div>
+        <!-- Menu Lateral Completo (Navegação interna contendo todas as trilhas) -->
+        <aside class="menu-lateral escondido">
+            <!-- CATEGORIA: MÓDULOS DE SMARTPHONE -->
+            <div style="color: #0056B3; 
+                font-size: 13px; font-weight: 900; 
+                letter-spacing: 1px; text-transform: uppercase; 
+                margin-bottom: 5px; 
+                border-bottom: 2px solid #E2E8F0;
+                padding-bottom: 4px;">📱 Treinos de Celular
+            </div>
             
             <div class="categoria-secao">
                 <div class="categoria-titulo">🏥 Saúde e Serviços</div>
@@ -373,8 +93,17 @@
                 </div>
             </div>
 
-            <!-- NOVA SEÇÃO COMPUTADOR REAL E INTEGRADA -->
-            <div style="color: #0A7A4C; font-size: 13px; font-weight: 900; letter-spacing: 1px; text-transform: uppercase; margin-top: 15px; margin-bottom: 5px; border-bottom: 2px solid #E2E8F0; padding-bottom: 4px;">💻 Treinos de Computador</div>
+            <!-- CATEGORIA: MÓDULOS DE COMPUTADOR -->
+            <div style="color: #0A7A4C;
+                font-size: 13px; 
+                font-weight: 900; 
+                letter-spacing: 1px; 
+                text-transform: uppercase; 
+                margin-top: 15px; 
+                margin-bottom: 5px; 
+                border-bottom: 2px solid #E2E8F0; 
+                padding-bottom: 4px;">💻 Treinos de Computador
+            </div>
             
             <div class="categoria-secao">
                 <div class="categoria-titulo">💻 Programas Básicos</div>
@@ -389,7 +118,7 @@
             <div class="categoria-secao">
                 <div class="categoria-titulo">🌐 Internet e Segurança</div>
                 <div class="lista-links">
-                    <!-- LINK DO GOOGLE CHROME COM LOGO REDONDO EM CORES NO MENU -->
+                    <!-- Link estilizado com as cores do Google Chrome no menu lateral -->
                     <a href="simulador.html?tema=comp_internet" id="link-comp_internet" class="menu-link">
                         <span style="border-radius: 50% !important; background: white !important; font-size: 14px; position: relative; display: inline-flex; align-items: center; justify-content: center; width: 32px; height: 32px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); border: 1px solid #CBD5E1;">
                             <div style="width: 100%; height: 100%; border-radius: 50%; background: linear-gradient(135deg, #4285F4 0%, #34A853 50%, #FBBC05 50%, #EA4335 100%); display: flex; align-items: center; justify-content: center;">
@@ -403,38 +132,39 @@
             </div>
         </aside>
 
-        <!-- Área Central Útil Corrigida (Apenas uma caixinha e um celular na tela) -->
+        <!-- Área Central Útil: Centraliza a mesa e o dispositivo na tela -->
         <main class="conteudo-principal">
             <div class="simulador-caixa">
+                <!-- Caixa amarela dinâmica para as instruções -->
                 <div class="instrucao" id="texto-instrucao"></div>
                 
-                <!-- A casca onde o treino acontece -->
+                <!-- O receptáculo dinâmico onde o layout do celular ou monitor é injetado -->
                 <div class="tela-celular" id="tela-treino"></div>
                 
-                <!-- O Pé de apoio físico do monitor (Ativado apenas no PC) -->
+                <!-- O Pé de suporte físico do monitor (Ativado via JS apenas no PC) -->
                 <div class="pe-computador" id="suporte-monitor">
                     <div class="haste"></div>
                     <div class="base"></div>
                 </div>
 
+                <!-- Painel inferior dinâmico para avisos de Sucesso ou Erro -->
                 <div class="feedback" id="mensagem-feedback"></div>
             </div>
         </main>
     </div>
 
-
-    <!-- CARREGAMENTO DE TODOS OS COMPONENTES DO PORTAL -->
+    <!-- CARREGAMENTO DE TODOS OS COMPONENTES DO PORTAL (CELULAR) -->
     <script src="./inss.js"></script>
     <script src="./evitar_golpes.js"></script>
     <script src="./whatsapp.js"></script>
     <script src="./carteira.js"></script>
     <script src="./pix.js"></script>
-    <script src="./mercado.js"></script>
+    <script src="./mercado_livre.js"></script>
     <script src="./maps.js"></script>
     <script src="./uber.js"></script>
     <script src="./youtube.js"></script>
-    
-    <!-- ARQUIVOS DE INTELIGÊNCIA EXCLUSIVOS DO COMPUTADOR -->
+
+    <!-- CARREGAMENTO DOS SCRIPTS DE CONFIGURAÇÃO DO COMPUTADOR -->
     <script src="./comp_basico.js"></script>
     <script src="./comp_texto.js"></script>
     <script src="./comp_arquivos.js"></script>
@@ -443,36 +173,32 @@
     <script src="./comp_email.js"></script>
     <script src="./comp_seguranca.js"></script>
 
+    <!-- MOTOR LÓGICO E CONTROLADOR DE EVENTOS DO SIMULADOR -->
     <script>
+        // Captura o nome da trilha ativa direto na URL do navegador (ex: ?tema=youtube)
         const urlParams = new URLSearchParams(window.location.search);
-        const tutorialAtivo = urlParams.get('tema');
-        let passoAtual = parseInt(urlParams.get('passo')) || 0;
-        
-        // TRAVA DE SEGURANÇA ANTI-CLIQUE RÁPIDO
-        let podeAvancar = true; 
+        const tutorialAtivo = urlParams.get('tema') || 'youtube'; 
 
-        // Destaca o menu lateral ativo baseado no tema real da URL
-        if (tutorialAtivo) {
-            const linkAtivo = document.getElementById(`link-${tutorialAtivo}`);
-            if (linkAtivo) { linkAtivo.classList.add('ativo'); }
+        // Controladores numéricos e flags booleanas de navegação
+        let passoAtual = 0;
+        let podeAvancar = true; // Trava física essencial para impedir que cliques rápidos ou acidentais pulem etapas
+
+        // Destaca visualmente no menu esquerdo o link que o usuário está treinando no momento
+        const linkMenu = document.getElementById(`link-${tutorialAtivo}`);
+        if (linkMenu) {
+            linkMenu.classList.add('ativo');
         }
 
-        // FUNÇÃO DE RENDERIZAÇÃO ADAPTÁVEL E ORGANIZADA
+        // Função responsável por pintar a interface do aparelho na tela baseado no passo atual
         window.renderizarPasso = function() {
             const textoInstrucao = document.getElementById('texto-instrucao');
             const telaTreino = document.getElementById('tela-treino');
-            const msgFeedback = document.getElementById('mensagem-feedback');
             const suporteMonitor = document.getElementById('suporte-monitor');
+            const msgFeedback = document.getElementById('mensagem-feedback');
 
-            if (!textoInstrucao || !telaTreino || !msgFeedback || !suporteMonitor) return;
+            if (!textoInstrucao || !telaTreino || !suporteMonitor) return;
 
-            if (!tutorialAtivo) {
-                textoInstrucao.innerHTML = 'Escolha um tutorial.';
-                msgFeedback.innerHTML = "<span class='erro'>⚠️ Selecione uma das opções no menu lateral para começar a treinar!</span>";
-                return;
-            }
-
-            // MUDANÇA DINÂMICA DE CASCA: Verifica se é um tema de computador (começa com 'comp_')
+            // MUDANÇA DINÂMICA DE CASCA: Se o tema começar com 'comp_', chaveia para monitor e ergue o suporte físico
             if (tutorialAtivo.startsWith('comp_')) {
                 telaTreino.classList.add('tela-computador-simulada');
                 suporteMonitor.style.display = 'flex';
@@ -480,11 +206,11 @@
                 telaTreino.classList.remove('tela-computador-simulada');
                 suporteMonitor.style.display = 'none';
             }
-
+            
             // MAPEAMENTO COMPLETO DE VARIÁVEIS COM SISTEMA ANTI-TRAVAMENTO
             let listaAtual = null;
             try {
-                // Rotas do Celular
+                // Rotas das trilhas do Celular
                 if (tutorialAtivo === 'inss' && typeof inss !== 'undefined') listaAtual = inss;
                 if (tutorialAtivo === 'golpes' && typeof golpes !== 'undefined') listaAtual = golpes;
                 if (tutorialAtivo === 'whatsapp' && typeof whatsapp !== 'undefined') listaAtual = whatsapp;
@@ -495,7 +221,7 @@
                 if (tutorialAtivo === 'uber' && typeof uber !== 'undefined') listaAtual = uber;
                 if (tutorialAtivo === 'youtube' && typeof youtube !== 'undefined') listaAtual = youtube;
 
-                // Novas Rotas do Computador
+                // Novas Rotas das trilhas do Computador
                 if (tutorialAtivo === 'comp_basico' && typeof comp_basico !== 'undefined') listaAtual = comp_basico;
                 if (tutorialAtivo === 'comp_texto' && typeof comp_texto !== 'undefined') listaAtual = comp_texto;
                 if (tutorialAtivo === 'comp_arquivos' && typeof comp_arquivos !== 'undefined') listaAtual = comp_arquivos;
@@ -507,7 +233,7 @@
                 console.error("Erro ao ler variáveis dos arquivos locais:", e);
             }
 
-            // Tratamento caso a lista não exista na pasta do projeto
+            // Fallback visual caso a rota exista no menu mas o arquivo .js não tenha sido inserido
             if (!listaAtual) {
                 textoInstrucao.innerHTML = 'Módulo em Desenvolvimento';
                 telaTreino.innerHTML = `
@@ -528,7 +254,6 @@
                 msgFeedback.innerHTML = "";
             }
             
-            // LIBERA O PRÓXIMO CLIQUE: A tela acabou de carregar, o idoso pode clicar de novo
             podeAvancar = true; 
         }
         
@@ -544,8 +269,15 @@
             }
         }
 
+         // FUNÇÃO ADICIONAL: Aplica ou remove a classe 'escondido' no menu lateral
+        window.alternarMenuLateral = function() {
+            const menu = document.querySelector('.menu-lateral');
+            if (menu) {
+                menu.classList.toggle('escondido');
+            }
+        }
+
         window.avancarPasso = function() {
-            // CHECAGEM DA TRAVA: Se já houver um avanço em andamento, ignora os cliques extras!
             if (!podeAvancar) return; 
             
             let listaAtual = null;
@@ -573,34 +305,35 @@
 
             if (!listaAtual || !listaAtual[passoAtual]) return;
 
-            // TRAVA O BOTÃO: Impede cliques repetidos no mesmo segundo
             podeAvancar = false; 
 
             const feedback = listaAtual[passoAtual].feedback;
             passoAtual++;
 
+            // Injeta o alerta verde de sucesso na tela
             const msgFeedback = document.getElementById('mensagem-feedback');
             if (feedback && msgFeedback) {
                 let feedbackHTML = `<span class='sucesso'>${feedback}</span>`;
                 
+                // CONDICIONAL DE ENCERRAMENTO: Se for a última etapa, monta o botão 3D de finalização
                 if (passoAtual === listaAtual.length) {
                     feedbackHTML += `
                         <div style="margin-top: 25px; display:flex; justify-content:center;">
-                            <button class="botao-grande botao-sucesso" onclick="window.location.href='index.html'">Finalizar Tutorial</button>
+                            <!-- CORRIGIDO: Agora aponta para menu.html para voltar à lista de treinos -->
+                            <button class="botao-grande botao-sucesso" onclick="window.location.href='menu.html'">Finalizar Tutorial</button>
                         </div>`;
                 }
                 msgFeedback.innerHTML = feedbackHTML;
             }
 
             if (passoAtual < listaAtual.length) {
-                setTimeout(window.renderizarPasso, 4500); // Mantém o tempo confortável de leitura
+                setTimeout(window.renderizarPasso, 4500); 
             } else {
-                // Se for o passo final (tela de vitória), destrava para caso queira interagir
                 podeAvancar = true;
             }
         }
 
-        // Executa imediatamente
+        // Inicializa o motor do portal
         window.renderizarPasso();
     </script>
 </body>
