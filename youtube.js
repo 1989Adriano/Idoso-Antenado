@@ -1,4 +1,5 @@
 const youtube = [
+    // OBJETO 1: PASSO 1 (Pesquisa usando Lupa)
     {
         instrucao: "Passo 1: Para começar, toque na lupa (pesquisa) na parte de cima.",
         conteudo: `
@@ -30,6 +31,8 @@ const youtube = [
             </div>`,
         feedback: "Ótimo! Agora vamos procurar um vídeo que você goste."
     },
+
+    // OBJETO 2: PASSO 2 (Area de pesquisa(Field))
     {
         instrucao: "Passo 2: Toque na barra branca de cima para digitar o que quer assistir.",
         conteudo: `
@@ -60,7 +63,9 @@ const youtube = [
                 </div>
             </div>`,
         feedback: "Excelente! No celular, sempre que precisar escrever, um teclado parecido com este vai subir na tela."
-    },   
+    }, 
+
+    // OBJETO 3: PASSO 3 (Escolha do  video)
     {
         instrucao: "Passo 3: Toque em cima do primeiro vídeo da lista (Bolo de Fubá) para ele começar a tocar.",
         conteudo: `
@@ -85,7 +90,9 @@ const youtube = [
                 </div>
             </div>`,
         feedback: "Isso mesmo! Clicando no título ou na foto do vídeo, ele abre e começa a tocar na hora."
-    },   
+    },
+
+    // OBJETO 4: PASSO 4 (Pular Progagandas)
     {
         instrucao: "Passo Importante: Apareceu uma propaganda! Aguarde os segundos na tela e toque no botão 'Pular Anúncio' na direita.",
         conteudo: `
@@ -108,6 +115,8 @@ const youtube = [
             </div>`,
         feedback: "Sensacional! Perder o medo de anúncios é o segredo para navegar tranquilo pela internet!"
     },
+
+    // OBJETO 5: PASSO 5 (Pausar/Despausar)  
     {
         instrucao: "Passo 5: Toque no botão de Pausa (⏸️) no centro para parar o vídeo.",
         conteudo: `
@@ -128,6 +137,8 @@ const youtube = [
             </div>`,
         feedback: "Muito bem! Pausar é útil para anotações ou para buscar um cafezinho."
     },
+
+    // OBJETO 6: PASSO 6 (Inscrever-se/salvar canal)  
     {
         instrucao: "Passo 6: Se você gostou do canal, toque no botão preto 'Inscrever-se'.",
         conteudo: `
@@ -154,6 +165,8 @@ const youtube = [
             </div>`,
         feedback: "Excelente! Inscrever-se ajuda o YouTube a te sugerir novos vídeos desse canal."
     },
+
+     // OBJETO 7: PASSO 7 (deixar tela cheia)  
     {
         instrucao: "Passo 7: Para ver o vídeo em toda a tela do celular, toque no quadradinho (🔲) no canto.",
         conteudo: `
@@ -172,6 +185,8 @@ const youtube = [
             </div>`,
         feedback: "Parabéns! Você concluiu com sucesso o treino do YouTube! 🎉"
     },
+
+    // OBJETO 8: PASSO 8 (Tirar da tela cheia)  
     {
         instrucao: "Passo 8: O vídeo ocupou a tela toda! Para voltar o celular em pé e ver os outros botões, toque no quadradinho menor (↙️) no canto direito de baixo.",
         conteudo: `
