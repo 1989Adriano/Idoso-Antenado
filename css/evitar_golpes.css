@@ -1,0 +1,79 @@
+/* Container Principal do Celular */
+.golpe-container {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    font-family: sans-serif;
+    box-sizing: border-box;
+    user-select: none;
+}
+
+/* Telas com fundos variantes */
+.golpe-bg-whatsapp { background: #ECE5DD; }
+.golpe-bg-sms      { background: #F4F4F4; }
+.golpe-bg-telefone { background: #1C1C1E; color: white; }
+
+/* Topos e Barras de Navegação Realistas */
+.golpe-topo-wa {
+    background: #075E54;
+    color: white;
+    padding: 12px 15px;
+    text-align: left;
+    font-weight: bold;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.golpe-topo-sms {
+    background: #FFFFFF;
+    color: #333;
+    padding: 14px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 16px;
+    border-bottom: 1px solid #E0E0E0;
+}
+
+.golpe-topo-entrega {
+    background: #EA1D2C;
+    color: white;
+    padding: 14px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 16px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* Áreas Centrais de Mensagens */
+.golpe-corpo {
+    flex: 1;
+    padding: 20px 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+/* Rodapés Fixos de Botões */
+.golpe-rodape-cinza {
+    padding: 20px 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    align-items: center;
+    width: 100%;
+    box-sizing: border-box;
+    background: rgba(0,0,0,0.02);
+}
+
+.golpe-rodape-limpo {
+    padding: 20px 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    align-items: center;
+    width: 100%;
+    box-sizing: border-box;
+}

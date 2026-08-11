@@ -1,5 +1,5 @@
 /* ==========================================================================
-   1. VARIÁVEIS DE CORES E CONFIGURAÇÃO DO BODY
+   VARIÁVEIS DE CORES E CONFIGURAÇÃO DO BODY
    ========================================================================== */
 :root {
     --cor-fundo: #F8FAFC; 
@@ -24,9 +24,7 @@ body {
     flex-direction: column;
 }
 
-/* ==========================================================================
-   2. ESTRUTURA DE CORPO E EIXO DE PORTAL (MONITOR)
-   ========================================================================== */
+/* ESTRUTURA DE CORPO E EIXO DE PORTAL (MONITOR) */
 .barra-navegacao {
     background-color: var(--cor-azul-escuro);
     padding: 15px 24px;
@@ -54,9 +52,7 @@ body {
     padding: 0;
     box-sizing: border-box;
 }
-/* ==========================================================================
-   3. MENU LATERAL DE NAVEGAÇÃO INTERNA
-   ========================================================================== */
+/* MENU LATERAL DE NAVEGAÇÃO INTERNA */
 .menu-lateral {
     width: 320px;
     background-color: var(--cor-fundo-menu);
@@ -124,9 +120,7 @@ body {
     transform: translateX(4px);
 }
 
-/* ==========================================================================
-   4. CONTEÚDO DA ÁREA DO APARELHO E CAIXA DE SIMULAÇÃO
-   ========================================================================== */
+/* CONTEÚDO DA ÁREA DO APARELHO E CAIXA DE SIMULAÇÃO */
 .conteudo-principal {
     flex: 1;
     height: 100%; 
@@ -154,29 +148,28 @@ body {
     transition: all 0.3s ease; 
 }
 
-/* ==========================================================================
-   5. CAIXA DE TEXTO DE INSTRUÇÃO ACESSÍVEL (BOX AMARELO)
-   ========================================================================== */
+/* CAIXA DE TEXTO DE INSTRUÇÃO ACESSÍVEL (BOX AMARELO CORRIGIDO) */
 .instrucao {
     font-weight: 700;
     font-size: 20px; 
     margin-bottom: 20px;
     background-color: #FEF3C7; 
-    color: #78350F;
-    padding: 16px 20px;
+    color: #030303;
+    padding: 20px 24px; /* Espaçamento interno confortável */
     border-left: 6px solid #F59E0B;
     border-radius: 8px;
     line-height: 1.5;
-    text-align: justify;
-    box-sizing: border-box;
+    text-align: left; /* Garante que todo o texto comece sempre na esquerda */
+    box-sizing: border-box;    
     display: flex;
-    align-items: center; 
+    flex-direction: column; /* Força o Passo 1 a ficar em cima e o texto embaixo */
+    align-items: flex-start; /* Alinha todo mundo perfeitamente no canto esquerdo */
+    justify-content: center;
     min-height: 110px; 
     height: auto; 
 }
-/* ==========================================================================
-   6. CASCA 1: SMARTPHONE (CELULAR) - DESIGN E SEGURANÇA GRÁFICA
-   ========================================================================== */
+
+/* CASCA 1: SMARTPHONE (CELULAR) - DESIGN E SEGURANÇA GRÁFICA */
 .tela-celular {
     width: 340px;
     height: 490px;
@@ -199,9 +192,7 @@ body {
     transform: translateZ(0); 
 }
 
-/* ==========================================================================
-   7. CASCA 2: MONITOR DE COMPUTADOR - BLINDADO CONTRA VAZAMENTO
-   ========================================================================== */
+/* CASCA 2: MONITOR DE COMPUTADOR - BLINDADO CONTRA VAZAMENTO */
 .tela-computador-simulada {
     width: 540px !important;
     height: 360px !important;
@@ -240,9 +231,7 @@ body {
     box-shadow: 0 4px 10px rgba(0,0,0,0.2);
 }
 
-/* ==========================================================================
-   8. BOTÕES ACESSÍVEIS (EFEITO 3D DE AFUNDAMENTO)
-   ========================================================================== */
+/* BOTÕES ACESSÍVEIS (EFEITO 3D DE AFUNDAMENTO) */
 .botao-grande {
     background-color: var(--cor-primaria);
     color: white !important;
@@ -270,9 +259,7 @@ body {
 .botao-sucesso { background-color: var(--cor-sucesso); box-shadow: 0 6px 0 #059669; }
 .botao-sucesso:active { box-shadow: 0 2px 0 #059669; }
 
-/* ==========================================================================
-   9. FEEDBACKS E EMBLEMAS DO MENU (ALTO CONTRASTE)
-   ========================================================================== */
+/* FEEDBACKS E EMBLEMAS DO MENU (ALTO CONTRASTE) */
 .feedback {
     font-size: 20px;
     font-weight: 700;
@@ -313,9 +300,7 @@ body {
     font-size: 18px;
 }
 
-/* ==========================================================================
-   10. MELHORIAS: CONTROLE DINÂMICO DO MENU LATERAL (TOTALMENTE ARREDONDADO)
-   ========================================================================== */
+/* MELHORIAS: CONTROLE DINÂMICO DO MENU LATERAL (TOTALMENTE ARREDONDADO) */
 .menu-lateral.escondido {
     width: 0 !important;
     padding: 0 !important;
@@ -364,9 +349,7 @@ body {
     transition: width 0.3s ease, padding 0.3s ease, border-color 0.3s ease !important;
 }
 
-/* ==========================================================================
-   11. COMPORTAMENTO RESPONSIVO DA BARRA DE NAVEGAÇÃO SUPERIOR
-   ========================================================================== */
+/* COMPORTAMENTO RESPONSIVO DA BARRA DE NAVEGAÇÃO SUPERIOR */
 @media (max-width: 1024px) {
     /* Diminui levemente a fonte da nota em notebooks ou tablets para economizar espaço */
     .caixa-nota-aparelho p {

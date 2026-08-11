@@ -1,0 +1,61 @@
+/* Container Principal do Celular */
+.ub-container {
+    background: #FFFFFF;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    font-family: Arial, sans-serif;
+    box-sizing: border-box;
+    user-select: none;
+    position: relative;
+    color: #333;
+}
+
+/* Barras Superiores e Menus */
+.ub-topo-preto {
+    background: black;
+    color: white;
+    padding: 15px;
+    text-align: left;
+    font-weight: bold;
+    font-size: 20px;
+    flex-shrink: 0;
+}
+
+.ub-topo-branco {
+    background: white;
+    padding: 12px 15px;
+    border-bottom: 1px solid #eee;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Áreas de Mapa e Conteúdo */
+.ub-mapa-fundo {
+    flex: 1;
+    background: #E5E5E5;
+    position: relative;
+}
+
+/* Painéis de Escolha Inferiores */
+.ub-painel-busca {
+    background: white;
+    padding: 15px;
+    border-radius: 16px 16px 0 0;
+    box-shadow: 0 -4px 10px rgba(0,0,0,0.1);
+    flex-shrink: 0;
+    box-sizing: border-box;
+}
+
+.ub-painel-categorias {
+    flex: 1;
+    background: white;
+    padding: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    box-sizing: border-box;
+    overflow-y: auto;
+}

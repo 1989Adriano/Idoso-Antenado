@@ -1,0 +1,148 @@
+/* Container Principal do Celular */
+.wa-container {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    background: #ECE5DD;
+    font-family: sans-serif;
+    box-sizing: border-box;
+    user-select: none;
+}
+
+/* Cabeçalhos Verdes Principais */
+.wa-topo-agenda {
+    background: #007AFF;
+    color: white;
+    padding: 15px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 18px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.wa-topo-app {
+    background: #075E54;
+    color: white;
+    padding: 15px;
+    text-align: left;
+    font-weight: bold;
+    font-size: 20px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.wa-topo-chat {
+    background: #075E54;
+    color: white;
+    padding: 12px 15px;
+    text-align: left;
+    font-weight: bold;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* Áreas de Corpo e Feeds */
+.wa-corpo-agenda {
+    flex: 1;
+    padding: 25px 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    justify-content: center;
+}
+
+.wa-corpo-app {
+    flex: 1;
+    padding: 15px;
+    background: #F4F4F4;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.wa-corpo-chat {
+    flex: 1;
+    padding: 20px 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    gap: 10px;
+}
+
+/* Barras Operacionais Inferiores */
+.wa-barra-inferior {
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: transparent;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+}
+
+.wa-barra-salvar {
+    padding: 20px 15px;
+    display: flex;
+    justify-content: center;
+    background: white;
+    border-top: 1px solid #EEE;
+}
+
+/* Botões e Ícones Padronizados */
+.wa-btn-microfone {
+    width: 45px;
+    height: 45px;
+    background: #075E54;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+}
+
+.wa-btn-microfone-ativo {
+    width: 48px;
+    height: 48px;
+    background: #00A884;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 22px;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    border: 3px dashed #FFC107;
+}
+
+/* Balões de Envio e Recebimento */
+.wa-balao-envio {
+    background: #DCF8C6;
+    padding: 10px 14px;
+    border-radius: 14px 14px 0 14px;
+    align-self: flex-end;
+    max-width: 80%;
+    font-size: 16px;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.15);
+    text-align: left;
+    color: #222;
+    position: relative;
+    margin-bottom: 10px;
+}
+
+.wa-balao-recebimento {
+    background: #FFFFFF;
+    padding: 10px 14px;
+    border-radius: 14px 14px 14px 0;
+    align-self: flex-start;
+    max-width: 80%;
+    font-size: 16px;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.15);
+    color: #222;
+    text-align: left;
+}

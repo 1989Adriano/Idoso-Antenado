@@ -1,0 +1,52 @@
+/* pix.css - Estilos Gerais para os Simuladores de Pix */
+
+/* Container Principal do Celular */
+.pix-container {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    font-family: sans-serif;
+    box-sizing: border-box;
+    user-select: none;
+    background: #FFFFFF;
+    color: #333;
+}
+
+/* Topos e Cabeçalhos de Bancos */
+.pix-topo-banco {
+    background: #008037; /* Tom padrão para o Banco Verde */
+    color: white;
+    padding: 12px 15px;
+    text-align: left;
+    font-weight: bold;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    flex-shrink: 0;
+}
+
+/* Áreas Centrais de Conteúdo */
+.pix-corpo {
+    flex: 1;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    background: #F4F6F9;
+    box-sizing: border-box;
+}
+
+/* Rodapés de Botões de Ação */
+.pix-rodape {
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    width: 100%;
+    box-sizing: border-box;
+    background: #FFFFFF;
+    border-top: 1px solid #eee;
+}

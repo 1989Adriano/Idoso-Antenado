@@ -1,0 +1,96 @@
+/* inss.css - Versão Completa com Efeitos e Animações */
+
+/* Container Principal do Celular */
+.inss-container {
+    background: #FFFFFF;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    font-family: Arial, sans-serif;
+    box-sizing: border-box;
+    user-select: none;
+    padding: 15px;
+}
+
+/* Container do Hub Principal (Fundo Azul do INSS) */
+.inss-container-hub {
+    background: #002F6C;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    font-family: Arial, sans-serif;
+    box-sizing: border-box;
+    user-select: none;
+}
+
+/* Área de Cabeçalho do Hub */
+.inss-topo-hub {
+    background: #002F6C;
+    padding: 12px 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-shrink: 0;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+/* Corpo Principal das Telas de Login */
+.inss-corpo-centralizado {
+    padding: 20px 10px;
+    text-align: center;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+
+/* Grid de Serviços do Painel Interno */
+.inss-corpo-hub {
+    padding: 12px;
+    flex: 1;
+    background: #F4F6F9;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    box-sizing: border-box;
+    overflow-y: auto;
+}
+
+/* Rodapés de Botões Fixos */
+.inss-rodape-acao {
+    padding: 15px 0;
+    display: flex;
+    justify-content: center;
+    background: #F4F6F9;
+    border-top: 1px solid #EEE;
+    flex-shrink: 0;
+    border-radius: 0 0 12px 12px;
+}
+
+/* Botões Azuis Grandes Padronizados */
+.inss-btn-azul {
+    background: #1351B4;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 15px;
+    border-radius: 50px;
+    cursor: pointer;
+    width: 95%;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.15);
+    box-sizing: border-box;
+}
+
+/* Efeito de Flutuar do Emoji */
+.inss-emoji-flutuar {
+    font-size: 45px;
+    display: inline-block;
+    animation: inssFlutuar 3s ease-in-out infinite;
+}
+
+@keyframes inssFlutuar {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
