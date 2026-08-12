@@ -1,0 +1,82 @@
+/* Estrutura principal da tela do navegador de e-mail */
+.mail-container-web {
+    background: #F4F6F9;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    font-family: sans-serif;
+    box-sizing: border-box;
+    user-select: none;
+    color: #333;
+}
+
+/* Barra superior azul do provedor de e-mail */
+.mail-barra-topo {
+    background: #0056B3;
+    color: white;
+    padding: 10px 15px;
+    font-size: 14px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-shrink: 0;
+}
+
+/* Corpo principal dividido em menu esquerdo e lista de e-mails */
+.mail-corpo-layout {
+    flex: 1;
+    display: flex;
+    background: white;
+    overflow: hidden;
+}
+
+/* Menu lateral de pastas do e-mail (Caixa de Entrada, Enviados, etc) */
+.mail-menu-lateral {
+    width: 120px;
+    background: #F8FAFC;
+    border-right: 1px solid #E2E8F0;
+    padding: 12px 6px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    box-sizing: border-box;
+    font-size: 11px;
+    font-weight: bold;
+    color: #475569;
+}
+
+/* Lista centralizada ou container de leitura de e-mails */
+.mail-painel-conteudo {
+    flex: 1;
+    background: white;
+    padding: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    box-sizing: border-box;
+    overflow-y: auto;
+}
+
+/* Estilo padrão para as linhas da Caixa de Entrada */
+.mail-linha-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+    border-bottom: 1px solid #F1F5F9;
+    border-radius: 6px;
+    background: #FFF;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+}
+
+/* Animações Operacionais */
+@keyframes pulsarBordaAlvo {
+    0%, 100% { border-color: transparent; }
+    50% { border-color: #F97316; }
+}
+
+@keyframes piscarAlertaVermelho {
+    0%, 100% { box-shadow: 0 0 4px #EF4444; }
+    50% { box-shadow: 0 0 12px #EF4444; }
+}

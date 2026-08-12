@@ -1,9 +1,9 @@
 const golpes = [
-    // CENÁRIO 1: FALSO PARENTE NO WHATSAPP
-    {
-        instrucao: `<strong>Cenário 1:</strong>
+  // CENÁRIO 1: FALSO PARENTE NO WHATSAPP
+  {
+    instrucao: `<strong>Cenário 1:</strong>
             Um número desconhecido usa a foto de um parente e pede dinheiro. O que você faz?"`,
-        conteudo: `
+    conteudo: `
             <div style="height: 100%; 
                 display: flex; 
                 flex-direction: column; 
@@ -59,14 +59,15 @@ const golpes = [
                     <button class="botao-grande botao-sucesso" onclick="avancarPasso()">Bloquear e Ligar no Fixo</button>
                 </div>
             </div>`,
-        feedback: "✅ Excelente! Sempre ligue para o número antigo ou de linha fixa para confirmar a identidade antes de enviar qualquer valor."
-    },
+    feedback:
+      "✅ Excelente! Sempre ligue para o número antigo ou de linha fixa para confirmar a identidade antes de enviar qualquer valor.",
+  },
 
-    // CENÁRIO 2: LINK FALSO POR SMS
-    {
-        instrucao: `<strong>Cenário 2:</strong>
+  // CENÁRIO 2: LINK FALSO POR SMS
+  {
+    instrucao: `<strong>Cenário 2:</strong>
             Você recebeu um SMS dizendo que sua conta do banco será bloqueada. O que fazer?"`,
-        conteudo: `
+    conteudo: `
             <div style="height: 100%; 
                 display: flex; 
                 flex-direction: column; 
@@ -115,14 +116,15 @@ const golpes = [
                     <button class="botao-grande botao-sucesso" onclick="avancarPasso()">Apagar Mensagem</button>
                 </div>
             </div>`,
-        feedback: "✅ Perfeito! Instituições bancárias reais nunca enviam links de segurança ou ameaças de bloqueio imediato por SMS."
-    },
+    feedback:
+      "✅ Perfeito! Instituições bancárias reais nunca enviam links de segurança ou ameaças de bloqueio imediato por SMS.",
+  },
 
-    // CENÁRIO 3: PRÊMIO FALSO NO WHATSAPP
-    {
-        instrucao: `<strong>Cenário 3:</strong>
+  // CENÁRIO 3: PRÊMIO FALSO NO WHATSAPP
+  {
+    instrucao: `<strong>Cenário 3:</strong>
             Uma mensagem diz que você ganhou um prêmio, mas pede dados. O que fazer?"`,
-        conteudo: `
+    conteudo: `
             <div style="height: 100%; 
                 display: flex; 
                 flex-direction: column; 
@@ -172,14 +174,15 @@ const golpes = [
                     <button class="botao-grande botao-sucesso" onclick="avancarPasso()">Denunciar e Apagar</button>
                 </div>
             </div>`,
-        feedback: "✅ Isso mesmo! Prêmios fáceis e repentinos de sorteios nos quais você nem se inscreveu são golpes para roubar dados."
-    },
+    feedback:
+      "✅ Isso mesmo! Prêmios fáceis e repentinos de sorteios nos quais você nem se inscreveu são golpes para roubar dados.",
+  },
 
-    // CENÁRIO 4: ROUBO DE CÓDIGO SMS (CLONAGEM)
-    {
-        instrucao: `<strong>Cenário 4: </strong>
+  // CENÁRIO 4: ROUBO DE CÓDIGO SMS (CLONAGEM)
+  {
+    instrucao: `<strong>Cenário 4: </strong>
             Alguém pede um código de 6 dígitos que chegou por SMS no seu celular. O que você faz?"`,
-        conteudo: `
+    conteudo: `
             <div style="height: 100%; 
                 display: flex; 
                 flex-direction: column; 
@@ -232,13 +235,14 @@ const golpes = [
                     <button class="botao-grande botao-sucesso" onclick="avancarPasso()">Não passar e Bloquear</button>
                 </div>
             </div>`,
-        feedback: "✅ Excelente! Esse código SMS é a chave de verificação que os criminosos usam para clonar e roubar o seu WhatsApp."
-    },
-    // CENÁRIO 5: GOLPE DO DINHEIRO ESQUECIDO (FALSO PORTAL REGULARIZAR)
-    {
-        instrucao: `<strong>Cenário 5:</strong>
+    feedback:
+      "✅ Excelente! Esse código SMS é a chave de verificação que os criminosos usam para clonar e roubar o seu WhatsApp.",
+  },
+  // CENÁRIO 5: GOLPE DO DINHEIRO ESQUECIDO (FALSO PORTAL REGULARIZAR)
+  {
+    instrucao: `<strong>Cenário 5:</strong>
             Você recebe uma mensagem sobre 'dinheiro esquecido' para receber do governo. O que fazer?"`,
-        conteudo: `
+    conteudo: `
             <div style="height: 100%; 
                 display: flex; 
                 flex-direction: column; 
@@ -288,14 +292,15 @@ const golpes = [
                     <button class="botao-grande botao-sucesso" onclick="avancarPasso()">Ignorar e Apagar Conversa</button>
                 </div>
             </div>`,
-        feedback: "✅ Perfeito! A consulta oficial de valores esquecidos é feita apenas dentro do site oficial do Banco Central (bcb.gov.br) e nunca por links de mensagens."
-    },
+    feedback:
+      "✅ Perfeito! A consulta oficial de valores esquecidos é feita apenas dentro do site oficial do Banco Central (bcb.gov.br) e nunca por links de mensagens.",
+  },
 
-    // CENÁRIO 6: FALSAS VAGAS DE EMPREGO (HOME OFFICE)
-    {
-        instrucao: `<strong>Cenário 6:</strong>
+  // CENÁRIO 6: FALSAS VAGAS DE EMPREGO (HOME OFFICE)
+  {
+    instrucao: `<strong>Cenário 6:</strong>
             Uma proposta de emprego oferece R$ 500 por dia para avaliar produtos de casa, mas pede um pagamento inicial de 'treinamento'. O que fazer?"`,
-        conteudo: `
+    conteudo: `
             <div style="height: 100%; 
                 display: flex; 
                 flex-direction: column; 
@@ -348,14 +353,15 @@ const golpes = [
                     <button class="botao-grande botao-sucesso" onclick="avancarPasso()">Ignorar Vaga Falsa</button>
                 </div>
             </div>`,
-        feedback: "✅ Exatamente! Empresas sérias e oportunidades de emprego legítimas nunca cobram qualquer tipo de taxa ou depósito antecipado para contratação."
-    },
+    feedback:
+      "✅ Exatamente! Empresas sérias e oportunidades de emprego legítimas nunca cobram qualquer tipo de taxa ou depósito antecipado para contratação.",
+  },
 
-    // CENÁRIO 7: GOLPE DA MAQUININHA DE CARTÃO
-    {
-        instrucao: `<strong>Cenário 7:</strong>
+  // CENÁRIO 7: GOLPE DA MAQUININHA DE CARTÃO
+  {
+    instrucao: `<strong>Cenário 7:</strong>
             Um suposto entregador liga dizendo que tem um presente para você, mas cobra uma taxa de R$ 5,00 de entrega na maquininha. O que fazer?"`,
-        conteudo: `
+    conteudo: `
             <div style="height: 100%; 
                 display: flex; 
                 flex-direction: column; 
@@ -397,14 +403,15 @@ const golpes = [
                     <button class="botao-grande botao-sucesso" onclick="avancarPasso()">Recusar e Não Passar Cartão</button>
                 </div>
             </div>`,
-        feedback: "✅ Perfeito! Este é o golpe da maquininha: o visor pode estar quebrado ou adulterado para passar valores altíssimos sem você perceber."
-    },
+    feedback:
+      "✅ Perfeito! Este é o golpe da maquininha: o visor pode estar quebrado ou adulterado para passar valores altíssimos sem você perceber.",
+  },
 
-    // CENÁRIO 8: FALSO AVISO DA RECEITA FEDERAL
-    {
-        instrucao: `<strong>Cenário 8:</strong>
+  // CENÁRIO 8: FALSO AVISO DA RECEITA FEDERAL
+  {
+    instrucao: `<strong>Cenário 8:</strong>
             Uma mensagem urgente diz que seu CPF está irregular na Receita Federal e dá um link para resolver. O que fazer?"`,
-        conteudo: `
+    conteudo: `
             <div style="height: 100%; 
                 display: flex; 
                 flex-direction: column; 
@@ -457,14 +464,15 @@ const golpes = [
                     <button class="botao-grande botao-sucesso" onclick="avancarPasso()">Bloquear e Apagar</button>
                 </div>
             </div>`,
-        feedback: "✅ Excelente! Órgãos públicos federais e a Receita nunca realizam notificações de irregularidades de documentos por chats ou redes sociais."
-    },
+    feedback:
+      "✅ Excelente! Órgãos públicos federais e a Receita nunca realizam notificações de irregularidades de documentos por chats ou redes sociais.",
+  },
 
-    // CENÁRIO 9: FALSO PARENTE / SEQUESTRO FALSO POR TELEFONE
-    {
-        instrucao: `<strong>Cenário 9:</strong> 
+  // CENÁRIO 9: FALSO PARENTE / SEQUESTRO FALSO POR TELEFONE
+  {
+    instrucao: `<strong>Cenário 9:</strong> 
             Uma pessoa desconhecida liga desesperada dizendo ser seu sobrinho, que o carro quebrou e precisa de um Pix urgente para o guincho. O que fazer?`,
-        conteudo: `
+    conteudo: `
             <div style="height: 100%; 
                 display: flex; 
                 flex-direction: column; 
@@ -523,13 +531,14 @@ const golpes = [
                     <button class="botao-grande botao-sucesso" onclick="avancarPasso()">Desligar e Ligar Pro Parente Real</button>
                 </div>
             </div>`,
-        feedback: "✅ Certinho! Diante de ligações desesperadas simulando emergências familiares, encerre a chamada imediatamente e faça você mesmo o contato com o parente verdadeiro usando o número salvo."
-    },
+    feedback:
+      "✅ Certinho! Diante de ligações desesperadas simulando emergências familiares, encerre a chamada imediatamente e faça você mesmo o contato com o parente verdadeiro usando o número salvo.",
+  },
 
-    // CENÁRIO 10: FALSO GERENTE DO BANCO
-    {
-        instrucao: `<strong>Cenário 10:</strong> O 'gerente do banco' entra em contato por chat avisando que há uma compra suspeita no seu cartão e pede para você confirmar seus dados e senha. O que fazer?`,
-        conteudo: `
+  // CENÁRIO 10: FALSO GERENTE DO BANCO
+  {
+    instrucao: `<strong>Cenário 10:</strong> O 'gerente do banco' entra em contato por chat avisando que há uma compra suspeita no seu cartão e pede para você confirmar seus dados e senha. O que fazer?`,
+    conteudo: `
             <div style="height: 100%; 
                 display: flex; 
                 flex-direction: column; 
@@ -582,13 +591,14 @@ const golpes = [
                     <button class="botao-grande botao-sucesso" onclick="avancarPasso()">Desligar e Procurar a Agência</button>
                 </div>
             </div>`,
-        feedback: "✅ Espetacular! Bancos reais nunca solicitam senhas ou dados confidenciais por ligações ou aplicativos de chat. Ao desligar e ir direto ao seu banco, você neutraliza 100% da fraude!"
-    },
+    feedback:
+      "✅ Espetacular! Bancos reais nunca solicitam senhas ou dados confidenciais por ligações ou aplicativos de chat. Ao desligar e ir direto ao seu banco, você neutraliza 100% da fraude!",
+  },
 
-    // CENÁRIO 11: GOLPE DO FALSO SUPORTE TÉCNICO (AVISO DE VÍRUS)
-    {
-        instrucao: `<strong>Cenário 11:</strong> Um aviso urgente pisca na tela dizendo que seu aparelho está infectado por vírus e pede para ligar para um 0800. O que fazer?`,
-        conteudo: `
+  // CENÁRIO 11: GOLPE DO FALSO SUPORTE TÉCNICO (AVISO DE VÍRUS)
+  {
+    instrucao: `<strong>Cenário 11:</strong> Um aviso urgente pisca na tela dizendo que seu aparelho está infectado por vírus e pede para ligar para um 0800. O que fazer?`,
+    conteudo: `
             <div style="height: 100%; 
                 display: flex; 
                 flex-direction: column; 
@@ -642,13 +652,14 @@ const golpes = [
                     <button class="botao-grande botao-sucesso" onclick="avancarPasso()">Fechar o Navegador ou Desligar</button>
                 </div>
             </div>`,
-        feedback: "✅ Espetacular! Avisos de vírus que travam a tela e exigem ligações para números 0800 são fraudes para te induzir a instalar programas espiões no celular ou computador."
-    },
+    feedback:
+      "✅ Espetacular! Avisos de vírus que travam a tela e exigem ligações para números 0800 são fraudes para te induzir a instalar programas espiões no celular ou computador.",
+  },
 
-    // CENÁRIO 12: GOLPE DO FALSO MOTOBOY (RECOLHIMENTO DE CARTÃO)
-    {
-        instrucao: `<strong>Cenário 12:</strong> A central do banco liga avisando que seu cartão foi clonado e que enviarão um motoboy para recolhê-lo na sua casa. O que fazer?`,
-        conteudo: `
+  // CENÁRIO 12: GOLPE DO FALSO MOTOBOY (RECOLHIMENTO DE CARTÃO)
+  {
+    instrucao: `<strong>Cenário 12:</strong> A central do banco liga avisando que seu cartão foi clonado e que enviarão um motoboy para recolhê-lo na sua casa. O que fazer?`,
+    conteudo: `
             <div style="height: 100%; 
                 display: flex; 
                 flex-direction: column; 
@@ -707,6 +718,7 @@ const golpes = [
                     <button class="botao-grande botao-sucesso" onclick="window.location.href='menu.html'">Recusar, Desligar e Ligar no Banco</button>
                 </div>
             </div>`,
-        feedback: "✅ Perfeito e cirúrgico! Nenhum banco envia funcionários, gerentes ou motoboys para recolher cartões magnéticos na casa de clientes, mesmo que estejam cortados ao meio. O chip continua legível e operante!"
-    }
+    feedback:
+      "✅ Perfeito e cirúrgico! Nenhum banco envia funcionários, gerentes ou motoboys para recolher cartões magnéticos na casa de clientes, mesmo que estejam cortados ao meio. O chip continua legível e operante!",
+  },
 ];

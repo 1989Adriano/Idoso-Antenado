@@ -1,10 +1,11 @@
-const pix_pt3 = [ 
-    /* passos 11 ao 12 */ 
+const pix_pt3 = [
+  /* passos 11 ao 12 */
 
-    // PASSO 11 (ÍNDICE 10): ROTA 2 - REVISAR OS DADOS DO QR CODE
-    {
-        instrucao: "<strong>PASSO 11:</strong> Regra de ouro no QR Code!<br>Sempre confira se o valor cobrado é o mesmo valor gasto, antes de digitar sua senha.<br>Tudo correto? Dê um clique esquerdo no botão verde 'Avançar para Senha'.",
-        conteudo: `
+  // PASSO 11 (ÍNDICE 10): ROTA 2 - REVISAR OS DADOS DO QR CODE
+  {
+    instrucao:
+      "<strong>PASSO 11:</strong> Regra de ouro no QR Code!<br>Sempre confira se o valor cobrado é o mesmo valor gasto, antes de digitar sua senha.<br>Tudo correto? Dê um clique esquerdo no botão verde 'Avançar para Senha'.",
+    conteudo: `
             <div style="background: #F4F7FA; 
                 height: 100%; 
                 display: flex; 
@@ -72,13 +73,14 @@ const pix_pt3 = [
                     </button>
                 </div>
             </div>`,
-        feedback: "✓ Muito bem! Os dados comerciais foram revisados e confirmados."
-    },
+    feedback: "✓ Muito bem! Os dados comerciais foram revisados e confirmados.",
+  },
 
-    // PASSO 12 (ÍNDICE 11): ROTA 2 - DIGITAR A SENHA DE 6 DÍGITOS DO QR CODE
-    {
-        instrucao: "<strong>PASSO 12:</strong> Última etapa de proteção!<br>Para confirmar que é você quem está pagando e liberar a saída do dinheiro, dê um clique esquerdo no botão azul 'Confirmar Senha (6 Dígitos)' no teclado do celular.",
-        conteudo: `
+  // PASSO 12 (ÍNDICE 11): ROTA 2 - DIGITAR A SENHA DE 6 DÍGITOS DO QR CODE
+  {
+    instrucao:
+      "<strong>PASSO 12:</strong> Última etapa de proteção!<br>Para confirmar que é você quem está pagando e liberar a saída do dinheiro, dê um clique esquerdo no botão azul 'Confirmar Senha (6 Dígitos)' no teclado do celular.",
+    conteudo: `
             <div style="background: #F4F7FA; 
                 height: 100%; 
                 display: flex; 
@@ -155,13 +157,15 @@ const pix_pt3 = [
                     </div>
                 </div>
             </div>`,
-        feedback: "✓ Espetacular! A sua senha secreta foi autenticada e validada pelo banco. Redirecionando para o comprovante..."
-    },
-    
-    // PASSO 12 (ÍNDICE 11): ROTA 2 - DIGITAR A SENHA DE 6 DÍGITOS DO QR CODE
-    {
-        instrucao: "<strong>PASSO 12:</strong> Última etapa de proteção no QR Code!<br>Para confirmar que é você quem está pagando e liberar a saída do dinheiro, use o mouse. Dê um clique esquerdo no botão azul 'Confirmar Senha (6 Dígitos)'.",
-        conteudo: `
+    feedback:
+      "✓ Espetacular! A sua senha secreta foi autenticada e validada pelo banco. Redirecionando para o comprovante...",
+  },
+
+  // PASSO 12 (ÍNDICE 11): ROTA 2 - DIGITAR A SENHA DE 6 DÍGITOS DO QR CODE
+  {
+    instrucao:
+      "<strong>PASSO 12:</strong> Última etapa de proteção no QR Code!<br>Para confirmar que é você quem está pagando e liberar a saída do dinheiro, use o mouse. Dê um clique esquerdo no botão azul 'Confirmar Senha (6 Dígitos)'.",
+    conteudo: `
             <div style="background: #F4F7FA; 
                 height: 100%; 
                 display: flex; 
@@ -238,6 +242,7 @@ const pix_pt3 = [
                     </div>
                 </div>
             </div>`,
-        feedback: "✓ Espetacular! A sua senha secreta foi autenticada e validada pelo banco. Redirecionando para o comprovante..."
-    }
+    feedback:
+      "✓ Espetacular! A sua senha secreta foi autenticada e validada pelo banco. Redirecionando para o comprovante...",
+  },
 ];

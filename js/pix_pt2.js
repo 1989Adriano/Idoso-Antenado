@@ -1,8 +1,9 @@
 const pix_pt2 = [
-    // PASSO 1 (ÍNDICE 0): ABRIR O APLICATIVO DO BANCO
-    {
-        instrucao: "<strong>PASSO 1:</strong> Vamos simular o pagamento de uma conta ou compra!<br>Primeiro, abra o aplicativo de finanças.<br>Use o mouse e dê um clique esquerdo no ícone azul escrito 'Seu Banco'.",
-        conteudo: `
+  // PASSO 1 (ÍNDICE 0): ABRIR O APLICATIVO DO BANCO
+  {
+    instrucao:
+      "<strong>PASSO 1:</strong> Vamos simular o pagamento de uma conta ou compra!<br>Primeiro, abra o aplicativo de finanças.<br>Use o mouse e dê um clique esquerdo no ícone azul escrito 'Seu Banco'.",
+    conteudo: `
             <div style="background: #1E293B; 
                 height: 100%; 
                 display: flex; 
@@ -54,13 +55,15 @@ const pix_pt2 = [
                 </div>
                 <style>@keyframes pulsarFundo { 0%, 100% { background:rgba(255,255,255,0.1); } 50% { background:rgba(255,255,255,0.25); } }</style>
             </div>`,
-        feedback: "✓ Muito bem! O aplicativo do 'Seu Banco' foi aberto com total segurança."
-    },
+    feedback:
+      "✓ Muito bem! O aplicativo do 'Seu Banco' foi aberto com total segurança.",
+  },
 
-    // PASSO 2 (ÍNDICE 1): SELEÇÃO DO CAMPO DE LOGIN
-    {
-        instrucao: "<strong>PASSO 2:</strong> Para entrar na sua conta bancária de forma segura,<br>o aplicativo precisa carregar seus dados.<br>Dê um clique esquerdo na caixa branca escrita 'Agência e Conta'<br>para simular a inserção do seu cadastro.",
-        conteudo: `
+  // PASSO 2 (ÍNDICE 1): SELEÇÃO DO CAMPO DE LOGIN
+  {
+    instrucao:
+      "<strong>PASSO 2:</strong> Para entrar na sua conta bancária de forma segura,<br>o aplicativo precisa carregar seus dados.<br>Dê um clique esquerdo na caixa branca escrita 'Agência e Conta'<br>para simular a inserção do seu cadastro.",
+    conteudo: `
             <div style="background: #0056B3; 
                 height: 100%; 
                 display: flex; 
@@ -110,13 +113,15 @@ const pix_pt2 = [
                     </div>
                 </div>
             </div>`,
-        feedback: "✓ Excelente! Os dados de Agência e Conta foram preenchidos de forma automática."
-    },
+    feedback:
+      "✓ Excelente! Os dados de Agência e Conta foram preenchidos de forma automática.",
+  },
 
-    // PASSO 3 (ÍNDICE 2): EFETUAR O LOGIN COM SENHA DO APP
-    {
-        instrucao: "<strong>PASSO 3:</strong> Dados preenchidos!<br>Agora, para liberar o acesso ao saldo, clique com o botão esquerdo no botão azul '🔑 Confirmar Senha de Acesso' para fazer o login.",
-        conteudo: `
+  // PASSO 3 (ÍNDICE 2): EFETUAR O LOGIN COM SENHA DO APP
+  {
+    instrucao:
+      "<strong>PASSO 3:</strong> Dados preenchidos!<br>Agora, para liberar o acesso ao saldo, clique com o botão esquerdo no botão azul '🔑 Confirmar Senha de Acesso' para fazer o login.",
+    conteudo: `
             <div style="background: #0056B3; 
                 height: 100%; 
                 display: flex; 
@@ -180,13 +185,15 @@ const pix_pt2 = [
                     margin-top: 10px;">🔑 Confirmar Senha de Acesso
                 </button>
             </div>`,
-        feedback: "✓ Muito bem! Você fez login e acessou com sucesso o painel principal da sua conta corrente."
-    },
-    
-    // PASSO 4 (ÍNDICE 3): ENTRAR NA ÁREA PI(REAJUSTADO)
-    {
-        instrucao: "<strong>PASSO 4:</strong> Esta é a tela inicial da sua conta bancária!<br>Para iniciar um pagamento ou transferência eletrônica instantânea,<br>use o mouse. Dê um clique esquerdo no botão azul redondo 'Área Pix'.",
-        conteudo: `
+    feedback:
+      "✓ Muito bem! Você fez login e acessou com sucesso o painel principal da sua conta corrente.",
+  },
+
+  // PASSO 4 (ÍNDICE 3): ENTRAR NA ÁREA PI(REAJUSTADO)
+  {
+    instrucao:
+      "<strong>PASSO 4:</strong> Esta é a tela inicial da sua conta bancária!<br>Para iniciar um pagamento ou transferência eletrônica instantânea,<br>use o mouse. Dê um clique esquerdo no botão azul redondo 'Área Pix'.",
+    conteudo: `
             <div style="background: #F4F7FA; 
                 height: 100%; 
                 display: flex; 
@@ -259,13 +266,15 @@ const pix_pt2 = [
                     </div>
                 </div>
             </div>`,
-        feedback: "✓ Perfeito! Você acessou a central operacional do Pix de forma protegida."
-    },
+    feedback:
+      "✓ Perfeito! Você acessou a central operacional do Pix de forma protegida.",
+  },
 
-    // PASSO 5 (ÍNDICE 4): A TELA DE ESCOLHA DAS 3 ROTAS DISTINTAS
-    {
-        instrucao: "<strong>PASSO 5:</strong> Como você deseja realizar esse Pix hoje?<br>Escolha com atenção o caminho: toque em 'Copia e Cola' para códigos,<br>'QR Code' para usar a câmera, ou 'Chave Manual' para telefone.",
-        conteudo: `
+  // PASSO 5 (ÍNDICE 4): A TELA DE ESCOLHA DAS 3 ROTAS DISTINTAS
+  {
+    instrucao:
+      "<strong>PASSO 5:</strong> Como você deseja realizar esse Pix hoje?<br>Escolha com atenção o caminho: toque em 'Copia e Cola' para códigos,<br>'QR Code' para usar a câmera, ou 'Chave Manual' para telefone.",
+    conteudo: `
             <div style="background: #F4F7FA; 
                 height: 100%; 
                 display: flex; 
@@ -346,13 +355,15 @@ const pix_pt2 = [
                     </div>
                 </div>
             </div>`,
-        feedback: "Muito bem! Toque em uma das opções acima para iniciar a simulação específica."
-    },
-    
-    // PASSO 6 (ÍNDICE 5): ROTA 1 - ENTRAR NO CAMPO DE TEXTO DO COPIA E COLA
-    {
-        instrucao: "<strong>PASSO 6:</strong> Vamos colar o código que copiamos da loja virtual!<br>Use o mouse e dê um clique esquerdo dentro da caixa branca escrito 'Toque para inserir o código Pix'. Isso simulará a abertura do teclado digital.",
-        conteudo: `
+    feedback:
+      "Muito bem! Toque em uma das opções acima para iniciar a simulação específica.",
+  },
+
+  // PASSO 6 (ÍNDICE 5): ROTA 1 - ENTRAR NO CAMPO DE TEXTO DO COPIA E COLA
+  {
+    instrucao:
+      "<strong>PASSO 6:</strong> Vamos colar o código que copiamos da loja virtual!<br>Use o mouse e dê um clique esquerdo dentro da caixa branca escrito 'Toque para inserir o código Pix'. Isso simulará a abertura do teclado digital.",
+    conteudo: `
             <div style="background: #F4F7FA; 
                 height: 100%; 
                 display: flex; 
@@ -392,13 +403,15 @@ const pix_pt2 = [
                     </div>
                 </div>
             </div>`,
-        feedback: "✓ Excelente! O campo de texto foi ativado e o código foi colado da memória do telefone."
-    },
+    feedback:
+      "✓ Excelente! O campo de texto foi ativado e o código foi colado da memória do telefone.",
+  },
 
-    // PASSO 7 (ÍNDICE 6): ROTA 1 - CONFIRMAR O CÓDIGO INSERIDO
-    {
-        instrucao: "<strong>PASSO 7:</strong> O código longo do Mercado Livre já preencheu a barra cinza.<br>Para o banco realizar a leitura dos dados da fatura, use o mouse.<br>Dê um clique esquerdo no botão azul 'Confirmar Código'.",
-        conteudo: `
+  // PASSO 7 (ÍNDICE 6): ROTA 1 - CONFIRMAR O CÓDIGO INSERIDO
+  {
+    instrucao:
+      "<strong>PASSO 7:</strong> O código longo do Mercado Livre já preencheu a barra cinza.<br>Para o banco realizar a leitura dos dados da fatura, use o mouse.<br>Dê um clique esquerdo no botão azul 'Confirmar Código'.",
+    conteudo: `
             <div style="background: #F4F7FA; 
                 height: 100%; 
                 display: flex; 
@@ -456,13 +469,15 @@ const pix_pt2 = [
                     </button>
                 </div>
             </div>`,
-        feedback: "✓ Muito bem! O sistema bancário processou as informações do boleto eletrônico."
-    },
+    feedback:
+      "✓ Muito bem! O sistema bancário processou as informações do boleto eletrônico.",
+  },
 
-    // PASSO 8 (ÍNDICE 7): ROTA 1 - REVISAR DADOS DA FATURA COMERCIAL
-    {
-        instrucao: "<strong>PASSO 8:</strong> Regra de ouro!<br>Sempre confira se o valor cobrado é o mesmo valor gasto, antes de digitar sua senha.<br>Tudo correto?<br>Dê um clique esquerdo no botão verde 'Avançar para Senha'.",
-        conteudo: `
+  // PASSO 8 (ÍNDICE 7): ROTA 1 - REVISAR DADOS DA FATURA COMERCIAL
+  {
+    instrucao:
+      "<strong>PASSO 8:</strong> Regra de ouro!<br>Sempre confira se o valor cobrado é o mesmo valor gasto, antes de digitar sua senha.<br>Tudo correto?<br>Dê um clique esquerdo no botão verde 'Avançar para Senha'.",
+    conteudo: `
             <div style="background: #F4F7FA; 
                 height: 100%; 
                 display: flex; 
@@ -529,13 +544,15 @@ const pix_pt2 = [
                     </button>
                 </div>
             </div>`,
-        feedback: "✓ Excelente! Essa checagem impede que você mande dinheiro para golpistas ou pague contas adulteradas."
-    },
+    feedback:
+      "✓ Excelente! Essa checagem impede que você mande dinheiro para golpistas ou pague contas adulteradas.",
+  },
 
-    // PASSO 9 (ÍNDICE 8): ROTA 1 - DIGITAR A SENHA SECRETA DE 6 NÚMEROS
-    {
-        instrucao: "<strong>PASSO 9:</strong> Hora da segurança máxima!<br>Para aprovar a saída do dinheiro da sua conta corrente com segurança, insira sua chave.<br>Dê um clique esquerdo no botão azul 'Confirmar Senha (6 Dígitos)' do teclado virtual.",
-        conteudo: `
+  // PASSO 9 (ÍNDICE 8): ROTA 1 - DIGITAR A SENHA SECRETA DE 6 NÚMEROS
+  {
+    instrucao:
+      "<strong>PASSO 9:</strong> Hora da segurança máxima!<br>Para aprovar a saída do dinheiro da sua conta corrente com segurança, insira sua chave.<br>Dê um clique esquerdo no botão azul 'Confirmar Senha (6 Dígitos)' do teclado virtual.",
+    conteudo: `
             <div style="background: #F4F7FA; 
                 height: 100%; 
                 display: flex; 
@@ -606,13 +623,15 @@ const pix_pt2 = [
                     </div>
                 </div>
             </div>`,
-        feedback: "✓ Sensacional! A senha secreta foi aceita. Redirecionando para a emissão do comprovante oficial..."
-    },
+    feedback:
+      "✓ Sensacional! A senha secreta foi aceita. Redirecionando para a emissão do comprovante oficial...",
+  },
 
-    // PASSO 10 (ÍNDICE 9): ROTA 2 - ABRIR O LEITOR DE QR CODE COM CÂMERA
-    {
-        instrucao: "<strong>PASSO 10:</strong> O aplicativo ativou a câmera do seu celular!<br>No mundo real, aponte a lente para o código quadrado.<br>Dê um clique esquerdo no '📦 Quadradinho' piscando para simular o foco da lente.",
-        conteudo: `
+  // PASSO 10 (ÍNDICE 9): ROTA 2 - ABRIR O LEITOR DE QR CODE COM CÂMERA
+  {
+    instrucao:
+      "<strong>PASSO 10:</strong> O aplicativo ativou a câmera do seu celular!<br>No mundo real, aponte a lente para o código quadrado.<br>Dê um clique esquerdo no '📦 Quadradinho' piscando para simular o foco da lente.",
+    conteudo: `
             <div style="background: #000000; 
                 height: 100%; 
                 display: flex; 
@@ -671,6 +690,7 @@ const pix_pt2 = [
                 </div>
                 <style>@keyframes pulsarAlvo { 0%, 100% { transform: scale(1); } 50% { transform: scale(1.04); } }</style>
             </div>`,
-        feedback: "✓ Excelente! A câmera realizou a leitura do QR Code digital e extraiu a fatura."
-    }
+    feedback:
+      "✓ Excelente! A câmera realizou a leitura do QR Code digital e extraiu a fatura.",
+  },
 ];

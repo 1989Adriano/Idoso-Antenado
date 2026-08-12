@@ -1,8 +1,9 @@
 const maps = [
-    // PASSO 1: TELA INICIAL COM MAPA SIMULADO
-    {
-        instrucao: "<strong>Passo 1:</strong> Vamos planejar uma viagem! Toque na barra de pesquisa branca no topo escrita '🔍 Pesquisar endereço...' para digitar o seu destino.",
-        conteudo: `
+  // PASSO 1: TELA INICIAL COM MAPA SIMULADO
+  {
+    instrucao:
+      "<strong>Passo 1:</strong> Vamos planejar uma viagem! Toque na barra de pesquisa branca no topo escrita '🔍 Pesquisar endereço...' para digitar o seu destino.",
+    conteudo: `
             <div style="background: #EBF1F5; 
                 height: 100%; 
                 display: flex; 
@@ -47,13 +48,15 @@ const maps = [
                     </div>
                 </div>
             </div>`,
-        feedback: "Muito bem! O aplicativo abriu a caixa de digitação para o endereço."
-    },
-    
-    // PASSO 2: ENDEREÇO SELECIONADO NA LISTA
-    {
-        instrucao: "<strong>Passo 2:</strong> O endereço 'Hospital das Clínicas' já foi digitado! Toque na sugestão com o '📍 Alfinete Vermelho' para confirmar o local no mapa.",
-        conteudo: `
+    feedback:
+      "Muito bem! O aplicativo abriu a caixa de digitação para o endereço.",
+  },
+
+  // PASSO 2: ENDEREÇO SELECIONADO NA LISTA
+  {
+    instrucao:
+      "<strong>Passo 2:</strong> O endereço 'Hospital das Clínicas' já foi digitado! Toque na sugestão com o '📍 Alfinete Vermelho' para confirmar o local no mapa.",
+    conteudo: `
             <div style="background: #FFFFFF; 
                 height: 100%; 
                 display: flex; 
@@ -99,13 +102,15 @@ const maps = [
                     </div>
                 </div>
             </div>`,
-        feedback: "Excelente! O local exato foi marcado com o alfinete vermelho no mapa."
-    },
-    
-    // PASSO 3: BOTÃO DE ROTAS DESTACADO
-    {
-        instrucao: "<strong>Passo 3:</strong> O hospital apareceu na tela. Agora toque no botão azul redondo '🔄 Rotas' na parte de baixo para calcular o caminho.",
-        conteudo: `
+    feedback:
+      "Excelente! O local exato foi marcado com o alfinete vermelho no mapa.",
+  },
+
+  // PASSO 3: BOTÃO DE ROTAS DESTACADO
+  {
+    instrucao:
+      "<strong>Passo 3:</strong> O hospital apareceu na tela. Agora toque no botão azul redondo '🔄 Rotas' na parte de baixo para calcular o caminho.",
+    conteudo: `
             <div style="background: #EBF1F5; 
                 height: 100%; 
                 display: flex; 
@@ -145,13 +150,15 @@ const maps = [
                     </button>
                 </div>
             </div>`,
-        feedback: "Muito bem! O aplicativo começou a calcular os trajetos disponíveis."
-    },
-    
-    // PASSO 4: ESCOLHA DO MEIO DE TRANSPORTE
-    {
-        instrucao: "<strong>Passo 4:</strong> O mapa sugeriu ir de carro. Mas hoje vamos de transporte público! Toque no ícone do '🚍 Ônibus/Trem' no topo para mudar o trajeto.",
-        conteudo: `
+    feedback:
+      "Muito bem! O aplicativo começou a calcular os trajetos disponíveis.",
+  },
+
+  // PASSO 4: ESCOLHA DO MEIO DE TRANSPORTE
+  {
+    instrucao:
+      "<strong>Passo 4:</strong> O mapa sugeriu ir de carro. Mas hoje vamos de transporte público! Toque no ícone do '🚍 Ônibus/Trem' no topo para mudar o trajeto.",
+    conteudo: `
             <div style="background: #EBF1F5; 
                 height: 100%; 
                 display: flex; 
@@ -190,13 +197,15 @@ const maps = [
                     <div style="position: absolute; width: 100%; height: 6px; background: #4285F4; top: 150px; transform: rotate(15deg);"></div>
                 </div>
             </div>`,
-        feedback: "Excelente escolha! O mapa mudou e agora vai mostrar as linhas de ônibus e metrô."
-    },
+    feedback:
+      "Excelente escolha! O mapa mudou e agora vai mostrar as linhas de ônibus e metrô.",
+  },
 
-    // PASSO 5: TELA DETALHADA DA LINHA DE ÔNIBUS SUL
-    {
-        instrucao: "<strong>Passo 5:</strong> O Maps encontrou a linha perfeita: 'Linha 412 - Metrô Sul'. Toque em cima deste bloco branco da linha para escolher essa viagem.",
-        conteudo: `
+  // PASSO 5: TELA DETALHADA DA LINHA DE ÔNIBUS SUL
+  {
+    instrucao:
+      "<strong>Passo 5:</strong> O Maps encontrou a linha perfeita: 'Linha 412 - Metrô Sul'. Toque em cima deste bloco branco da linha para escolher essa viagem.",
+    conteudo: `
             <div style="background: #F4F6F9; 
                 height: 100%; 
                 display: flex; 
@@ -255,13 +264,15 @@ const maps = [
                     </div>
                 </div>
             </div>`,
-        feedback: "Ótimo! O sistema selecionou esse trajeto e agora vai te guiar até o embarque."
-    },
+    feedback:
+      "Ótimo! O sistema selecionou esse trajeto e agora vai te guiar até o embarque.",
+  },
 
-    // PASSO 6: ORIENTAÇÃO DE EMBARQUE E CAMINHADA
-    {
-        instrucao: "<strong>Passo 6:</strong> O aplicativo abriu o guia de ruas. Para ver o mapa detalhado e descobrir para qual lado você deve caminhar até o ponto, toque no botão branco '📋 Ver Etapas'.",
-        conteudo: `
+  // PASSO 6: ORIENTAÇÃO DE EMBARQUE E CAMINHADA
+  {
+    instrucao:
+      "<strong>Passo 6:</strong> O aplicativo abriu o guia de ruas. Para ver o mapa detalhado e descobrir para qual lado você deve caminhar até o ponto, toque no botão branco '📋 Ver Etapas'.",
+    conteudo: `
             <div style="background: #F4F6F9; 
                 height: 100%; 
                 display: flex; 
@@ -304,13 +315,15 @@ const maps = [
                     </button>
                 </div>
             </div>`,
-        feedback: "Perfeito! Ler as etapas detalhadas impede que você ande para o lado errado na calçada."
-    },
+    feedback:
+      "Perfeito! Ler as etapas detalhadas impede que você ande para o lado errado na calçada.",
+  },
 
-    // PASSO 7: BOTÃO AZUL DE INICIAR NAVEGAÇÃO POR VOZ
-    {
-        instrucao: "<strong>Passo 7:</strong> Tudo pronto! Para ativar o GPS em tempo real e ouvir as instruções de voz do celular te guiando pelo caminho, toque no botão azul '▶️ Iniciar'.",
-        conteudo: `
+  // PASSO 7: BOTÃO AZUL DE INICIAR NAVEGAÇÃO POR VOZ
+  {
+    instrucao:
+      "<strong>Passo 7:</strong> Tudo pronto! Para ativar o GPS em tempo real e ouvir as instruções de voz do celular te guiando pelo caminho, toque no botão azul '▶️ Iniciar'.",
+    conteudo: `
             <div style="background: #EBF1F5; 
                 height: 100%; 
                 display: flex; 
@@ -361,13 +374,15 @@ const maps = [
                     </div>
                 </div>
             </div>`,
-        feedback: "🔊 Excelente! A navegação por voz foi ativada de forma correta. O GPS vai te monitorar de perto."
-    },
-    
-    // PASSO 8: SEGURANÇA E PREVENÇÃO EM DESVIOS DE ROTA
-    {
-        instrucao: "<strong>Passo 8:</strong> Alerta de segurança! O GPS detectou que o ônibus fez um desvio inesperado da rota normal. Para recalcular o caminho certo ou checar o mapa, toque no botão vermelho '⚠️ Verificar Rota'.",
-        conteudo: `
+    feedback:
+      "🔊 Excelente! A navegação por voz foi ativada de forma correta. O GPS vai te monitorar de perto.",
+  },
+
+  // PASSO 8: SEGURANÇA E PREVENÇÃO EM DESVIOS DE ROTA
+  {
+    instrucao:
+      "<strong>Passo 8:</strong> Alerta de segurança! O GPS detectou que o ônibus fez um desvio inesperado da rota normal. Para recalcular o caminho certo ou checar o mapa, toque no botão vermelho '⚠️ Verificar Rota'.",
+    conteudo: `
             <div style="background: #FFF; 
                 height: 100%; 
                 display: flex; 
@@ -416,13 +431,15 @@ const maps = [
                     </button>
                 </div>
             </div>`,
-        feedback: "✅ Perfeito e seguro! Monitorar desvios de rota no mapa te dá controle total e evita que você desça em bairros desconhecidos."
-    },
+    feedback:
+      "✅ Perfeito e seguro! Monitorar desvios de rota no mapa te dá controle total e evita que você desça em bairros desconhecidos.",
+  },
 
-    // PASSO 9: TELA FINAL DE SUCESSO (VITÓRIA)
-    {
-        instrucao: "<strong>Passo 9:</strong> Treino Concluído! Você aprendeu a pesquisar locais, escolher ônibus e usar o GPS do celular de forma totalmente segura.",
-        conteudo: `
+  // PASSO 9: TELA FINAL DE SUCESSO (VITÓRIA)
+  {
+    instrucao:
+      "<strong>Passo 9:</strong> Treino Concluído! Você aprendeu a pesquisar locais, escolher ônibus e usar o GPS do celular de forma totalmente segura.",
+    conteudo: `
             <div style="background: white; 
                 height: 100%; 
                 display: flex; 
@@ -493,6 +510,6 @@ const maps = [
                     </button>
                 </div>
             </div>`,
-        feedback: "Parabéns! Módulo do Google Maps finalizado com sucesso! 🗺️🎉"
-    }
+    feedback: "Parabéns! Módulo do Google Maps finalizado com sucesso! 🗺️🎉",
+  },
 ];

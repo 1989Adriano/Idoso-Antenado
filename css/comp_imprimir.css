@@ -1,0 +1,73 @@
+/* comp_imprimir.css - Estilos Gerais para a Trilha de Impressão */
+
+/* Área de trabalho cinza do monitor */
+.imp-desktop-fundo {
+    background: #2A4365;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    font-family: sans-serif;
+    box-sizing: border-box;
+    user-select: none;
+    position: relative;
+}
+
+/* Moldura das janelas do processador de texto e propriedades */
+.imp-janela-branca {
+    background: #FFFFFF;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    font-family: sans-serif;
+    box-sizing: border-box;
+    user-select: none;
+    color: #333;
+    text-align: left;
+}
+
+/* Painel de ferramentas superior cinza */
+.imp-barra-topo {
+    background: #F1F3F4;
+    padding: 8px 15px;
+    border-bottom: 1px solid #E0E0E0;
+    font-size: 13px;
+    font-weight: bold;
+    flex-shrink: 0;
+}
+
+/* Área cinza de visualização de folhas */
+.imp-mesa-trabalho {
+    flex: 1;
+    background: #E2E8F0;
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+/* Caixa de diálogo central suspensa */
+.imp-caixa-dialogo {
+    background: white;
+    border: 1px solid #CBD5E1;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    border-radius: 8px;
+    width: 85%;
+    padding: 15px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+/* Animações Operacionais */
+@keyframes pulsarFundoCinza {
+    0%, 100% { background: rgba(255, 255, 255, 0.1); }
+    50% { background: rgba(255, 255, 255, 0.25); }
+}
+
+@keyframes pulsarBordaCinza {
+    0%, 100% { border-color: transparent; }
+    50% { border-color: #757575; }
+}

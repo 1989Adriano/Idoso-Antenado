@@ -1,8 +1,9 @@
 const uber = [
-    // PASSO 1 (ÍNDICE 0): TELA INICIAL DA UBER
-    {
-        instrucao: "<strong>Passo 1:</strong> Para iniciar a sua viagem, toque na barra cinza central escrita '🔍 Para onde?'.",
-        conteudo: `
+  // PASSO 1 (ÍNDICE 0): TELA INICIAL DA UBER
+  {
+    instrucao:
+      "<strong>Passo 1:</strong> Para iniciar a sua viagem, toque na barra cinza central escrita '🔍 Para onde?'.",
+    conteudo: `
             <div style="background: #FFF; 
                 height: 100%; 
                 display: flex; 
@@ -81,13 +82,15 @@ const uber = [
                     </div>
                 </div>
             </div>`,
-        feedback: "Perfeito! A barra 'Para onde?' ativa a tela de busca de endereços."
-    },
-    
-    // PASSO 2 (ÍNDICE 1): SELEÇÃO DO ENDEREÇO DE DESTINO
-    {
-        instrucao: "<strong>Passo 2:</strong> O aplicativo digitou o endereço 'Hospital Central'. Toque em cima do primeiro resultado na lista para confirmar o destino.",
-        conteudo: `
+    feedback:
+      "Perfeito! A barra 'Para onde?' ativa a tela de busca de endereços.",
+  },
+
+  // PASSO 2 (ÍNDICE 1): SELEÇÃO DO ENDEREÇO DE DESTINO
+  {
+    instrucao:
+      "<strong>Passo 2:</strong> O aplicativo digitou o endereço 'Hospital Central'. Toque em cima do primeiro resultado na lista para confirmar o destino.",
+    conteudo: `
             <div style="background: white; 
                 height: 100%; 
                 display: flex; 
@@ -150,13 +153,15 @@ const uber = [
                     </div>
                 </div>
             </div>`,
-        feedback: "Muito bem! Tocar no endereço correto garante que o motorista te leve para o local exato."
-    },
+    feedback:
+      "Muito bem! Tocar no endereço correto garante que o motorista te leve para o local exato.",
+  },
 
-    // PASSO 3 (ÍNDICE 2): SELEÇÃO DO TIPO DE CARRO FIEL AO APP
-    {
-        instrucao: "<strong>Passo 3:</strong> Escolha a categoria do veículo. Toque na primeira opção oficial da lista: '🚗 UberX' para selecionar a viagem mais econômica.",
-        conteudo: `
+  // PASSO 3 (ÍNDICE 2): SELEÇÃO DO TIPO DE CARRO FIEL AO APP
+  {
+    instrucao:
+      "<strong>Passo 3:</strong> Escolha a categoria do veículo. Toque na primeira opção oficial da lista: '🚗 UberX' para selecionar a viagem mais econômica.",
+    conteudo: `
             <div style="background: #FFF; 
                 height: 100%; 
                 display: flex; 
@@ -219,13 +224,15 @@ const uber = [
                     </div>
                 </div>
             </div>`,
-        feedback: "Excelente escolha! A opção UberX é a mais tradicional e econômica do aplicativo."
-    },
+    feedback:
+      "Excelente escolha! A opção UberX é a mais tradicional e econômica do aplicativo.",
+  },
 
-    // PASSO 4 (ÍNDICE 3): TRAVA DE SEGURANÇA CONTRA GOLPES DE COBRANÇA
-    {
-        instrucao: "<strong>Passo 4:</strong> Escolha a forma de pagamento recomendada. Toque no botão 'Confirmar UberX' para garantir o pagamento registrado diretamente no aplicativo.",
-        conteudo: `
+  // PASSO 4 (ÍNDICE 3): TRAVA DE SEGURANÇA CONTRA GOLPES DE COBRANÇA
+  {
+    instrucao:
+      "<strong>Passo 4:</strong> Escolha a forma de pagamento recomendada. Toque no botão 'Confirmar UberX' para garantir o pagamento registrado diretamente no aplicativo.",
+    conteudo: `
             <div style="background: #FFF; 
                 height: 100%; 
                 display: flex; 
@@ -291,13 +298,15 @@ const uber = [
                     </button>
                 </div>
             </div>`,
-        feedback: "Definir e monitorar o pagamento direto pelo aplicativo evita cobranças indevidas ou golpes na viagem."
-    },
+    feedback:
+      "Definir e monitorar o pagamento direto pelo aplicativo evita cobranças indevidas ou golpes na viagem.",
+  },
 
-    // PASSO 5 (ÍNDICE 4): CONFIRMAÇÃO DO LOCAL DE EMBARQUE
-    {
-        instrucao: "<strong>Passo 5:</strong> Revise se o seu endereço de partida 'Rua das Flores, 123' está correto. Estando tudo certo, toque no botão preto 'Confirmar Embarque'.",
-        conteudo: `
+  // PASSO 5 (ÍNDICE 4): CONFIRMAÇÃO DO LOCAL DE EMBARQUE
+  {
+    instrucao:
+      "<strong>Passo 5:</strong> Revise se o seu endereço de partida 'Rua das Flores, 123' está correto. Estando tudo certo, toque no botão preto 'Confirmar Embarque'.",
+    conteudo: `
             <div style="background: #FFF; 
                 height: 100%; 
                 display: flex; 
@@ -355,13 +364,15 @@ const uber = [
                     </button>
                 </div>
             </div>`,
-        feedback: "Excelente! Confirmar o ponto de partida evita que o motorista fique te procurando na rua errada."
-    },
+    feedback:
+      "Excelente! Confirmar o ponto de partida evita que o motorista fique te procurando na rua errada.",
+  },
 
-    // PASSO 6 (ÍNDICE 5): IDENTIFICAÇÃO VISUAL DO VEÍCULO (NOVO!)
-    {
-        instrucao: "<strong>Passo 6:</strong> O aplicativo avisa que o motorista está chegando! Olhe para a rua e procure visualmente o modelo e a cor do veículo informados. Toque na imagem do carro correspondente: o 'Corolla Branco'.",
-        conteudo: `
+  // PASSO 6 (ÍNDICE 5): IDENTIFICAÇÃO VISUAL DO VEÍCULO (NOVO!)
+  {
+    instrucao:
+      "<strong>Passo 6:</strong> O aplicativo avisa que o motorista está chegando! Olhe para a rua e procure visualmente o modelo e a cor do veículo informados. Toque na imagem do carro correspondente: o 'Corolla Branco'.",
+    conteudo: `
             <div style="background: #FFF; 
                 height: 100%; 
                 display: flex; 
@@ -431,13 +442,15 @@ const uber = [
                     </div>
                 </div>
             </div>`,
-        feedback: "Excelente! Focar na cor e no modelo do carro de longe agiliza o embarque e evita que você fique perdido na calçada."
-    },
+    feedback:
+      "Excelente! Focar na cor e no modelo do carro de longe agiliza o embarque e evita que você fique perdido na calçada.",
+  },
 
-    // PASSO 7 (ÍNDICE 6): CÓDIGO DE SEGURANÇA PIN / U-CÓDIGO (NOVO!)
-    {
-        instrucao: "<strong>Passo 7:</strong> O carro parou. Para que a viagem comece, você deve informar o código de segurança de 4 dígitos ao motorista. Localize o número na tela e toque nele para ditar.",
-        conteudo: `
+  // PASSO 7 (ÍNDICE 6): CÓDIGO DE SEGURANÇA PIN / U-CÓDIGO (NOVO!)
+  {
+    instrucao:
+      "<strong>Passo 7:</strong> O carro parou. Para que a viagem comece, você deve informar o código de segurança de 4 dígitos ao motorista. Localize o número na tela e toque nele para ditar.",
+    conteudo: `
             <div style="background: #FFF; 
                 height: 100%; 
                 display: flex; 
@@ -503,13 +516,15 @@ const uber = [
                     </div>
                 </div>
             </div>`,
-        feedback: "Perfeito! Falar o código PIN é a melhor garantia de que você está no veículo regulamentar rastreado pela Uber."
-    },
-    
-    // PASSO 8 (ÍNDICE 7): TELA DE VITÓRIA ABSOLUTA DO MÓDULO UBER (REAJUSTADO)
-    {
-        instrucao: "<strong>Passo 8:</strong> Treino Concluído! Você aprendeu a pedir uma viagem pelo celular e a entrar no carro com total segurança e independência.",
-        conteudo: `
+    feedback:
+      "Perfeito! Falar o código PIN é a melhor garantia de que você está no veículo regulamentar rastreado pela Uber.",
+  },
+
+  // PASSO 8 (ÍNDICE 7): TELA DE VITÓRIA ABSOLUTA DO MÓDULO UBER (REAJUSTADO)
+  {
+    instrucao:
+      "<strong>Passo 8:</strong> Treino Concluído! Você aprendeu a pedir uma viagem pelo celular e a entrar no carro com total segurança e independência.",
+    conteudo: `
             <div style="background: white; 
                 height: 100%; 
                 display: flex; 
@@ -582,6 +597,6 @@ const uber = [
                     </button>
                 </div>
             </div>`,
-        feedback: "Parabéns! Módulo da Uber finalizado com sucesso! 🥇"
-    }
+    feedback: "Parabéns! Módulo da Uber finalizado com sucesso! 🥇",
+  },
 ];

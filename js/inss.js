@@ -1,8 +1,8 @@
 const inss = [
-    // PASSO 1: TELA DE ENTRADA + ALERTA DE SEGURANÇA GOV.BR
-    {
-        instrucao: `<strong>PASSO 1:</strong> Para entrar no Meu INSS com segurança, toque no botão azul '🔑 Entrar com gov.br'.`,
-        conteudo: `
+  // PASSO 1: TELA DE ENTRADA + ALERTA DE SEGURANÇA GOV.BR
+  {
+    instrucao: `<strong>PASSO 1:</strong> Para entrar no Meu INSS com segurança, toque no botão azul '🔑 Entrar com gov.br'.`,
+    conteudo: `
             <div style="background: #FFFFFF; 
                 height: 100%; 
                 display: flex; 
@@ -68,13 +68,15 @@ const inss = [
                     </button>
                 </div>
             </div>`,
-        feedback: "Ótimo! Lembre-se sempre desse aviso de segurança no mundo real. Vamos colocar os seus dados."
-    },
+    feedback:
+      "Ótimo! Lembre-se sempre desse aviso de segurança no mundo real. Vamos colocar os seus dados.",
+  },
 
-    // PASSO 2: IDENTIFICAÇÃO (DIGITAR CPF)
-    {
-        instrucao: "Passo 2: Agora, precisamos digitar o número do seu CPF. Toque na barra branca de preenchimento.",
-        conteudo: `
+  // PASSO 2: IDENTIFICAÇÃO (DIGITAR CPF)
+  {
+    instrucao:
+      "Passo 2: Agora, precisamos digitar o número do seu CPF. Toque na barra branca de preenchimento.",
+    conteudo: `
             <div style="background: #FFFFFF; 
                 height: 100%; 
                 display: flex; 
@@ -127,13 +129,15 @@ const inss = [
                     color: #555;">Outras opções de login: Certificado digital ou Bancos credenciados.
                 </div>
             </div>`,
-        feedback: "Perfeito! O CPF foi preenchido com sucesso. Agora vamos para a senha."
-    },
+    feedback:
+      "Perfeito! O CPF foi preenchido com sucesso. Agora vamos para a senha.",
+  },
 
-    // PASSO 3: SEGURANÇA (DIGITAR SENHA DO GOV.BR)
-    {
-        instrucao: "Passo 3: Digite a sua senha secreta do gov.br. Toque no botão azul 'Continuar' para efetuar o login.",
-        conteudo: `
+  // PASSO 3: SEGURANÇA (DIGITAR SENHA DO GOV.BR)
+  {
+    instrucao:
+      "Passo 3: Digite a sua senha secreta do gov.br. Toque no botão azul 'Continuar' para efetuar o login.",
+    conteudo: `
             <div style="background: #FFFFFF; 
                 height: 100%; 
                 display: flex; 
@@ -196,13 +200,15 @@ const inss = [
                     </button>
                 </div>
             </div>`,
-        feedback: "Parabéns! Login efetuado com absoluto sucesso. Você entrou no Meu INSS!"
-    },
+    feedback:
+      "Parabéns! Login efetuado com absoluto sucesso. Você entrou no Meu INSS!",
+  },
 
-    // OBJETO 4: PASSO 4 (Grade Principal de Botões do Meu INSS)
-    {
-        instrucao: "Passo 4: Para conferir o extrato e a data de pagamento do seu benefício, toque no botão '💵 Extrato de Pagamento'.",
-        conteudo: `
+  // OBJETO 4: PASSO 4 (Grade Principal de Botões do Meu INSS)
+  {
+    instrucao:
+      "Passo 4: Para conferir o extrato e a data de pagamento do seu benefício, toque no botão '💵 Extrato de Pagamento'.",
+    conteudo: `
             <div style="background: #002F6C; 
                 height: 100%; 
                 display: flex; 
@@ -281,13 +287,15 @@ const inss = [
                     </div>
                 </div>
             </div>`,
-        feedback: "Excelente! O extrato de pagamento detalha centavo por centavo do seu dinheiro."
-    },
-    
-    // OBJETO 5: PASSO 5 (Demonstrativo Financeiro)
-    {
-        instrucao: "Passo 5: Analise o seu recibo na tela. Para voltar à página inicial e continuar o treino, toque no botão azul '⬅️ Voltar'.",
-        conteudo: `
+    feedback:
+      "Excelente! O extrato de pagamento detalha centavo por centavo do seu dinheiro.",
+  },
+
+  // OBJETO 5: PASSO 5 (Demonstrativo Financeiro)
+  {
+    instrucao:
+      "Passo 5: Analise o seu recibo na tela. Para voltar à página inicial e continuar o treino, toque no botão azul '⬅️ Voltar'.",
+    conteudo: `
             <div style="background: #002F6C; 
                 height: 100%; 
                 display: flex; 
@@ -379,13 +387,14 @@ const inss = [
                     </div>
                 </div>
             </div>`,
-        feedback: "Excelente! Ler o extrato com calma impede erros na sua conta."
-    },
+    feedback: "Excelente! Ler o extrato com calma impede erros na sua conta.",
+  },
 
-    // OBJETO 6: PASSO 6 (Ativando a Prova de Vida)
-    {
-        instrucao: "Passo 6: Excelente! Agora vamos simular a Prova de Vida. Toque no botão azul escrito '👤 Prova de Vida'.",
-        conteudo: `
+  // OBJETO 6: PASSO 6 (Ativando a Prova de Vida)
+  {
+    instrucao:
+      "Passo 6: Excelente! Agora vamos simular a Prova de Vida. Toque no botão azul escrito '👤 Prova de Vida'.",
+    conteudo: `
             <div style="background: #002F6C; 
                 height: 100%; 
                 display: flex; 
@@ -452,13 +461,14 @@ const inss = [
                     </div>
                 </div>
             </div>`,
-        feedback: "O Substituição de passos deu certo. O app vai abrir a câmera."
-    },
+    feedback: "O Substituição de passos deu certo. O app vai abrir a câmera.",
+  },
 
-    // OBJETO 7: PASSO 7 (Reconhecimento Facial / Câmera)
-    {
-        instrucao: "Passo 7: A câmera abriu! Centralize seu rosto na tela e dê um clique no centro do círculo pontilhado azul para tirar a foto de confirmação.",
-        conteudo: `
+  // OBJETO 7: PASSO 7 (Reconhecimento Facial / Câmera)
+  {
+    instrucao:
+      "Passo 7: A câmera abriu! Centralize seu rosto na tela e dê um clique no centro do círculo pontilhado azul para tirar a foto de confirmação.",
+    conteudo: `
             <div style="background: #000; 
                 height: 100%; 
                 display: flex; 
@@ -520,13 +530,15 @@ const inss = [
                     </p>
                 </div>
             </div>`,
-        feedback: "Excelente! Foto capturada com sucesso e enviada para conferência com o governo."
-    },
+    feedback:
+      "Excelente! Foto capturada com sucesso e enviada para conferência com o governo.",
+  },
 
-    // OBJETO 8: PASSO 8 (Consultar Pedidos / Acompanhamento de Processos)
-    {
-        instrucao: "Passo 8: Para terminar, vamos conferir se uma solicitação deu certo. Toque no botão '📅 Consultar Pedidos'.",
-        conteudo: `
+  // OBJETO 8: PASSO 8 (Consultar Pedidos / Acompanhamento de Processos)
+  {
+    instrucao:
+      "Passo 8: Para terminar, vamos conferir se uma solicitação deu certo. Toque no botão '📅 Consultar Pedidos'.",
+    conteudo: `
             <div style="background: #002F6C; 
                 height: 100%; 
                 display: flex; 
@@ -584,13 +596,15 @@ const inss = [
                     </div>
                 </div>
             </div>`,
-        feedback: "Muito bem! Agora você abriu a lista de processos que estão em análise pelo governo."
-    },
+    feedback:
+      "Muito bem! Agora você abriu a lista de processos que estão em análise pelo governo.",
+  },
 
-    // PASSO 9: DESAFIO ANTIGOLPE CORRIGIDO (APRENDER A FECHAR AMEAÇAS)
-    {
-        instrucao: "🚨 ALERTA DE SEGURANÇA: Você recebeu um SMS falso dizendo que seu benefício foi bloqueado. Nunca clique em links de mensagens! Toque no botão de fechar '❌' no canto de cima para rejeitar o golpe.",
-        conteudo: `
+  // PASSO 9: DESAFIO ANTIGOLPE CORRIGIDO (APRENDER A FECHAR AMEAÇAS)
+  {
+    instrucao:
+      "🚨 ALERTA DE SEGURANÇA: Você recebeu um SMS falso dizendo que seu benefício foi bloqueado. Nunca clique em links de mensagens! Toque no botão de fechar '❌' no canto de cima para rejeitar o golpe.",
+    conteudo: `
             <div style="background: #F4F6F9; 
                 height: 100%; 
                 display: flex; 
@@ -671,13 +685,15 @@ const inss = [
                     </p>
                 </div>
             </div>`,
-        feedback: "Espetacular! Clicando no '❌' você fechou e rejeitou a fraude. Nunca clique em links que prometem vantagens ou fazem ameaças por SMS ou WhatsApp!"
-    },
+    feedback:
+      "Espetacular! Clicando no '❌' você fechou e rejeitou a fraude. Nunca clique em links que prometem vantagens ou fazem ameaças por SMS ou WhatsApp!",
+  },
 
-    // OBJETO 10: PASSO 10 (Finalização com Sucesso)
-    {
-        instrucao: "Treino Concluído! Você aprendeu a usar o Meu INSS e a se defender de golpes com total segurança.",
-        conteudo: `
+  // OBJETO 10: PASSO 10 (Finalização com Sucesso)
+  {
+    instrucao:
+      "Treino Concluído! Você aprendeu a usar o Meu INSS e a se defender de golpes com total segurança.",
+    conteudo: `
             <div style="background: white; 
                 height: 100%; 
                 display: flex; 
@@ -757,6 +773,6 @@ const inss = [
                     </button>
                 </div>
             </div>`,
-        feedback: "Parabéns! Módulo do Meu INSS finalizado com sucesso! 🎉"
-    }
+    feedback: "Parabéns! Módulo do Meu INSS finalizado com sucesso! 🎉",
+  },
 ];

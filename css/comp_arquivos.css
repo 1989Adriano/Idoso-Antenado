@@ -1,0 +1,105 @@
+/* Moldura externa azul da Área de Trabalho */
+.arqv-desktop-fundo {
+    background: #2A4365;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    font-family: sans-serif;
+    box-sizing: border-box;
+    user-select: none;
+    position: relative;
+}
+
+/* Corpo interno branco das janelas do Explorador de Arquivos */
+.arqv-explorador-janela {
+    background: #FFFFFF;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    font-family: sans-serif;
+    box-sizing: border-box;
+    user-select: none;
+    color: #333;
+    text-align: left;
+}
+
+/* Barra cinza superior de endereço/título */
+.arqv-barra-endereco {
+    background: #F1F3F4;
+    padding: 8px 12px;
+    border-bottom: 1px solid #E0E0E0;
+    font-size: 13px;
+    font-weight: bold;
+    flex-shrink: 0;
+}
+
+/* Grid ou área central útil onde os ícones são renderizados */
+.arqv-area-icones {
+    flex: 1;
+    display: flex;
+    background: white;
+    padding: 15px;
+    gap: 20px;
+    align-content: start;
+    flex-wrap: wrap;
+}
+
+/* Bloco estático para pastas/arquivos inativos (Opacidade reduzida) */
+.arqv-icone-inativo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+    width: 80px;
+    opacity: 0.4;
+}
+
+/* Caixa de controle do Menu Iniciar e barra inferior */
+.arqv-barra-tarefas {
+    background: #1E293B;
+    height: 45px;
+    border-top: 1px solid #334155;
+    display: flex;
+    align-items: center;
+    padding: 0 10px;
+    box-sizing: border-box;
+    flex-shrink: 0;
+    gap: 15px;
+}
+
+/* Botões inativos cinzas do teclado virtual */
+.tecla-teclado-falsa {
+    width: 32px;
+    height: 32px;
+    background: #475569;
+    color: white;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    opacity: 0.4;
+}
+
+/* Animações Operacionais Corrigidas */
+@keyframes pulsarFundoAmarelo {
+    0%, 100% { background: rgba(251, 188, 5, 0.1); }
+    50% { background: rgba(251, 188, 5, 0.3); }
+}
+
+@keyframes balancarArquivo {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-5px); }
+}
+
+@keyframes moverSeta {
+    0% { transform: translateX(0); opacity: 0; }
+    50% { opacity: 1; }
+    100% { transform: translateX(15px); opacity: 0; }
+}
+
+@keyframes piscarCursor {
+    0%, 100% { opacity: 0; }
+    50% { opacity: 1; }
+}

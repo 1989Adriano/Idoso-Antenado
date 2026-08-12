@@ -1,0 +1,49 @@
+/* Animações Reutilizáveis */
+@keyframes piscarCursor {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}
+
+@keyframes pulsarBorda {
+    0%, 100% { border-color: transparent; }
+    50% { border-color: #FFF; }
+}
+
+/* Estruturas do Editor de Texto */
+.texto-container-desktop {
+    background: #2A4365;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    font-family: sans-serif;
+    box-sizing: border-box;
+    user-select: none;
+    position: relative;
+}
+
+.texto-folha-branca {
+    background: #E2E8F0;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    font-family: sans-serif;
+    box-sizing: border-box;
+    user-select: none;
+    color: #333;
+    text-align: left;
+}
+
+/* Teclas cinzas inativas do simulador de teclado */
+.tecla-teclado-falsa {
+    width: 32px;
+    height: 32px;
+    background: #475569;
+    color: white;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    opacity: 0.4;
+}

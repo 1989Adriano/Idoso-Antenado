@@ -1,0 +1,59 @@
+/* Tela de fundo principal do monitor emulando a Área de Trabalho */
+.net-container-desktop {
+    background: #2A4365;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    font-family: sans-serif;
+    box-sizing: border-box;
+    user-select: none;
+    position: relative;
+}
+
+/* Janela interna simulando o navegador Google Chrome */
+.net-janela-browser {
+    background: #FFFFFF;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    font-family: sans-serif;
+    box-sizing: border-box;
+    user-select: none;
+    color: #333;
+}
+
+/* Barra superior cinza de controle de URL */
+.net-barra-navegacao {
+    background: #F1F3F4;
+    padding: 8px 12px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border-bottom: 1px solid #E0E0E0;
+    font-size: 12px;
+    flex-shrink: 0;
+}
+
+/* Espaço central de exibição das páginas da internet */
+.net-conteudo-pagina {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    background: white;
+    box-sizing: border-box;
+}
+
+/* Caixa de links e resultados de pesquisa do Google */
+.net-item-resultado {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    text-align: left;
+}
+
+/* Animações Operacionais */
+@keyframes pulsarFundoBranco {
+    0%, 100% { background: rgba(255, 255, 255, 0.1); }
+    50% { background: rgba(255, 255, 255, 0.25); }
+}

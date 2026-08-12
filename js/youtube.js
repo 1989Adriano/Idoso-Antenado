@@ -1,10 +1,10 @@
 const youtube = [
-    // OBJETO 1: PASSO 1 (Pesquisa usando Lupa)
-    {
-        instrucao: `<strong>PASSO 1:</strong>Para começar, vamos abrir a barra de buscas!
+  // OBJETO 1: PASSO 1 (Pesquisa usando Lupa)
+  {
+    instrucao: `<strong>PASSO 1:</strong>Para começar, vamos abrir a barra de buscas!
                     <br>Use o mouse ou o dedo na tela do celular.
                     <br>Toque no ícone da lupa (pesquisa) na parte de cima do cabeçalho.`,
-        conteudo: `
+    conteudo: `
             <div class="yt-container">
                 <div class="yt-topo-home">
                     
@@ -49,15 +49,15 @@ const youtube = [
                     </div>
                 </div>
             </div>`,
-        feedback: "Ótimo! Agora vamos procurar um vídeo que você goste."
-    },
+    feedback: "Ótimo! Agora vamos procurar um vídeo que você goste.",
+  },
 
-    // OBJETO 2: PASSO 2 (Área de Pesquisa / Input Field)
-    {
-        instrucao: `<strong>PASSO 2:</strong>O campo de buscas foi ativado com sucesso!
+  // OBJETO 2: PASSO 2 (Área de Pesquisa / Input Field)
+  {
+    instrucao: `<strong>PASSO 2:</strong>O campo de buscas foi ativado com sucesso!
                     <br>Toque na barra cinza de cima, escrita 'Toque aqui para digitar...',
                     <br>para acionar o teclado virtual do celular e simular a escrita do vídeo.`,
-        conteudo: `
+    conteudo: `
             <div class="yt-container">
                 <div class="yt-topo-busca">
                     <span style="font-size:18px; color:#555;">⬅️</span>
@@ -81,15 +81,16 @@ const youtube = [
                     </div>
                 </div>
             </div>`,
-        feedback: "Excelente! No celular, sempre que precisar escrever, um teclado parecido com este vai subir na tela."
-    },
+    feedback:
+      "Excelente! No celular, sempre que precisar escrever, um teclado parecido com este vai subir na tela.",
+  },
 
-    // OBJETO 3: PASSO 3 (Escolha do Vídeo nos Resultados)
-    {
-        instrucao: `<strong>PASSO 3:</strong>O termo 'receita de bolo de fubá' foi pesquisado!
+  // OBJETO 3: PASSO 3 (Escolha do Vídeo nos Resultados)
+  {
+    instrucao: `<strong>PASSO 3:</strong>O termo 'receita de bolo de fubá' foi pesquisado!
                     <br>Veja os resultados que apareceram na sua tela.
                     <br>Toque em cima do primeiro vídeo da lista (Bolo de Fubá) para ele começar a tocar.`,
-        conteudo: `
+    conteudo: `
             <div class="yt-container">
                 <div class="yt-topo-busca">
                     <span style="font-size:18px;">⬅️</span>
@@ -112,15 +113,16 @@ const youtube = [
                     </div>
                 </div>
             </div>`,
-        feedback: "Isso mesmo! Clicando no título ou na foto do vídeo, ele abre e começa a tocar na hora."
-    },
+    feedback:
+      "Isso mesmo! Clicando no título ou na foto do vídeo, ele abre e começa a tocar na hora.",
+  },
 
-    // OBJETO 4: PASSO 4 (Pular Propagandas)
-    {
-        instrucao: `<strong>PASSO 4:</strong>Apareceu uma propaganda comercial!
+  // OBJETO 4: PASSO 4 (Pular Propagandas)
+  {
+    instrucao: `<strong>PASSO 4:</strong>Apareceu uma propaganda comercial!
                     <br>Não se assuste, isso serve para manter o site gratuito.
                     <br>Aguarde os segundos na tela e toque no botão 'Pular Anúncio ➔' na direita.`,
-        conteudo: `
+    conteudo: `
             <div class="yt-container">
                 <div class="yt-player-video">
                     <span style="position:absolute; top:10px; left:12px; background:rgba(0,0,0,0.6); color:#FFB300; font-size:14px; font-weight:bold; padding:4px 8px; border-radius:4px;">⚠️ Propaganda (0:05)</span>
@@ -142,15 +144,16 @@ const youtube = [
                     </div>
                 </div>
             </div>`,
-        feedback: "Sensacional! Perder o medo de anúncios é o segredo para navegar tranquilo pela internet!"
-    },
-    
-    // OBJETO 5: PASSO 5 (Pausar/Despausar)  
-    {
-        instrucao: `<strong>PASSO 5:</strong>O vídeo do bolo de fubá começou a tocar!
+    feedback:
+      "Sensacional! Perder o medo de anúncios é o segredo para navegar tranquilo pela internet!",
+  },
+
+  // OBJETO 5: PASSO 5 (Pausar/Despausar)
+  {
+    instrucao: `<strong>PASSO 5:</strong>O vídeo do bolo de fubá começou a tocar!
                     <br>Para simular uma parada para buscar um cafezinho ou fazer uma anotação, use o mouse.
                     <br>Toque no grande botão redondo de Pausa (⏸️) bem no centro da imagem.`,
-        conteudo: `
+    conteudo: `
             <div class="yt-container">
                 <div class="yt-player-video">
                     <div style="position:absolute; bottom:0; left:0; right:0; height:4px; background:#606060;">
@@ -174,14 +177,15 @@ const youtube = [
                     </div>
                 </div>
             </div>`,
-        feedback: "Muito bem! Pausar é útil para anotações ou para buscar um cafezinho."
-    },
+    feedback:
+      "Muito bem! Pausar é útil para anotações ou para buscar um cafezinho.",
+  },
 
-    // OBJETO 6: PASSO 6 (Inscrever-se/salvar canal)  
-    {
-        instrucao: `<strong>PASSO 6:</strong>Vídeo pausado! Se você gostou da professora e quer ver mais receitas dela no futuro, use o mouse.
+  // OBJETO 6: PASSO 6 (Inscrever-se/salvar canal)
+  {
+    instrucao: `<strong>PASSO 6:</strong>Vídeo pausado! Se você gostou da professora e quer ver mais receitas dela no futuro, use o mouse.
                     <br>Toque no botão preto escrito 'Inscrever-se' ao lado da logo do canal.`,
-        conteudo: `
+    conteudo: `
             <div class="yt-container">
                 <div style="background:black; height:140px; display:flex; align-items:center; justify-content:center; color:#ccc; flex-shrink:0; font-size:16px;">[Vídeo Pausado]</div>
                 
@@ -210,14 +214,15 @@ const youtube = [
                     </div>
                 </div>
             </div>`,
-        feedback: "Excelente! Inscrever-se ajuda o YouTube a te sugerir novos vídeos desse canal."
-    },
+    feedback:
+      "Excelente! Inscrever-se ajuda o YouTube a te sugerir novos vídeos desse canal.",
+  },
 
-    // OBJETO 7: PASSO 7 (deixar tela cheia)  
-    {
-        instrucao: `<strong>PASSO 7:</strong>Para ver o vídeo grande ocupando toda a tela do celular, use o mouse.
+  // OBJETO 7: PASSO 7 (deixar tela cheia)
+  {
+    instrucao: `<strong>PASSO 7:</strong>Para ver o vídeo grande ocupando toda a tela do celular, use o mouse.
                     <br>Toque no pequeno quadradinho (🔲) de ampliação localizado no canto direito inferior do player.`,
-        conteudo: `
+    conteudo: `
             <div class="yt-container">
                 <div class="yt-player-video">
                     <span style="color:white; font-size:32px; opacity:0.3;">▶️</span>
@@ -239,15 +244,15 @@ const youtube = [
                     <p style="font-size:16px; color:#555; margin-top:5px; line-height:1.3;">A tela cheia deita o celular de lado para você enxergar tudo bem grande.</p>
                 </div>
             </div>`,
-        feedback: "Parabéns! O vídeo deitou e agora está expandido."
-    },
+    feedback: "Parabéns! O vídeo deitou e agora está expandido.",
+  },
 
-    // OBJETO 8: PASSO 8 (Tirar da tela cheia)  
-    {
-        instrucao: `<strong>PASSO 8:</strong>O vídeo ocupou o smartphone inteiro!
+  // OBJETO 8: PASSO 8 (Tirar da tela cheia)
+  {
+    instrucao: `<strong>PASSO 8:</strong>O vídeo ocupou o smartphone inteiro!
                     <br>Para voltar o celular em pé e conseguir ver os outros botões do site, use o mouse.
                     <br>Toque no pequeno quadradinho com setas (↙️) no canto inferior direito.`,
-        conteudo: `
+    conteudo: `
             <div style="background:black; 
                 height:100%; width:100%; 
                 display:flex; align-items:center; 
@@ -273,6 +278,7 @@ const youtube = [
                     </span>
                 </div>
             </div>`,
-        feedback: "Parabéns! Você concluiu com sucesso o treino do YouTube! Agora você sabe navegar, assistir e controlar seus vídeos com total segurança! 🎉"
-    }
+    feedback:
+      "Parabéns! Você concluiu com sucesso o treino do YouTube! Agora você sabe navegar, assistir e controlar seus vídeos com total segurança! 🎉",
+  },
 ];

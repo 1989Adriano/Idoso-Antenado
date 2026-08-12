@@ -1,10 +1,11 @@
 const pix_pt5 = [
-    /* passos 17 ao 19 */
+  /* passos 17 ao 19 */
 
-    // PASSO 17 (ÍNDICE 16): ROTA 3 - ABRIR CAMPO DE DINHEIRO
-    {
-        instrucao: "<strong>PASSO 17:</strong> Agora vamos definir a quantidade de dinheiro do envio!<br>Use o mouse e dê um clique esquerdo na barra cinza central 'R$ 0,00'.<br>Isso ativará o preenchimento de valores.",
-        conteudo: `
+  // PASSO 17 (ÍNDICE 16): ROTA 3 - ABRIR CAMPO DE DINHEIRO
+  {
+    instrucao:
+      "<strong>PASSO 17:</strong> Agora vamos definir a quantidade de dinheiro do envio!<br>Use o mouse e dê um clique esquerdo na barra cinza central 'R$ 0,00'.<br>Isso ativará o preenchimento de valores.",
+    conteudo: `
             <div style="background: #F4F7FA; 
                 height: 100%; 
                 display: flex; 
@@ -52,13 +53,15 @@ const pix_pt5 = [
                     </div>
                 </div>
             </div>`,
-        feedback: "✓ Muito bem! A caixa de valores foi ativada e abriu o sistema numérico."
-    },
+    feedback:
+      "✓ Muito bem! A caixa de valores foi ativada e abriu o sistema numérico.",
+  },
 
-    // PASSO 18 (ÍNDICE 17): ROTA 3 - CONFIRMAR VALOR DIGITADO
-    {
-        instrucao: "<strong>PASSO 18:</strong> Você digitou que vai transferir R$ 50,00! Para prosseguir para a próxima etapa de revisão, use o mouse. Dê um clique esquerdo no botão azul 'Confirmar Valor'.",
-        conteudo: `
+  // PASSO 18 (ÍNDICE 17): ROTA 3 - CONFIRMAR VALOR DIGITADO
+  {
+    instrucao:
+      "<strong>PASSO 18:</strong> Você digitou que vai transferir R$ 50,00! Para prosseguir para a próxima etapa de revisão, use o mouse. Dê um clique esquerdo no botão azul 'Confirmar Valor'.",
+    conteudo: `
             <div style="background: #F4F7FA; 
                 height: 100%; 
                 display: flex; 
@@ -118,13 +121,15 @@ const pix_pt5 = [
                     </button>
                 </div>
             </div>`,
-        feedback: "✓ Muito bem! O valor foi gravado e enviado para a folha de revisão de segurança."
-    },
+    feedback:
+      "✓ Muito bem! O valor foi gravado e enviado para a folha de revisão de segurança.",
+  },
 
-    // PASSO 19 (ÍNDICE 18): ROTA 3 - REVISAR DADOS DA MARIA DA SILVA
-    {
-        instrucao: "<strong>PASSO 19:</strong> Regra de ouro no Pix!<br>Sempre confira se o valor cobrado é o mesmo valor gasto e o nome de quem recebe. Tudo correto com a 'Maria da Silva'? Dê um clique esquerdo no botão 'Avançar para Senha'.",
-        conteudo: `
+  // PASSO 19 (ÍNDICE 18): ROTA 3 - REVISAR DADOS DA MARIA DA SILVA
+  {
+    instrucao:
+      "<strong>PASSO 19:</strong> Regra de ouro no Pix!<br>Sempre confira se o valor cobrado é o mesmo valor gasto e o nome de quem recebe. Tudo correto com a 'Maria da Silva'? Dê um clique esquerdo no botão 'Avançar para Senha'.",
+    conteudo: `
             <div style="background: #F4F7FA; 
                 height: 100%; 
                 display: flex; 
@@ -192,6 +197,7 @@ const pix_pt5 = [
                     </button>
                 </div>
             </div>`,
-        feedback: "✓ Excelente! Essa checagem confere a identidade exata antes de mexer no dinheiro."
-    }
+    feedback:
+      "✓ Excelente! Essa checagem confere a identidade exata antes de mexer no dinheiro.",
+  },
 ];

@@ -1,8 +1,9 @@
 const pix_pt1 = [
-    // PASSO 1 (ÍNDICE 0): ABRIR O APLICATIVO DO BANCO
-    {
-        instrucao: "<strong>PASSO 1:</strong> Vamos simular o pagamento de uma conta ou compra! Primeiro, abra o aplicativo de finanças. Use o mouse e dê um clique esquerdo no ícone azul escrito 'Seu Banco'.",
-        conteudo: `
+  // PASSO 1 (ÍNDICE 0): ABRIR O APLICATIVO DO BANCO
+  {
+    instrucao:
+      "<strong>PASSO 1:</strong> Vamos simular o pagamento de uma conta ou compra! Primeiro, abra o aplicativo de finanças. Use o mouse e dê um clique esquerdo no ícone azul escrito 'Seu Banco'.",
+    conteudo: `
             <div style="background: #1E293B; 
                 height: 100%; 
                 display: flex; 
@@ -54,13 +55,15 @@ const pix_pt1 = [
                 </div>
                 <style>@keyframes pulsarFundo { 0%, 100% { background:rgba(255,255,255,0.1); } 50% { background:rgba(255,255,255,0.25); } }</style>
             </div>`,
-        feedback: "✓ Muito bem! O aplicativo do 'Seu Banco' foi aberto com total segurança."
-    },
+    feedback:
+      "✓ Muito bem! O aplicativo do 'Seu Banco' foi aberto com total segurança.",
+  },
 
-    // PASSO 2 (ÍNDICE 1): SELEÇÃO DO CAMPO DE LOGIN
-    {
-        instrucao: "<strong>PASSO 2:</strong> Para entrar na sua conta bancária de forma segura, o aplicativo precisa carregar seus dados. Dê um clique esquerdo na caixa branca escrita 'Agência e Conta'<br>para simular a inserção do seu cadastro.",
-        conteudo: `
+  // PASSO 2 (ÍNDICE 1): SELEÇÃO DO CAMPO DE LOGIN
+  {
+    instrucao:
+      "<strong>PASSO 2:</strong> Para entrar na sua conta bancária de forma segura, o aplicativo precisa carregar seus dados. Dê um clique esquerdo na caixa branca escrita 'Agência e Conta'<br>para simular a inserção do seu cadastro.",
+    conteudo: `
             <div style="background: #0056B3; 
                 height: 100%; 
                 display: flex; 
@@ -110,13 +113,15 @@ const pix_pt1 = [
                     </div>
                 </div>
             </div>`,
-        feedback: "✓ Excelente! Os dados de Agência e Conta foram preenchidos de forma automática."
-    },
+    feedback:
+      "✓ Excelente! Os dados de Agência e Conta foram preenchidos de forma automática.",
+  },
 
-    // PASSO 3 (ÍNDICE 2): EFETUAR O LOGIN COM SENHA DO APP
-    {
-        instrucao: "<strong>PASSO 3:</strong> Dados preenchidos!<br>Agora, para liberar o acesso ao saldo, clique com o botão esquerdo no botão azul '🔑 Confirmar Senha de Acesso' para fazer o login.",
-        conteudo: `
+  // PASSO 3 (ÍNDICE 2): EFETUAR O LOGIN COM SENHA DO APP
+  {
+    instrucao:
+      "<strong>PASSO 3:</strong> Dados preenchidos!<br>Agora, para liberar o acesso ao saldo, clique com o botão esquerdo no botão azul '🔑 Confirmar Senha de Acesso' para fazer o login.",
+    conteudo: `
             <div style="background: #0056B3; 
                 height: 100%; 
                 display: flex; 
@@ -180,13 +185,15 @@ const pix_pt1 = [
                     margin-top: 10px;">🔑 Confirmar Senha de Acesso
                 </button>
             </div>`,
-        feedback: "✓ Muito bem! Você fez login e acessou com sucesso o painel principal da sua conta corrente."
-    },
+    feedback:
+      "✓ Muito bem! Você fez login e acessou com sucesso o painel principal da sua conta corrente.",
+  },
 
-    // PASSO 4 (ÍNDICE 3): ENTRAR NA ÁREA PIX
-    {
-        instrucao: "<strong>PASSO 4:</strong>Esta é a tela inicial da sua conta bancária!<br>Para iniciar um pagamento ou transferência eletrônica instantânea, use o mouse. Dê um clique esquerdo no botão azul redondo 'Área Pix'.",
-        conteudo: `
+  // PASSO 4 (ÍNDICE 3): ENTRAR NA ÁREA PIX
+  {
+    instrucao:
+      "<strong>PASSO 4:</strong>Esta é a tela inicial da sua conta bancária!<br>Para iniciar um pagamento ou transferência eletrônica instantânea, use o mouse. Dê um clique esquerdo no botão azul redondo 'Área Pix'.",
+    conteudo: `
             <div style="background: #F4F7FA; 
                 height: 100%; 
                 display: flex; 
@@ -259,13 +266,15 @@ const pix_pt1 = [
                     </div>
                 </div>
             </div>`,
-        feedback: "✓ Perfeito! Você acessou a central operacional do Pix de forma protegida."
-    },
+    feedback:
+      "✓ Perfeito! Você acessou a central operacional do Pix de forma protegida.",
+  },
 
-    // PASSO 5 (ÍNDICE 4): A TELA DE ESCOLHA DAS 3 ROTAS DISTINTAS
-    {
-        instrucao: "<strong>PASSO 5:</strong> Como você deseja realizar esse Pix hoje?<br>Escolha com atenção o caminho: toque em 'Copia e Cola' para códigos, 'QR Code' para usar a câmera, ou 'Chave Manual' para telefone.",
-        conteudo: `
+  // PASSO 5 (ÍNDICE 4): A TELA DE ESCOLHA DAS 3 ROTAS DISTINTAS
+  {
+    instrucao:
+      "<strong>PASSO 5:</strong> Como você deseja realizar esse Pix hoje?<br>Escolha com atenção o caminho: toque em 'Copia e Cola' para códigos, 'QR Code' para usar a câmera, ou 'Chave Manual' para telefone.",
+    conteudo: `
             <div style="background: #F4F7FA; 
                 height: 100%; 
                 display: flex; 
@@ -346,6 +355,7 @@ const pix_pt1 = [
                     </div>
                 </div>
             </div>`,
-        feedback: "Muito bem! Toque em uma das opções acima para iniciar a simulação específica."
-    }
+    feedback:
+      "Muito bem! Toque em uma das opções acima para iniciar a simulação específica.",
+  },
 ];

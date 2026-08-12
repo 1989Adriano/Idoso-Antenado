@@ -1,9 +1,10 @@
 // mercado.js - SIMULADOR DO MERCADO LIVRE COMPLETO (PARTE 1 DE 4)
 const mercado = [
-    // PASSO 1 (ÍNDICE 0): ABRIR O SITE NA ÁREA DE TRABALHO
-    {
-        instrucao: "<strong>Passo 1:</strong> Vamos aprender a fazer compras online com entrega na sua casa! Dê um clique esquerdo no ícone amarelo escrito 'Mercado Livre' para abrir a página de compras.",
-        conteudo: `
+  // PASSO 1 (ÍNDICE 0): ABRIR O SITE NA ÁREA DE TRABALHO
+  {
+    instrucao:
+      "<strong>Passo 1:</strong> Vamos aprender a fazer compras online com entrega na sua casa! Dê um clique esquerdo no ícone amarelo escrito 'Mercado Livre' para abrir a página de compras.",
+    conteudo: `
             <div style="background: #2A4365; 
                 height: 100%; 
                 display: flex; 
@@ -67,13 +68,15 @@ const mercado = [
                 </div>
                 <style>@keyframes pulsarFundo { 0%, 100% { background:rgba(255,255,255,0.1); } 50% { background:rgba(255,255,255,0.25); } }</style>
             </div>`,
-        feedback: "✓ Muito bem! A página inicial oficial do Mercado Livre carregou no seu navegador."
-    },
+    feedback:
+      "✓ Muito bem! A página inicial oficial do Mercado Livre carregou no seu navegador.",
+  },
 
-    // PASSO 2 (ÍNDICE 1): CLICAR NA BARRA DE BUSCA
-    {
-        instrucao: "<strong>Passo 2:</strong> Para procurar o produto que deseja comprar, dê um clique esquerdo no meio da grande 'Barra de Pesquisa Branca' no topo do site.",
-        conteudo: `
+  // PASSO 2 (ÍNDICE 1): CLICAR NA BARRA DE BUSCA
+  {
+    instrucao:
+      "<strong>Passo 2:</strong> Para procurar o produto que deseja comprar, dê um clique esquerdo no meio da grande 'Barra de Pesquisa Branca' no topo do site.",
+    conteudo: `
             <div style="background: #FFFDF0; 
                 height: 100%; 
                 display: flex; 
@@ -110,13 +113,15 @@ const mercado = [
                 </div>
                 <div style="flex: 1; display: flex; align-items: center; justify-content: center; color: #999; font-size: 14px;">Aguardando pesquisa...</div>
             </div>`,
-        feedback: "✓ Excelente! A caixa de texto está pronta para receber o nome do produto."
-    },
+    feedback:
+      "✓ Excelente! A caixa de texto está pronta para receber o nome do produto.",
+  },
 
-    // PASSO 3 (ÍNDICE 2): CLICAR NA LUPA DE BUSCA
-    {
-        instrucao: "<strong>Passo 3:</strong> Imagine que você digitou 'Cafeteira Elétrica'. Agora, use o mouse e dê um clique esquerdo na '🔍 Lupa Azul' para o site listar os modelos.",
-        conteudo: `
+  // PASSO 3 (ÍNDICE 2): CLICAR NA LUPA DE BUSCA
+  {
+    instrucao:
+      "<strong>Passo 3:</strong> Imagine que você digitou 'Cafeteira Elétrica'. Agora, use o mouse e dê um clique esquerdo na '🔍 Lupa Azul' para o site listar os modelos.",
+    conteudo: `
             <div style="background: #FFFDF0; 
                 height: 100%; 
                 display: flex; 
@@ -152,13 +157,15 @@ const mercado = [
                 </div>
                 <div style="flex: 1;"></div>
             </div>`,
-        feedback: "✓ Perfeito! O site listou as melhores ofertas de cafeteiras disponíveis na plataforma."
-    },
+    feedback:
+      "✓ Perfeito! O site listou as melhores ofertas de cafeteiras disponíveis na plataforma.",
+  },
 
-    // PASSO 4 (ÍNDICE 3): REPUTAÇÃO E AVALIAÇÕES DO VENDEDOR
-    {
-        instrucao: "<strong>Passo 4:</strong> Antes de clicar em comprar, é vital checar se o vendedor é confiável! Dê um clique esquerdo no botão amarelo '⭐ Ver Opiniões e Reputação'.",
-        conteudo: `
+  // PASSO 4 (ÍNDICE 3): REPUTAÇÃO E AVALIAÇÕES DO VENDEDOR
+  {
+    instrucao:
+      "<strong>Passo 4:</strong> Antes de clicar em comprar, é vital checar se o vendedor é confiável! Dê um clique esquerdo no botão amarelo '⭐ Ver Opiniões e Reputação'.",
+    conteudo: `
             <div style="background: #FFFDF0; 
                 height: 100%; 
                 display: flex; 
@@ -217,13 +224,15 @@ const mercado = [
                     </button>
                 </div>
             </div>`,
-        feedback: "✓ Excelente! Comentários como 'Entrega rápida' e 'Produto original' provam que a compra é segura."
-    },
+    feedback:
+      "✓ Excelente! Comentários como 'Entrega rápida' e 'Produto original' provam que a compra é segura.",
+  },
 
-    // PASSO 5 (ÍNDICE 4): CORRIGIR ITEM DUPLICADO NO CARRINHO
-    {
-        instrucao: "<strong>Passo 5:</strong> Atenção! Por erro de clique, duas cafeteiras foram adicionadas ao carrinho. Evite pagar o dobro! Dê um clique esquerdo no texto azul escrito '❌ Excluir' na segunda unidade.",
-        conteudo: `
+  // PASSO 5 (ÍNDICE 4): CORRIGIR ITEM DUPLICADO NO CARRINHO
+  {
+    instrucao:
+      "<strong>Passo 5:</strong> Atenção! Por erro de clique, duas cafeteiras foram adicionadas ao carrinho. Evite pagar o dobro! Dê um clique esquerdo no texto azul escrito '❌ Excluir' na segunda unidade.",
+    conteudo: `
             <div style="background: #FFFDF0; 
                 height: 100%; 
                 display: flex; 
@@ -269,13 +278,15 @@ const mercado = [
                     </div>
                 </div>
             </div>`,
-        feedback: "✓ Sensacional! Você removeu o item repetido e economizou R$ 120,00. O carrinho agora tem o preço certo."
-    },
+    feedback:
+      "✓ Sensacional! Você removeu o item repetido e economizou R$ 120,00. O carrinho agora tem o preço certo.",
+  },
 
-    // PASSO 6 (ÍNDICE 5): SELECIONAR MÉTODO DE PAGAMENTO
-    {
-        instrucao: "<strong>Passo 6:</strong> Escolha como deseja pagar. Para evitar digitar os números do cartão de crédito hoje, dê um clique esquerdo na opção '⚡ Pix (Aprovação Imediata)'.",
-        conteudo: `
+  // PASSO 6 (ÍNDICE 5): SELECIONAR MÉTODO DE PAGAMENTO
+  {
+    instrucao:
+      "<strong>Passo 6:</strong> Escolha como deseja pagar. Para evitar digitar os números do cartão de crédito hoje, dê um clique esquerdo na opção '⚡ Pix (Aprovação Imediata)'.",
+    conteudo: `
             <div style="background: #FFFDF0; 
                 height: 100%; 
                 display: flex; 
@@ -326,13 +337,15 @@ const mercado = [
                     </div>
                 </div>
             </div>`,
-        feedback: "✓ Perfeito! O Pix é o método mais rápido e seguro para transações online na atualidade."
-    },
+    feedback:
+      "✓ Perfeito! O Pix é o método mais rápido e seguro para transações online na atualidade.",
+  },
 
-    // PASSO 7 (ÍNDICE 6): BOTÃO DE COMPRAR
-    {
-        instrucao: "<strong>Passo 7:</strong> Com o carrinho correto e o Pix escolhido, confirme o pedido! Dê um clique esquerdo no botão azul 'Comprar Agora' para gerar o pagamento.",
-        conteudo: `
+  // PASSO 7 (ÍNDICE 6): BOTÃO DE COMPRAR
+  {
+    instrucao:
+      "<strong>Passo 7:</strong> Com o carrinho correto e o Pix escolhido, confirme o pedido! Dê um clique esquerdo no botão azul 'Comprar Agora' para gerar o pagamento.",
+    conteudo: `
             <div style="background: #FFFDF0; 
                 height: 100%; 
                 display: flex; 
@@ -381,13 +394,15 @@ const mercado = [
                     </button>
                 </div>
             </div>`,
-        feedback: "✓ Excelente! O sistema direcionou você para a tela do código Pix."
-    },
+    feedback:
+      "✓ Excelente! O sistema direcionou você para a tela do código Pix.",
+  },
 
-    // PASSO 8 (ÍNDICE 7): COPIAR O CÓDIGO PIX
-    {
-        instrucao: "<strong>Passo 8:</strong> O site gerou as informações do Pix! Para simular o pagamento no aplicativo do seu banco, use o mouse e dê um clique esquerdo no botão azul '📋 Copiar Código Pix'.",
-        conteudo: `
+  // PASSO 8 (ÍNDICE 7): COPIAR O CÓDIGO PIX
+  {
+    instrucao:
+      "<strong>Passo 8:</strong> O site gerou as informações do Pix! Para simular o pagamento no aplicativo do seu banco, use o mouse e dê um clique esquerdo no botão azul '📋 Copiar Código Pix'.",
+    conteudo: `
             <div style="background: #FFFDF0; 
                 height: 100%; 
                 display: flex; 
@@ -423,13 +438,15 @@ const mercado = [
                     <button onclick="avancarPasso()" style="background: #3483FA; color: white; font-weight: bold; font-size: 15px; border: 2px dashed #002B5C; padding: 12px; border-radius: 6px; width: 100%;">📋 Copiar Código Pix</button>
                 </div>
             </div>`,
-        feedback: "✓ Perfeito! O código foi copiado. Agora você simulará a finalização segura da sua entrega."
-    },
+    feedback:
+      "✓ Perfeito! O código foi copiado. Agora você simulará a finalização segura da sua entrega.",
+  },
 
-    // PASSO 9 (ÍNDICE 8): CONFIRMAÇÃO DE PAGAMENTO APROVADO
-    {
-        instrucao: "<strong>Passo 9:</strong> O pagamento foi identificado com sucesso! Use o mouse e dê um clique esquerdo no botão azul '📦 Ver Meus Pedidos' para avançar para a área de rastreamento.",
-        conteudo: `
+  // PASSO 9 (ÍNDICE 8): CONFIRMAÇÃO DE PAGAMENTO APROVADO
+  {
+    instrucao:
+      "<strong>Passo 9:</strong> O pagamento foi identificado com sucesso! Use o mouse e dê um clique esquerdo no botão azul '📦 Ver Meus Pedidos' para avançar para a área de rastreamento.",
+    conteudo: `
             <div style="background: #FFFDF0; 
                 height: 100%; 
                 display: flex; 
@@ -473,13 +490,15 @@ const mercado = [
                     <button onclick="avancarPasso()" style="background: #3483FA; color: white; font-weight: bold; font-size: 14px; border: none; padding: 12px; border-radius: 6px; width: 100%;">📦 Ver Meus Pedidos</button>
                 </div>
             </div>`,
-        feedback: "✓ Perfeito! O site registrou sua compra e abriu o seu painel pessoal de controle."
-    },
-    
-    // PASSO 10 (ÍNDICE 9): ÁREA DE RASTREAMENTO DA ENCOMENDA
-    {
-        instrucao: "<strong>Passo 10:</strong> Esta é a tela de rastreamento! Ela mostra onde o pacote está viajando. Dê um clique esquerdo no botão verde 'Acompanhar Compra' para simular que você conferiu a rota de entrega.",
-        conteudo: `
+    feedback:
+      "✓ Perfeito! O site registrou sua compra e abriu o seu painel pessoal de controle.",
+  },
+
+  // PASSO 10 (ÍNDICE 9): ÁREA DE RASTREAMENTO DA ENCOMENDA
+  {
+    instrucao:
+      "<strong>Passo 10:</strong> Esta é a tela de rastreamento! Ela mostra onde o pacote está viajando. Dê um clique esquerdo no botão verde 'Acompanhar Compra' para simular que você conferiu a rota de entrega.",
+    conteudo: `
             <div style="background: #FFFDF0; 
                 height: 100%; 
                 display: flex; 
@@ -546,13 +565,15 @@ const mercado = [
                     </button>
                 </div>
             </div>`,
-        feedback: "✓ Excelente! Saber ler esse mapa de envio te dá total segurança de que o produto está a caminho do seu endereço."
-    },
-    
-    // PASSO 11 (ÍNDICE 10): TELA FINAL DE SUCESSO (VITÓRIA)
-    {
-        instrucao: "<strong>Passo 11:</strong> Treino Concluído! Você aprendeu com perfeição a abrir o Mercado Livre, pesquisar produtos, avaliar vendedores, ajustar o carrinho e rastrear suas encomendas com total segurança.",
-        conteudo: `
+    feedback:
+      "✓ Excelente! Saber ler esse mapa de envio te dá total segurança de que o produto está a caminho do seu endereço.",
+  },
+
+  // PASSO 11 (ÍNDICE 10): TELA FINAL DE SUCESSO (VITÓRIA)
+  {
+    instrucao:
+      "<strong>Passo 11:</strong> Treino Concluído! Você aprendeu com perfeição a abrir o Mercado Livre, pesquisar produtos, avaliar vendedores, ajustar o carrinho e rastrear suas encomendas com total segurança.",
+    conteudo: `
             <div style="background: white; 
                 height: 100%; 
                 display: flex; 
@@ -622,6 +643,7 @@ const mercado = [
                     </button>
                 </div>
             </div>`,
-        feedback: "Parabéns! Módulo de Compras no Mercado Livre finalizado com sucesso! 📦🎉"
-    }
+    feedback:
+      "Parabéns! Módulo de Compras no Mercado Livre finalizado com sucesso! 📦🎉",
+  },
 ];

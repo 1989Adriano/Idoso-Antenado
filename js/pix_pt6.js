@@ -1,13 +1,13 @@
 // pix_pt6.js - SIMULADOR DO PIX COMPLETO (PASSOS 20 AO 21)
-const pix_pt6 = [ 
-    /* passos 20 ao 21 */ 
-    
-    // PASSO 20 (ÍNDICE 19): ROTA 3 - ENTRAR COM A SENHA DE 6 DÍGÍTOS DA CHAVE MANUAL
-    {
-        instrucao: `"<strong>PASSO 20:</strong> Último obstáculo de segurança na Chave Manual!
+const pix_pt6 = [
+  /* passos 20 ao 21 */
+
+  // PASSO 20 (ÍNDICE 19): ROTA 3 - ENTRAR COM A SENHA DE 6 DÍGÍTOS DA CHAVE MANUAL
+  {
+    instrucao: `"<strong>PASSO 20:</strong> Último obstáculo de segurança na Chave Manual!
                     <br>Para concluir o envio dos R$ 50,00 para a Maria com total proteção. 
                     Dê um clique esquerdo no botão azul na simulação ou 'Confirmar Senha (6 Dígitos)' no teclado digital."`,
-        conteudo: `
+    conteudo: `
             <div style="background: #F4F7FA; 
                 height: 100%; 
                 display: flex; 
@@ -84,15 +84,16 @@ const pix_pt6 = [
                     </div>
                 </div>
             </div>`,
-        feedback: "✓ Perfeito! A senha eletrônica pessoal de movimentação foi autenticada e enviada via Pix."
-    },
+    feedback:
+      "✓ Perfeito! A senha eletrônica pessoal de movimentação foi autenticada e enviada via Pix.",
+  },
 
-    // PASSO 21 (ÍNDICE 20): TELA FINAL DE VITÓRIA DO COMPROVANTE UNIFICADO
-    {
-        instrucao: `"<strong>TREINO CONCLUÍDO!</strong> Você aprendeu com total maestria a fazer o login e acessar a área Pix. 
+  // PASSO 21 (ÍNDICE 20): TELA FINAL DE VITÓRIA DO COMPROVANTE UNIFICADO
+  {
+    instrucao: `"<strong>TREINO CONCLUÍDO!</strong> Você aprendeu com total maestria a fazer o login e acessar a área Pix. 
                     Navegou por todas as 3 rotas operacionais (Copia e Cola, QR Code e Chave) de forma 100% segura. 
                     Toque no botão azul 'Finalizar Treino' para voltar à lista principal."`,
-        conteudo: `
+    conteudo: `
             <div style="background: white; 
                 height: 100%; 
                 display: flex; 
@@ -166,6 +167,6 @@ const pix_pt6 = [
                     </button>
                 </div>
             </div>`,
-        feedback: "Parabéns! Módulo operacional do Pix concluído com sucesso! 🎉"
-    }
+    feedback: "Parabéns! Módulo operacional do Pix concluído com sucesso! 🎉",
+  },
 ];

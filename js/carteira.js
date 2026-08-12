@@ -1,9 +1,9 @@
 const carteira = [
-    // PASSO 1 (ÍNDICE 0): ENTRADA DO APP
-    {
-        instrucao: `<strong>Passo 1:</strong>
+  // PASSO 1 (ÍNDICE 0): ENTRADA DO APP
+  {
+    instrucao: `<strong>Passo 1:</strong>
             Para acessar seus documentos com segurança, toque no botão azul central escrito '🔑 Entrar com gov.br'."`,
-        conteudo: `
+    conteudo: `
             <div style="background: #FFF; 
                 height: 100%; 
                 display: flex; 
@@ -54,15 +54,15 @@ const carteira = [
                     </button>
                 </div>
             </div>`,
-        feedback: "Excelente! O sistema gov.br unifica sua senha para proteger todas as suas informações públicas."
-    },
-    
-    // PASSO 2 (ÍNDICE 1): INSERÇÃO DO CPF
-    {
-     
-        instrucao: `<strong>Passo 2:</strong>
+    feedback:
+      "Excelente! O sistema gov.br unifica sua senha para proteger todas as suas informações públicas.",
+  },
+
+  // PASSO 2 (ÍNDICE 1): INSERÇÃO DO CPF
+  {
+    instrucao: `<strong>Passo 2:</strong>
             O sistema já preencheu seu CPF. Para continuar o acesso, toque no botão azul 'Continuar'."`,
-        conteudo: `
+    conteudo: `
             <div style="background: #FFF; 
                 height: 100%; 
                 display: flex; 
@@ -128,14 +128,14 @@ const carteira = [
                     </button>
                 </div>
             </div>`,
-        feedback: "Muito bem! O aplicativo validou suas credenciais com sucesso."
-    },
+    feedback: "Muito bem! O aplicativo validou suas credenciais com sucesso.",
+  },
 
-    // PASSO 3 (ÍNDICE 2): PAINEL PRINCIPAL INTERATIVO
-    {        
-        instrucao: `<strong>Passo 3:</strong>
+  // PASSO 3 (ÍNDICE 2): PAINEL PRINCIPAL INTERATIVO
+  {
+    instrucao: `<strong>Passo 3:</strong>
             Você entrou! Escolha o que quer treinar hoje: toque em '🚗 Habilitação' para ver a CNH, em '🚙 Veículos' para o documento do carro, ou em '⚠️ Infrações' para ver multas."`,
-        conteudo: `
+    conteudo: `
             <div style="background: #FFF; 
                 height: 100%; 
                 display: flex; 
@@ -226,14 +226,14 @@ const carteira = [
                     </div>
                 </div>
             </div>`,
-        feedback: "Muito bem! Escolha uma das três categorias para explorar."
-    },
+    feedback: "Muito bem! Escolha uma das três categorias para explorar.",
+  },
 
-    // PASSO 4 (ÍNDICE 3): CNH FRENTE
-    {        
-        instrucao: `<strong>Passo 4 (CNH):</strong>
+  // PASSO 4 (ÍNDICE 3): CNH FRENTE
+  {
+    instrucao: `<strong>Passo 4 (CNH):</strong>
             Esta é a frente da sua CNH. Para simular que vai mostrar o verso com o QR Code de fiscalização, toque no botão azul '🔄 Ver Verso'."`,
-        conteudo: `
+    conteudo: `
             <div style="background: #FFF; 
                 height: 100%; 
                 display: flex; 
@@ -290,14 +290,15 @@ const carteira = [
                     </button>
                 </div>
             </div>`,
-        feedback: "Perfeito! A carteira digital simulou a rotação regulamentar para o verso."
-    },
+    feedback:
+      "Perfeito! A carteira digital simulou a rotação regulamentar para o verso.",
+  },
 
-    // PASSO 5 (ÍNDICE 4): CNH VERSO
-    {
-         instrucao: `<strong>Passo 5 (CNH):</strong>
+  // PASSO 5 (ÍNDICE 4): CNH VERSO
+  {
+    instrucao: `<strong>Passo 5 (CNH):</strong>
             Este é o verso com o código quadrado (QR Code). Policiais usam isso para checar o documento. Toque no botão verde 'Voltar ao Menu' para ver os outros."`,
-        conteudo: `
+    conteudo: `
             <div style="background: #FFF; 
                 height: 100%; 
                 display: flex; 
@@ -364,14 +365,15 @@ const carteira = [
                     </button>
                 </div>
             </div>`,
-        feedback: "Ótimo! Agora você sabe como apresentar sua carteira digital em uma fiscalização de trânsito."
-    },
+    feedback:
+      "Ótimo! Agora você sabe como apresentar sua carteira digital em uma fiscalização de trânsito.",
+  },
 
-    // PASSO 6 (ÍNDICE 5): DOCUMENTO DO VEÍCULO
-    {   
-        instrucao: `<strong>Passo 6 (Veículos):</strong>
+  // PASSO 6 (ÍNDICE 5): DOCUMENTO DO VEÍCULO
+  {
+    instrucao: `<strong>Passo 6 (Veículos):</strong>
             Este é o documento oficial do seu carro (CRLV). Para simular que vai mandar o arquivo para um parente por mensagem, toque no botão azul 'Mandar por WhatsApp'."`,
-        conteudo: `
+    conteudo: `
             <div style="background: #FFF; 
                 height: 100%; 
                 display: flex; 
@@ -429,14 +431,15 @@ const carteira = [
                     </button>
                 </div>
             </div>`,
-        feedback: "Excelente! O aplicativo gera um arquivo seguro para você compartilhar com quem dirige o seu carro."
-    },
+    feedback:
+      "Excelente! O aplicativo gera um arquivo seguro para você compartilhar com quem dirige o seu carro.",
+  },
 
-    // PASSO 7 (ÍNDICE 6): CONFIRMAÇÃO ENVIADA
-    {
-        instrucao: `<strong>Passo 7 (Veículos):</strong>
+  // PASSO 7 (ÍNDICE 6): CONFIRMAÇÃO ENVIADA
+  {
+    instrucao: `<strong>Passo 7 (Veículos):</strong>
             Pronto! O documento foi enviado. Para voltar e conferir o painel de multas, toque no botão verde 'Ir para Multas'."`,
-        conteudo: `
+    conteudo: `
             <div style="background: #FFF; 
                 height: 100%; 
                 display: flex; 
@@ -486,14 +489,14 @@ const carteira = [
                     </button>
                 </div>
             </div>`,
-        feedback: "Muito bem! Agora vamos conferir a aba de infrações e boletos."
-    },
+    feedback: "Muito bem! Agora vamos conferir a aba de infrações e boletos.",
+  },
 
-    // PASSO 8 (ÍNDICE 7): LISTA DE MULTAS
-    {      
-        instrucao: `<strong>Passo 8 (Infrações):</strong>
+  // PASSO 8 (ÍNDICE 7): LISTA DE MULTAS
+  {
+    instrucao: `<strong>Passo 8 (Infrações):</strong>
             Você abriu o painel de multas. Veja que há uma multa ativa. Para ver o boleto e conseguir desconto, toque na opção '⚠️ Velocidade Superior à Máxima'."`,
-        conteudo: `
+    conteudo: `
             <div style="background: #FFF; 
                 height: 100%; 
                 display: flex; 
@@ -540,14 +543,15 @@ const carteira = [
                     </div>
                 </div>
             </div>`,
-        feedback: "Otimização feita com sucesso. O sistema abre a opção de emitir o boleto bancário."
-    },
+    feedback:
+      "Otimização feita com sucesso. O sistema abre a opção de emitir o boleto bancário.",
+  },
 
-    // PASSO 9 (ÍNDICE 8): DETALHES DA MULTA E DESCONTO
-    {
-        instrucao: `<strong>Passo 9 (Infrações):</strong>
+  // PASSO 9 (ÍNDICE 8): DETALHES DA MULTA E DESCONTO
+  {
+    instrucao: `<strong>Passo 9 (Infrações):</strong>
             Excelente! O app oferece 40% de desconto se você pagar antes do vencimento. Toque no botão azul '📄 Copiar Código Pix' para simular o pagamento seguro."`,
-        conteudo: `
+    conteudo: `
             <div style="background: #FFF; 
                 height: 100%; 
                 display: flex; 
@@ -603,14 +607,15 @@ const carteira = [
                     </button>
                 </div>
             </div>`,
-        feedback: "Parabéns! O código Pix copia e cola foi enviado para a área de transferência do celular!"
-    },
+    feedback:
+      "Parabéns! O código Pix copia e cola foi enviado para a área de transferência do celular!",
+  },
 
-    // PASSO 10 (ÍNDICE 9): CONCLUSÃO DO PROCESSO
-    {   
-        instrucao: `<strong>Treino Concluído!</strong>
+  // PASSO 10 (ÍNDICE 9): CONCLUSÃO DO PROCESSO
+  {
+    instrucao: `<strong>Treino Concluído!</strong>
             Você aprendeu a usar o aplicativo de trânsito! Toque em 'Finalizar' para sair."`,
-        conteudo: `
+    conteudo: `
             <div style="background: white; 
                 height: 100%; 
                 display: flex; 
@@ -672,6 +677,6 @@ const carteira = [
                     </button>
                 </div>
             </div>`,
-        feedback: "Parabéns! Módulo finalizado com absoluto sucesso! 🚗💨🎉"
-    }
+    feedback: "Parabéns! Módulo finalizado com absoluto sucesso! 🚗💨🎉",
+  },
 ];

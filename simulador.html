@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Simulador - Conecta Idade</title>   
+    <title>Simulador - Conecta Idade</title>
+
     <link rel="stylesheet" href="./css/simulador.css">   
     <link rel="stylesheet" href="./css/whatsapp.css">
     <link rel="stylesheet" href="./css/youtube.css">
@@ -14,6 +15,12 @@
     <link rel="stylesheet" href="./css/maps.css">
     <link rel="stylesheet" href="./css/mercado.css">
     <link rel="stylesheet" href="./css/pix.css">
+    <link rel="stylesheet" href="./css/comp_basico.css">
+    <link rel="stylesheet" href="./css/comp_texto.css">
+    <link rel="stylesheet" href="./css/comp_arquivos.css">
+    <link rel="stylesheet" href="./css/comp_imprimir.css">
+    <link rel="stylesheet" href="./css/comp_email.css">
+    <link rel="stylesheet" href="./css/comp_internet.css">
 
 </head>
 
@@ -25,7 +32,8 @@
         align-items: center; 
         justify-content: space-between; 
         gap: 20px; 
-        box-sizing: border-box; border-bottom: 4px solid var(--cor-laranja); 
+        box-sizing: border-box; 
+        border-bottom: 4px solid var(--cor-laranja); 
         width: 100%; overflow: hidden;">
         
         <!-- 1. BOTÃO DE CONTROLE COM ÍCONE E TEXTO (Extrema Esquerda) -->
@@ -187,12 +195,10 @@
     <script src="./js/comp_arquivos.js"></script>
     <script src="./js/comp_imprimir.js"></script>
     <script src="./js/comp_internet.js"></script>
-    <script src="./js/comp_email.js"></script>   
-    <!-- <script src="./js/comp_seguranca.js"></script> -->
+    <script src="./js/comp_email.js"></script>    
 
     <!-- MOTOR LÓGICO E CONTROLADOR DE EVENTOS DO SIMULADOR -->
-    <script>
-        // 🌟 UNIFICAÇÃO DO PIX DEFENSIVA: Evita ReferenceError se as variáveis falharem
+    <script>       
         window.pix = [];
         try {
             if (typeof pix_pt1 !== 'undefined' && typeof pix_pt2 !== 'undefined' && typeof pix_pt6 !== 'undefined') {

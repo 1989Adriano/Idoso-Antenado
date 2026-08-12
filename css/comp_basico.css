@@ -1,0 +1,72 @@
+/* comp_basico.css - Estilos Gerais para o Simulador de Informática Básica */
+
+/* Containers Principais de Fundos de Hardware e Sistema */
+.pc-container-escuro {
+    background: #1E293B;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: sans-serif;
+    box-sizing: border-box;
+    user-select: none;
+    padding: 15px;
+    color: white;
+}
+
+.pc-container-monitor {
+    background: #344155;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: sans-serif;
+    box-sizing: border-box;
+    user-select: none;
+    padding: 15px;
+    color: white;
+}
+
+.pc-container-painel {
+    background: #0F172A;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: sans-serif;
+    box-sizing: border-box;
+    user-select: none;
+    padding: 15px;
+    color: white;
+}
+
+.pc-container-claro {
+    background: #F1F5F9;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: sans-serif;
+    box-sizing: border-box;
+    user-select: none;
+    padding: 15px;
+    color: #1E293B;
+}
+
+/* Bases de Teclados Físicos no Simulador */
+.pc-teclado-base {
+    background: #1E293B;
+    padding: 15px;
+    border-radius: 10px;
+    display: flex;
+    gap: 10px;
+    box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+    width: 85%;
+    justify-content: center;
+    box-sizing: border-box;
+    align-items: stretch;
+}
