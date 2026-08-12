@@ -1,8 +1,8 @@
 const uber = [
   // PASSO 1 (ÍNDICE 0): TELA INICIAL DA UBER
   {
-    instrucao:
-      "<strong>Passo 1:</strong> Para iniciar a sua viagem, toque na barra cinza central escrita '🔍 Para onde?'.",
+    instrucao: `<strong>Passo 1:</strong> 
+        Para iniciar a sua viagem, toque na barra cinza central escrita '🔍 Para onde?'.`,
     conteudo: `
             <div style="background: #FFF; 
                 height: 100%; 
@@ -88,8 +88,9 @@ const uber = [
 
   // PASSO 2 (ÍNDICE 1): SELEÇÃO DO ENDEREÇO DE DESTINO
   {
-    instrucao:
-      "<strong>Passo 2:</strong> O aplicativo digitou o endereço 'Hospital Central'. Toque em cima do primeiro resultado na lista para confirmar o destino.",
+    instrucao: `<strong>Passo 2:</strong> 
+        O aplicativo digitou o endereço 'Hospital Central'. 
+        Toque em cima do primeiro resultado na lista para confirmar o destino.`,
     conteudo: `
             <div style="background: white; 
                 height: 100%; 
@@ -121,12 +122,31 @@ const uber = [
                     
                     <div style="display: flex; align-items: center; gap: 10px;">
                         <span style="color: #28A745; font-size: 12px;">🟢</span>
-                        <input type="text" value="Meu Local Atu (Rua das Flores, 123)" readonly style="flex: 1; border: none; background: #F3F3F3; padding: 8px 12px; border-radius: 4px; font-size: 13px; color: #666;">
+                        <input type="text" 
+                            value="Meu Local Atu (Rua das Flores, 123)" 
+                            readonly 
+                            style="flex: 1; 
+                            border: none; 
+                            background: #F3F3F3; 
+                            padding: 8px 12px; 
+                            border-radius: 4px; f
+                            ont-size: 13px; 
+                            color: #666;">
                     </div>
                     
                     <div style="display: flex; align-items: center; gap: 10px;">
                         <span style="color: #000; font-size: 12px;">⬛</span>
-                        <input type="text" value="Hospital Central" readonly style="flex: 1; border: 2px solid #000; background: #FFF; padding: 8px 12px; border-radius: 4px; font-size: 14px; font-weight: bold; color: #000;">
+                        <input type="text" 
+                            value="Hospital Central" 
+                            readonly 
+                            style="flex: 1; 
+                            border: 2px solid #000; 
+                            background: #FFF; 
+                            padding: 8px 12px; 
+                            border-radius: 4px; 
+                            font-size: 14px; 
+                            font-weight: 
+                            bold; color: #000;">
                     </div>
                 </div>
                 
@@ -145,7 +165,17 @@ const uber = [
                         background: #E7F1FF; 
                         border-left: 4px solid #000;">
                         
-                        <span style="font-size: 24px; background: #EEEEEE; width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">📍</span>
+                        <span style="font-size: 24px; 
+                            background: #EEEEEE;
+                            width: 40px; 
+                            height: 40px; 
+                            border-radius: 50%; 
+                            display: flex; 
+                            align-items: center; 
+                            justify-content: center; 
+                            flex-shrink: 0;">📍
+                        </span>
+
                         <div style="text-align: left;">
                             <strong style="font-size: 15px; color: #000;">Hospital Central da Cidade</strong><br>
                             <span style="font-size: 12px; color: #666;">Avenida da Saúde, 500 - Centro</span>
@@ -159,8 +189,10 @@ const uber = [
 
   // PASSO 3 (ÍNDICE 2): SELEÇÃO DO TIPO DE CARRO FIEL AO APP
   {
-    instrucao:
-      "<strong>Passo 3:</strong> Escolha a categoria do veículo. Toque na primeira opção oficial da lista: '🚗 UberX' para selecionar a viagem mais econômica.",
+    instrucao: `<strong>Passo 3:</strong> 
+        Escolha a categoria do veículo. 
+        Toque na primeira opção oficial da lista: '🚗 UberX' 
+        para selecionar a viagem mais econômica.`,
     conteudo: `
             <div style="background: #FFF; 
                 height: 100%; 
@@ -230,8 +262,10 @@ const uber = [
 
   // PASSO 4 (ÍNDICE 3): TRAVA DE SEGURANÇA CONTRA GOLPES DE COBRANÇA
   {
-    instrucao:
-      "<strong>Passo 4:</strong> Escolha a forma de pagamento recomendada. Toque no botão 'Confirmar UberX' para garantir o pagamento registrado diretamente no aplicativo.",
+    instrucao: `<strong>Passo 4:</strong> 
+        Escolha a forma de pagamento recomendada. 
+        Toque no botão 'Confirmar UberX' para garantir 
+        o pagamento registrado diretamente no aplicativo.`,
     conteudo: `
             <div style="background: #FFF; 
                 height: 100%; 
@@ -277,7 +311,10 @@ const uber = [
                         color: #856404; 
                         text-align: left; 
                         font-weight: bold; 
-                        line-height: 1.4;">🚨 ALERTA ANTIGOLPE:<br>Nunca faça transferências Pix por fora ou links enviados pelo chat do motorista antes do início do trajeto! O app faz tudo de forma automatizada e protegida.
+                        line-height: 1.4;">🚨 ALERTA ANTIGOLPE:<br>
+                            Nunca faça transferências Pix por fora ou links 
+                            enviados pelo chat do motorista antes do início do 
+                            trajeto! O app faz tudo de forma automatizada e protegida.
                     </div>
                 </div>
 
@@ -304,8 +341,9 @@ const uber = [
 
   // PASSO 5 (ÍNDICE 4): CONFIRMAÇÃO DO LOCAL DE EMBARQUE
   {
-    instrucao:
-      "<strong>Passo 5:</strong> Revise se o seu endereço de partida 'Rua das Flores, 123' está correto. Estando tudo certo, toque no botão preto 'Confirmar Embarque'.",
+    instrucao: `<strong>Passo 5:</strong> 
+        Revise se o seu endereço de partida 'Rua das Flores, 123' está correto. 
+        Estando tudo certo, toque no botão preto 'Confirmar Embarque'.`,
     conteudo: `
             <div style="background: #FFF; 
                 height: 100%; 
@@ -370,8 +408,10 @@ const uber = [
 
   // PASSO 6 (ÍNDICE 5): IDENTIFICAÇÃO VISUAL DO VEÍCULO (NOVO!)
   {
-    instrucao:
-      "<strong>Passo 6:</strong> O aplicativo avisa que o motorista está chegando! Olhe para a rua e procure visualmente o modelo e a cor do veículo informados. Toque na imagem do carro correspondente: o 'Corolla Branco'.",
+    instrucao: `<strong>Passo 6:</strong> 
+        O aplicativo avisa que o motorista está chegando! 
+        Olhe para a rua e procure visualmente o modelo e a cor do veículo informados.
+        Toque na imagem do carro correspondente: o 'Corolla Branco'.`,
     conteudo: `
             <div style="background: #FFF; 
                 height: 100%; 
@@ -446,10 +486,12 @@ const uber = [
       "Excelente! Focar na cor e no modelo do carro de longe agiliza o embarque e evita que você fique perdido na calçada.",
   },
 
-  // PASSO 7 (ÍNDICE 6): CÓDIGO DE SEGURANÇA PIN / U-CÓDIGO (NOVO!)
+  // PASSO 7 (ÍNDICE 6): CÓDIGO DE SEGURANÇA PIN / U-CÓDIGO 
   {
-    instrucao:
-      "<strong>Passo 7:</strong> O carro parou. Para que a viagem comece, você deve informar o código de segurança de 4 dígitos ao motorista. Localize o número na tela e toque nele para ditar.",
+    instrucao: `<strong>Passo 7:</strong> 
+        O carro parou. Para que a viagem comece, 
+        você deve informar o código de segurança de 4 dígitos ao motorista. 
+        Localize o número na tela e toque nele para ditar.`,
     conteudo: `
             <div style="background: #FFF; 
                 height: 100%; 
@@ -512,7 +554,10 @@ const uber = [
                         text-align: left; 
                         line-height: 1.4;
                         box-shadow: 0 2px 4px rgba(0,0,0,0.02);">
-                        💡 <strong>Por que isso existe?</strong> O motorista não consegue iniciar a corrida no celular dele sem digitar esses números. Isso garante que nem você entre no carro errado, nem ele leve o passageiro errado.
+                        💡 <strong>Por que isso existe?</strong>
+                            O motorista não consegue iniciar a corrida no celular 
+                            dele sem digitar esses números. Isso garante que nem você 
+                            entre no carro errado, nem ele leve o passageiro errado.
                     </div>
                 </div>
             </div>`,
@@ -520,10 +565,12 @@ const uber = [
       "Perfeito! Falar o código PIN é a melhor garantia de que você está no veículo regulamentar rastreado pela Uber.",
   },
 
-  // PASSO 8 (ÍNDICE 7): TELA DE VITÓRIA ABSOLUTA DO MÓDULO UBER (REAJUSTADO)
+  // PASSO 8 (ÍNDICE 7): TELA DE VITÓRIA ABSOLUTA DO MÓDULO UBER
   {
-    instrucao:
-      "<strong>Passo 8:</strong> Treino Concluído! Você aprendeu a pedir uma viagem pelo celular e a entrar no carro com total segurança e independência.",
+    instrucao: `<strong>Passo 8:</strong> 
+        Treino Concluído! Você aprendeu a pedir uma 
+        viagem pelo celular e a entrar no carro com 
+        total segurança e independência.`,
     conteudo: `
             <div style="background: white; 
                 height: 100%; 
@@ -580,7 +627,11 @@ const uber = [
                         font-size: 14px; 
                         color: #555; 
                         line-height: 1.4; 
-                        text-align: center;">Muito bem! Você concluiu todas as etapas. Agora já sabe como digitar o endereço de destino, escolher o carro, verificar as placas e informar o código PIN de segurança.
+                        text-align: center;">
+                            Muito bem! Você concluiu todas as etapas. 
+                            Agora já sabe como digitar o endereço de destino, 
+                            escolher o carro, verificar as placas e 
+                            informar o código PIN de segurança.
                     </p>
                     
                     <button onclick="window.location.href='menu.html'" 

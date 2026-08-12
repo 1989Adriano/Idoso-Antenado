@@ -117,7 +117,7 @@ const inss = [
                     gap: 10px;">
                     <label style="font-weight: bold; font-size: 13px; color: #444; text-align: left; display: block;">NÚMERO DO CPF:</label>
                     
-                    <!-- 🌟 ALVO: BARRA DE CPF PONTILHADA -->
+                    <!-- BARRA DE CPF PONTILHADA -->
                     <div onclick="avancarPasso()" 
                         style="background: #E8F5E9; 
                         padding: 14px; 

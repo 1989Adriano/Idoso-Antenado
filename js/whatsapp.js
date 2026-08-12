@@ -1,9 +1,10 @@
 const whatsapp = [
   // OBJETO 1: PASSO 1 (Agenda de Contatos)
   {
-    instrucao: `<strong>PASSO 1:</strong>Antes de conversar, precisamos salvar o número!
-                    <br>Use o mouse ou o toque na tela.
-                    <br>Toque no botão verde '➕ Salvar Novo Contato' para adicionar seu neto.`,
+    instrucao: `<strong>PASSO 1:</strong>
+        Antes de conversar, precisamos salvar o número!
+        Use o mouse ou o toque na tela.
+        Toque no botão verde '➕ Salvar Novo Contato' para adicionar seu neto.`,
     conteudo: `
             <div class="wa-container">
                 <div class="wa-topo-agenda">👤 Contatos do Celular</div>
@@ -72,9 +73,10 @@ const whatsapp = [
 
   // OBJETO 2: PASSO 2 (Busca por Nome)
   {
-    instrucao: `<strong>PASSO 2:</strong>Vamos procurar o contato dele para abrir o bate-papo!
-                    <br>Use o mouse ou toque na tela do smartphone.
-                    <br>Toque na barra de pesquisa branca escrita '🔍 Procurar: Neto Querido'.`,
+    instrucao: `<strong>PASSO 2:</strong>
+        Vamos procurar o contato dele para abrir o bate-papo!
+        Use o mouse ou toque na tela do smartphone.
+        Toque na barra de pesquisa branca escrita '🔍 Procurar: Neto Querido'.`,
     conteudo: `
             <div class="wa-container" style="background:#FFFFFF;">
                 <div class="wa-topo-app">💬 WhatsApp</div>
@@ -118,11 +120,13 @@ const whatsapp = [
     feedback:
       "✅ Perfeito! O aplicativo filtrou a sua lista e encontrou o contato correto.",
   },
+
   // OBJETO 3: PASSO 3 (Abertura do Chat e Ativação do Texto)
   {
-    instrucao: `<strong>PASSO 3:</strong>O bate-papo com o seu familiar está aberto!
-                    <br>Agora toque no campo de texto branco embaixo, escrito '⌨️ Digitar mensagem'.
-                    <br>Isso simularia a abertura das letras do teclado na tela do celular.`,
+    instrucao: `<strong>PASSO 3:</strong>
+        O bate-papo com o seu familiar está aberto!
+        Agora toque no campo de texto branco embaixo, escrito '⌨️ Digitar mensagem'.
+        Isso simularia a abertura das letras do teclado na tela do celular.`,
     conteudo: `
             <div class="wa-container">
                 <div class="wa-topo-chat">
@@ -171,9 +175,10 @@ const whatsapp = [
 
   // OBJETO 4: PASSO 4 (O Botão de Enviar Seta Verde)
   {
-    instrucao: `<strong>PASSO 4:</strong>A mensagem 'Oi neto, tudo bem?' já está digitada na caixa!
-                    <br>Para fazer o texto subir e ser enviado de verdade, use o mouse.
-                    <br>Toque no botão verde redondo com a '➡️ Seta' branca.`,
+    instrucao: `<strong>PASSO 4:</strong>
+        A mensagem 'Oi neto, tudo bem?' já está digitada na caixa!
+        Para fazer o texto subir e ser enviado de verdade, use o mouse.
+        Toque no botão verde redondo com a '➡️ Seta' branca.`,
     conteudo: `
             <div class="wa-container">
                 <div class="wa-topo-chat">
@@ -221,9 +226,10 @@ const whatsapp = [
 
   // OBJETO 5: PASSO 5 (Entendendo o tique azul de lido)
   {
-    instrucao: `<strong>PASSO 5:</strong>Repare nos dois risquinhos azuis abaixo do seu texto!
-                    <br>Para aprender o significado desse sinal visual de confirmação do app, use o mouse.
-                    <br>Toque em cima das palavras indicadoras '✔️✔️ LIDO' dentro do balão verde.`,
+    instrucao: `<strong>PASSO 5:</strong>
+        Repare nos dois risquinhos azuis abaixo do seu texto!
+        Para aprender o significado desse sinal visual de confirmação do app, use o mouse.
+        Toque em cima das palavras indicadoras '✔️✔️ LIDO' dentro do balão verde.`,
     conteudo: `
             <div class="wa-container">
                 <div class="wa-topo-chat">
@@ -270,11 +276,13 @@ const whatsapp = [
     feedback:
       "Isso aí! Dois tracinhos azuis significam que a outra pessoa já abriu a conversa e leu o seu recado.",
   },
+
   // OBJETO 6: PASSO 6 (Ouvir Áudio Recebido do Neto)
   {
-    instrucao: `<strong>PASSO 6:</strong>Olha só! Seu neto acabou de responder com um áudio!
-                    <br>Para escutar o que ele te mandou, use o mouse ou o toque na tela.
-                    <br>Toque em cima do botão retangular branco escrito 'Ouvir 🎧'.`,
+    instrucao: `<strong>PASSO 6:</strong>
+        Olha só! Seu neto acabou de responder com um áudio!
+        Para escutar o que ele te mandou, use o mouse ou o toque na tela.
+        Toque em cima do botão retangular branco escrito 'Ouvir 🎧'.`,
     conteudo: `
             <div class="wa-container">
                 <div class="wa-topo-chat">
@@ -303,14 +311,38 @@ const whatsapp = [
                         gap:12px; 
                         cursor:pointer; 
                         border:3px dashed #075E54;">
-                        <div style="width:36px; height:36px; background:#075E54; border-radius:50%; display:flex; align-items:center; justify-content:center; color:white; font-size:14px;">▶️</div>
+                        <div style="width:36px; 
+                            height:36px; 
+                            background:#075E54; 
+                            border-radius:50%; 
+                            display:flex; 
+                            align-items:center; 
+                            justify-content:center; 
+                            color:white; 
+                            font-size:14px;">▶️
+                        </div>
+
                         <div style="flex:1; height:6px; background:#DDD; border-radius:3px;"></div>
-                        <span style="font-size:13px; color:#075E54; font-weight:bold; background:#E7F1FF; padding:4px 8px; border-radius:6px; white-space:nowrap;">Ouvir 🎧</span>
+                        <span style="font-size:13px; 
+                            color:#075E54; 
+                            font-weight:bold; 
+                            background:#E7F1FF; 
+                            padding:4px 8px; 
+                            border-radius:6px; 
+                            white-space:nowrap;">Ouvir 🎧
+                        </span>
                     </div>
                 </div>
 
                 <div class="wa-barra-inferior">
-                    <div style="flex:1; background:white; padding:12px 15px; border-radius:25px; text-align:left; font-size:16px; color:#999;">Digite uma mensagem...</div>
+                    <div style="flex:1; 
+                        background:white; 
+                        padding:12px 15px; 
+                        border-radius:25px; 
+                        text-align:left; 
+                        font-size:16px; 
+                        color:#999;">Digite uma mensagem...
+                    </div>
                     <div class="wa-btn-microfone">🎙️</div>
                 </div>
             </div>`,
@@ -320,9 +352,12 @@ const whatsapp = [
 
   // OBJETO 7: PASSO 7 (Acompanhando o progresso do áudio)
   {
-    instrucao: `<strong>PASSO 7:</strong>O áudio está tocando!
-                    <br>Aguarde a barrinha de progresso verde preencher até o final.
-                    <br>Toque na palavra azul 'Concluído ✔️' para avançar para a próxima etapa.`,
+    instrucao: `<strong>PASSO 7:</strong>
+        O áudio está tocando! Aguarde a barrinha
+        de progresso verde preencher até o final.
+        Toque na palavra azul 'Concluído ✔️' para 
+        
+            avançar para a próxima etapa.`,
     conteudo: `
             <div class="wa-container">
                 <div class="wa-topo-chat">
@@ -335,7 +370,16 @@ const whatsapp = [
 
                 <div class="wa-corpo-chat">
                     <div class="wa-balao-recebimento" style="width:80%; display:flex; align-items:center; gap:12px;">
-                        <div style="width:36px; height:36px; background:#00A884; border-radius:50%; display:flex; align-items:center; justify-content:center; color:white; font-size:14px;">⏸️</div>
+                        <div style="width:36px; 
+                            height:36px; 
+                            background:#00A884; 
+                            border-radius:50%; 
+                            display:flex; 
+                            align-items:center; 
+                            justify-content:center; 
+                            color:white; 
+                            font-size:14px;">⏸️
+                        </div>
                         
                         <div style="flex:1; height:6px; background:#DDD; border-radius:3px; position:relative;">
                             <div style="width:100%; height:100%; background:#00A884; border-radius:3px;"></div>
@@ -357,7 +401,14 @@ const whatsapp = [
                 </div>
 
                 <div class="wa-barra-inferior">
-                    <div style="flex:1; background:white; padding:12px 15px; border-radius:25px; text-align:left; font-size:16px; color:#999;">Digite uma mensagem...</div>
+                    <div style="flex:1; 
+                        background:white; 
+                        padding:12px 15px; 
+                        border-radius:25px; 
+                        text-align:left; 
+                        font-size:16px; 
+                        color:#999;">Digite uma mensagem...
+                    </div>
                     <div class="wa-btn-microfone">🎙️</div>
                 </div>
             </div>`,
@@ -366,9 +417,10 @@ const whatsapp = [
 
   // OBJETO 8: PASSO 8 (Simulador de Gravação de Áudio Próprio)
   {
-    instrucao: `<strong>PASSO 8:</strong>Agora responda gravando sua própria voz!
-                    <br>Use o mouse ou toque na tela do smartphone.
-                    <br>Toque no botão redondo verde com o '🎙️ Microfone' no canto inferior direito.`,
+    instrucao: `<strong>PASSO 8:</strong>
+        Agora responda gravando sua própria voz!
+        Use o mouse ou toque na tela do smartphone.
+        Toque no botão redondo verde com o '🎙️ Microfone' no canto inferior direito.`,
     conteudo: `
             <div class="wa-container">
                 <div class="wa-topo-chat">
@@ -381,8 +433,29 @@ const whatsapp = [
 
                 <div class="wa-corpo-chat">
                     <div class="wa-balao-recebimento" style="width:80%; display:flex; align-items:center; gap:12px;">
-                        <div style="width:36px; height:36px; background:#00A884; border-radius:50%; display:flex; align-items:center; justify-content:center; color:white; font-size:14px;">⏸️</div>
-                        <div style="flex:1; height:6px; background:#DDD; border-radius:3px; position:relative;"><div style="width:100%; height:100%; background:#00A884; border-radius:3px;"></div></div>
+                        <div style="width:36px; 
+                            height:36px; 
+                            background:#00A884; 
+                            border-radius:50%; 
+                            display:flex; 
+                            align-items:center; 
+                            justify-content:center; 
+                            color:white; 
+                            font-size:14px;">⏸️
+                        </div>
+
+                        <div style="flex:1; 
+                            height:6px; 
+                            background:#DDD; 
+                            border-radius:3px;
+                            position:relative;">
+
+                            <div style="width:100%; 
+                                height:100%; 
+                                background:#00A884; 
+                                border-radius:3px;">
+                            </div>
+                        </div>
                         <span style="font-size:12px; color:#666; font-weight:bold;">0:12</span>
                     </div>
                 </div>
@@ -407,11 +480,14 @@ const whatsapp = [
     feedback:
       "🎙️ Perfeito! No mundo real, basta segurar esse botão para falar e soltá-lo para enviar a sua voz automaticamente.",
   },
+
   // OBJETO 9: PASSO 9 (Chamada de Vídeo por Câmera)
   {
-    instrucao: `<strong>PASSO 9:</strong>Que tal ver o rosto do seu neto em tempo real?
-                    <br>Use o mouse ou o toque na tela do smartphone.
-                    <br>Toque no ícone da '📹 Câmera de Vídeo' que fica no topo direito do cabeçalho.`,
+    instrucao: `<strong>PASSO 9:</strong>
+        Que tal ver o rosto do seu neto em tempo real?
+        Use o mouse ou o toque na tela do smartphone.
+        Toque no ícone da '📹 Câmera de Vídeo' que fica 
+        no topo direito do cabeçalho.`,
     conteudo: `
             <div class="wa-container">
                 <div class="wa-topo-chat" style="justify-content:space-between;">
@@ -466,9 +542,12 @@ const whatsapp = [
 
   // OBJETO 10: PASSO 10 (Envio de Figurinhas/Stickers de Reação)
   {
-    instrucao: `<strong>PASSO 10:</strong>Para terminar o bate-papo com muita alegria, mande uma figurinha carinhosa!
-                    <br>Use o mouse ou dê um toque na tela.
-                    <br>Toque no emoji de '🥰 Carinha Sorridente' localizado no canto esquerdo da barra de mensagens.`,
+    instrucao: `<strong>PASSO 10:</strong>
+        Para terminar o bate-papo com muita alegria, 
+        mande uma figurinha carinhosa!
+        Use o mouse ou dê um toque na tela.
+        Toque no emoji de '🥰 Carinha Sorridente' 
+        localizado no canto esquerdo da barra de mensagens.`,
     conteudo: `
             <div class="wa-container">
                 <div class="wa-topo-chat">
