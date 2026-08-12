@@ -42,7 +42,7 @@
     cursor: pointer;
     text-align: left;
     font-weight: bold;
-    border: 3px dashed #0056B3; /* Alvo pontilhado azul padrão */
+    border: 3px dashed #0056B3;
 }
 
 /* Área de resultados e feed de vídeos */

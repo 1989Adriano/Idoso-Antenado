@@ -1,7 +1,10 @@
 const comp_internet = [
   // PASSO 1: ABRIR O GOOGLE CHROME NA ÁREA DE TRABALHO
   {
-    instrucao: `<strong>Passo 1:</strong> Para entrar na internet, precisamos abrir o navegador. Use o mouse e dê um clique esquerdo no ícone redondo e colorido do 'Google Chrome'.`,
+    instrucao: `<strong>Passo 1:</strong> 
+        Para entrar na internet, precisamos abrir o navegador. 
+        Use o mouse e dê um clique esquerdo no ícone 
+        redondo e colorido do 'Google Chrome'.`,
     conteudo: `
             <div class="net-container-desktop">
                 <div style="flex: 1; 

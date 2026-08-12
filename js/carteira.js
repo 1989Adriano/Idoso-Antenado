@@ -2,7 +2,8 @@ const carteira = [
   // PASSO 1 (ÍNDICE 0): ENTRADA DO APP
   {
     instrucao: `<strong>Passo 1:</strong>
-            Para acessar seus documentos com segurança, toque no botão azul central escrito '🔑 Entrar com gov.br'."`,
+        Para acessar seus documentos com segurança, 
+        toque no botão azul central escrito '🔑 Entrar com gov.br'."`,
     conteudo: `
             <div style="background: #FFF; 
                 height: 100%; 
@@ -40,7 +41,10 @@ const carteira = [
                         font-size: 16px; 
                         line-height: 1.4; 
                         padding: 0 10px;">
-                        Tenha sua <strong>CNH</strong>, o <strong>Documento do Carro (CRLV)</strong> e suas <strong>Multas</strong> direto no celular com validade nacional.
+                                    Tenha sua <strong>CNH</strong>, o <strong>
+                                    Documento do Carro (CRLV)</strong> 
+                                    e suas <strong>Multas</strong> direto no 
+                                    celular com validade nacional.
                     </div>
                     
                     <!-- 🌟 ALVO: CONTORNO PONTILHADO LARANJA -->
@@ -134,7 +138,9 @@ const carteira = [
   // PASSO 3 (ÍNDICE 2): PAINEL PRINCIPAL INTERATIVO
   {
     instrucao: `<strong>Passo 3:</strong>
-            Você entrou! Escolha o que quer treinar hoje: toque em '🚗 Habilitação' para ver a CNH, em '🚙 Veículos' para o documento do carro, ou em '⚠️ Infrações' para ver multas."`,
+        Você entrou! Escolha o que quer treinar hoje: 
+        toque em '🚗 Habilitação' para ver a CNH, em '🚙 Veículos' 
+        para o documento do carro, ou em '⚠️ Infrações' para ver multas."`,
     conteudo: `
             <div style="background: #FFF; 
                 height: 100%; 
@@ -232,7 +238,8 @@ const carteira = [
   // PASSO 4 (ÍNDICE 3): CNH FRENTE
   {
     instrucao: `<strong>Passo 4 (CNH):</strong>
-            Esta é a frente da sua CNH. Para simular que vai mostrar o verso com o QR Code de fiscalização, toque no botão azul '🔄 Ver Verso'."`,
+        Esta é a frente da sua CNH. Para simular que vai mostrar
+        o verso com o QR Code de fiscalização, toque no botão azul '🔄 Ver Verso'."`,
     conteudo: `
             <div style="background: #FFF; 
                 height: 100%; 
@@ -252,6 +259,7 @@ const carteira = [
                 </div>
                 
                 <div style="padding: 15px; 
+
                     flex: 1; 
                     background: #E2E8F0; 
                     display: flex; 
@@ -273,7 +281,14 @@ const carteira = [
                         font-size: 13px; 
                         line-height: 1.4;">
                         
-                        <div style="font-weight: bold; border-bottom: 1px solid #D5A300; padding-bottom: 4px; font-size: 14px; margin-bottom: 6px; color: #856404; text-align: center;">CARTEIRA NACIONAL DE HABILITAÇÃO</div>
+                        <div style="font-weight: bold;
+                            border-bottom: 1px solid #D5A300;
+                            padding-bottom: 4px;
+                            font-size: 14px;
+                            margin-bottom: 6px;
+                            color: #856404;
+                            text-align: center;">CARTEIRA NACIONAL DE HABILITAÇÃO
+                        </div>
                         <p style="margin: 2px 0;"><strong>NOME:</strong> CONDUTOR DA SILVA</p>
                         <p style="margin: 2px 0;"><strong>REGISTRO:</strong> 01234567890</p>
                         <p style="margin: 2px 0;"><strong>CATEGORIA:</strong> AB</p>
@@ -297,7 +312,9 @@ const carteira = [
   // PASSO 5 (ÍNDICE 4): CNH VERSO
   {
     instrucao: `<strong>Passo 5 (CNH):</strong>
-            Este é o verso com o código quadrado (QR Code). Policiais usam isso para checar o documento. Toque no botão verde 'Voltar ao Menu' para ver os outros."`,
+            Este é o verso com o código quadrado (QR Code). 
+            Policiais usam isso para checar o documento. 
+            Toque no botão verde 'Voltar ao Menu' para ver os outros."`,
     conteudo: `
             <div style="background: #FFF; 
                 height: 100%; 
@@ -372,7 +389,10 @@ const carteira = [
   // PASSO 6 (ÍNDICE 5): DOCUMENTO DO VEÍCULO
   {
     instrucao: `<strong>Passo 6 (Veículos):</strong>
-            Este é o documento oficial do seu carro (CRLV). Para simular que vai mandar o arquivo para um parente por mensagem, toque no botão azul 'Mandar por WhatsApp'."`,
+        Este é o documento oficial do seu carro (CRLV). 
+        Para simular que vai mandar o arquivo para um parente 
+        por mensagem, toque no botão azul 'Mandar por WhatsApp'."`,
+
     conteudo: `
             <div style="background: #FFF; 
                 height: 100%; 
@@ -413,14 +433,21 @@ const carteira = [
                         font-size: 13px; 
                         line-height: 1.4;">
                         
-                        <div style="font-weight: bold; border-bottom: 1px solid #28A745; padding-bottom: 4px; font-size: 14px; margin-bottom: 6px; color: #1E7E34; text-align: center;">CRLV-e DIGITAL VIA</div>
+                        <div style="font-weight: bold;
+                             border-bottom: 1px solid #28A745;
+                             padding-bottom: 4px; 
+                            font-size: 14px; margin-bottom: 6px; 
+                            color: #1E7E34; 
+                            text-align: center;">CRLV-e DIGITAL VIA
+                        </div>
+
                         <p style="margin: 2px 0;"><strong>PLACA:</strong> ABC-1234</p>
                         <p style="margin: 2px 0;"><strong>RENAVAM:</strong> 9876543210</p>
                         <p style="margin: 2px 0;"><strong>ANO EXERCÍCIO:</strong> 2026</p>
                         <p style="margin: 2px 0; color: #28A745;"><strong>SITUAÇÃO:</strong> Licenciado</p>
                     </div>
                     
-                    <!-- 🌟 ALVO: CONTORNO PONTILHADO AMARELO -->
+                    <!-- ALVO: CONTORNO PONTILHADO AMARELO -->
                     <button class="botao-grande" 
                         style="background: #1351B4; 
                         width: 100%; 
@@ -438,7 +465,8 @@ const carteira = [
   // PASSO 7 (ÍNDICE 6): CONFIRMAÇÃO ENVIADA
   {
     instrucao: `<strong>Passo 7 (Veículos):</strong>
-            Pronto! O documento foi enviado. Para voltar e conferir o painel de multas, toque no botão verde 'Ir para Multas'."`,
+        Pronto! O documento foi enviado. Para voltar e conferir o painel
+        de multas, toque no botão verde 'Ir para Multas'."`,
     conteudo: `
             <div style="background: #FFF; 
                 height: 100%; 
@@ -477,7 +505,13 @@ const carteira = [
                         justify-content: center; 
                         border-radius: 50%;">✓
                     </div>
-                    <p style="text-align: center; color: #333; font-size: 16px; font-weight: bold; margin: 0;">Envio Concluído!</p>
+
+                    <p style="text-align: center;
+                        color: #333; 
+                        font-size: 16px;
+                        font-weight: bold; 
+                        margin: 0;">Envio Concluído!                    
+                    </p>
                     
                     <button class="botao-grande" 
                         style="background: #248A3D; 
@@ -495,7 +529,9 @@ const carteira = [
   // PASSO 8 (ÍNDICE 7): LISTA DE MULTAS
   {
     instrucao: `<strong>Passo 8 (Infrações):</strong>
-            Você abriu o painel de multas. Veja que há uma multa ativa. Para ver o boleto e conseguir desconto, toque na opção '⚠️ Velocidade Superior à Máxima'."`,
+        Você abriu o painel de multas. Veja que há uma multa ativa. 
+        Para ver o boleto e conseguir desconto, toque na opção 
+        '⚠️ Velocidade Superior à Máxima'."`,
     conteudo: `
             <div style="background: #FFF; 
                 height: 100%; 
@@ -535,8 +571,24 @@ const carteira = [
                         box-shadow: 0 3px 6px rgba(0,0,0,0.05);">
                         
                         <div style="text-align: left; min-width: 0;">
-                            <span style="background: #FFF3CD; color: #856404; font-size: 11px; font-weight: bold; padding: 2px 6px; border-radius: 4px; display: inline-block; margin-bottom: 4px;">⚠️ Infração Média</span>
-                            <div style="font-weight: bold; font-size: 14px; color: #333; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">Transitar em velocidade superior à máxima</div>
+                            <span style="background: #FFF3CD; 
+                                color: #856404; 
+                                font-size: 11px; 
+                                font-weight: bold; 
+                                padding: 2px 6px; 
+                                border-radius: 4px; 
+                                display: inline-block;
+                                 margin-bottom: 4px;">⚠️ Infração Média
+                            </span>
+
+                            <div style="font-weight: bold; 
+                                font-size: 14px; 
+                                color: #333; 
+                                overflow: hidden; 
+                                text-overflow: ellipsis; 
+                                white-space: nowrap;">Transitar em velocidade superior à máxima
+                            </div>
+
                             <div style="font-size: 13px; color: #666; margin-top: 2px;">Valor Original: R$ 130,16</div>
                         </div>
                         <span style="color: #FD7E14; font-weight: bold; margin-left: 5px;">❯</span>
@@ -550,12 +602,14 @@ const carteira = [
   // PASSO 9 (ÍNDICE 8): DETALHES DA MULTA E DESCONTO
   {
     instrucao: `<strong>Passo 9 (Infrações):</strong>
-            Excelente! O app oferece 40% de desconto se você pagar antes do vencimento. Toque no botão azul '📄 Copiar Código Pix' para simular o pagamento seguro."`,
+        Excelente! O app oferece 40% de desconto se você pagar antes do vencimento. 
+        Toque no botão azul '📄 Copiar Código Pix' para simular o pagamento seguro."`,
     conteudo: `
             <div style="background: #FFF; 
                 height: 100%; 
                 display: flex; 
                 flex-direction: column; 
+
                 font-family: Arial, sans-serif; 
                 box-sizing: border-box; 
                 user-select: none;">
@@ -591,10 +645,27 @@ const carteira = [
                         font-size: 13px; 
                         line-height: 1.4;">
                         
-                        <div style="font-weight: bold; color: #C55A11; text-align: center; font-size: 14px; margin-bottom: 6px; border-bottom: 1px solid #FD7E14; padding-bottom: 4px;">DESCONTO DO SISTEMA NOTIFICAÇÃO</div>
-                        <p style="margin: 2px 0;"><span>Valor Original:</span> <span style="text-decoration: line-through; color: #888;">R$ 130,16</span></p>
+                        <div style="font-weight: bold; color: #C55A11; text-align: center; 
+                            font-size: 14px;
+                            margin-bottom: 6px; 
+                            border-bottom: 1px solid #FD7E14; 
+                            padding-bottom: 4px;">DESCONTO DO SISTEMA NOTIFICAÇÃO<
+                        /div>
+
+                        <p style="margin: 2px 0;">
+                            <span>Valor Original:</span>
+                            <span style="text-decoration: line-through; 
+                                color: #888;">R$ 130,16
+                            </span>
+                        </p>
+                        
                         <p style="margin: 2px 0; color: #28A745;"><strong>VALOR COM 40% OFF:</strong> <strong>R$ 78,10</strong></p>
-                        <p style="margin: 4px 0 0 0; font-size: 11px; color: #666; font-style: italic;">💡 Dica: Pagar pelo app evita filas e garante descontos reais do Governo.</p>
+                        <p style="margin: 4px 0 0 0; 
+                            font-size: 11px;
+                            color: #666;
+                            font-style: italic;">💡 Dica: Pagar pelo app evita filas
+                                                e garante descontos reais do Governo.
+                        </p>
                     </div>
                     
                     <button class="botao-grande" 
@@ -660,7 +731,8 @@ const carteira = [
                         color: #555; 
                         line-height: 1.4; 
                         margin: 0 0 20px 0; 
-                        padding: 0 10px;">Você está pronto para navegar pela sua Carteira Digital e economizar tempo e dinheiro na sua rotina!
+                        padding: 0 10px;">Você está pronto para navegar pela sua 
+                            Carteira Digital e economizar tempo e dinheiro na sua rotina!
                     </p>
                     
                     <button onclick="window.location.href='menu.html'" 

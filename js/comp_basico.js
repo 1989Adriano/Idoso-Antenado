@@ -108,7 +108,14 @@ const comp_basico = [
                     box-sizing: border-box; 
                     position: relative; 
                     box-shadow: 0 8px 16px rgba(0,0,0,0.4);">
-                    <div style="position: absolute; top: 45%; left: 50%; transform: translate(-50%,-50%); font-size: 14px; color: #64748B; font-weight: bold;">Tela Apagada 🌑</div>
+                    <div style="position: absolute; 
+                        top: 45%; 
+                        left: 50%; 
+                        transform: translate(-50%,-50%); 
+                        font-size: 14px; 
+                        color: #64748B; 
+                        font-weight: bold;">Tela Apagada 🌑
+                    </div>
                     
                     <!-- BOTÃO ALVO MONITOR -->
                     <div onclick="avancarPasso()" 
@@ -134,8 +141,10 @@ const comp_basico = [
   // PASSO 3: CONECTAR O PLUGUE COM FOCO NO SÍMBOLO DE FONE NO GABINETE
   {
     instrucao: `<strong>Passo 3:</strong> Onde conectar o som? 
-                No gabinete da CPU, procure pelo desenho gravado de um '🎧 Fone de Ouvido' ou pela cor VERDE. 
-                Dê um clique esquerdo na 'Entrada Verde com o Desenho do Fone' para plugar o cabo de som.`,
+        No gabinete da CPU, procure pelo desenho gravado de um '🎧 
+        Fone de Ouvido' ou pela cor VERDE. 
+        Dê um clique esquerdo na 'Entrada Verde com o 
+        Desenho do Fone' para plugar o cabo de som.`,
     conteudo: `
             <div style="background: #0F172A; 
                 height: 100%; 
@@ -148,7 +157,12 @@ const comp_basico = [
                 user-select: none; 
                 padding: 15px; 
                 color: white;">
-                <h3 style="margin: 0 0 15px 0; font-size: 14px; text-align: center; opacity: 0.8; text-transform: uppercase;">Painel de Conexões da CPU (Procure o Símbolo)</h3>
+                <h3 style="margin: 0 0 15px 0; 
+                    font-size: 14px; 
+                    text-align: center; 
+                    opacity: 0.8; 
+                    text-transform: uppercase;">Painel de Conexões da CPU (Procure o Símbolo)
+                </h3>
                 
                 <div style="background: #1E293B; 
                     padding: 20px; 
@@ -161,7 +175,14 @@ const comp_basico = [
                     width: 80%; 
                     box-sizing: border-box;">
                     
-                    <div onclick="mostrarErro()" style="display: flex; flex-direction: column; align-items: center; gap: 6px; cursor: pointer; opacity: 0.5;">
+                    <div onclick="mostrarErro()" 
+                        style="display: flex; 
+                        flex-direction: column; 
+                        align-items: center; 
+                        gap: 6px; 
+                        cursor: pointer; 
+                        opacity: 0.5;">
+
                         <div style="width: 40px; 
                             height: 40px; 
                             background: #FCE7F3;
@@ -211,8 +232,9 @@ const comp_basico = [
   // PASSO 4: ENTENDER O CLIQUE ESQUERDO DO MOUSE (SELEÇÃO)
   {
     instrucao: `<strong>Passo 4:</strong> 
-                Agora vamos usar o mouse na tela! O botão esquerdo (azul) serve para selecionar, abrir programas e clicar. 
-                Dê um clique esquerdo no 'Botão Esquerdo Azul' para treinar o movimento.`,
+        Agora vamos usar o mouse na tela! O botão esquerdo 
+        (azul) serve para selecionar, abrir programas e clicar. 
+        Dê um clique esquerdo no 'Botão Esquerdo Azul' para treinar o movimento.`,
     conteudo: `
             <div style="background: #F1F5F9; 
                 height: 100%; 
@@ -283,8 +305,9 @@ const comp_basico = [
   // PASSO 5: CLIQUE DIREITO DO MOUSE (OPÇÕES)
   {
     instrucao: `<strong>Passo 5:</strong> 
-                Agora vamos conhecer o outro lado! O botão direito (laranja) serve para abrir menus de opções escondidas na tela. 
-                Dê um clique esquerdo no 'Botão Direito Laranja' para testar.`,
+        Agora vamos conhecer o outro lado! O botão direito (laranja) 
+        serve para abrir menus de opções escondidas na tela. 
+        Dê um clique esquerdo no 'Botão Direito Laranja' para testar.`,
     conteudo: `
             <div style="background: #F1F5F9; 
                 height: 100%; 
@@ -356,9 +379,10 @@ const comp_basico = [
   // PASSO 6: TREINAR O DUPLO CLIQUE RÁPIDO (ABRIR PROGRAMAS)
   {
     instrucao: `<strong>Passo 6:</strong> 
-                Para abrir programas na Área de Trabalho, o clique único não funciona! 
-                Você precisa dar um clique-clique bem rápido com o botão esquerdo. 
-                Dê um duplo clique rápido em cima do ícone do '🌐 Google Chrome' para simular a abertura da internet.`,
+        Para abrir programas na Área de Trabalho, o clique único não funciona! 
+        Você precisa dar um clique-clique bem rápido com o botão esquerdo. 
+        Dê um duplo clique rápido em cima do ícone do 
+        '🌐 Google Chrome' para simular a abertura da internet.`,
     conteudo: `
             <div style="background: #2A4365; 
                 height: 100%; 
@@ -406,9 +430,9 @@ const comp_basico = [
   // PASSO 7 (ÍNDICE 6): TECLA CAPS LOCK / FIXA (INPUT INTERATIVO)
   {
     instrucao: `<strong>Passo 7:</strong> Quer digitar letras maiúsculas? 
-            No lado esquerdo do teclado existe a tecla 'CAPS LOCK' ou 'FIXA'. 
-            Primeiro, dê um clique esquerdo na caixa branca abaixo e digite seu nome para testar. 
-            Depois, clique no botão azul 'Avançar'.`,
+        No lado esquerdo do teclado existe a tecla 'CAPS LOCK' ou 'FIXA'. 
+        Primeiro, dê um clique esquerdo na caixa branca abaixo e digite seu nome para testar.
+        Depois, clique no botão azul 'Avançar'.`,
     conteudo: `
             <div style="background: #F1F5F9; 
                 height: 100%; 
@@ -456,8 +480,10 @@ const comp_basico = [
   // PASSO 8: DESATIVAR CAPS LOCK E CONFERIR A LUZ DE AVISO
   {
     instrucao: `<strong>Passo 8:</strong> 
-                Cuidado com o bloqueio de senhas! Quando o Caps Lock está ligado, uma luz se acende no teclado. 
-                Para destravar e voltar a digitar letras minúsculas normais, dê um clique esquerdo na 'Tecla Caps Lock Laranja' novamente.`,
+        Cuidado com o bloqueio de senhas! Quando o Caps Lock 
+        está ligado, uma luz se acende no teclado. 
+        Para destravar e voltar a digitar letras minúsculas normais, 
+        dê um clique esquerdo na 'Tecla Caps Lock Laranja' novamente.`,
     conteudo: `
             <div style="background: #F1F5F9; 
                 height: 100%; 
@@ -482,14 +508,21 @@ const comp_basico = [
                     box-sizing: border-box; 
                     align-items: center;">
 
-                    <div style="display: flex; gap: 15px; background: #0F172A; padding: 6px 15px; border-radius: 6px; font-size: 11px; font-weight: bold;">
+                    <div style="display: flex; 
+                        gap: 15px; 
+                        background: #0F172A; 
+                        padding: 6px 15px; 
+                        border-radius: 6px; 
+                        font-size: 11px; 
+                        font-weight: bold;">
+                        
                         <span style="color: #4ADE80; animation: piscarLuz 1.5s infinite;">🟢 Luz Caixa Alta Ativa</span>
                     </div>
+
                     <div style="display: flex; gap: 8px; justify-content: flex-start; width: 100%;">
+
                         <!-- TECLA ALVA PARA APAGAR A LUZ -->
                         <div onclick="avancarPasso()" 
-
-
                             style="width: 95px; 
                             height: 36px; 
                             background: #F97316; 
@@ -513,8 +546,10 @@ const comp_basico = [
   // PASSO 9 (ÍNDICE 8): COMO CONECTAR O PEN DRIVE NA ENTRADA RETANGULAR USB
   {
     instrucao: `<strong>Passo 9:</strong> 
-            Vamos espetar um Pen Drive para salvar fotos! No painel do computador, procure pelas entradas retangulares chamadas 'USB'. 
-            Atenção: o Pen Drive tem lado certo! Dê um clique esquerdo na 'Entrada Retangular com a Borda Azul' para simular o encaixe perfeito.`,
+        Vamos espetar um Pen Drive para salvar fotos! No painel do 
+        computador, procure pelas entradas retangulares chamadas 'USB'. 
+        Atenção: o Pen Drive tem lado certo! Dê um clique esquerdo na 
+        'Entrada Retangular com a Borda Azul' para simular o encaixe perfeito.`,
     conteudo: `
             <div style="background: #0F172A; 
                 height: 100%; 
@@ -642,9 +677,11 @@ const comp_basico = [
 
   // PASSO 11 (ÍNDICE 10): CONHECER A TECLA DE APAGAR BACKSPACE (INPUT INTERATIVO)
   {
-    instrucao: `<strong>Passo 11:</strong> A palavra abaixo foi digitada errada de propósito ('Computadorr'). 
-                Dê um clique esquerdo dentro da caixa branca, use a tecla Backspace (Apagar) do seu teclado real para apagar 
-                a última letra de erro, e depois clique no botão azul.`,
+    instrucao: `<strong>Passo 11:</strong> 
+        A palavra abaixo foi digitada errada de propósito ('Computadorrr'). 
+        Dê um clique esquerdo dentro da caixa branca, use a 
+        tecla Backspace (Apagar) do seu teclado real para apagar 
+        a última letra de erro, e depois clique no botão azul.`,
     conteudo: `
             <div style="background: #F1F5F9; 
                 height: 100%; 
@@ -692,8 +729,10 @@ const comp_basico = [
   // PASSO 12 (ÍNDICE 11): ATIVAR O TECLADO NUMÉRICO (TECLA NUM LOCK)
   {
     instrucao: `<strong>Passo 12:</strong> 
-                Cuidado com a pegadinha! Se tentar digitar números no teclado lateral e não funcionar, a luz está apagada. 
-                Use o mouse e dê um clique esquerdo na 'Tecla Num Lock Laranja' para acender a luz e liberar os números.`,
+        Cuidado com a pegadinha! Se tentar digitar números no
+        teclado lateral e não funcionar, a luz está apagada. 
+        Use o mouse e dê um clique esquerdo na 'Tecla Num 
+        Lock Laranja' para acender a luz e liberar os números.`,
     conteudo: `
             <div style="background: #F1F5F9; 
                 height: 100%; 
@@ -840,8 +879,10 @@ const comp_basico = [
   // PASSO 14 (ÍNDICE 13): CONTROLAR JANELAS (MINIMIZAR, MAXIMIZAR E FECHAR)
   {
     instrucao: `<strong>Passo 14:</strong> 
-                Toda janela aberta tem 3 botões no topo direito. O traço (➖) minimiza (esconde a janela lá embaixo) e o quadrado aumenta a tela. 
-                Para fechar o programa e sumir com ele, dê um clique esquerdo no '❌ Botão Vermelho de Fechar'.`,
+        Toda janela aberta tem 3 botões no topo direito. O traço 
+        (➖)  minimiza (esconde a janela lá embaixo) e o quadrado
+        aumenta a tela. Para fechar o programa e sumir com ele, 
+        dê um clique esquerdo no '❌ Botão Vermelho de Fechar'.`,
     conteudo: `
             <div style="background: #2A4365; 
                 height: 100%; 
@@ -935,13 +976,14 @@ const comp_basico = [
 
   // PASSO 15: CONTROLAR O ZOOM DA TELA (TECLADO OU MOUSE)
   {
-    instrucao: `<strong>Passo 15:</strong> Letras muito miúdas? Não force as vistas! 
-                    Você pode segurar a tecla Ctrl e apertar a tecla ➕ no teclado, 
-                    ou segurar o Ctrl e rodar a bolinha do mouse para a frente. 
-                    Para diminuir, você pode segurar a tecla Ctrl e apertar a tecla ➖ 
-                    no teclado, ou segurar o Ctrl e rodar a bolinha do mouse para trás.
-                    Dê um clique esquerdo no botão azul '🔍 Aumentar Tamanho (Zoom)' 
-                    para simular as letras crescendo.`,
+    instrucao: `<strong>Passo 15:</strong> 
+        Letras muito miúdas? Não force as vistas! 
+        Você pode segurar a tecla Ctrl e apertar a tecla ➕ no teclado, 
+        ou segurar o Ctrl e rodar a bolinha do mouse para a frente. 
+        Para diminuir, você pode segurar a tecla Ctrl e apertar a tecla ➖ 
+        no teclado, ou segurar o Ctrl e rodar a bolinha do mouse para trás.
+        Dê um clique esquerdo no botão azul '🔍 Aumentar Tamanho (Zoom)' 
+        para simular as letras crescendo.`,
     conteudo: `
             <div style="background: #F8FAFC; 
                 height: 100%; 
@@ -1030,7 +1072,14 @@ const comp_basico = [
                         border: 1px solid rgba(255,255,255,0.1); 
                         width: 70%;">
                         <span style="font-size: 28px;">🔊 Volume</span>
-                        <div style="width: 100%; height: 12px; background: rgba(255,255,255,0.2); border-radius: 6px; overflow: hidden; display: flex;">
+
+                        <div style="width: 100%; 
+                            height: 12px; 
+                            background: rgba(255,255,255,0.2); 
+                            border-radius: 6px;
+                            overflow: hidden; 
+                            display: flex;">
+
                             <div style="width: 30%; background: #0284C7; height: 100%;"></div>
                         </div>
                         <span style="font-size: 13px; font-weight: bold; opacity: 0.8; color: #38BDF8;">Som do Fone: Baixo (30%)</span>
@@ -1074,8 +1123,9 @@ const comp_basico = [
   // PASSO 17 (ÍNDICE 16): DESLIGAR O COMPUTADOR COM SEGURANÇA
   {
     instrucao: `<strong>Passo 17:</strong> 
-                Para terminar o treino, vamos aprender a escolher desligar a máquina da forma correta. 
-                Use o clique esquerdo e aperte o botão vermelho '📥 Desligar o PC'.`,
+        Para terminar o treino, vamos aprender a escolher
+        desligar a máquina da forma correta. 
+        Use o clique esquerdo e aperte o botão vermelho '📥 Desligar o PC'.`,
     conteudo: `
             <div style="background: #2A4365; 
                 height: 100%; 

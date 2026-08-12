@@ -1,5 +1,3 @@
-/* pix.css - Estilos Gerais para os Simuladores de Pix */
-
 /* Container Principal do Celular */
 .pix-container {
     height: 100%;
@@ -14,7 +12,7 @@
 
 /* Topos e Cabeçalhos de Bancos */
 .pix-topo-banco {
-    background: #008037; /* Tom padrão para o Banco Verde */
+    background: #008037;
     color: white;
     padding: 12px 15px;
     text-align: left;

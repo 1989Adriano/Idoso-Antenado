@@ -1,8 +1,10 @@
 const maps = [
   // PASSO 1: TELA INICIAL COM MAPA SIMULADO
   {
-    instrucao:
-      "<strong>Passo 1:</strong> Vamos planejar uma viagem! Toque na barra de pesquisa branca no topo escrita '🔍 Pesquisar endereço...' para digitar o seu destino.",
+    instrucao: `<strong>Passo 1:</strong> 
+      Vamos planejar uma viagem! Toque na barra de pesquisa 
+      branca no topo escrita '🔍 Pesquisar endereço...' 
+      para digitar o seu destino.`,
     conteudo: `
             <div style="background: #EBF1F5; 
                 height: 100%; 
@@ -23,7 +25,16 @@ const maps = [
                     opacity: 0.7;">
                     <div style="position: absolute; width: 10px; height: 100%; background: white; left: 120px;"></div>
                     <div style="position: absolute; width: 100%; height: 10px; background: white; top: 200px;"></div>
-                    <div style="position: absolute; width: 24px; height: 24px; background: #4285F4; border: 3px solid white; border-radius: 50%; top: 280px; left: 113px; box-shadow: 0 2px 5px rgba(0,0,0,0.3);"></div>
+                    <div style="position: absolute; 
+                        width: 24px; 
+                        height: 24px; 
+                        background: #4285F4; 
+                        border: 3px solid white; 
+                        border-radius: 50%; 
+                        top: 280px; 
+                        left: 113px; 
+                        box-shadow: 0 2px 5px rgba(0,0,0,0.3);">
+                    </div>
                     <span style="position: absolute; font-size: 12px; font-weight: bold; color: #555; top: 260px; left: 80px;">Sua Localização</span>
                 </div>
                 
@@ -54,8 +65,10 @@ const maps = [
 
   // PASSO 2: ENDEREÇO SELECIONADO NA LISTA
   {
-    instrucao:
-      "<strong>Passo 2:</strong> O endereço 'Hospital das Clínicas' já foi digitado! Toque na sugestão com o '📍 Alfinete Vermelho' para confirmar o local no mapa.",
+    instrucao: `<strong>Passo 2:</strong> 
+        O endereço 'Hospital das Clínicas' já foi digitado! 
+        Toque na sugestão com o '📍 Alfinete Vermelho' 
+        para confirmar o local no mapa.`,
     conteudo: `
             <div style="background: #FFFFFF; 
                 height: 100%; 
@@ -72,7 +85,15 @@ const maps = [
                     align-items: center; 
                     gap: 10px;">
                     <span style="font-size: 18px; color: #666;">⬅️</span>
-                    <input type="text" value="Hospital das Clínicas" disabled style="flex: 1; padding: 8px; font-size: 16px; border: none; background: transparent; font-weight: bold; color: #333;">
+                    <input type="text" 
+                        value="Hospital das Clínicas" 
+                        disabled style="flex: 1; 
+                        padding: 8px; 
+                        font-size: 16px; 
+                        border: none; 
+                        background: transparent; 
+                        font-weight: bold; 
+                        color: #333;">
                 </div>
                 
                 <div style="flex: 1; 
@@ -108,8 +129,9 @@ const maps = [
 
   // PASSO 3: BOTÃO DE ROTAS DESTACADO
   {
-    instrucao:
-      "<strong>Passo 3:</strong> O hospital apareceu na tela. Agora toque no botão azul redondo '🔄 Rotas' na parte de baixo para calcular o caminho.",
+    instrucao: `<strong>Passo 3:</strong>
+        O hospital apareceu na tela. Agora toque no botão azul
+        redondo '🔄 Rotas' na parte de baixo para calcular o caminho.`,
     conteudo: `
             <div style="background: #EBF1F5; 
                 height: 100%; 
@@ -156,8 +178,9 @@ const maps = [
 
   // PASSO 4: ESCOLHA DO MEIO DE TRANSPORTE
   {
-    instrucao:
-      "<strong>Passo 4:</strong> O mapa sugeriu ir de carro. Mas hoje vamos de transporte público! Toque no ícone do '🚍 Ônibus/Trem' no topo para mudar o trajeto.",
+    instrucao: `<strong>Passo 4:</strong>
+        O mapa sugeriu ir de carro. Mas hoje vamos de transporte público!
+        Toque no ícone do '🚍 Ônibus/Trem' no topo para mudar o trajeto.`,
     conteudo: `
             <div style="background: #EBF1F5; 
                 height: 100%; 
@@ -175,7 +198,15 @@ const maps = [
                     border-bottom: 1px solid #E0E0E0; 
                     flex-shrink: 0;">
                     
-                    <div onclick="mostrarErro()" style="display: flex; flex-direction: column; align-items: center; opacity: 0.5; cursor: pointer;"><span style="font-size: 22px;">🚗</span><span style="font-size: 11px; font-weight: bold;">15 min</span></div>
+                    <div onclick="mostrarErro()" 
+                        style="display: flex; 
+                        flex-direction: column; 
+                        align-items: center; 
+                        opacity: 0.5; 
+                        cursor: pointer;">
+                        <span style="font-size: 22px;">🚗</span>
+                        <span style="font-size: 11px; font-weight: bold;">15 min</span>
+                    </div>
                     
                     <!-- BOTÃO ALVO DO ÔNIBUS -->
                     <div onclick="avancarPasso()" 
@@ -187,14 +218,29 @@ const maps = [
                         border-radius: 8px; 
                         background: rgba(26,115,232,0.05); 
                         cursor: pointer;">
-                        <span style="font-size: 24px;">🚍</span><span style="font-size: 11px; font-weight: bold; color: #1A73E8;">25 min</span>
+                        <span style="font-size: 24px;">🚍</span>
+                        <span style="font-size: 11px; font-weight: bold; color: #1A73E8;">25 min</span>
                     </div>
                     
-                    <div onclick="mostrarErro()" style="display: flex; flex-direction: column; align-items: center; opacity: 0.5; cursor: pointer;"><span style="font-size: 22px;">🚶</span><span style="font-size: 11px; font-weight: bold;">45 min</span></div>
+                    <div onclick="mostrarErro()" 
+                        style="display: flex; 
+                        flex-direction: column; 
+                        align-items: center; 
+                        opacity: 0.5; 
+                        cursor: pointer;">
+                        <span style="font-size: 22px;">🚶</span>
+                        <span style="font-size: 11px; font-weight: bold;">45 min</span>
+                    </div>
                 </div>
                 
                 <div style="flex: 1; position: relative; opacity: 0.6; pointer-events: none;">
-                    <div style="position: absolute; width: 100%; height: 6px; background: #4285F4; top: 150px; transform: rotate(15deg);"></div>
+                    <div style="position: absolute; 
+                        width: 100%; 
+                        height: 6px;
+                        background: #4285F4; 
+                        top: 150px; 
+                        transform: rotate(15deg);">
+                    </div>
                 </div>
             </div>`,
     feedback:
@@ -203,8 +249,9 @@ const maps = [
 
   // PASSO 5: TELA DETALHADA DA LINHA DE ÔNIBUS SUL
   {
-    instrucao:
-      "<strong>Passo 5:</strong> O Maps encontrou a linha perfeita: 'Linha 412 - Metrô Sul'. Toque em cima deste bloco branco da linha para escolher essa viagem.",
+    instrucao: `<strong>Passo 5:</strong>
+        O Maps encontrou a linha perfeita: 'Linha 412 - Metrô Sul'. 
+        Toque em cima deste bloco branco da linha para escolher essa viagem.`,
     conteudo: `
             <div style="background: #F4F6F9; 
                 height: 100%; 
@@ -270,8 +317,10 @@ const maps = [
 
   // PASSO 6: ORIENTAÇÃO DE EMBARQUE E CAMINHADA
   {
-    instrucao:
-      "<strong>Passo 6:</strong> O aplicativo abriu o guia de ruas. Para ver o mapa detalhado e descobrir para qual lado você deve caminhar até o ponto, toque no botão branco '📋 Ver Etapas'.",
+    instrucao: `<strong>Passo 6:</strong> 
+        O aplicativo abriu o guia de ruas. Para ver o mapa detalhado 
+        e descobrir para qual lado você deve caminhar até o ponto, 
+        toque no botão branco '📋 Ver Etapas'.`,
     conteudo: `
             <div style="background: #F4F6F9; 
                 height: 100%; 
@@ -298,7 +347,12 @@ const maps = [
                         padding: 12px; 
                         border-radius: 8px; 
                         text-align: left; 
-                        font-size: 14px;">🚶 <strong>Caminhada Inicial:</strong><br>Siga na direção Norte na Rua das Flores por 2 minutos (200 metros) até o ponto regulamentar.
+                        font-size: 14px;">🚶
+
+                        <strong>Caminhada Inicial:</strong>
+                        <br>Siga na direção Norte 
+                            na Rua das Flores por 2 minutos 
+                            (200 metros) até o ponto regulamentar.
                     </div>
                     
                     <!-- BOTÃO ALVO COMPLEMENTAR -->
@@ -321,8 +375,10 @@ const maps = [
 
   // PASSO 7: BOTÃO AZUL DE INICIAR NAVEGAÇÃO POR VOZ
   {
-    instrucao:
-      "<strong>Passo 7:</strong> Tudo pronto! Para ativar o GPS em tempo real e ouvir as instruções de voz do celular te guiando pelo caminho, toque no botão azul '▶️ Iniciar'.",
+    instrucao: `<strong>Passo 7:</strong> 
+        Tudo pronto! Para ativar o GPS em tempo real e ouvir as 
+        instruções de voz do celular te guiando pelo 
+        caminho, toque no botão azul '▶️ Iniciar'.`,
     conteudo: `
             <div style="background: #EBF1F5; 
                 height: 100%; 
@@ -341,7 +397,14 @@ const maps = [
                     left: 0; 
                     pointer-events: none; 
                     opacity: 0.8;">
-                    <div style="position: absolute; width: 6px; height: 180px; background: #1A73E8; left: 160px; top: 40px; border-radius: 3px;"></div>
+                    <div style="position: absolute; 
+                        width: 6px; 
+                        height: 180px; 
+                        background: #1A73E8; 
+                        left: 160px; 
+                        top: 40px; 
+                        border-radius: 3px;">
+                    </div>
                     <div style="position: absolute; font-size: 24px; top: 35px; left: 151px;">📍</div>
                 </div>
 
@@ -380,10 +443,13 @@ const maps = [
 
   // PASSO 8: SEGURANÇA E PREVENÇÃO EM DESVIOS DE ROTA
   {
-    instrucao:
-      "<strong>Passo 8:</strong> Alerta de segurança! O GPS detectou que o ônibus fez um desvio inesperado da rota normal. Para recalcular o caminho certo ou checar o mapa, toque no botão vermelho '⚠️ Verificar Rota'.",
+    instrucao: `<strong>Passo 8:</strong> 
+        Alerta de segurança! O GPS detectou que o ônibus fez um desvio 
+        inesperado da rota normal. Para recalcular o caminho certo ou 
+        checar o mapa, toque no botão vermelho '⚠️ Verificar Rota'.`,
     conteudo: `
             <div style="background: #FFF; 
+
                 height: 100%; 
                 display: flex; 
                 flex-direction: column; 
@@ -414,7 +480,11 @@ const maps = [
                         box-shadow: 0 4px 8px rgba(0,0,0,0.05); 
                         text-align: left; 
                         line-height: 1.4; 
-                        font-size: 14px;">🚨 <strong>Aviso do GPS:</strong><br>Você saiu do trajeto original da Linha 412! Fique atento às redondezas ou confirme o itinerário com o cobrador.
+                        font-size: 14px;">🚨 
+                        <strong>Aviso do GPS:</strong><br>
+                            Você saiu do trajeto original da Linha 412! 
+                            Fique atento às redondezas ou confirme 
+                            o itinerário com o cobrador.
                     </div>
                     
                     <!-- BOTÃO ALVO PREVENTIVO -->
@@ -437,8 +507,9 @@ const maps = [
 
   // PASSO 9: TELA FINAL DE SUCESSO (VITÓRIA)
   {
-    instrucao:
-      "<strong>Passo 9:</strong> Treino Concluído! Você aprendeu a pesquisar locais, escolher ônibus e usar o GPS do celular de forma totalmente segura.",
+    instrucao: `<strong>Passo 9:</strong> 
+        Treino Concluído! Você aprendeu a pesquisar locais, 
+        escolher ônibus e usar o GPS do celular de forma totalmente segura.`,
     conteudo: `
             <div style="background: white; 
                 height: 100%; 
@@ -494,7 +565,10 @@ const maps = [
                         font-size: 14px; 
                         color: #555; 
                         line-height: 1.4; 
-                        text-align: center;">Incrível! Você dominou o Maps por completo. Agora sabe como viajar de transporte público sem se perder e sem precisar pedir informações na rua.</p>
+                        text-align: center;">Incrível! Você dominou o Maps por completo.
+                            Agora sabe como viajar de transporte público sem se 
+                            perder e sem precisar pedir informações na rua.<
+                    /p>
                     
                     <button onclick="window.location.href='menu.html'" 
                         style="background: #1A73E8; 

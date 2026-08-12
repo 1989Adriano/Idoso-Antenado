@@ -2,7 +2,8 @@ const golpes = [
   // CENÁRIO 1: FALSO PARENTE NO WHATSAPP
   {
     instrucao: `<strong>Cenário 1:</strong>
-            Um número desconhecido usa a foto de um parente e pede dinheiro. O que você faz?"`,
+        Um número desconhecido usa a foto de um 
+        parente e pede dinheiro. O que você faz?"`,
     conteudo: `
             <div style="height: 100%; 
                 display: flex; 
@@ -96,11 +97,17 @@ const golpes = [
                         box-shadow: 0 2px 5px rgba(0,0,0,0.05); 
                         color: #333; 
                         line-height: 1.4;">
+
                         <span style="color: #888; 
                             font-size: 12px; 
                             display: block; 
                             margin-bottom: 6px; 
-                            font-weight: bold;">NÚMERO DESCONHECIDO</span>"Segurança Banco: Sua conta será bloqueada hoje. Evite multas em: <span style="color: #0066CC; text-decoration: underline;">http://banco-seguro.net</span>"
+                            font-weight: bold;">NÚMERO DESCONHECIDO
+                        </span>"Segurança Banco: Sua conta será bloqueada hoje. Evite multas em: 
+
+                            <span style="color: #0066CC; 
+                                text-decoration: underline;">http://banco-seguro.net
+                            </span>"
                     </div>
                 </div>
                 
@@ -158,7 +165,13 @@ const golpes = [
                         font-size: 17px; 
                         font-weight: 600; 
                         box-shadow: 0 1px 2px rgba(0,0,0,0.15); 
-                        color: #222;">Parabéns! Você ganhou R$ 5.000! Clique aqui para resgatar agora: <span style="color: #0066CC; text-decoration: underline;">http://premio-falso.net</span>
+                        color: #222;">
+                            Parabéns! Você ganhou R$ 5.000! 
+                            Clique aqui para resgatar agora:
+
+                        <span style="color: 
+                            #0066CC; text-decoration: underline;">http://premio-falso.net
+                        </span>
                     </div>
                 </div>
                 
@@ -276,7 +289,13 @@ const golpes = [
                         font-size: 17px; 
                         font-weight: 600; 
                         box-shadow: 0 1px 2px rgba(0,0,0,0.15); 
-                        color: #222;">Você tem valores a receber liberados pelo Banco Central! Faça a retirada imediata no link: <span style="color: #0066CC; text-decoration: underline;">http://resgate-gov.click</span>
+                        color: #222;">
+                            Você tem valores a receber liberados pelo Banco Central! 
+                            Faça a retirada imediata no link:
+
+                        <span style="color: #0066CC; 
+                            text-decoration: underline;">http://resgate-gov.click
+                        </span>
                     </div>
                 </div>
                 
@@ -537,7 +556,10 @@ const golpes = [
 
   // CENÁRIO 10: FALSO GERENTE DO BANCO
   {
-    instrucao: `<strong>Cenário 10:</strong> O 'gerente do banco' entra em contato por chat avisando que há uma compra suspeita no seu cartão e pede para você confirmar seus dados e senha. O que fazer?`,
+    instrucao: `<strong>Cenário 10:</strong> 
+        O 'gerente do banco' entra em contato por chat avisando
+        que há uma compra suspeita no seu cartão e pede para você
+        confirmar seus dados e senha. O que fazer?`,
     conteudo: `
             <div style="height: 100%; 
                 display: flex; 
@@ -597,7 +619,10 @@ const golpes = [
 
   // CENÁRIO 11: GOLPE DO FALSO SUPORTE TÉCNICO (AVISO DE VÍRUS)
   {
-    instrucao: `<strong>Cenário 11:</strong> Um aviso urgente pisca na tela dizendo que seu aparelho está infectado por vírus e pede para ligar para um 0800. O que fazer?`,
+    instrucao: `<strong>Cenário 11:</strong> 
+        Um aviso urgente pisca na tela dizendo que seu
+        aparelho está infectado por vírus e pede para 
+        ligar para um 0800. O que fazer?`,
     conteudo: `
             <div style="height: 100%; 
                 display: flex; 
@@ -635,8 +660,16 @@ const golpes = [
                         line-height: 1.3;
                         text-align: left;
                         margin: 0;">
-                        <strong>ATENÇÃO:</strong> Seu dispositivo foi bloqueado por vírus! Ligue imediatamente para a central de remoção: 
-                        <span style="color: #DC3545; font-weight: bold; display: block; margin-top: 4px; text-align: center; font-size: 16px;">0800-999-0000</span>
+                        <strong>ATENÇÃO:</strong> Seu dispositivo foi bloqueado por vírus! 
+                                                Ligue imediatamente para a central de remoção:
+                                                
+                        <span style="color: #DC3545;
+                            font-weight: bold;
+                             display: block; 
+                            margin-top: 4px; 
+                            text-align: center; 
+                            font-size: 16px;">0800-999-0000
+                        </span>
                     </div>
                 </div>
                 
@@ -658,7 +691,10 @@ const golpes = [
 
   // CENÁRIO 12: GOLPE DO FALSO MOTOBOY (RECOLHIMENTO DE CARTÃO)
   {
-    instrucao: `<strong>Cenário 12:</strong> A central do banco liga avisando que seu cartão foi clonado e que enviarão um motoboy para recolhê-lo na sua casa. O que fazer?`,
+    instrucao: `<strong>Cenário 12:</strong>
+        A central do banco liga avisando que seu cartão
+        foi clonado e que enviarão um motoboy para 
+        recolhê-lo na sua casa. O que fazer?`,
     conteudo: `
             <div style="height: 100%; 
                 display: flex; 

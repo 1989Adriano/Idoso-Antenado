@@ -89,9 +89,29 @@ const comp_texto = [
                     z-index: 20; 
                     text-align: left;">
                     
-                    <div style="color: #94A3B8; font-size: 11px; font-weight: bold; text-transform: uppercase; margin-bottom: 4px; padding-left: 4px;">Programas Disponíveis</div>
-                    <div onclick="mostrarErro()" style="color: white; font-size: 13px; padding: 6px; opacity: 0.5; cursor: pointer;">📁 Minhas Pastas</div>
-                    <div onclick="mostrarErro()" style="color: white; font-size: 13px; padding: 6px; opacity: 0.5; cursor: pointer;">🖨️ Imprimir</div>
+                    <div style="color: #94A3B8;
+                        font-size: 11px; 
+                        font-weight: bold; 
+                        text-transform: uppercase; 
+                        margin-bottom: 4px; 
+                        padding-left: 4px;">Programas Disponíveis
+                    </div>
+
+                    <div onclick="mostrarErro()" 
+                        style="color: white; 
+                        font-size: 13px; 
+                        padding: 6px; 
+                        opacity: 0.5; 
+                        cursor: pointer;">📁 Minhas Pastas
+                    </div>
+
+                    <div onclick="mostrarErro()" 
+                        style="color: white; 
+                        font-size: 13px; 
+                        padding: 6px; 
+                        opacity: 0.5; 
+                        cursor: pointer;">🖨️ Imprimir
+                    </div>
                     
                     <!-- BOTÃO ALVO DIGITAR TEXTOS -->
                     <div onclick="avancarPasso()" 
@@ -120,9 +140,16 @@ const comp_texto = [
                     padding: 0 10px; 
                     box-sizing: border-box; 
                     flex-shrink: 0;">
-                    <div style="background: #0F172A; color: #94A3B8; font-weight: bold; font-size: 14px; padding: 6px 14px; border-radius: 6px; opacity: 0.7;">
+                    <div style="background: #0F172A; 
+                        color: #94A3B8; 
+                        font-weight: bold; 
+                        font-size: 14px; 
+                        padding: 6px 14px; 
+                        border-radius: 6px; 
+                        opacity: 0.7;">
                         <span>🪟</span> Iniciar
                     </div>
+
                 </div>
             </div>`,
     feedback: "✓ Excelente! O processador de textos foi carregado com sucesso.",
@@ -145,7 +172,15 @@ const comp_texto = [
                 color: #333; 
                 text-align: left;">
                 
-                <div style="background: #F1F3F4; padding: 6px 12px; display: flex; align-items: center; gap: 15px; border-bottom: 1px solid #CBD5E1; font-size: 12px; flex-shrink: 0;">
+                <div style="background: #F1F3F4; 
+                    padding: 6px 12px; 
+                    display: flex; 
+                    align-items: center; 
+                    gap: 15px; 
+                    border-bottom: 1px solid #CBD5E1; 
+                    font-size: 12px; 
+                    flex-shrink: 0;">
+
                     <span style="font-weight: bold; color: #1F4E96;">📝 Documento 1</span>
                     <span style="color: #64748B; opacity: 0.5;">💾 Salvar • 🖨️ Imprimir</span>
                 </div>
@@ -177,9 +212,11 @@ const comp_texto = [
   // PASSO 4: APERTAR ENTER PARA CONFIRMAR E QUEBRAR A LINHA
   {
     instrucao: `<strong>Passo 4:</strong> 
-                Você digitou a frase 'LISTA DE COMPRAS:'. Para pular para a linha de baixo e começar a escrever os itens, 
-                você deve apertar a tecla Enter no seu teclado físico. 
-                Dê um clique esquerdo na 'Tecla ENTER Laranja' desenhada abaixo para simular essa ação.`,
+        Você digitou a frase 'LISTA DE COMPRAS:'. Para pular para 
+        a linha de baixo e começar a escrever os itens, 
+        você deve apertar a tecla Enter no seu teclado físico. 
+        Dê um clique esquerdo na 'Tecla ENTER Laranja' 
+        desenhada abaixo para simular essa ação.`,
     conteudo: `
             <div style="background: #E2E8F0; 
                 height: 100%; 
@@ -222,8 +259,6 @@ const comp_texto = [
                         font-family: monospace; 
                         box-sizing: border-box;">
                         <strong style="color: #1F4E96;">LISTA DE COMPRAS:</strong>
-
-
                             <span style="font-weight: bold; 
                                 color: #1F4E96; 
                                 animation: piscarCursor 1s infinite;">|
@@ -384,20 +419,61 @@ const comp_texto = [
                 color: #333; 
                 text-align: left;">
                 
-                <div style="background: #F1F3F4; padding: 6px 12px; display: flex; align-items: center; gap: 15px; border-bottom: 1px solid #CBD5E1; font-size: 12px; flex-shrink: 0;">
+                <div style="background: #F1F3F4; 
+                    padding: 6px 12px; 
+                    display: flex; 
+                    align-items: center;
+                    
+                        gap: 15px; 
+                    border-bottom: 1px solid #CBD5E1; 
+                    font-size: 12px; 
+                    flex-shrink: 0;">
+
                     <span style="font-weight: bold; color: #1F4E96;">📝 Documento 1</span>
                     <span style="color: #64748B; opacity: 0.5;">💾 Salvar • 🖨️ Imprimir</span>
                 </div>
                 
                 <div style="flex: 1; padding: 15px; display: flex; flex-direction: column; gap: 12px; align-items: center; box-sizing: border-box;">
-                    <div style="background: white; width: 95%; height: 90px; box-shadow: 0 2px 5px rgba(0,0,0,0.05); padding: 12px; border-radius: 4px; font-size: 14px; color: #222; font-family: monospace; box-sizing: border-box;">
+                    <div style="background: white; 
+                        width: 95%; 
+                        height: 90px; 
+                        box-shadow: 0 2px 5px rgba(0,0,0,0.05); 
+                        padding: 12px;
+                        border-radius: 4px; 
+                        font-size: 14px; 
+                        color: #222; 
+                        font-family: monospace; 
+                        box-sizing: border-box;">
                         <span style="color: #64748B;">LISTA DE COMPRAS:</span><br>
-                        • 1 kg de Arroz<span style="font-weight: bold; color: #F97316; animation: piscarCursor 1s infinite;">|</span>
+                        <span style="color: #222;">• 1 kg de Arroz<span 
+                            style="font-weight: bold; 
+                            color: #F97316; 
+                            animation: piscarCursor 1s infinite;">|
+                        </span>
                     </div>
                     
                     <!-- TECLADO SIMULADO COM ALVO NO PONTO -->
-                    <div style="background: #1E293B; padding: 10px; border-radius: 8px; display: flex; gap: 8px; width: 95%; justify-content: center; box-sizing: border-box; margin-top: auto;">
-                        <div style="width: 32px; height: 32px; background: #475569; color: white; border-radius: 4px; display: flex; align-items: center; justify-content: center; font-size: 14px; opacity: 0.4;">,</div>
+                    <div style="background: #1E293B; 
+                        padding: 10px; 
+                        border-radius: 8px; 
+                        display: flex;
+                        gap: 8px; 
+                        width: 95%; 
+                        justify-content: center; 
+                        box-sizing: border-box; 
+                        margin-top: auto;">
+
+                        <div style="width: 32px; 
+                            height: 32px; 
+                            background: #475569; 
+                            color: white; 
+                            border-radius: 4px; 
+                            display: flex; 
+                            align-items: center; j
+                            ustify-content: center; 
+                            font-size: 14px; 
+                            opacity: 0.4;">,
+                        </div>
                         
                         <!-- BOTÃO ALVO: TECLA DE PONTO FINAL -->
                         <div onclick="avancarPasso()" 
@@ -424,11 +500,14 @@ const comp_texto = [
 
   // PASSO 7 (ÍNDICE 6): CLICAR NO BOTÃO DE SALVAR (DISQUETE)
   {
-    instrucao:
-      "<strong>Passo 7:</strong> Agora que a frase tem ponto final e está bem espaçada, vamos salvar! Dê um clique esquerdo no botão azul escrito '💾 Salvar Documento' na barra do topo.",
+    instrucao: `<strong>Passo 7:</strong> 
+        Agora que a frase tem ponto final e está bem espaçada, 
+        vamos salvar! Dê um clique esquerdo no botão azul 
+        escrito '💾 Salvar Documento' na barra do topo.`,
     conteudo: `
             <div style="background: #E2E8F0; 
                 height: 100%; 
+
                 display: flex; 
                 flex-direction: column; 
                 font-family: sans-serif; 
@@ -463,12 +542,26 @@ const comp_texto = [
                         <span>💾</span> Salvar Documento
                     </div>
                     <span style="color: #64748B; opacity: 0.5;">🖨️ Imprimir</span>
+
                 </div>
                 
                 <div style="flex: 1; padding: 15px; display: flex; justify-content: center; box-sizing: border-box;">
-                    <div style="background: white; width: 95%; height: 100%; box-shadow: 0 4px 10px rgba(0,0,0,0.08); padding: 15px; border-radius: 4px; font-size: 14px; color: #222; font-family: monospace; opacity: 0.8;">
-                        <h4 style="margin: 0 0 6px 0; font-family: sans-serif; color: #1F4E96;">LISTA DE COMPRAS:</h4>
-                        • 1 kg de Arroz.
+                    <div style="background: white; 
+                        width: 95%; 
+                        height: 100%; 
+                        box-shadow: 0 4px 10px rgba(0,0,0,0.08); 
+                        padding: 15px; 
+                        border-radius: 4px; 
+                        font-size: 14px; 
+                        color: #222; 
+                        font-family: monospace; opacity: 0.8;">
+
+                        <h4 style="margin: 0 0 6px 0; 
+                            font-family: sans-serif; 
+                            color: #1F4E96;">LISTA DE COMPRAS:
+                        </h4>
+                        
+                        <span style="color: #222;">• 1 kg de Arroz.</span>                     
                     </div>
                 </div>
                 <style>@keyframes pulsarBorda { 0%, 100% { border-color:transparent; } 50% { border-color:#1F4E96; } }</style>
@@ -479,8 +572,10 @@ const comp_texto = [
 
   // PASSO 8 (ÍNDICE 7): CONFIRMAR O SALVAMENTO COM O NOME DO ARQUIVO (INPUT REAL DE TREINO)
   {
-    instrucao:
-      "<strong>Passo 8:</strong> Dê um clique esquerdo na caixa branca abaixo e digite um nome para a sua lista usando o seu teclado real. Depois, dê um clique esquerdo no botão azul escrito 'Confirmar Salvar'.",
+    instrucao: `<strong>Passo 8:</strong> 
+        Dê um clique esquerdo na caixa branca abaixo e digite um nome para a
+        sua lista usando o seu teclado real. Depois, dê um clique esquerdo
+        no botão azul escrito 'Confirmar Salvar'.`,
     conteudo: `
             <div style="background: #E2E8F0; 
                 height: 100%; 
@@ -509,9 +604,20 @@ const comp_texto = [
                     flex-direction: column; 
                     gap: 12px;">
                     
-                    <strong style="font-size: 14px; color: #1F4E96; border-bottom: 1px solid #eee; padding-bottom: 4px; display: block;">💾 Salvar Como...</strong>
+                    <strong style="font-size: 14px; 
+                        color: #1F4E96; 
+                        border-bottom: 1px solid #eee; 
+                        padding-bottom: 4px; 
+                        display: block;">💾 Salvar Como...
+                    </strong>
+
                     <div>
-                        <small style="color: #64748B; font-weight: bold; display: block; margin-bottom: 4px;">DIGITE O NOME DO SEU ARQUIVO:</small>
+                        <small style="color: #64748B; 
+                            font-weight: bold;
+                            display: block; 
+                            margin-bottom: 4px;">DIGITE O NOME DO SEU ARQUIVO:
+                        </small>
+
                         <input type="text" 
                             placeholder="Minha Lista" 
                             style="width: 100%; 
@@ -546,8 +652,11 @@ const comp_texto = [
 
   // PASSO 9 (ÍNDICE 8): US CO ENTER REAL PARA SIMULAR A EDIÇÃO/INCLUSÃO DE ITENS
   {
-    instrucao:
-      "<strong>Passo 9:</strong> Quer modificar o texto? Basta clicar na linha de baixo e digitar! Imagine que você quer incluir o café. Dê um clique esquerdo na 'Tecla ENTER Laranja' do teclado abaixo para simular que você pulou a linha e digitou o novo produto.",
+    instrucao: `<strong>Passo 9:</strong> 
+        Quer modificar o texto? Basta clicar na linha de baixo e digitar! 
+        Imagine que você quer incluir o café. Dê um clique esquerdo na 
+        'Tecla ENTER Laranja' do teclado abaixo para simular que 
+        você pulou a linha e digitou o novo produto.`,
     conteudo: `
             <div style="background: #E2E8F0; 
                 height: 100%; 
@@ -559,24 +668,100 @@ const comp_texto = [
                 color: #333; 
                 text-align: left;">
                 
-                <div style="background: #F1F3F4; padding: 6px 12px; display: flex; align-items: center; gap: 15px; border-bottom: 1px solid #CBD5E1; font-size: 12px; flex-shrink: 0;">
+                <div style="background: #F1F3F4; 
+                    padding: 6px 12px;
+                    display: flex; 
+                    align-items: center;
+                    gap: 15px; 
+                    border-bottom: 1px solid #CBD5E1; 
+                    font-size: 12px; 
+                    flex-shrink: 0;">
+
                     <span style="font-weight: bold; color: #1F4E96;">📝 Minha Lista.txt (Salvo)</span>
                     <span style="color: #64748B; opacity: 0.5;">💾 Salvar • 🖨️ Imprimir</span>
                 </div>
                 
-                <div style="flex: 1; padding: 15px; display: flex; flex-direction: column; gap: 10px; align-items: center; justify-content: center; box-sizing: border-box;">
-                    <div style="background: white; width: 95%; flex: 1; box-shadow: 0 4px 10px rgba(0,0,0,0.08); padding: 15px; border-radius: 4px; font-size: 14px; color: #222; text-align: left; line-height: 1.5; font-family: monospace;">
+                <div style="flex: 1; 
+                    padding: 15px; 
+                    display: flex; 
+                    flex-direction: column; 
+                    gap: 10px; 
+                    align-items: center; 
+                    justify-content: center; 
+                    box-sizing: border-box;">
+
+                    <div style="background: white; 
+                        width: 95%; 
+                        flex: 1; 
+                        box-shadow: 0 4px 10px rgba(0,0,0,0.08); 
+                        padding: 15px; 
+                        border-radius: 4px; 
+                        font-size: 14px; 
+
+                        color: #222; 
+                        text-align: left; 
+                        line-height: 1.5; 
+                        font-family: monospace;">
+
                         <h4 style="margin: 0 0 6px 0; font-family: sans-serif; color: #1F4E96;">LISTA DE COMPRAS:</h4>
-                        • 1 kg de Arroz.<br>
+                        <span style="color: #222;">• 1 kg de Arroz.</span><br>
                         <span style="font-weight: bold; color: #1F4E96; animation: piscarCursor 1s infinite;">• |</span>
                     </div>
                     
                     <!-- TECLADO FÍSICO SIMULADO (ALVO É O ENTER) -->
-                    <div style="background: #1E293B; padding: 10px; border-radius: 8px; display: flex; gap: 8px; width: 95%; justify-content: center; box-sizing: border-box; margin-top: auto;">
-                        <div style="width: 32px; height: 32px; background: #475569; color: white; border-radius: 4px; display: flex; align-items: center; justify-content: center; font-size: 12px; font-weight: bold; opacity: 0.4;">C</div>
-                        <div style="width: 32px; height: 32px; background: #475569; color: white; border-radius: 4px; display: flex; align-items: center; justify-content: center; font-size: 12px; font-weight: bold; opacity: 0.4;">V</div>
+                    <div style="background: #1E293B; 
+                        padding: 10px; 
+                        border-radius: 8px; 
+                        display: flex; 
+
+                        gap: 8px; 
+                        width: 95%; 
+                        justify-content: center; 
+                        box-sizing: border-box; 
+                        margin-top: auto;">
+
+                        <div style="width: 32px; 
+                            height: 32px; 
+                            background: #475569; 
+                            color: white; 
+                            border-radius: 4px; 
+                            display: flex; 
+                            align-items: center; 
+                            justify-content: center; 
+                            font-size: 12px; 
+                            font-weight: bold; 
+                            opacity: 0.4;">C
+                        </div>
+
+                        <div style="width: 32px; 
+                            height: 32px; 
+                            background: #475569; 
+                            color: white; 
+                            border-radius: 4px; 
+                            display: flex; 
+                            align-items: center; 
+                            justify-content: center; 
+                            font-size: 12px; 
+                            font-weight: bold; 
+                            opacity: 0.4;">V
+                        </div>
+
                         <!-- BOTÃO ALVO TECLA ENTER -->
-                        <div onclick="avancarPasso()" style="flex: 1; height: 32px; background: #F97316; color: white; border-radius: 4px; display: flex; align-items: center; justify-content: center; font-size: 11px; font-weight: bold; cursor: pointer; border: 2px dashed #FFF; box-shadow: 0 2px 0 #C2410C;">ENTER ↵</div>
+                        <div onclick="avancarPasso()" 
+                            style="flex: 1; 
+                            height: 32px; 
+                            background: #F97316; 
+                            color: white; 
+                            border-radius: 4px; 
+                            display: flex; 
+                            align-items: center; 
+                            justify-content: center; 
+                            font-size: 11px; 
+                            font-weight: bold; 
+                            cursor: pointer; 
+                            border: 2px dashed #FFF; 
+                            box-shadow: 0 2px 0 #C2410C;">ENTER ↵
+                        </div>
                     </div>
                 </div>
                 <style>@keyframes piscarCursor { 0%, 100% { opacity: 0; } 50% { opacity: 1; } }</style>
@@ -587,8 +772,10 @@ const comp_texto = [
 
   // PASSO 10 (ÍNDICE 9): SALVAR AS ALTERAÇÕES APÓS A EDIÇÃO REALISTA
   {
-    instrucao:
-      "<strong>Passo 10:</strong> Como a lista ganhou um item novo, você precisa salvar o arquivo de novo para não perder a alteração! Dê um clique esquerdo no botão azul '💾 Salvar Alterações' no topo.",
+    instrucao: `<strong>Passo 10:</strong> 
+        Como a lista ganhou um item novo, você precisa salvar o arquivo de novo
+        para não perder a alteração! Dê um clique esquerdo no botão azul 
+        '💾 Salvar Alterações' no topo.`,
     conteudo: `
             <div style="background: #E2E8F0; 
                 height: 100%; 
@@ -629,10 +816,19 @@ const comp_texto = [
                 </div>
                 
                 <div style="flex: 1; padding: 15px; display: flex; justify-content: center; box-sizing: border-box;">
-                    <div style="background: white; width: 95%; height: 100%; box-shadow: 0 4px 10px rgba(0,0,0,0.08); padding: 15px; border-radius: 4px; font-size: 14px; color: #222; font-family: monospace; opacity: 0.8;">
+                    <div style="background: white; 
+                        width: 95%; 
+                        height: 100%; 
+                        box-shadow: 0 4px 10px rgba(0,0,0,0.08); 
+                        padding: 15px; 
+                        border-radius: 4px; 
+                        font-size: 14px; 
+                        color: #222; 
+                        font-family: monospace; opacity: 0.8;">
+
                         <h4 style="margin: 0 0 6px 0; font-family: sans-serif; color: #1F4E96;">LISTA DE COMPRAS:</h4>
-                        • 1 kg de Arroz.<br>
-                        • 1 pacote de Café
+                        <span style="color: #222;">• 1 kg de Arroz.</span><br>
+                        <span style="color: #222;">• 1 pacote de Café</span>
                     </div>
                 </div>
                 <style>@keyframes pulsarBorda { 0%, 100% { border-color: transparent; } 50% { border-color: #1F4E96; } }</style>
@@ -643,8 +839,10 @@ const comp_texto = [
 
   // PASSO 11 (ÍNDICE 10): TELA FINAL DE SUCESSO (VITÓRIA ABSOLUTA)
   {
-    instrucao:
-      "<strong>Passo 11:</strong> Treino Concluído! Você aprendeu a abrir o menu iniciar, carregar o Word, ativar a folha em branco, organizar os espaços, usar pontuação e salvar as alterações.",
+    instrucao: `<strong>Passo 11:</strong> 
+        Treino Concluído! Você aprendeu a abrir o menu iniciar, 
+        carregar o Word, ativar a folha em branco, organizar 
+        os espaços, usar pontuação e salvar as alterações.`,
     conteudo: `
             <div style="background: white; 
                 height: 100%; 
@@ -693,12 +891,17 @@ const comp_texto = [
                         margin: 0 0 10px 0; 
                         font-weight: bold; 
                         line-height: 1.2;">Cartas e Notas Dominadas!</h2>
+
                     
                     <p style="margin: 0 0 25px 0; 
                         font-size: 14px; 
                         color: #555; 
                         line-height: 1.4; 
-                        text-align: center;">Parabéns! Você dominou o processador de textos. Agora abrir folhas em branco, pular linhas usando as regras certas do teclado e salvar faturas ficou muito mais fácil!</p>
+                        text-align: center;">
+                            Parabéns! Você dominou o processador de textos. 
+                            Agora abrir folhas em branco, pular linhas usando as regras
+                            certas do teclado e salvar faturas ficou muito mais fácil!
+                    </p>
                     
                     <button onclick="window.location.href='menu.html'" 
                         style="background: #1F4E96; 

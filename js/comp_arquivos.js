@@ -52,7 +52,6 @@ const comp_arquivos = [
     instrucao: `<strong>Passo 2:</strong> Atenção! No computador, um clique simples
         apenas seleciona. Para abrir a pasta de fotos de verdade, use o mouse
         e dê um CLIQUE DUPLO (dois cliques esquerdos muito rápidos)
-
         em cima da pasta amarela escrito '🖼️ Imagens'.`,
     conteudo: `
             <div class="arqv-explorador-janela">
@@ -64,7 +63,10 @@ const comp_arquivos = [
                     <!-- Pasta Inativa Organizada com CSS -->
                     <div class="arqv-icone-inativo">
                         <span style="font-size: 40px;">📁</span>
-                        <span style="font-size: 11px; font-weight: bold; text-align: center;">Documentos</span>
+                        <span style="font-size: 11px; 
+                            font-weight: bold; 
+                            text-align: center;">Documentos
+                        </span>
                     </div>
                     
                     <!-- ALVO DINÂMICO QUE PROCURA O DUPLO CLIQUE NATIVO -->
@@ -140,7 +142,9 @@ const comp_arquivos = [
                     <span style="font-size: 13px; 
                         color: #64748B; 
                         font-weight: bold; 
-                        text-align: center;">⚡ Dê um CLIQUE DIREITO com o mouse aqui neste fundo branco para abrir a lista de comandos.</span>
+                        text-align: center;">⚡ Dê um CLIQUE DIREITO com o mouse 
+                            aqui neste fundo branco para abrir a lista de comandos.
+                    </span>
                 </div>
             </div>`,
     feedback: "✓ Muito bem! O menu de ações flutuantes se abriu na tela.",
@@ -148,8 +152,9 @@ const comp_arquivos = [
 
   // PASSO 4: CLICAR EM "NOVO" NO MENU DO WINDOWS
   {
-    instrucao:
-      "<strong>Passo 4:</strong> Use o mouse e dê um clique esquerdo na primeira opção escrita '🆕 Novo' (que tem um sinal de mais) para abrir a lista de criações.",
+    instrucao: `<strong>Passo 4:</strong> 
+        Use o mouse e dê um clique esquerdo na primeira opção escrita 
+        '🆕 Novo' (que tem um sinal de mais) para abrir a lista de criações.`,
     conteudo: `
             <div class="arqv-explorador-janela" 
                 style="position: relative;">
@@ -172,7 +177,11 @@ const comp_arquivos = [
                         box-sizing: border-box; 
                         opacity: 0.5;">
                         <div style="font-size: 13px; padding: 4px;">📄 Documentos</div>
-                        <div style="font-size: 13px; padding: 4px; font-weight: bold; color: #1A73E8;">🖼️ Imagens</div>
+                        <div style="font-size: 13px; 
+                            padding: 4px; 
+                            font-weight: bold; 
+                            color: #1A73E8;">🖼️ Imagens
+                        </div>
                     </div>
                     
                     <div style="flex: 1; 
@@ -219,10 +228,13 @@ const comp_arquivos = [
     feedback:
       "✓ Excelente! A aba lateral se expandiu trazendo os tipos de arquivos.",
   },
+
   // PASSO 5: CLICAR EM "PASTA" NO SUBMENU
   {
-    instrucao:
-      "<strong>Passo 5:</strong> Agora que a aba abriu, use o mouse e dê um clique esquerdo na primeira opção escrita '📁 Pasta' para gerar o novo diretório amarelo na tela.",
+    instrucao: `<strong>Passo 5:</strong> 
+        Agora que a aba abriu, use o mouse e dê um clique esquerdo
+        na primeira opção escrita '📁 Pasta' para gerar o novo 
+        diretório amarelo na tela. `,
     conteudo: `
             <div class="arqv-explorador-janela" 
                 style="position: relative;">
@@ -276,7 +288,13 @@ const comp_arquivos = [
                                 gap: 8px;">
                                 <span>📁</span> Pasta
                             </div>
-                            <div onclick="mostrarErro()" style="padding: 8px 12px; font-size: 12px; color: #64748B; opacity: 0.4;">📄 Arquivo de Texto</div>
+
+                            <div onclick="mostrarErro()" 
+                                style="padding: 8px 12px; 
+                                font-size: 12px; 
+                                color: #64748B; 
+                                opacity: 0.4;">📄 Arquivo de Texto
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -426,7 +444,7 @@ const comp_arquivos = [
         Veja que legal! Entramos dentro da pasta 'Fotos Viagem' dando um clique duplo 
         e a sua foto está guardada lá dentro. Mas e se você apagar algo sem querer? 
         Use o mouse e dê um clique esquerdo no botão vermelho '🗑️ Excluir' para simular um erro comum.`,
-    conteudo: /* html */ `
+    conteudo: `
             <div class="arqv-explorador-janela">
                 <div class="arqv-barra-endereco" 
                     style="color: #1A73E8;">📁 Este Computador > Imagens > 📁 Fotos Viagem
@@ -479,13 +497,14 @@ const comp_arquivos = [
         A foto sumiu da pasta! Para recuperá-la, voltamos para a 
         Área de Trabalho principal do computador. Procure pelo ícone do cesto de lixo.
         Use o mouse e dê um CLIQUE DUPLO (dois cliques rápidos) em cima do ícone da '🗑️ Lixeira'.`,
-    conteudo: /* html */ `
+    conteudo: `
             <div class="arqv-desktop-fundo" 
                 style="justify-content: flex-start; padding: 20px;">
                 
                 <!-- ÍCONE DA LIXEIRA CONFIGURADO COM DUPLO CLIQUE NATIVO -->
                 <div ondblclick="window.avancarPasso()" 
-                    onclick="const msg = document.getElementById('mensagem-feedback'); if (msg) msg.innerHTML = 
+                    onclick="const msg = document.getElementById('mensagem-feedback');
+                    if (msg) msg.innerHTML = 
                         '<span class=\\'erro\\'>⚠️ Quase lá! Dê dois cliques seguidos bem rapidinho (clique-clique) no botão esquerdo para abrir a Lixeira!</span>';"
                         style="display: flex; 
                         flex-direction: column; 
@@ -511,7 +530,7 @@ const comp_arquivos = [
         Olha a sua foto salva dentro do cesto de lixo! 
         Para mandá-la de volta para a pasta de viagens de onde ela nunca deveria ter saído,
         use o mouse e dê um clique esquerdo no botão azul '🔄 Restaurar Arquivo'.`,
-    conteudo: /* html */ `
+    conteudo: `
             <div class="arqv-explorador-janela">
                 <div class="arqv-barra-endereco" 
                     style="color: #EF4444;">🗑️ Lixeira do Sistema
@@ -565,7 +584,7 @@ const comp_arquivos = [
         Olha a sua foto salva dentro do cesto de lixo! 
         Para mandá-la de volta para a pasta de viagens de onde ela nunca deveria ter saído, 
         use o mouse e dê um clique esquerdo no botão azul '🔄 Restaurar Arquivo'.`,
-    conteudo: /* html */ `
+    conteudo: `
             <div class="arqv-explorador-janela">
                 <div class="arqv-barra-endereco" 
                     style="color: #EF4444;">🗑️ Lixeira do Sistema
@@ -590,9 +609,12 @@ const comp_arquivos = [
                         <div>
                             <strong style="font-size: 13px; 
                                 display: block; 
-                                color: #334155;">Foto.jpg</strong>
+                                color: #334155;">Foto.jpg
+                            </strong>
+                            
                             <small style="color: #64748B; 
-                                font-size: 11px;">Local original: Imagens/Fotos Viagem</small>
+                                font-size: 11px;">Local original: Imagens/Fotos Viagem
+                            </small>
                         </div>
                     </div>
                     
@@ -618,9 +640,11 @@ const comp_arquivos = [
 
   // PASSO 11 (ÍNDICE 10): TELA FINAL DE SUCESSO (VITÓRIA REESTRUTURADA)
   {
-    instrucao:
-      "<strong>Treino Concluído!</strong> Você aprendeu com perfeição a abrir o explorador, criar pastas, mover itens, e o mais importante: recuperar arquivos da lixeira sem sustos!",
-    conteudo: /* html */ `
+    instrucao: `<strong>Treino Concluído!</strong> 
+       Você aprendeu com perfeição a abrir o explorador, 
+       criar pastas, mover itens, e o mais importante: 
+       recuperar arquivos da lixeira sem sustos! `,
+    conteudo: `
             <div style="background: white; 
                 height: 100%; 
                 display: flex; 

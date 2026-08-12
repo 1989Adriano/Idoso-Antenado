@@ -1,4 +1,3 @@
-// comp_imprimir.js - PARTE 1 (ABRIR ARQUIVO E LOCALIZAR IMPRESSORA)
 const comp_imprimir = [
   // PASSO 1: ABRIR O PROGRAMA DE IMPRESSÃO NA ÁREA DE TRABALHO
   {
@@ -380,6 +379,7 @@ const comp_imprimir = [
                             justify-content: center; 
                             gap: 4px;
                             animation: deslizarPapel 2s ease-out forwards;">
+
                             <span style="font-size: 14px; font-weight: bold; color: #248A3D;">📄 2 Cópias</span>
                             <small style="font-size: 9px; color: #64748B; font-weight: bold;">Clique para pegar!</small>
                         </div>
@@ -450,6 +450,7 @@ const comp_imprimir = [
                             justify-content: center; 
                             gap: 4px;
                             animation: deslizarPapel 2s ease-out forwards;">
+                            
                             <span style="font-size: 14px; font-weight: bold; color: #248A3D;">📄 2 Cópias</span>
                             <small style="font-size: 9px; color: #64748B; font-weight: bold;">Clique para pegar!</small>
                         </div>

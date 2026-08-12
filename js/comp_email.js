@@ -1,5 +1,5 @@
-// comp_email.js - TREINAMENTO DE USO DE E-MAIL E SEGURANÇA CONTRA GOLPES
-const comp_email = [
+
+    const comp_email = [
   // PASSO 1: ABRIR O NAVEGADOR E CLICAR NA CAIXA DE LOGIN
   {
     instrucao: `<strong>Passo 1:</strong> 
@@ -363,12 +363,31 @@ const comp_email = [
                     gap: 12px; 
                     text-align: left;">
 
-                    <strong style="font-size: 13px; color: #334155; border-bottom: 1px solid #E2E8F0; padding-bottom: 6px; display: block;">📂 Escolha a Foto para Enviar:</strong>
+                    <strong style="font-size: 13px; 
+                        color: #334155; 
+                        border-bottom: 1px solid #E2E8F0; 
+                        padding-bottom: 6px; 
+                        display: block;">📂 Escolha a Foto para Enviar:
+                    </strong>
                     
                     <div style="display: flex; gap: 15px; padding: 10px 0;">
                         <!-- Arquivo Errado -->
-                        <div onclick="mostrarErro()" style="display: flex; flex-direction: column; align-items: center; gap: 4px; width: 70px; opacity: 0.4; cursor: pointer;">
-                            <span style="font-size: 32px;">📄</span><span style="font-size: 10px; font-weight: bold; text-align: center; color: #334155;">Conta.pdf</span>
+                        <div onclick="mostrarErro()" 
+                            style="display: flex; 
+                            flex-direction: column; 
+                            align-items: center; 
+                            gap: 4px; 
+                            width: 70px; 
+                            opacity: 0.4; 
+                            cursor: pointer;">
+
+                            <span style="font-size: 32px;">📄</span>
+                            <span style="font-size: 10px; 
+                                font-weight: bold; 
+                                text-align: center; 
+                                color: #334155;">Conta.pdf
+                            </span>
+
                         </div>
                         
                         <!-- BOTÃO ALVO ARQUIVO CORRETO -->
@@ -484,7 +503,10 @@ const comp_email = [
                     
                     <div class="mail-painel-conteudo" style="justify-content: center; align-items: center; opacity: 0.3;">
                         <span style="font-size: 40px;">✔️</span>
-                        <span style="font-size: 13px; font-weight: bold; color: #475569;">Sua resposta foi enviada com sucesso!</span>
+                        <span style="font-size: 13px; 
+                            font-weight: bold; 
+                            color: #475569;">Sua resposta foi enviada com sucesso!
+                        </span>
                     </div>
                 </div>
             </div>`,

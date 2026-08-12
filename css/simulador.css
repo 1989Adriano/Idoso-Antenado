@@ -1,6 +1,4 @@
-/* ==========================================================================
-   VARIÁVEIS DE CORES E CONFIGURAÇÃO DO BODY
-   ========================================================================== */
+/* VARIÁVEIS DE CORES E CONFIGURAÇÃO DO BODY */
 :root {
     --cor-fundo: #F8FAFC; 
     --cor-texto: #0F172A; 
@@ -155,15 +153,15 @@ body {
     margin-bottom: 20px;
     background-color: #FEF3C7; 
     color: #030303;
-    padding: 20px 24px; /* Espaçamento interno confortável */
+    padding: 20px 24px;
     border-left: 6px solid #F59E0B;
     border-radius: 8px;
     line-height: 1.5;
-    text-align: left; /* Garante que todo o texto comece sempre na esquerda */
+    text-align: left;
     box-sizing: border-box;    
     display: flex;
-    flex-direction: column; /* Força o Passo 1 a ficar em cima e o texto embaixo */
-    align-items: flex-start; /* Alinha todo mundo perfeitamente no canto esquerdo */
+    flex-direction: column; 
+    align-items: flex-start; 
     justify-content: center;
     min-height: 110px; 
     height: auto; 
@@ -311,12 +309,9 @@ body {
 .btn-controle-menu {
     background: rgba(255, 255, 255, 0.15);
     color: white;
-    border: 1px solid rgba(255, 255, 255, 0.25);
-    
-    /* MUDANÇA AQUI: Bordas totalmente arredondadas igual ao botão de voltar */
+    border: 1px solid rgba(255, 255, 255, 0.25);   
     border-radius: 25px; 
-    padding: 0 24px; /* Aumentado levemente para acomodar as bordas ovais com folga */
-    
+    padding: 0 24px;    
     height: 54px; 
     font-size: 17px; 
     font-weight: bold;

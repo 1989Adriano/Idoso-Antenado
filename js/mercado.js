@@ -1,9 +1,10 @@
-// mercado.js - SIMULADOR DO MERCADO LIVRE COMPLETO (PARTE 1 DE 4)
 const mercado = [
   // PASSO 1 (ÍNDICE 0): ABRIR O SITE NA ÁREA DE TRABALHO
   {
-    instrucao:
-      "<strong>Passo 1:</strong> Vamos aprender a fazer compras online com entrega na sua casa! Dê um clique esquerdo no ícone amarelo escrito 'Mercado Livre' para abrir a página de compras.",
+    instrucao: `<strong>Passo 1:</strong> 
+        Vamos aprender a fazer compras online com entrega na sua casa! 
+        Dê um clique esquerdo no ícone amarelo escrito 'Mercado Livre' 
+        para abrir a página de compras.`,
     conteudo: `
             <div style="background: #2A4365; 
                 height: 100%; 
@@ -64,7 +65,14 @@ const mercado = [
                     align-items: center; 
                     padding: 0 12px; 
                     box-sizing: border-box;">
-                    <div style="background: #0066CC; color: white; font-weight: bold; font-size: 12px; padding: 3px 10px; border-radius: 4px; opacity: 0.7;">🪟 Iniciar</div>
+                    <div style="background: #0066CC; 
+                        color: white; 
+                        font-weight: bold; 
+                        font-size: 12px; 
+                        padding: 3px 10px; 
+                        border-radius: 4px; 
+                        opacity: 0.7;">🪟 Iniciar
+                    </div>
                 </div>
                 <style>@keyframes pulsarFundo { 0%, 100% { background:rgba(255,255,255,0.1); } 50% { background:rgba(255,255,255,0.25); } }</style>
             </div>`,
@@ -74,8 +82,10 @@ const mercado = [
 
   // PASSO 2 (ÍNDICE 1): CLICAR NA BARRA DE BUSCA
   {
-    instrucao:
-      "<strong>Passo 2:</strong> Para procurar o produto que deseja comprar, dê um clique esquerdo no meio da grande 'Barra de Pesquisa Branca' no topo do site.",
+    instrucao: `<strong>Passo 2:</strong> 
+        Para procurar o produto que deseja comprar, dê um 
+        clique esquerdo no meio da grande 'Barra de 
+        Pesquisa Branca' no topo do site.`,
     conteudo: `
             <div style="background: #FFFDF0; 
                 height: 100%; 
@@ -111,7 +121,12 @@ const mercado = [
                         border: 2px solid #1A73E8;">Buscar produtos, marcas e muito mais...
                     </div>
                 </div>
-                <div style="flex: 1; display: flex; align-items: center; justify-content: center; color: #999; font-size: 14px;">Aguardando pesquisa...</div>
+                <div style="flex: 1; 
+                    display: flex; 
+                    align-items: center; 
+                    justify-content: center; 
+                    color: #999; font-size: 14px;">Aguardando pesquisa...
+                </div>
             </div>`,
     feedback:
       "✓ Excelente! A caixa de texto está pronta para receber o nome do produto.",
@@ -119,8 +134,10 @@ const mercado = [
 
   // PASSO 3 (ÍNDICE 2): CLICAR NA LUPA DE BUSCA
   {
-    instrucao:
-      "<strong>Passo 3:</strong> Imagine que você digitou 'Cafeteira Elétrica'. Agora, use o mouse e dê um clique esquerdo na '🔍 Lupa Azul' para o site listar os modelos.",
+    instrucao: `<strong>Passo 3:</strong> 
+        Imagine que você digitou 'Cafeteira Elétrica'. 
+        Agora, use o mouse e dê um clique esquerdo na '
+        🔍 Lupa Azul' para o site listar os modelos.`,
     conteudo: `
             <div style="background: #FFFDF0; 
                 height: 100%; 
@@ -152,7 +169,17 @@ const mercado = [
                         border: 2px solid #1A73E8;">
                         <span style="padding: 8px 12px; font-size: 13px; color: #1A1A1A; font-weight: bold; flex: 1;">Cafeteira Elétrica</span>
                         <!-- BOTÃO ALVO LUPA -->
-                        <div onclick="avancarPasso()" style="background: #E2E8F0; width: 40px; display: flex; align-items: center; justify-content: center; cursor: pointer; font-size: 14px; border-left: 1px solid #ddd; font-weight: bold;">🔍</div>
+                        <div onclick="avancarPasso()" 
+                            style="background: #E2E8F0; 
+                            width: 40px; 
+                            display: flex; 
+                            align-items: center; 
+                            justify-content: center;
+                             cursor: pointer; 
+                            font-size: 14px; 
+                            border-left: 1px solid #ddd; 
+                            font-weight: bold;">🔍
+                        </div>
                     </div>
                 </div>
                 <div style="flex: 1;"></div>
@@ -163,8 +190,10 @@ const mercado = [
 
   // PASSO 4 (ÍNDICE 3): REPUTAÇÃO E AVALIAÇÕES DO VENDEDOR
   {
-    instrucao:
-      "<strong>Passo 4:</strong> Antes de clicar em comprar, é vital checar se o vendedor é confiável! Dê um clique esquerdo no botão amarelo '⭐ Ver Opiniões e Reputação'.",
+    instrucao: `<strong>Passo 4:</strong>
+        Antes de clicar em comprar, é vital checar se o 
+        vendedor é confiável! Dê um clique esquerdo no botão
+        amarelo '⭐ Ver Opiniões e Reputação'.`,
     conteudo: `
             <div style="background: #FFFDF0; 
                 height: 100%; 
@@ -230,8 +259,11 @@ const mercado = [
 
   // PASSO 5 (ÍNDICE 4): CORRIGIR ITEM DUPLICADO NO CARRINHO
   {
-    instrucao:
-      "<strong>Passo 5:</strong> Atenção! Por erro de clique, duas cafeteiras foram adicionadas ao carrinho. Evite pagar o dobro! Dê um clique esquerdo no texto azul escrito '❌ Excluir' na segunda unidade.",
+    instrucao: `<strong>Passo 5:</strong> 
+        Atenção! Por erro de clique, duas cafeteiras foram
+        adicionadas ao carrinho. Evite pagar o dobro! 
+        Dê um clique esquerdo no texto azul escrito 
+        '❌ Excluir' na segunda unidade.`,
     conteudo: `
             <div style="background: #FFFDF0; 
                 height: 100%; 
@@ -269,10 +301,23 @@ const mercado = [
                         <strong>R$ 120,00</strong>
                     </div>
                     
-                    <div style="border: 2px dashed #DC3545; padding: 8px; border-radius: 6px; background: #FFF5F5; display: flex; justify-content: space-between; align-items: center;">
+                    <div style="border: 2px dashed #DC3545; 
+                        padding: 8px; 
+                        border-radius: 6px; 
+                        background: #FFF5F5; 
+                        display: flex; 
+                        justify-content: space-between; 
+                        align-items: center;">
+
                         <div>
                             <strong style="font-size: 13px; display: block; color: #C82333;">Cafeteira Elétrica (Cópia)</strong>
-                            <span onclick="avancarPasso()" style="color: #1A73E8; font-size: 12px; font-weight: bold; text-decoration: underline; cursor: pointer;">❌ Excluir do Carrinho</span>
+                            <span onclick="avancarPasso()" 
+                                style="color: #1A73E8; 
+                                font-size: 12px; 
+                                font-weight: bold; 
+                                text-decoration: underline;
+                                 cursor: pointer;">❌ Excluir do Carrinho
+                            </span>
                         </div>
                         <strong style="color: #C82333;">R$ 120,00</strong>
                     </div>
@@ -284,8 +329,10 @@ const mercado = [
 
   // PASSO 6 (ÍNDICE 5): SELECIONAR MÉTODO DE PAGAMENTO
   {
-    instrucao:
-      "<strong>Passo 6:</strong> Escolha como deseja pagar. Para evitar digitar os números do cartão de crédito hoje, dê um clique esquerdo na opção '⚡ Pix (Aprovação Imediata)'.",
+    instrucao: `<strong>Passo 6:</strong> 
+        Escolha como deseja pagar. Para evitar digitar 
+        os números do cartão de crédito hoje, dê um 
+        clique esquerdo na opção '⚡ Pix (Aprovação Imediata)'.`,
     conteudo: `
             <div style="background: #FFFDF0; 
                 height: 100%; 
@@ -315,7 +362,15 @@ const mercado = [
                     box-sizing: border-box; 
                     justify-content: center;">
                     
-                    <div onclick="mostrarErro()" style="border: 1px solid #ccc; padding: 12px; border-radius: 8px; cursor: pointer; display: flex; align-items: center; gap: 10px; opacity: 0.6;">
+                    <div onclick="mostrarErro()" 
+                        style="border: 1px solid #ccc; 
+                        padding: 12px; 
+                        border-radius: 8px; 
+                        cursor: pointer; 
+                        display: flex; 
+                        align-items: center; 
+                        gap: 10px; 
+                        opacity: 0.6;">
                         <span style="font-size: 24px;">💳</span>
                         <div><strong>Cartão de Crédito</strong><br><small style="color: #666;">Em até 12x sem juros</small></div>
                     </div>
@@ -343,8 +398,10 @@ const mercado = [
 
   // PASSO 7 (ÍNDICE 6): BOTÃO DE COMPRAR
   {
-    instrucao:
-      "<strong>Passo 7:</strong> Com o carrinho correto e o Pix escolhido, confirme o pedido! Dê um clique esquerdo no botão azul 'Comprar Agora' para gerar o pagamento.",
+    instrucao: `<strong>Passo 7:</strong> 
+        Com o carrinho correto e o Pix escolhido, 
+        confirme o pedido! Dê um clique esquerdo no 
+        botão azul 'Comprar Agora' para gerar o pagamento.`,
     conteudo: `
             <div style="background: #FFFDF0; 
                 height: 100%; 
@@ -400,8 +457,11 @@ const mercado = [
 
   // PASSO 8 (ÍNDICE 7): COPIAR O CÓDIGO PIX
   {
-    instrucao:
-      "<strong>Passo 8:</strong> O site gerou as informações do Pix! Para simular o pagamento no aplicativo do seu banco, use o mouse e dê um clique esquerdo no botão azul '📋 Copiar Código Pix'.",
+    instrucao: `<strong>Passo 8:</strong> 
+        O site gerou as informações do Pix! Para simular 
+        o pagamento no aplicativo do seu banco, use o 
+        mouse e dê um clique esquerdo no botão azul 
+        '📋 Copiar Código Pix'.`,
     conteudo: `
             <div style="background: #FFFDF0; 
                 height: 100%; 
@@ -433,9 +493,24 @@ const mercado = [
                     
                     <div style="text-align: center; border: 1px dashed #ddd; padding: 12px; border-radius: 6px;">
                         <span style="font-size: 13px; font-weight: bold; color: #666; display: block; margin-bottom: 5px;">Código Copia e Cola gerado:</span>
-                        <div style="background: #F4F6F9; padding: 8px; font-family: monospace; font-size: 11px; color: #333; word-break: break-all;">://mercadolivre.com.br/pagamento/cafeteira1209384</div>
+                        <div style="background: #F4F6F9; 
+                            padding: 8px; 
+                            font-family: monospace; 
+                            font-size: 11px; color: #333; 
+                            word-break: break-all;">://mercadolivre.com.br/pagamento/cafeteira1209384
+                        </div>
                     </div>
-                    <button onclick="avancarPasso()" style="background: #3483FA; color: white; font-weight: bold; font-size: 15px; border: 2px dashed #002B5C; padding: 12px; border-radius: 6px; width: 100%;">📋 Copiar Código Pix</button>
+
+                    <button onclick="avancarPasso()" 
+                        style="background: #3483FA; 
+                        color: white; 
+                        font-weight: bold; 
+                        font-size: 15px; 
+                        border: 2px dashed #002B5C; 
+                        padding: 12px; 
+                        border-radius: 6px; 
+                        width: 100%;">📋 Copiar Código Pix
+                    </button>
                 </div>
             </div>`,
     feedback:
@@ -444,8 +519,10 @@ const mercado = [
 
   // PASSO 9 (ÍNDICE 8): CONFIRMAÇÃO DE PAGAMENTO APROVADO
   {
-    instrucao:
-      "<strong>Passo 9:</strong> O pagamento foi identificado com sucesso! Use o mouse e dê um clique esquerdo no botão azul '📦 Ver Meus Pedidos' para avançar para a área de rastreamento.",
+    instrucao: `<strong>Passo 9:</strong> 
+        O pagamento foi identificado com sucesso! 
+        Use o mouse e dê um clique esquerdo no botão azul 
+        '📦 Ver Meus Pedidos' para avançar para a área de rastreamento.`,
     conteudo: `
             <div style="background: #FFFDF0; 
                 height: 100%; 
@@ -487,7 +564,15 @@ const mercado = [
                     </div>
                     <h4 style="margin: 0; font-size: 18px; color: #03543F; font-weight: bold;">¡Pagamento Aprovado!</h4>
                     <p style="margin: 0 0 10px 0; font-size: 13px; color: #666; text-align: center; line-height: 1.4;">Já avisamos o vendedor e ele está preparando o embrulho da sua cafeteira.</p>
-                    <button onclick="avancarPasso()" style="background: #3483FA; color: white; font-weight: bold; font-size: 14px; border: none; padding: 12px; border-radius: 6px; width: 100%;">📦 Ver Meus Pedidos</button>
+                    <button onclick="avancarPasso()" 
+                        style="background: #3483FA; 
+                        color: white; 
+                        font-weight: bold; 
+                        font-size: 14px; border: none; 
+                        padding: 12px; 
+                        border-radius: 6px; 
+                        width: 100%;">📦 Ver Meus Pedidos
+                    </button>
                 </div>
             </div>`,
     feedback:
@@ -496,8 +581,11 @@ const mercado = [
 
   // PASSO 10 (ÍNDICE 9): ÁREA DE RASTREAMENTO DA ENCOMENDA
   {
-    instrucao:
-      "<strong>Passo 10:</strong> Esta é a tela de rastreamento! Ela mostra onde o pacote está viajando. Dê um clique esquerdo no botão verde 'Acompanhar Compra' para simular que você conferiu a rota de entrega.",
+    instrucao: `<strong>Passo 10:</strong> 
+        Esta é a tela de rastreamento! Ela mostra onde o
+        pacote está viajando. Dê um clique esquerdo no 
+        botão verde 'Acompanhar Compra' para simular 
+        que você conferiu a rota de entrega.`,
     conteudo: `
             <div style="background: #FFFDF0; 
                 height: 100%; 
@@ -550,7 +638,10 @@ const mercado = [
                         border-radius: 6px; 
                         border: 1px solid #eee;">
                         <div>🟢 <strong>14:10</strong> - Pacote enviado pelo vendedor</div>
-                        <div style="color: #00a650; font-weight: bold;">🟡 <strong>16:30</strong> - O caminhão saiu do centro de distribuição rumo à sua cidade</div>
+                        <div style="color: #00a650; 
+                            font-weight: bold;">🟡 
+                            <strong>16:30</strong> - O caminhão saiu do centro de distribuição rumo à sua cidade
+                        </div>
                     </div>
                     
                     <button onclick="avancarPasso()" 
@@ -571,8 +662,11 @@ const mercado = [
 
   // PASSO 11 (ÍNDICE 10): TELA FINAL DE SUCESSO (VITÓRIA)
   {
-    instrucao:
-      "<strong>Passo 11:</strong> Treino Concluído! Você aprendeu com perfeição a abrir o Mercado Livre, pesquisar produtos, avaliar vendedores, ajustar o carrinho e rastrear suas encomendas com total segurança.",
+    instrucao: `<strong>Passo 11:</strong> 
+        Treino Concluído! Você aprendeu com perfeição
+        a abrir o Mercado Livre, pesquisar produtos, 
+        avaliar vendedores, ajustar o carrinho e 
+        rastrear suas encomendas com total segurança.`,
     conteudo: `
             <div style="background: white; 
                 height: 100%; 
@@ -629,7 +723,11 @@ const mercado = [
                         font-size: 14px; 
                         color: #555; 
                         line-height: 1.4; 
-                        text-align: center;">Parabéns! Encontrar mercadorias, avaliar a reputação de lojas, resolver erros do carrinho e rastrear as entregas agora ficou simples. Você já domina as compras online com total autonomia!</p>
+                        text-align: center;">Parabéns! Encontrar mercadorias,
+                            avaliar a reputação de lojas, resolver erros do carrinho
+                            e rastrear as entregas agora ficou simples.
+                            Você já domina as compras online com total autonomia!
+                    </p>
                     
                     <button onclick="window.location.href='menu.html'" 
                         style="background: #3483FA; 
