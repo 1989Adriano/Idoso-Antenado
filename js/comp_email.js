@@ -1,5 +1,4 @@
-
-    const comp_email = [
+const comp_email = [
   // PASSO 1: ABRIR O NAVEGADOR E CLICAR NA CAIXA DE LOGIN
   {
     instrucao: `<strong>Passo 1:</strong> 

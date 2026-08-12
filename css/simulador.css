@@ -352,6 +352,10 @@ body {
     }
 }
 
+/* Tamanho padrão confortável para Computadores e Telas Grandes */
+.texto-nota-aparelho {
+    font-size: 18px !important;
+}
 @media (max-width: 768px) {
     /* Em telas menores ou celulares deitados, oculta a nota central para dar espaço total aos botões */
     .caixa-nota-aparelho {
@@ -360,5 +364,10 @@ body {
     .barra-navegacao {
         justify-content: space-between !important;
         padding: 15px 20px !important;
+    }
+
+    .texto-nota-aparelho {
+        font-size: 22px !important; /* Fonte ampliada para o idoso ler sem forçar as vistas */
+        line-height: 1.6 !important; /* Espaçamento maior entre as linhas para não embolar */
     }
 }
