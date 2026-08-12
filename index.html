@@ -14,7 +14,7 @@
             overflow: hidden;
         }
 
-                .tela-abertura-container {
+        .tela-abertura-container {
             width: 100%;
             height: 100%;
             display: grid;
@@ -23,8 +23,7 @@
             justify-items: center;
             text-align: center;
             padding: 70px;
-            box-sizing: border-box;
-        
+            box-sizing: border-box;        
             background-color: transparent;
             background-image: url('img/fundo_principal.jpeg');
             background-repeat: no-repeat;
@@ -32,9 +31,8 @@
             background-size: 115% auto;   
             
             /* Mantém apenas a calibração de iluminação e nitidez nativa */
-            filter: brightness(0.70) contrast(1.05);
+            filter: brightness(0.90) contrast(1.15);
         }
-
 
         /* Alinhamento dos itens nas linhas do Grid */
         .splash-emojis { grid-row: 2; }
@@ -79,14 +77,14 @@
         }
 
         .btn-splash-entrada {
-            background-color: #FD7E14;
+            background-color: #8c470f;
             color: white;
             font-size: min(5.5vw, 26px);
             font-weight: bold;
             padding: 18px 44px;
             border: none;
             border-radius: 50px;
-            box-shadow: 0 6px 0 #C45A00, 0 10px 20px rgba(0,0,0,0.4);
+            box-shadow: 0 6px 0 #653306, 0 10px 20px rgba(0,0,0,0.4);
             cursor: pointer;
             display: inline-block;
             text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
@@ -97,7 +95,7 @@
 
         /* EFEITO HOVER AO PASSAR O MOUSE */
         .btn-splash-entrada:hover {
-            background-color: #b35803; /* Laranja mais claro e chamativo */
+            background-color: #e8760c;
             transform: scale(1.03); /* Aumenta o tamanho do botão discretamente em 3% */
             box-shadow: 0 6px 0 #D96A00, 0 12px 25px rgba(253, 126, 20, 0.4); /* Sombra com brilho laranja */
         }
@@ -119,7 +117,7 @@
         <div class="splash-emojis"></div>
         <h1 class="splash-titulo">Idoso Antenado</h1>
         <p class="splash-subtitulo">
-            O seu guia para aprender <br>a mexer no celular e no computador<br>sem medo e com total segurança!
+            O seu guia para aprender <br>a usar o celular e o computador<br>sem medo e com total segurança!
         </p>
         
         <button onclick="irParaMenu()" class="btn-splash-entrada">

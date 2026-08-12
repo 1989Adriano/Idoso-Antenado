@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="pt-BR" style="height: 100%; margin: 0; padding: 0;">
+<html lang="pt-BR" 
+    style="height: 100%; margin: 0; padding: 0;">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -21,52 +22,69 @@
     <link rel="stylesheet" href="./css/comp_imprimir.css">
     <link rel="stylesheet" href="./css/comp_email.css">
     <link rel="stylesheet" href="./css/comp_internet.css">
-
 </head>
 
 <body style="height: 100%; margin: 0; padding: 0;">
     
-    <nav class="barra-navegacao" style="background-color: var(--cor-azul-escuro) !important; 
-        height: auto; min-height: 100px; 
-        padding: 20px 30px; display: flex; 
+    <!-- BARRA DE NAVEGAÇÃO RESTRUTURADA COM TÍTULO CENTRAL ABSOLUTO -->
+    <nav class="barra-navegacao" 
+        style="background-color: var(--cor-azul-escuro) !important; 
+        height: auto; 
+        min-height: 100px; 
+        padding: 20px 30px; 
+        display: flex; 
         align-items: center; 
         justify-content: space-between; 
         gap: 20px; 
         box-sizing: border-box; 
         border-bottom: 4px solid var(--cor-laranja); 
-        width: 100%; overflow: hidden;">
+        width: 100%; 
+        overflow: hidden;
+        position: relative;">
         
-        <!-- 1. BOTÃO DE CONTROLE COM ÍCONE E TEXTO (Extrema Esquerda) -->
-        <div style="flex-shrink: 0;">
-            <button onclick="alternarMenuLateral()" class="btn-controle-menu" title="Ocultar ou Mostrar o Menu Lateral">
+        <!-- BOTÃO DE CONTROLE (Extrema Esquerda) -->
+        <div style="flex-shrink: 0; z-index: 10;">
+            <button onclick="alternarMenuLateral()" 
+                class="btn-controle-menu" 
+                title="Ocultar ou Mostrar o Menu Lateral">
                 <span style="font-size: 22px;">📋</span> Menu Treinamentos
             </button>
+        </div>      
+
+        <!-- TÍTULO  NO CENTRO DA BARRA DE NAVEGAÇÃO -->
+        <div style="position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            text-align: center;
+            pointer-events: none; /* Evita que o título atrapalhe cliques na barra */
+            width: auto;
+            max-width: 50%;
+            overflow: hidden;">
+            <h1 style="margin: 0;
+                color: #FFFFFF;
+                font-family: system-ui, sans-serif;
+                font-size: 24px;
+                font-weight: 800;
+                letter-spacing: 1.5px;
+                text-transform: uppercase;
+                text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+                white-space: nowrap;">🌟 CONECTA IDADE • SIMULADORES 🌟</h1>
         </div>
 
-        <!-- 2. MENSAGEM CENTRALIZADA COM TRAVA ANTI-VAZAMENTO -->
-        <!-- O uso de flex: 1 1 0% e min-width: 0 impede fisicamente o elemento de estourar a largura do Nav -->
-        <div class="caixa-nota-aparelho" style="flex: 1 1 0%; min-width: 0; max-width: 850px; background: rgba(255, 255, 255, 0.06); 
-                    padding: 12px 20px; border-radius: 14px; border-left: 5px solid #F97316; box-sizing: border-box; box-shadow: inset 0 1px 3px rgba(0,0,0,0.2);">
-            <p style="margin: 0; color: #F1F5F9; font-size: 15px; font-weight: 700; line-height: 1.5; text-align: justify; font-family: system-ui, sans-serif; 
-                      white-space: normal; overflow: hidden; text-overflow: ellipsis;">
-                💡 <span style="color: #F97316; 
-                        text-transform: uppercase;
-                        font-size: 12px; letter-spacing: 0.5px; 
-                        display: inline-block; 
-                        margin-bottom: 2px;">Nota sobre o seu aparelho:
-                    </span><br>
-                As telas abaixo servem como modelo! O formato, a posição ou a cor dos botões reais podem mudar um pouquinho dependendo da marca do seu celular ou computador.
-            </p>
-        </div>
-
-        <!-- 3. BOTÃO DE VOLTAR AO MENU (Extrema Direita) -->
-        <div style="flex-shrink: 0;">
-            <a href="menu.html" style="text-decoration: none; 
-                background: #FD7E14; color: white; 
-                font-weight: bold; font-size: 18px; 
-                padding: 12px 24px; border-radius: 25px;
-                transition: all 0.2s; box-shadow: 0 4px 0 #C45A00, 0 6px 10px rgba(0,0,0,0.15); 
-                display: inline-block; white-space: nowrap;"> Voltar ao Menu
+        <!-- BOTÃO DE VOLTAR AO MENU (Extrema Direita) -->
+        <div style="flex-shrink: 0; z-index: 10;">
+            <a href="menu.html" 
+                style="text-decoration: none; 
+                background: #FD7E14; 
+                color: white; 
+                font-weight: bold; 
+                font-size: 18px; 
+                padding: 12px 24px; 
+                border-radius: 25px;
+                transition: all 0.2s; 
+                box-shadow: 0 4px 0 #C45A00, 0 6px 10px rgba(0,0,0,0.15); 
+                display: inline-block; 
+                white-space: nowrap;">Voltar ao Menu
             </a>
         </div>
     </nav>
@@ -77,11 +95,13 @@
         <!-- Menu Lateral Completo (Navegação interna contendo todas as trilhas) -->
         <aside class="menu-lateral escondido">
             <!-- CATEGORIA: MÓDULOS DE SMARTPHONE -->
-            <div style="color: #0056B3; 
-                font-size: 13px; font-weight: 900; 
-                letter-spacing: 1px; text-transform: uppercase; 
+            <div style="color: #091d32; 
+                font-size: 13px; 
+                font-weight: 900; 
+                letter-spacing: 1px; 
+                text-transform: uppercase; 
                 margin-bottom: 5px; 
-                border-bottom: 2px solid #E2E8F0;
+                border-bottom: 2px solid #E2E8F0; 
                 padding-bottom: 4px;">📱 Treinos de Celular
             </div>
             
@@ -100,8 +120,7 @@
                     <a href="simulador.html?tema=golpes" id="link-golpes" class="menu-link"><span>🛡️</span> Evitar Golpes</a>
                 </div>
             </div>
-            
-            <div class="categoria-secao">
+       <div class="categoria-secao">
                 <div class="categoria-titulo">📱 Comunicação e Apps</div>
                 <div class="lista-links">
                     <a href="simulador.html?tema=whatsapp" id="link-whatsapp" class="menu-link"><span>💬</span>WhatsApp</a>
@@ -139,9 +158,29 @@
                 <div class="lista-links">
                     <!-- Link estilizado com as cores do Google Chrome no menu lateral -->
                     <a href="simulador.html?tema=comp_internet" id="link-comp_internet" class="menu-link">
-                        <span style="border-radius: 50% !important; background: white !important; font-size: 14px; position: relative; display: inline-flex; align-items: center; justify-content: center; width: 32px; height: 32px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); border: 1px solid #CBD5E1;">
-                            <div style="width: 100%; height: 100%; border-radius: 50%; background: linear-gradient(135deg, #4285F4 0%, #34A853 50%, #FBBC05 50%, #EA4335 100%); display: flex; align-items: center; justify-content: center;">
-                                <div style="width: 12px; height: 12px; background: #1A73E8; border: 2px solid white; border-radius: 50%;"></div>
+                        <span style="border-radius: 50% !important; 
+                            background: white !important; 
+                            font-size: 14px; 
+                            position: relative; 
+                            display: inline-flex; 
+                            align-items: center; 
+                            justify-content: center; 
+                            width: 32px; 
+                            height: 32px; 
+                            box-shadow: 0 2px 4px rgba(0,0,0,0.1); 
+                            border: 1px solid #CBD5E1;">
+                            <div style="width: 100%; 
+                                height: 100%; 
+                                border-radius: 50%; 
+                                background: linear-gradient(135deg, #4285F4 0%, #34A853 50%, #FBBC05 50%, #EA4335 100%); 
+                                display: flex; 
+                                align-items: center; 
+                                justify-content: center;">
+                                <div style="width: 12px; 
+                                    height: 12px; 
+                                    background: #1A73E8; 
+                                    border: 2px solid white; 
+                                    border-radius: 50%;"></div>
                             </div>
                         </span>
                         Google Chrome
@@ -151,9 +190,56 @@
             </div>
         </aside>
 
-        <!-- Área Central Útil: Centraliza a mesa e o dispositivo na tela -->
-        <main class="conteudo-principal">
-            <div class="simulador-caixa">
+        <!-- Área Central -->
+        <main class="conteudo-principal" 
+            style="display: flex; 
+            flex-direction: column; 
+            align-items: center; 
+            justify-content: flex-start; 
+            width: 100%; 
+            box-sizing: border-box; 
+            padding: 15px; 
+            gap: 15px;">
+            
+            <!-- CONTÊINER PARA CENTRALIZAR O AVISO NO TOPO -->
+            <div style="display: flex; 
+                justify-content: center; 
+                width: 100%; 
+                max-width: 850px; 
+                box-sizing: border-box;">
+
+                <!-- MENSAGEM CENTRALIZADA COM TRAVA ANTI-VAZAMENTO -->    
+                <div class="caixa-nota-aparelho" 
+                    style="width: 100%; 
+                    background: rgba(255, 255, 255, 0.06); 
+                    padding: 12px 20px; 
+                    border-radius: 14px; 
+                    border-left: 5px solid #F97316; 
+                    box-sizing: border-box; 
+                    box-shadow: inset 0 1px 3px rgba(0,0,0,0.2);">
+                    
+                    <p style="margin: 0; 
+                        color: #0653a0; 
+                        font-size: 20px; 
+                        font-weight: 700; 
+                        line-height: 1.5; 
+                        text-align: justify; 
+                        font-family: system-ui, sans-serif; 
+                        white-space: normal;">
+                        
+                        💡 <span style="color: #F97316; 
+                                text-transform: uppercase;
+                                font-size: 12px; 
+                                letter-spacing: 0.5px; 
+                                display: inline-block; 
+                                margin-bottom: 4px;">Nota sobre o seu aparelho:</span><br>
+                        As telas abaixo servem como modelo! O formato, a posição ou a cor dos botões reais podem mudar um pouquinho dependendo da marca do seu celular ou computador.
+                    </p>
+                </div>
+            </div>
+
+            <!-- O SIMULADOR AGORA VAI FICAR EXATAMENTE EMBAIXO DO AVISO -->
+            <div class="simulador-caixa" style="width: 100%; max-width: 850px; margin: 0 auto;">
                 <!-- Caixa amarela dinâmica para as instruções -->
                 <div class="instrucao" id="texto-instrucao"></div>
                 
@@ -170,7 +256,6 @@
                 <div class="feedback" id="mensagem-feedback"></div>
             </div>
         </main>
-    </div>
 
     <!-- CARREGAMENTO DE TODOS OS COMPONENTES DO PORTAL (CELULAR) -->
     <script src="./js/inss.js"></script>
@@ -391,4 +476,3 @@
     </script>
 </body>
 </html>
-
