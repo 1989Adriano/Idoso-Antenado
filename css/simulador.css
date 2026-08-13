@@ -44,8 +44,10 @@ body {
 
 .titulo-treinamento-menu {
     font-size: 26px !important;      
-    margin-left: 30px !important;    
-    flex-grow: 0 !important;        
+    color: #FFFFFF !important;
+    margin: 0 0 0 40px !important;   
+    flex-grow: 0 !important;         
+    white-space: nowrap;          
 }
 
 .layout-portal {
@@ -282,7 +284,6 @@ body {
 
 .botao-alerta { background-color: var(--cor-alerta); box-shadow: 0 6px 0 #DC2626; }
 .botao-alerta:active { box-shadow: 0 2px 0 #DC2626; }
-
 .botao-sucesso { background-color: var(--cor-sucesso); box-shadow: 0 6px 0 #059669; }
 .botao-sucesso:active { box-shadow: 0 2px 0 #059669; }
 
@@ -405,7 +406,12 @@ body {
     
     /* Esconde o h1 gigante do topo no celular para sobrar espaço útil */
     .barra-navegacao h1 {
-        display: none !important;
+        font-size: 15px !important; 
+        color: #FFFFFF !important;
+        text-align: center !important;
+        padding: 0 !important;
+        margin: 0 !important;
+        display: block !important; 
     }
 
     .btn-controle-menu {
@@ -498,4 +504,3 @@ body {
         font-size: 11px !important;
     }
 }
-
