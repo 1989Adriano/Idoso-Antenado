@@ -190,7 +190,7 @@
             </div>
         </aside>
 
-        <!-- Área Central -->
+        <!-- Área Central -->            
         <main class="conteudo-principal" 
             style="display: flex; 
             flex-direction: column; 
@@ -201,15 +201,31 @@
             padding: 15px; 
             gap: 15px;">
             
-            <!-- CONTÊINER PARA CENTRALIZAR O AVISO NO TOPO -->
+            <!-- TOPO DO CONTEÚDO PRINCIPAL -->
+            <div class="simulador-caixa" style="width: 100%; max-width: 850px; margin: 0 auto;">
+                <!-- Caixa amarela dinâmica para as instruções -->
+                <div class="instrucao" id="texto-instrucao"></div>
+                
+                <!-- O receptáculo dinâmico onde o layout do celular ou monitor é injetado -->
+                <div class="tela-celular" id="tela-treino"></div>
+                
+                <!-- O Pé de suporte físico do monitor (Ativado via JS apenas no PC) -->
+                <div class="pe-computador" id="suporte-monitor">
+                    <div class="haste"></div>
+                    <div class="base"></div>
+                </div>
+
+                <!-- Painel inferior dinâmico para avisos de Sucesso ou Erro -->
+                <div class="feedback" id="mensagem-feedback"></div>
+            </div>
+
+            <!-- 2️⃣ CONTÊINER PARA CENTRALIZAR O AVISO NO RODAPÉ -->
             <div style="display: flex; 
                 justify-content: center; 
                 width: 100%; 
                 max-width: 850px; 
                 box-sizing: border-box;">
-
-            <!-- MENSAGEM CENTRALIZADA COM TRAVA ANTI-VAZAMENTO -->                           
-            <div style="display: flex; justify-content: center; width: 100%; max-width: 850px; box-sizing: border-box;">
+                
                 <div class="caixa-nota-aparelho" 
                     style="width: 100%; 
                     background: rgba(30, 41, 59, 0.05); 
@@ -228,38 +244,15 @@
                         font-family: system-ui, sans-serif; 
                         white-space: normal;">💡 
                         <span style="color: #F97316; 
-                        text-transform: uppercase; 
+                            text-transform: uppercase; 
                             font-size: 11px; 
                             letter-spacing: 0.5px; 
                             display: inline-block;
-                             margin-bottom: 4px;">Nota sobre o seu aparelho:
-                        </span>
-                        <br>
-                            As telas abaixo servem como modelo! O formato, a posição ou a cor
-                            dos botões reais podem mudar dependendo da marca, modelo do seu celular ou computador.
+                            margin-bottom: 4px;">Nota sobre o seu aparelho:</span><br>
+                        As telas abaixo servem como modelo! O formato, a posição ou a cor dos botões reais podem mudar dependendo da marca, modelo do seu celular ou computador.
                     </p>
                 </div>
-            </div>
-
-            </div>
-
-            <!-- O SIMULADOR AGORA VAI FICAR EXATAMENTE EMBAIXO DO AVISO -->
-            <div class="simulador-caixa" style="width: 100%; max-width: 850px; margin: 0 auto;">
-                <!-- Caixa amarela dinâmica para as instruções -->
-                <div class="instrucao" id="texto-instrucao"></div>
-                
-                <!-- O receptáculo dinâmico onde o layout do celular ou monitor é injetado -->
-                <div class="tela-celular" id="tela-treino"></div>
-                
-                <!-- O Pé de suporte físico do monitor (Ativado via JS apenas no PC) -->
-                <div class="pe-computador" id="suporte-monitor">
-                    <div class="haste"></div>
-                    <div class="base"></div>
-                </div>
-
-                <!-- Painel inferior dinâmico para avisos de Sucesso ou Erro -->
-                <div class="feedback" id="mensagem-feedback"></div>
-            </div>
+            </div>           
         </main>
 
     <!-- CARREGAMENTO DE TODOS OS COMPONENTES DO PORTAL (CELULAR) -->
