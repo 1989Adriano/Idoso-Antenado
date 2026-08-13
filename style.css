@@ -285,7 +285,7 @@ body {
 
 .tela-monitor-pc {
     width: 600px !important;       /* Expandido para espalhar bem os itens */
-    height: 420px !important;
+    height: 440px !important;
     min-height: 400px !important;
     background: #2A4365; 
     border: 16px solid #1E1E1E; 

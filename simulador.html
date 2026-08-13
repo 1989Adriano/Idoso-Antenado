@@ -190,7 +190,7 @@
             </div>
         </aside>
 
-        <!-- Área Central -->            
+        <!-- Área Central -->
         <main class="conteudo-principal" 
             style="display: flex; 
             flex-direction: column; 
@@ -201,8 +201,8 @@
             padding: 15px; 
             gap: 15px;">
             
-            <!-- TOPO DO CONTEÚDO PRINCIPAL -->
-            <div class="simulador-caixa" style="width: 100%; max-width: 850px; margin: 0 auto;">
+            <!-- O SIMULADOR FICA LIVRE NO TOPO DA TELA -->
+            <div class="simulador-caixa" style="width: 100%; max-width: 850px; margin: 0 auto; position: relative;">
                 <!-- Caixa amarela dinâmica para as instruções -->
                 <div class="instrucao" id="texto-instrucao"></div>
                 
@@ -214,18 +214,10 @@
                     <div class="haste"></div>
                     <div class="base"></div>
                 </div>
-
-                <!-- Painel inferior dinâmico para avisos de Sucesso ou Erro -->
-                <div class="feedback" id="mensagem-feedback"></div>
             </div>
 
-            <!-- 2️⃣ CONTÊINER PARA CENTRALIZAR O AVISO NO RODAPÉ -->
-            <div style="display: flex; 
-                justify-content: center; 
-                width: 100%; 
-                max-width: 850px; 
-                box-sizing: border-box;">
-                
+            <!-- SUA NOTA COM A BORDA LARANJA RECUPERADA (Fixa no rodapé do jogo) -->
+            <div style="display: flex; justify-content: center; width: 100%; max-width: 850px; box-sizing: border-box; margin-top: 10px;">
                 <div class="caixa-nota-aparelho" 
                     style="width: 100%; 
                     background: rgba(30, 41, 59, 0.05); 
@@ -243,17 +235,23 @@
                         text-align: justify; 
                         font-family: system-ui, sans-serif; 
                         white-space: normal;">💡 
-                        <span style="color: #F97316; 
-                            text-transform: uppercase; 
-                            font-size: 11px; 
-                            letter-spacing: 0.5px; 
-                            display: inline-block;
-                            margin-bottom: 4px;">Nota sobre o seu aparelho:</span><br>
+                        <span style="color: #F97316; text-transform: uppercase; font-size: 11px; letter-spacing: 0.5px; display: inline-block; margin-bottom: 4px;">Nota sobre o seu aparelho:</span><br>
                         As telas abaixo servem como modelo! O formato, a posição ou a cor dos botões reais podem mudar dependendo da marca, modelo do seu celular ou computador.
                     </p>
                 </div>
-            </div>           
+            </div>
+
+            <!-- POP-UP DE FEEDBACK (SÓ APARECE NA FRENTE QUANDO AVANÇA OU ERRA) -->
+            <div id="modal-feedback" class="feedback-modal-container" style="display: none;">
+                <div class="feedback-modal-caixa">
+                    <div class="feedback" id="mensagem-feedback"></div>
+                    <!-- Botão para fechar o pop-up e carregar o próximo passo -->
+                    <button onclick="window.fecharModalFeedback()" class="botao-grande botao-sucesso" style="margin-top: 20px; width: 100%;">Continuar Treinamento ➔</button>
+                </div>
+            </div>
+           
         </main>
+  
 
     <!-- CARREGAMENTO DE TODOS OS COMPONENTES DO PORTAL (CELULAR) -->
     <script src="./js/inss.js"></script>
@@ -280,11 +278,13 @@
     <script src="./js/comp_internet.js"></script>
     <script src="./js/comp_email.js"></script>    
 
-    <!-- MOTOR LÓGICO E CONTROLADOR DE EVENTOS DO SIMULADOR -->
+    <!-- MOTOR LÓGICO E CONTROLADOR DE EVENTOS DO SIMULADOR -->    
     <script>       
         window.pix = [];
         try {
-            if (typeof pix_pt1 !== 'undefined' && typeof pix_pt2 !== 'undefined' && typeof pix_pt6 !== 'undefined') {
+            if (typeof pix_pt1 !== 'undefined' && typeof pix_pt2 !== 'undefined' && 
+                typeof pix_pt3 !== 'undefined' && typeof pix_pt4 !== 'undefined' && 
+                typeof pix_pt5 !== 'undefined' && typeof pix_pt6 !== 'undefined') {
                 window.pix = [
                     ...pix_pt1,
                     ...pix_pt2,
@@ -302,7 +302,7 @@
         const urlParams = new URLSearchParams(window.location.search);
         const tutorialAtivo = urlParams.get('tema') || 'youtube'; 
 
-        // Controladores numéricos e flags booleanas de navigation
+        // Controladores numéricos e flags booleanas de navegação
         let passoAtual = 0;
         let podeAvancar = true;
 
@@ -332,7 +332,6 @@
             // MAPEAMENTO COMPLETO DE VARIÁVEIS COM SISTEMA ANTI-TRAVAMENTO
             let listaAtual = null;
             try {
-                // Rotas das trilhas do Celular
                 if (tutorialAtivo === 'inss' && typeof inss !== 'undefined') listaAtual = inss;
                 if (tutorialAtivo === 'golpes' && typeof golpes !== 'undefined') listaAtual = golpes;
                 if (tutorialAtivo === 'whatsapp' && typeof whatsapp !== 'undefined') listaAtual = whatsapp;
@@ -343,7 +342,6 @@
                 if (tutorialAtivo === 'uber' && typeof uber !== 'undefined') listaAtual = uber;
                 if (tutorialAtivo === 'youtube' && typeof youtube !== 'undefined') listaAtual = youtube;
 
-                // Novas Rotas das trilhas do Computador
                 if (tutorialAtivo === 'comp_basico' && typeof comp_basico !== 'undefined') listaAtual = comp_basico;
                 if (tutorialAtivo === 'comp_texto' && typeof comp_texto !== 'undefined') listaAtual = comp_texto;
                 if (tutorialAtivo === 'comp_arquivos' && typeof comp_arquivos !== 'undefined') listaAtual = comp_arquivos;
@@ -359,18 +357,7 @@
             if (!listaAtual) {
                 textoInstrucao.innerHTML = 'Módulo em Desenvolvimento';
                 telaTreino.innerHTML = `
-                    <div style="padding: 25px 15px; 
-                        text-align: center; 
-                        font-family: sans-serif; 
-                        color: #333; 
-                        height: 100%; 
-                        display: flex; 
-                        flex-direction: column; 
-                        align-items: center; 
-                        justify-content: center; 
-                        box-sizing: border-box; 
-                        background: #F4F7FA;"
-                    >                    
+                    <div style="padding: 25px 15px; text-align: center; font-family: sans-serif; color: #333; height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; box-sizing: border-box; background: #F4F7FA;">                    
                         <span style="font-size: 48px;">⚙️</span>
                         <p style="font-weight: bold; font-size: 16px; margin-top: 15px; color: #002B5C; margin-bottom: 5px;">Módulo Identificado!</p>
                         <p style="font-size: 13px; color: #666; line-height: 1.4; margin: 0;">
@@ -395,21 +382,24 @@
             window.renderizarPasso();
         }
 
+        // Função de erro totalmente integrada ao pop-up dinâmico
         window.mostrarErro = function(tipo) {
             const msg = document.getElementById('mensagem-feedback');
-            if (msg) {
+            const modal = document.getElementById('modal-feedback');
+            
+            if (msg && modal) {
                 msg.innerHTML = `<span class='erro'>⚠️ Cuidado! Isso pode ser perigoso ou um golpe. No mundo real, evite essa opção.</span>`;
+                modal.style.display = 'flex'; // Força o aviso de erro a saltar na frente da tela na hora!
             }
         }
 
-        // FUNÇÃO ADICIONAL: Aplica ou remove a classe 'escondido' no menu lateral
+        // Aplica ou remove a classe 'escondido' no menu lateral
         window.alternarMenuLateral = function() {
             const menu = document.querySelector('.menu-lateral');
             if (menu) {
                 menu.classList.toggle('escondido');
             }
         }
-
         window.avancarPasso = function() {
             if (!podeAvancar) return; 
             
@@ -443,27 +433,53 @@
             const feedback = listaAtual[passoAtual].feedback;
             passoAtual++;
 
-            // Injeta o alerta verde de sucesso na tela
             const msgFeedback = document.getElementById('mensagem-feedback');
             if (feedback && msgFeedback) {
                 let feedbackHTML = `<span class='sucesso'>${feedback}</span>`;
                 
-                // CONDICIONAL DE ENCERRAMENTO: Se for a última etapa, monta o botão 3D de finalização
                 if (passoAtual === listaAtual.length) {
                     feedbackHTML += `
-                        <div style="margin-top: 25px; 
-                            display: flex; 
-                            justify-content: center;">                         
-                            <button class="botao-grande botao-sucesso" 
-                                onclick="window.location.href='menu.html'">Finalizar Tutorial
-                            </button>
+                        <div style="margin-top: 25px; display: flex; justify-content: center;">                         
+                            <button class="botao-grande botao-sucesso" onclick="window.location.href='menu.html'">Finalizar Tutorial</button>
                         </div>`;
                 }
                 msgFeedback.innerHTML = feedbackHTML;
+                
+                // Faz a caixa de feedback de sucesso saltar na frente da tela na hora!
+                const modal = document.getElementById('modal-feedback');
+                if (modal) {
+                    modal.style.display = 'flex';
+                }
+            }
+        }
+
+        // Fecha o pop-up do feedback (Erro ou Sucesso) e carrega a próxima tela do simulador
+        window.fecharModalFeedback = function() {
+            const modal = document.getElementById('modal-feedback');
+            if (modal) {
+                modal.style.display = 'none'; // Esconde o pop-up da tela
             }
 
-            if (passoAtual < listaAtual.length) {
-                setTimeout(window.renderizarPasso, 4500); 
+            let listaAtual = null;
+            if (tutorialAtivo === 'whatsapp' && typeof whatsapp !== 'undefined') listaAtual = whatsapp;
+            if (tutorialAtivo === 'youtube' && typeof youtube !== 'undefined') listaAtual = youtube;
+            if (tutorialAtivo === 'inss' && typeof inss !== 'undefined') listaAtual = inss;
+            if (tutorialAtivo === 'golpes' && typeof golpes !== 'undefined') listaAtual = golpes;
+            if (tutorialAtivo === 'documentos' && typeof carteira !== 'undefined') listaAtual = carteira;
+            if (tutorialAtivo === 'pix' && typeof pix !== 'undefined') listaAtual = pix;
+            if (tutorialAtivo === 'mercado' && typeof mercado !== 'undefined') listaAtual = mercado;
+            if (tutorialAtivo === 'maps' && typeof maps !== 'undefined') listaAtual = maps;
+            if (tutorialAtivo === 'uber' && typeof uber !== 'undefined') listaAtual = uber;
+            if (tutorialAtivo === 'comp_basico' && typeof comp_basico !== 'undefined') listaAtual = comp_basico;
+            if (tutorialAtivo === 'comp_texto' && typeof comp_texto !== 'undefined') listaAtual = comp_texto;
+            if (tutorialAtivo === 'comp_arquivos' && typeof comp_arquivos !== 'undefined') listaAtual = comp_arquivos;
+            if (tutorialAtivo === 'comp_imprimir' && typeof comp_imprimir !== 'undefined') listaAtual = comp_imprimir;
+            if (tutorialAtivo === 'comp_internet' && typeof comp_internet !== 'undefined') listaAtual = comp_internet;
+            if (tutorialAtivo === 'comp_email' && typeof comp_email !== 'undefined') listaAtual = comp_email;
+
+            // Só atualiza os gráficos se o idoso de fato acertou e o jogo andou. Se foi erro, mantém a mesma tela!
+            if (listaAtual && passoAtual < listaAtual.length) {
+                window.renderizarPasso(); 
             } else {
                 podeAvancar = true;
             }
@@ -471,6 +487,7 @@
 
         // Inicializa o motor do portal
         window.renderizarPasso();
-    </script>
+    </script>    
+   
 </body>
 </html>
