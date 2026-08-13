@@ -462,4 +462,18 @@ body {
         height: 30px !important;
         font-size: 11px !important;
     }
+       
+    /* Barra de status do Windows compacta */
+    .barra-tarefas-inferior {
+        height: 30px !important;
+        font-size: 11px !important;
+    }
+
+    /* Força a cor de fundo padrão e remove a imagem pesada na versão mobile */
+    body {
+        background-color: var(--cor-fundo) !important;
+        background-image: none !important;
+    }
 }
+
+   
