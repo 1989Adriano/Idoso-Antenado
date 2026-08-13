@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Idoso Antenado - Bem-vindo</title>
 
-    <style>
+        <style>
         body, html {
             margin: 0;
             padding: 0;
@@ -15,7 +15,7 @@
             overflow: hidden;
         }
 
-        /* CONFIGURAÇÃO BASE (COMUM PARA TODOS) */
+        /* CONFIGURAÇÃO PADRÃO (FOCO INICIAL NO CELULAR) */
         .tela-abertura-container {
             width: 100%;
             height: 100%;
@@ -24,32 +24,27 @@
             align-items: center;
             justify-items: center;
             text-align: center;
-            padding: 40px;
+            padding: 30px 15px; /* Margens compactas ideais para smartphone */
             box-sizing: border-box;        
-            background-color: #1E293B; /* Fundo escuro de segurança caso a imagem demore */
+            background-color: #1E293B; /* Cor de fundo de segurança */
             background-repeat: no-repeat;
             background-position: center center;
             filter: brightness(0.90) contrast(1.15);
+            
+            /* 📱 O celular lê essa linha imediatamente e carrega o PNG direto */
+            background-image: url('./img/fundo_principal_cel.png?v=5');
+            background-size: cover; 
         }
 
-        /* ISOLAMENTO DO COMPUTADOR (TELAS GRANDES - ACIMA DE 768PX) */
+        /* INTERCEPTAÇÃO EXCLUSIVA PARA COMPUTADORES (ACIMA DE 768PX) */
         @media (min-width: 769px) {
-            .tela-abertura-container {               
-                background-image: url('./img/fundo_principal.jpeg?v=3');
-                background-size: 115% auto;   
-            }
-        }
-
-        /*  ISOLAMENTO DO CELULAR (TELAS PEQUENAS - ATÉ 768PX) */
-        @media (max-width: 768px) {
             .tela-abertura-container {
-                /*  Alterado para .webp para carregar instantaneamente */
-                background-image: url('./img/fundo_principal_cel.webp');
-                background-size: cover; 
-                padding: 30px 15px; 
+                /* O PC, com melhor conexão, faz a troca pelo JPEG pesado */
+                background-image: url('./img/fundo_principal.jpeg?v=5');
+                background-size: 115% auto;   
+                padding: 70px; /* Margem original expandida para monitores */
             }
         }
-
 
         /* Alinhamento dos itens nas linhas do Grid */
         .splash-emojis { grid-row: 2; }
@@ -125,11 +120,11 @@
         }
     </style>
 
+
 </head>
 
 <body>
-    <div class="tela-abertura-container">  
-        <div class="splash-emojis">👵📱👴</div>
+    <div class="tela-abertura-container">         
         <h1 class="splash-titulo">Idoso Antenado</h1>
         <p class="splash-subtitulo">
             O seu guia para aprender <br>a usar o celular e o computador<br>sem medo e com total segurança!
