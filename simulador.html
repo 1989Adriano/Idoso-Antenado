@@ -396,7 +396,8 @@
                 menu.classList.toggle('escondido');
             }
         }
-        window.avancarPasso = function() {
+
+          window.avancarPasso = function() {
             if (!podeAvancar) return; 
             
             let listaAtual = null;
@@ -430,56 +431,41 @@
             passoAtual++;
 
             const msgFeedback = document.getElementById('mensagem-feedback');
-            if (feedback && msgFeedback) {
-                let feedbackHTML = `<span class='sucesso'>${feedback}</span>`;
-                
+            const modal = document.getElementById('modal-feedback');
+
+            if (feedback && msgFeedback && modal) {
+                // Injeta apenas o texto puro do feedback de sucesso
+                msgFeedback.innerHTML = `<span class='sucesso'>${feedback}</span>`;
+                modal.style.display = 'flex'; // Abre o pop-up na frente para o idoso ler o feedback
+
+                // SE FOR O ÚLTIMO PASSO: Espera 4.5 segundos para o idoso ler e volta pro menu sozinho
                 if (passoAtual === listaAtual.length) {
-                    feedbackHTML += `
-                        <div style="margin-top: 25px; display: flex; justify-content: center;">                         
-                            <button class="botao-grande botao-sucesso" onclick="window.location.href='menu.html'">Finalizar Tutorial</button>
-                        </div>`;
-                }
-                msgFeedback.innerHTML = feedbackHTML;
-                
-                // Faz a caixa de feedback de sucesso saltar na frente da tela na hora!
-                const modal = document.getElementById('modal-feedback');
-                if (modal) {
-                    modal.style.display = 'flex';
+                    setTimeout(function() {
+                        window.location.href = 'menu.html';
+                    }, 4500);
+                } else {
+                    // FLUXO NORMAL: Espera os 4.5 segundos padrão do jogo, fecha o pop-up e renderiza o próximo cenário
+                    setTimeout(function() {
+                        modal.style.display = 'none';
+                        window.renderizarPasso();
+                    }, 4500);
                 }
             }
         }
 
-        // Fecha o pop-up do feedback (Erro ou Sucesso) e carrega a próxima tela do simulador
+        // Apenas fecha o aviso se o idoso errar
         window.fecharModalFeedback = function() {
             const modal = document.getElementById('modal-feedback');
             if (modal) {
-                modal.style.display = 'none'; // Esconde o pop-up da tela
+                modal.style.display = 'none'; // Esconde o pop-up de erro da tela
             }
-
-            let listaAtual = null;
-            if (tutorialAtivo === 'whatsapp' && typeof whatsapp !== 'undefined') listaAtual = whatsapp;
-            if (tutorialAtivo === 'youtube' && typeof youtube !== 'undefined') listaAtual = youtube;
-            if (tutorialAtivo === 'inss' && typeof inss !== 'undefined') listaAtual = inss;
-            if (tutorialAtivo === 'golpes' && typeof golpes !== 'undefined') listaAtual = golpes;
-            if (tutorialAtivo === 'documentos' && typeof carteira !== 'undefined') listaAtual = carteira;
-            if (tutorialAtivo === 'pix' && typeof pix !== 'undefined') listaAtual = pix;
-            if (tutorialAtivo === 'mercado' && typeof mercado !== 'undefined') listaAtual = mercado;
-            if (tutorialAtivo === 'maps' && typeof maps !== 'undefined') listaAtual = maps;
-            if (tutorialAtivo === 'uber' && typeof uber !== 'undefined') listaAtual = uber;
-            if (tutorialAtivo === 'comp_basico' && typeof comp_basico !== 'undefined') listaAtual = comp_basico;
-            if (tutorialAtivo === 'comp_texto' && typeof comp_texto !== 'undefined') listaAtual = comp_texto;
-            if (tutorialAtivo === 'comp_arquivos' && typeof comp_arquivos !== 'undefined') listaAtual = comp_arquivos;
-            if (tutorialAtivo === 'comp_imprimir' && typeof comp_imprimir !== 'undefined') listaAtual = comp_imprimir;
-            if (tutorialAtivo === 'comp_internet' && typeof comp_internet !== 'undefined') listaAtual = comp_internet;
-            if (tutorialAtivo === 'comp_email' && typeof comp_email !== 'undefined') listaAtual = comp_email;
-
-            // Só atualiza os gráficos se o idoso de fato acertou e o jogo andou. Se foi erro, mantém a mesma tela!
-            if (listaAtual && passoAtual < listaAtual.length) {
-                window.renderizarPasso(); 
-            } else {
-                podeAvancar = true;
-            }
+            podeAvancar = true; // Libera o clique para o idoso tentar de novo
         }
+
+        // Inicializa o motor do portal
+        window.renderizarPasso();
+    </script>
+
 
         // Inicializa o motor do portal
         window.renderizarPasso();
