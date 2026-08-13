@@ -1,6 +1,4 @@
-/* ==========================================
-    VARIÁVEIS E CONFIGURAÇÕES GERAIS
-   ========================================== */
+/*  VARIÁVEIS E CONFIGURAÇÕES GERAIS DE FUNDO DO PORTAL */
 :root {
     --cor-fundo: #EBF1F7;
     --cor-texto: #1A1A1A;
@@ -15,14 +13,11 @@
 
 body {
     font-family: Arial, Helvetica, sans-serif;
-    
-    /* EXIBE A FOTO PURA NO FUNDO DO SITE */
-    background-image: url('img/fundo.jpeg');
+    background-image: url('../img/fundo.jpeg'); /* Plano de fundo padrão do portal */
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    
     color: var(--cor-texto);
     font-size: 20px;
     line-height: 1.6;
@@ -34,69 +29,7 @@ body {
     min-height: 100vh;
 }
 
-@keyframes flutuar {
-    0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(-10px); }
-}
-
-/* TELA DE ABERTURA (SPLASH SCREEN) */
-.tela-abertura-container {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url('img/fundo.jpeg');
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;    
-    z-index: 9999;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    padding: 20px;
-    box-sizing: border-box;
-    transition: opacity 0.5s ease, visibility 0.5s;
-}
-
-.splash-emojis {
-    font-size: 90px; 
-    margin-bottom: 20px; 
-    animation: flutuar 3s ease-in-out infinite;
-}
-
-.splash-titulo {
-    font-size: 48px; 
-    color: white; 
-    margin-bottom: 10px; 
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.4);
-}
-
-.splash-subtitulo {
-    color: white; 
-    font-size: 24px; 
-    opacity: 0.9; 
-    max-width: 400px; 
-    margin-bottom: 40px; 
-    font-weight: bold;
-}
-
-.btn-splash-entrada {
-    background-color: #FD7E14;
-    color: white;
-    font-size: 26px;
-    font-weight: bold;
-    padding: 20px 45px;
-    border: none;
-    border-radius: 50px;
-    box-shadow: 0 8px 0 #C45A00, 0 15px 25px rgba(0,0,0,0.3);
-    cursor: pointer;
-    transition: all 0.1s ease;
-}
-
-/*  CABEÇALHO E ESTRUTURA DO TOPO  */
+/* ESTRUTURA DA BARRA SUPERIOR E CABEÇALHO DO MENU */
 .barra-navegacao {
     background-color: var(--cor-azul-escuro);
     padding: 8px 24px !important;
@@ -107,12 +40,13 @@ body {
     z-index: 50;
     height: 55px !important;        
     box-sizing: border-box;
+    width: 100%;
 }
 
 .menu-logo {
     color: white;
     font-weight: bold;
-    font-size: 30px;
+    font-size: 24px;
     text-decoration: none;
     display: flex;
     align-items: center;
@@ -155,7 +89,7 @@ body {
     text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
 }
 
-/* LAYOUT LADO A LADO JUNTOS */
+/* ARQUITETURA LADO A LADO DO PORTAL NO COMPUTADOR (Original Intacta) */
 .portal-flex-layout {
     display: flex;
     flex-direction: row;
@@ -166,7 +100,6 @@ body {
     max-width: 1200px;
     padding: 0 20px 40px 20px;
     box-sizing: border-box;
-    flex-wrap: wrap;
 }
 
 .coluna-aprendizado {
@@ -185,7 +118,7 @@ body {
     box-shadow: 0 3px 6px rgba(0,0,0,0.1);
 }
 
-/* SMARTPHONE (CELULAR) */
+/* VISUAL DO SMARTPHONE SIMULADO (CELULAR HOME) */
 .tela-celular-home {
     width: 350px;
     height: 620px;
@@ -274,7 +207,7 @@ body {
     text-overflow: ellipsis;
 }
 
-/* MONITOR (COMPUTADOR) */
+/* VISUAL DO MONITOR SIMULADO NO COMPUTADOR DE MESA */
 .monitor-estrutura-alinhamento {
     display: flex;
     flex-direction: column;
@@ -284,9 +217,9 @@ body {
 }
 
 .tela-monitor-pc {
-    width: 600px !important;       
-    height: 420px !important;      
-    min-height: 420px !important;
+    width: 540px !important;       
+    height: 360px !important;      
+    min-height: 360px !important;
     background-color: #2A4365;
     border-radius: 12px;
     box-shadow: 0 0 0 16px #1E1E1E, 0 20px 40px rgba(0,0,0,0.4);
@@ -298,8 +231,18 @@ body {
     box-sizing: border-box;
 }
 
+.grade-apps-monitor {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 25px !important;              
+    flex: 1;
+    box-sizing: border-box;
+    align-content: start; 
+}
+
 .grade-apps-monitor .app-item {
-    transform: scale(0.95) !important;
+    transform: scale(1) !important; /* Ícones grandes no monitor quando visto pelo computador */
     transform-origin: center center !important;
 }
 
@@ -400,7 +343,7 @@ body {
 @media (max-width: 768px) {
     /* Diminui o título da barra de navegação do menu para não estourar */
     .barra-navegacao h1 {
-        font-size: 18px !important; 
+        font-size: 15px !important; 
         text-align: center !important;
         padding: 5px !important;
     }
@@ -418,7 +361,7 @@ body {
     /* Altera o layout de lado a lado para empilhado de cima para baixo */
     .portal-flex-layout {
         display: flex !important;
-        flex-direction: column !important;
+        flex-direction: column !important; /* Empilha as colunas verticalmente */
         align-items: center !important;
         justify-content: flex-start !important;
         width: 100% !important;
@@ -507,6 +450,7 @@ body {
         padding: 10px !important;
     }
 
+    /* 📱 🌟 Reduz os ícones apenas no visor móvel do celular real para libertar a pasta */
     .grade-apps-monitor .app-item {
         transform: scale(0.85) !important; 
         margin: -2px !important;
@@ -518,4 +462,3 @@ body {
         font-size: 11px !important;
     }
 }
-
