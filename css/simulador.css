@@ -392,8 +392,9 @@ body {
     /* Barra de navegação superior compacta */
     .barra-navegacao {
         justify-content: space-between !important;
-        padding: 15px 20px !important;
-        min-height: 80px !important;
+        padding: 8px 12px !important;  
+        min-height: 55px !important;    
+        height: auto !important;
     }   
     
     /* Esconde o h1 gigante do topo no celular para sobrar espaço útil */
@@ -402,21 +403,21 @@ body {
     }
 
     .btn-controle-menu {
-        font-size: 13px !important;
-        padding: 0 12px !important;
-        height: 42px !important;
+        font-size: 13px !important; 
+        padding: 0 10px !important; 
+        height: 36px !important;    
     }
 
     /* Encolhe the botão voltar na extrema direita */
     .btn-controle-menu,
     .btn-voltar-menu {
-        font-size: 13px !important;       /* Mesma largura de fonte para ambos */
-        height: 42px !important;         /* Força exatamente a mesma altura vertical */
-        padding: 0 12px !important;       
+        font-size: 13px !important;      
+        height: 36px !important;        
+        padding: 0 10px !important;      
         display: inline-flex !important;
         align-items: center !important;
         justify-content: center !important;
-        border-radius: 20px !important;   /* Arredondamento harmônico igual */
+        border-radius: 20px !important;   
         box-sizing: border-box !important;
         line-height: 1 !important;       
     }
@@ -454,7 +455,7 @@ body {
     /* Encolhe o celular simulado para 265px */
     .tela-celular {
         max-width: 100% !important;
-        width: 265px !important;      
+        width: 265px !important;       
         height: 400px !important;      
         margin: 0 auto 25px auto !important; 
     }
@@ -465,7 +466,7 @@ body {
         max-width: 320px !important; 
         height: 240px !important;
         min-height: 240px !important;
-        margin: 0 auto 10px auto !important; 
+        margin: 0 auto 10px auto !important;
     }
 
     /* Encolhe a moldura cinza do simulador que envolve os aparelhos */
@@ -491,3 +492,4 @@ body {
         font-size: 11px !important;
     }
 }
+
