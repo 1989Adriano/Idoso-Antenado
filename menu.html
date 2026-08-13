@@ -9,16 +9,27 @@
 <body>
 
     <!-- BARRA DE NAVEGAÇÃO COM TÍTULO INTEGRADO E CENTRALIZADO -->    
-   <nav class="barra-navegacao">
-        <a href="index.html" class="menu-logo">IA - Idoso Antenado</a>        
+   <nav class="barra-navegacao" 
+         style="display: flex; 
+         justify-content: flex-start; 
+         align-items: center; 
+         width: 100%; 
+         box-sizing: border-box; 
+         border-bottom: 4px solid var(--cor-laranja) !important; /* 🌟 BORDA LARANJA DE VOLTA */
+         position: relative;">
+         
+        <a href="index.html" class="menu-logo">IA - Idoso Antenado</a>    
      
-        <h1 class="titulo-treinamento-menu">
+        <h1 class="titulo-treinamento-menu" 
+            style="color: #FFFFFF !important; 
+            font-weight: 900; 
+            margin: 0; 
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.5);">
            👵 Espaço de Treinamento! 👴
         </h1>
     </nav>
-
-    <!-- CABEÇALHO COM BOTÃO RETRÁTIL CONTRA POLUIÇÃO VISUAL -->
-    <header class="boas-vindas-painel">
+   
+    <header class="boas-vindas-painel" style="margin-top: 0 !important;">
         <!-- Título principal que funciona como botão para o idoso clicar -->
         <div onclick="window.alternarAvisosPainel()" class="painel-gatilho-clique" title="Clique para ocultar ou exibir os avisos">
             <p class="painel-texto-destaque" style="font-size: 35px; color: #d1850a; font-weight: bold; margin: 0;">
