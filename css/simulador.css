@@ -423,21 +423,20 @@ body {
     /* Encolhe the botão voltar na extrema direita */
     .btn-controle-menu,
     .btn-voltar-menu {
-        font-size: 13px !important;       
-        height: 36px !important;         
-        padding: 0 10px !important;       
-        display: inline-flex !important;
-        align-items: center !important;
+        font-size: 13px !important;     
+        height: 36px !important;       
+        padding: 0 16px !important;   
+        display: inline-flex !important;  
+        align-items: center !important;  
         justify-content: center !important;
-        border-radius: 20px !important;   
+        border-radius: 20px !important;  
         box-sizing: border-box !important;
-        line-height: 1 !important;        
+        line-height: 1 !important;  
     }
 
     /* Ajuste fino na sombra e margem do botão voltar para casar com o do menu */
     .btn-voltar-menu {
         box-shadow: 0 3px 0 #C45A00, 0 4px 6px rgba(0,0,0,0.15) !important;
-        line-height: 1 !important; 
     }
 
     /* Calibração da nota de aviso do topo */
