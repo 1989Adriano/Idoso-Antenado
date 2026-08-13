@@ -284,8 +284,9 @@ body {
 }
 
 .tela-monitor-pc {
-    width: 520px; 
-    height: 340px; 
+    width: 600px !important;       /* Expandido para espalhar bem os itens */
+    height: 400px !important;      /* Os 40px a mais salvam a pasta de ser engolida */
+    min-height: 400px !important;
     background: #2A4365; 
     border: 16px solid #1E1E1E; 
     border-radius: 12px; 
@@ -455,9 +456,9 @@ body {
 
     /* Força TODOS os parágrafos brancos do painel a ficarem pequenos no celular */
     .boas-vindas-painel .painel-texto-destaque {
-        font-size: 14px !important; /* Tamanho compacto e confortável para o smartphone */
+        font-size: 14px !important; 
         line-height: 1.5 !important;
-        color: #FFFFFF !important; /* Garante o contraste correto no fundo escuro */
+        color: #FFFFFF !important; 
         margin: 5px 0 !important;
         padding: 0 10px !important;
     }
@@ -485,18 +486,18 @@ body {
         font-size: 11px !important; 
     }
 
-    /* Encolhe de forma simétrica a moldura interna do monitor de PC */
+    /* Aumentado a altura de 220px para 240px no celular para acomodar o monitor maior do PC */
     .tela-monitor-pc {
         width: 320px !important; 
-        height: 220px !important;
-        min-height: 220px !important;
+        height: 240px !important;
+        min-height: 240px !important;
         transform: scale(1) !important;
     }
 
     /* Ajusta os tamanhos das bases físicas do monitor */
     .suporte-central-monitor {
         width: 40px !important;
-        height: 25px !important;
+        height: 20px !important;
     }
 
     .base-mesa-monitor {
@@ -521,3 +522,4 @@ body {
         font-size: 11px !important;
     }
 }
+
