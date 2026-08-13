@@ -395,5 +395,30 @@ body {
     .menu-lateral div[style*="font-size: 13px"] {
         font-size: 11px !important;     
     }
+
+    
+    .tela-celular {
+        max-width: 100% !important;
+        margin: 15px auto !important;
+    }
+    
+    .tela-computador-simulada {
+        width: 100% !important;
+        max-width: 480px !important; 
+        height: auto !important;
+        min-height: 300px !important;
+        margin: 15px auto !important;
+        transform: scale(0.9) !important;
+        transform-origin: center top !important;
+    }
+   
+    .simulador-caixa {
+        width: 100% !important;
+        min-width: 100% !important;
+        max-width: 100% !important;
+        padding: 15px !important; 
+    }
 }
+
+
 
