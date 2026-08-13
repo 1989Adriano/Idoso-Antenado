@@ -9,9 +9,9 @@
 <body>
 
     <!-- BARRA DE NAVEGAÇÃO COM TÍTULO INTEGRADO E CENTRALIZADO -->    
-    <nav class="barra-navegacao" 
+      <nav class="barra-navegacao" 
          style="display: flex; 
-         justify-content: space-between; 
+         justify-content: flex-start; /* 🌟 Alterado para alinhar tudo colado à esquerda */
          align-items: center; 
          width: 100%; 
          box-sizing: border-box; 
@@ -19,22 +19,20 @@
          position: relative;">
          
         <a href="index.html" class="menu-logo">IA - Idoso Antenado</a>        
-        <h1 class="titulo-treinamento-menu" style="color: white; font-weight: 900; margin: 0; text-align: center; flex-grow: 1; text-shadow: 1px 1px 2px rgba(0,0,0,0.5);">
+     
+        <h1 class="titulo-treinamento-menu" style="color: white; font-weight: 900; margin: 0; text-shadow: 1px 1px 2px rgba(0,0,0,0.5);">
            👵 Espaço de Treinamento! 👴
-        </h1>
-        
-        <!-- Bloco invisível apenas para empurrar o H1 perfeitamente para o centro da barra -->
-        <div style="width: 250px; visibility: hidden;" class="sm-esconder-div"></div>
+        </h1>      
     </nav>
 
     <!-- CABEÇALHO (PAINEL DE BOAS-VINDAS) -->
-    <header class="boas-vindas-painel">
+    <header class="boas-vindas-painel" style="margin-top: 0 !important;">
         <p class="painel-texto-destaque" 
-            style="font-size: 35px; color: #d1850a; font-weight: bold;">
-            Clique o Aperte o ícone que você deseja aprender a usar hoje.
+            style="font-size: 35px; color: #d1850a; font-weight: bold; margin-top: 5px;">
+            Clique no ícone que você deseja aprender a usar hoje.
         </p>
-        <p class="painel-texto-destaque">Pode haver variações de um aparelho: modelo, computador, celular e marcas diferentes com oque você possui.</p>
-        <p class="painel-texto-destaque">
+        <p class="painel-texto-destaque" style="margin-top: 5px; font-size: 18px;">Pode haver variações de um aparelho: modelo, computador, celular e marcas diferentes com oque você possui.</p>
+        <p class="painel-texto-destaque" style="margin-top: 5px; font-size: 18px; margin-bottom: 12px;">
             O intuito é chegar o mais próximo possível para o entendimento e a orientação. Na persistência da dúvida, procure orientação profissional.
         </p>
     </header>
