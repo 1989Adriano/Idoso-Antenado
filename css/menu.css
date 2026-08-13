@@ -340,13 +340,55 @@ body {
     box-shadow: 0 4px 10px rgba(0,0,0,0.2);
 }
 
+.painel-gatilho-clique {
+    cursor: pointer;
+    display: inline-block;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.painel-gatilho-clique:hover p {
+    opacity: 0.85;
+}
+
+#seta-painel {
+    font-size: 20px;
+    display: inline-block;
+    margin-left: 10px;
+    transition: transform 0.2s ease;
+}
+
+.avisos-painel-conteudo {
+    max-height: 500px; /* Altura máxima limite do texto aberto */
+    overflow: hidden;
+    transition: max-height 0.35s ease-in-out, opacity 0.3s ease;
+    opacity: 1;
+}
+
+/* Classe injetada via JS que faz os textos brancos sumirem de forma suave */
+.avisos-painel-conteudo.recolhido {
+    max-height: 0 !important;
+    opacity: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
 /* Celular */
-@media (max-width: 768px) {
-    /* Diminui o título da barra de navegação do menu para não estourar */
+@media (max-width: 768px) {   
+    .barra-navegacao {
+        flex-direction: column !important;
+        height: auto !important;
+        padding: 10px 15px !important;
+        gap: 6px !important;
+    }
+
+     /* Diminui o título da barra de navegação do menu para não estourar */
     .barra-navegacao h1 {
         font-size: 15px !important; 
         text-align: center !important;
-        padding: 5px !important;
+        padding: 0 !important;
+        margin: 0 !important;
+        display: block !important; /* Garante que ele apareça embaixo */
     }
 
     /* Oculta a div invisível de 250px no celular para liberar espaço real */

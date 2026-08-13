@@ -9,32 +9,31 @@
 <body>
 
     <!-- BARRA DE NAVEGAÇÃO COM TÍTULO INTEGRADO E CENTRALIZADO -->    
-      <nav class="barra-navegacao" 
-         style="display: flex; 
-         justify-content: flex-start; /* 🌟 Alterado para alinhar tudo colado à esquerda */
-         align-items: center; 
-         width: 100%; 
-         box-sizing: border-box; 
-         border-bottom: 4px solid var(--cor-laranja); 
-         position: relative;">
-         
+   <nav class="barra-navegacao">
         <a href="index.html" class="menu-logo">IA - Idoso Antenado</a>        
      
-        <h1 class="titulo-treinamento-menu" style="color: white; font-weight: 900; margin: 0; text-shadow: 1px 1px 2px rgba(0,0,0,0.5);">
+        <h1 class="titulo-treinamento-menu">
            👵 Espaço de Treinamento! 👴
-        </h1>      
+        </h1>
     </nav>
 
-    <!-- CABEÇALHO (PAINEL DE BOAS-VINDAS) -->
-    <header class="boas-vindas-painel" style="margin-top: 0 !important;">
-        <p class="painel-texto-destaque" 
-            style="font-size: 35px; color: #d1850a; font-weight: bold; margin-top: 5px;">
-            Clique no ícone que você deseja aprender a usar hoje.
-        </p>
-        <p class="painel-texto-destaque" style="margin-top: 5px; font-size: 18px;">Pode haver variações de um aparelho: modelo, computador, celular e marcas diferentes com oque você possui.</p>
-        <p class="painel-texto-destaque" style="margin-top: 5px; font-size: 18px; margin-bottom: 12px;">
-            O intuito é chegar o mais próximo possível para o entendimento e a orientação. Na persistência da dúvida, procure orientação profissional.
-        </p>
+    <!-- CABEÇALHO COM BOTÃO RETRÁTIL CONTRA POLUIÇÃO VISUAL -->
+    <header class="boas-vindas-painel">
+        <!-- Título principal que funciona como botão para o idoso clicar -->
+        <div onclick="window.alternarAvisosPainel()" class="painel-gatilho-clique" title="Clique para ocultar ou exibir os avisos">
+            <p class="painel-texto-destaque" style="font-size: 35px; color: #d1850a; font-weight: bold; margin: 0;">
+                Clique no ícone que você deseja aprender a usar hoje. <span id="seta-painel">🔼</span>
+            </p>
+        </div>
+   
+        <div id="container-avisos-extras" class="avisos-painel-conteudo">
+            <p class="painel-texto-destaque" style="margin-top: 15px; font-size: 18px;">
+                Pode haver variações de um aparelho: modelo, computador, celular e marcas diferentes com o que você possui.
+            </p>
+            <p class="painel-texto-destaque" style="margin-top: 5px; font-size: 18px; margin-bottom: 12px;">
+                O intuito é chegar o mais próximo possível para o entendimento e a orientação. Na persistência da dúvida, procure orientação profissional.
+            </p>
+        </div>
     </header>
 
     <!-- CONTEXTO PRINCIPAL: CELULAR E MONITOR LADO A LADO -->
@@ -145,6 +144,21 @@
             if (tela) {
                 tela.style.opacity = '0';
                 setTimeout(() => { tela.style.visibility = 'hidden'; }, 500);
+            }
+        }
+
+        window.alternarAvisosPainel = function() {
+            const container = document.getElementById('container-avisos-extras');
+            const seta = document.getElementById('seta-painel');
+            
+            if (container && seta) {
+                if (container.classList.contains('recolhido')) {
+                    container.classList.remove('recolhido');
+                    seta.innerHTML = '🔼'; // Seta para cima indica que está aberto
+                } else {
+                    container.classList.add('recolhido');
+                    seta.innerHTML = '🔽'; // Seta para baixo indica que está fechado
+                }
             }
         }
     </script>
