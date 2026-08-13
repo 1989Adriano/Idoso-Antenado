@@ -27,12 +27,11 @@
             background-color: transparent;
 
             /* IMAGEM PADRÃO PARA COMPUTADORES */
-            background-image: url('img/fundo_principal.jpeg');
+            background-image: url('img/fundo_principal.jpeg?v=2');
             background-repeat: no-repeat;
             background-position: center center;
             background-size: 115% auto;   
-            filter: brightness(0.90) contrast(1.15);
-        }
+}
 
         /* Alinhamento dos itens nas linhas do Grid */
         .splash-emojis { grid-row: 2; }
@@ -109,12 +108,11 @@
        
         @media (max-width: 768px) {
             .tela-abertura-container {
-                /* Troca automática para a imagem vertical de celular */
-                background-image: url('img/fundo_principal_cel.png?v=1');
-                background-size: cover; /* Obriga a imagem a cobrir 100% do celular */
+                background-image: url('img/fundo_principal_cel.png?v=2'); 
+                background-size: cover; 
                 background-position: center center;
-                padding: 30px 15px; /* Mais espaço livre para os elementos respirarem */
-            }
+                padding: 30px 15px; 
+                }      
 
             .splash-titulo {
                 font-size: min(12vw, 42px); /* Letra ligeiramente mais compacta para não quebrar linha */
