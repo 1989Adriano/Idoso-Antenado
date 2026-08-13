@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Idoso Antenado - Bem-vindo</title>
+
     <style>
         body, html {
             margin: 0;
@@ -14,6 +15,7 @@
             overflow: hidden;
         }
 
+        /* CONFIGURAÇÃO BASE (COMUM PARA TODOS) */
         .tela-abertura-container {
             width: 100%;
             height: 100%;
@@ -24,14 +26,28 @@
             text-align: center;
             padding: 40px;
             box-sizing: border-box;        
-            background-color: transparent;
-
-            /* IMAGEM PADRÃO PARA COMPUTADORES */
-            background-image: url('img/fundo_principal.jpeg?v=2');
+            background-color: #1E293B; /* Fundo escuro de segurança caso a imagem demore */
             background-repeat: no-repeat;
             background-position: center center;
-            background-size: 115% auto;   
-}
+            filter: brightness(0.90) contrast(1.15);
+        }
+
+        /* ISOLAMENTO DO COMPUTADOR (TELAS GRANDES - ACIMA DE 768PX) */
+        @media (min-width: 769px) {
+            .tela-abertura-container {
+                background-image: url('img/fundo_principal.jpeg?v=3');
+                background-size: 115% auto;   
+            }
+        }
+
+        /* ISOLAMENTO DO CELULAR (TELAS PEQUENAS - ATÉ 768PX) */
+        @media (max-width: 768px) {
+            .tela-abertura-container {
+                background-image: url('img/fundo_principal_cel.png?v=3');
+                background-size: cover; 
+                padding: 30px 15px; 
+            }
+        }
 
         /* Alinhamento dos itens nas linhas do Grid */
         .splash-emojis { grid-row: 2; }
@@ -105,36 +121,13 @@
             0%, 100% { transform: translateY(0); }
             50% { transform: translateY(-10px); }
         }
-       
-        @media (max-width: 768px) {
-            .tela-abertura-container {
-                background-image: url('img/fundo_principal_cel.png?v=2'); 
-                background-size: cover; 
-                background-position: center center;
-                padding: 30px 15px; 
-                }      
+    </style>
 
-            .splash-titulo {
-                font-size: min(12vw, 42px); /* Letra ligeiramente mais compacta para não quebrar linha */
-                margin-bottom: 10px;
-            }
-
-            .splash-subtitulo {
-                font-size: min(5.5vw, 18px); /* Calibrado para o idoso ler com conforto no celular */
-                margin-bottom: 25px;
-            }
-
-            .btn-splash-entrada {
-                font-size: min(6vw, 22px);
-                padding: 16px 36px; /* Botão ligeiramente mais compacto, ideal para o toque dos dedos */
-            }
-        }
-   </style>
 </head>
 
 <body>
-    <div class="tela-abertura-container">     
-       
+    <div class="tela-abertura-container">
+        <div class="splash-emojis">👵📱👴</div>       
         <h1 class="splash-titulo">Idoso Antenado</h1>
         <p class="splash-subtitulo">
             O seu guia para aprender <br>a usar o celular e o computador<br>sem medo e com total segurança!
