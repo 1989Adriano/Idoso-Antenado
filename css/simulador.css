@@ -392,8 +392,8 @@ body {
     /* Barra de navegação superior compacta */
     .barra-navegacao {
         justify-content: space-between !important;
-        padding: 8px 12px !important;  
-        min-height: 55px !important;    
+        padding: 8px 12px !important;    
+        min-height: 55px !important;     
         height: auto !important;
     }   
     
@@ -411,15 +411,15 @@ body {
     /* Encolhe the botão voltar na extrema direita */
     .btn-controle-menu,
     .btn-voltar-menu {
-        font-size: 13px !important;      
-        height: 36px !important;        
-        padding: 0 10px !important;      
+        font-size: 13px !important;       
+        height: 36px !important;         
+        padding: 0 10px !important;       
         display: inline-flex !important;
         align-items: center !important;
         justify-content: center !important;
         border-radius: 20px !important;   
         box-sizing: border-box !important;
-        line-height: 1 !important;       
+        line-height: 1 !important;        
     }
 
     /* Ajuste fino na sombra e margem do botão voltar para casar com o do menu */
@@ -435,7 +435,7 @@ body {
     }
     
     .texto-nota-aparelho span {
-        font-size: 12px !important;    /* Título laranja compacto */
+        font-size: 12px !important;    
     }
 
     /* Reduz a caixa amarela de instruções de passos */
@@ -448,15 +448,15 @@ body {
     }
     
     .instrucao strong {
-        font-size: 16px !important;    /* Destaque do PASSO X ligeiramente maior */
+        font-size: 16px !important;    
         color: #F97316 !important;
     }
 
-    /* Encolhe o celular simulado para 265px */
+    /* Expande a largura para 310px para impedir cortes de informações nas laterais */
     .tela-celular {
         max-width: 100% !important;
-        width: 265px !important;       
-        height: 400px !important;      
+        width: 310px !important;       /* Respiro perfeito que não come textos internos */
+        height: 450px !important;      /* Altura ajustada proporcionalmente */
         margin: 0 auto 25px auto !important; 
     }
 
@@ -466,7 +466,7 @@ body {
         max-width: 320px !important; 
         height: 240px !important;
         min-height: 240px !important;
-        margin: 0 auto 10px auto !important;
+        margin: 0 auto 10px auto !important; 
     }
 
     /* Encolhe a moldura cinza do simulador que envolve os aparelhos */
