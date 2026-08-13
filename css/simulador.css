@@ -409,11 +409,22 @@ body {
     }
 
     /* Encolhe o botão voltar na extrema direita */
+    .btn-controle-menu,
     .btn-voltar-menu {
-        font-size: 11px !important;    
-        padding: 6px 12px !important;   
-        border-radius: 15px !important; 
-        box-shadow: 0 2px 0 #C45A00, 0 3px 5px rgba(0,0,0,0.15) !important;
+        font-size: 13px !important;       /* Mesma largura de fonte para ambos */
+        height: 42px !important;         /* Força exatamente a mesma altura vertical */
+        padding: 0 16px !important;       /* Alinha os espaçamentos internos nas laterais */
+        display: inline-flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        border-radius: 20px !important;   /* Arredondamento harmônico igual */
+        box-sizing: border-box !important;
+    }
+
+    /* Ajuste fino na sombra e margem do botão voltar para casar com o do menu */
+    .btn-voltar-menu {
+        box-shadow: 0 3px 0 #C45A00, 0 4px 6px rgba(0,0,0,0.15) !important;
+        line-height: normal !important;
     }
 
     /* Calibração da nota de aviso do topo */
@@ -441,9 +452,10 @@ body {
 
     /* Encolhe o celular simulado para 290px */
     .tela-celular {
-        width: 290px !important; 
-        height: 440px !important; 
-        margin: 10px auto !important; 
+        max-width: 100% !important;
+        width: 290px !important;       
+        height: 440px !important;      
+        margin: 10px auto 25px auto !important;
     }
 
     /* Encolhe também o monitor simulado de PC para caber no visor se necessário */
@@ -460,7 +472,8 @@ body {
         width: 100% !important;
         min-width: 100% !important;
         max-width: 100% !important;
-        padding: 10px !important; 
+        padding: 15px 10px 45px 10px !important;
+        box-sizing: border-box !important;
     }
 
     /* Fontes dos links do menu lateral esquerdo compactas no mobile */

@@ -466,7 +466,7 @@ body {
     /* Encolhe a moldura do celular home para caber no smartphone real */
     .tela-celular-home {
         width: 290px !important;    
-        height: 440px !important;   
+        height: 450px !important;   
         padding: 10px !important;
         box-sizing: border-box !important;
         margin: 0 auto !important;
