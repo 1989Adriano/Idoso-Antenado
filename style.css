@@ -398,3 +398,74 @@ body {
     border-radius: 6px 6px 0 0; 
     box-shadow: 0 4px 10px rgba(0,0,0,0.2);
 }
+
+/* Celular */
+@media (max-width: 768px) {
+    /* Altera o layout de lado a lado para empilhado de cima para baixo */
+    .portal-flex-layout {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        justify-content: flex-start !important;
+        width: 100% !important;
+        gap: 30px !important;
+        padding: 10px !important;
+        box-sizing: border-box !important;
+    }
+
+    /* Garante que as colunas ocupem 100% da largura útil da tela */
+    .coluna-aprendizado {
+        width: 100% !important;
+        max-width: 100% !important;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        box-sizing: border-box !important;
+    }
+
+    /* Evita que o painel de boas-vindas do topo amasse as letras */
+    .boas-vindas-painel {
+        padding: 15px !important;
+    }
+    
+    .boas-vindas-painel p[style*="font-size: 35px"] {
+        font-size: 22px !important; /* Diminui o texto gigante do anúncio no celular */
+        line-height: 1.3 !important;
+    }
+
+    /* Encolhe de forma simétrica a moldura interna do monitor de PC */
+    .tela-monitor-pc {
+        width: 320px !important; /* Tamanho compacto ideal para telas mobile */
+        height: 220px !important;
+        min-height: 220px !important;
+        transform: scale(1) !important;
+    }
+
+    /* Ajusta os tamanhos das bases físicas do monitor para acompanhar o encolhimento */
+    .suporte-central-monitor {
+        width: 40px !important;
+        height: 25px !important;
+    }
+
+    .base-mesa-monitor {
+        width: 120px !important;
+        height: 8px !important;
+    }
+
+    /* Encolhe os ícones e letras da grade do monitor para caberem perfeitamente */
+    .grade-apps-monitor {
+        gap: 8px !important;
+        padding: 10px !important;
+    }
+
+    .grade-apps-monitor .app-item {
+        transform: scale(0.85) !important; /* Compacta os apps em 15% */
+        margin: -2px !important;
+    }
+
+    /* Barra de status do Windows compacta */
+    .barra-tarefas-inferior {
+        height: 30px !important;
+        font-size: 11px !important;
+    }
+}
