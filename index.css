@@ -31,7 +31,7 @@ body, html {
     .tela-abertura-container {
         background-image: url('./img/fundo_principal.jpeg?v=100') !important;
         background-size: 115% auto;   
-        padding: 70px; 
+        padding: 50px; 
     }
 }
 
@@ -43,16 +43,16 @@ body, html {
 
 /* Fontes responsivas com técnicas de alto contraste */
 .splash-emojis {
-    font-size: min(15vw, 100px); 
+    font-size: min(15vw, 90px); 
     margin-bottom: 10px; 
     animation: flutuar 3s ease-in-out infinite;
 }
 
 .splash-titulo {
-    font-size: min(10vw, 52px); 
+    font-size: min(10vw, 45px); 
     color: #FFFFFF; 
     margin: 0 0 15px 0; 
-    font-weight: 900;
+    font-weight: 800;
     text-shadow: 
         -2px -2px 0 #000,  
          2px -2px 0 #000,
@@ -63,7 +63,7 @@ body, html {
 
 .splash-subtitulo {
     color: #FFFFFF; 
-    font-size: min(4.5vw, 24px); 
+    font-size: min(4.5vw, 22px); 
     opacity: 1; 
     max-width: 600px; 
     margin: 0 0 30px 0; 

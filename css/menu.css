@@ -19,8 +19,8 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     color: var(--cor-texto);
-    font-size: 20px;
-    line-height: 1.6;
+    font-size: 15px; 
+    line-height: 1.5;
     margin: 0;
     padding: 0;
     display: flex;
@@ -32,13 +32,13 @@ body {
 /* ESTRUTURA DA BARRA SUPERIOR E CABEÇALHO DO MENU */
 .barra-navegacao {
     background-color: var(--cor-azul-escuro);
-    padding: 8px 24px !important;    
+    padding: 8px 20px !important;    
     display: flex;
     justify-content: flex-start !important; 
     align-items: center;
     box-shadow: 0 4px 12px rgba(0,0,0,0.08);
     z-index: 50;
-    height: 55px !important;                
+    height: 50px !important; /* Ajustado de 55px para 50px */               
     box-sizing: border-box;
     width: 100%;
     position: relative !important;
@@ -58,7 +58,7 @@ body {
 .menu-logo {
     color: white;
     font-weight: bold;
-    font-size: 24px;
+    font-size: 20px;
     text-decoration: none;
     display: flex;
     align-items: center;
@@ -101,9 +101,9 @@ body {
     background: linear-gradient(135deg, var(--cor-primaria) 0%, var(--cor-azul-escuro) 100%);
     color: white;
     padding: 5px 20px;
-    border-radius: 0 0 35px 35px;
-    box-shadow: 0 6px 20px rgba(0,0,0,0.3);
-    margin-bottom: 40px;
+    border-radius: 0 0 30px 35px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+    margin-bottom: 25px; /* Reduzido o espaçamento de 40px para 25px */
     box-sizing: border-box;
     border-bottom: 3px solid rgba(255, 255, 255, 0.2);
     width: 100%;
@@ -111,11 +111,10 @@ body {
 }
 
 .painel-texto-destaque {
-    margin: 12px 0 0 0; 
-    font-size: 24px; 
+    margin: 8px 0 0 0; 
+    font-size: 19px; /* Reduzido de 24px */
     font-weight: bold; 
     opacity: 0.95; 
-    text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
 }
 
 /* ARQUITETURA LADO A LADO DO PORTAL NO COMPUTADOR DE MESA */
@@ -124,10 +123,10 @@ body {
     flex-direction: row;
     justify-content: center;
     align-items: flex-start;
-    gap: 40px;
+    gap: 30px;
     width: 100%;
-    max-width: 1200px;
-    padding: 0 20px 40px 20px;
+    max-width: 1100px;
+    padding: 0 20px 30px 20px;
     box-sizing: border-box;
 }
 
@@ -149,16 +148,16 @@ body {
 
 /* VISUAL DO SMARTPHONE SIMULADO */
 .tela-celular-home {
-    width: 350px;
-    height: 620px;
+    width: 295px; 
+    height: 520px; 
     background: #F4F7FA;
-    border: 14px solid #1E1E1E;
-    border-radius: 45px;
+    border: 12px solid #1E1E1E;
+    border-radius: 38px;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
-    padding: 25px 18px;
-    box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+    padding: 20px 15px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.25);
     box-sizing: border-box;
     position: relative;
     overflow: hidden;
@@ -189,11 +188,12 @@ body {
 }
 
 .grade-apps {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 24px 14px;
+    display: grid;    
+    grid-template-columns: repeat(3, auto);   
+    gap: 20px 8px; 
     padding: 0;
-    text-align: center;
+    text-align: center;   
+    justify-content: center;
 }
 
 .app-item {
@@ -246,12 +246,12 @@ body {
 }
 
 .tela-monitor-pc {
-    width: 540px !important;       
-    height: 360px !important;      
-    min-height: 360px !important;
+    width: 450px !important;  
+    height: 300px !important; 
+    min-height: 300px !important;
     background-color: #2A4365;
     border-radius: 12px;
-    box-shadow: 0 0 0 16px #1E1E1E, 0 20px 40px rgba(0,0,0,0.4);
+    box-shadow: 0 0 0 14px #1E1E1E, 0 15px 35px rgba(0,0,0,0.3);
     position: relative;
     display: flex;
     flex-direction: column;
@@ -263,8 +263,8 @@ body {
 .grade-apps-monitor {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-    padding: 25px !important;              
+    gap: 15px;
+    padding: 18px !important;          
     flex: 1;
     box-sizing: border-box;
     align-content: start; 
