@@ -207,8 +207,28 @@ body {
     -webkit-tap-highlight-color: transparent;
 }
 
-.app-item:hover { transform: scale(1.04); }
-.app-item:active { transform: scale(0.92); }
+.app-item:hover { 
+    transform: scale(1.08) !important; /* Aumenta o tamanho levemente em 5% */
+}
+
+/* Efeito de borda brilhante laranja e sombra ao passar o mouse */
+.app-item:hover .app-icone,
+.app-item:hover .icone-chrome-redondo,
+.app-item:hover .app-icone-pc {
+    border-color: #FD7E14 !important; /* Borda com a sua cor laranja de destaque */
+    box-shadow: 0 0 15px rgba(253, 126, 20, 0.8), 0 4px 10px rgba(0, 0, 0, 0.2) !important; /* Brilho neon laranja */
+    animation: piscarFoco 0.4s ease-in-out; /* Faz o ícone dar uma piscada na transição */
+}
+.app-item:active { 
+    transform: scale(0.92) !important; 
+}
+
+/* ANIMAÇÃO EM FRAMES: Efeito de pulso/piscada rápida de luz para guiar a visão do idoso */
+@keyframes piscarFoco {
+    0% { opacity: 1; filter: brightness(1); }
+    50% { opacity: 0.7; filter: brightness(1.8); } /* Dá um pico de luz no meio do efeito */
+    100% { opacity: 1; filter: brightness(1); }
+}
 
 .app-icone {
     width: 68px;
