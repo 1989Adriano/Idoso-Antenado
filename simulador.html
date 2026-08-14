@@ -403,7 +403,7 @@
             }
         }
 
-          window.avancarPasso = function() {
+        window.avancarPasso = function() {
             if (!podeAvancar) return; 
             
             let listaAtual = null;
@@ -440,21 +440,54 @@
             const modal = document.getElementById('modal-feedback');
 
             if (feedback && msgFeedback && modal) {
-                // Injeta apenas o texto puro do feedback de sucesso
-                msgFeedback.innerHTML = `<span class='sucesso'>${feedback}</span>`;
                 modal.style.display = 'flex'; // Abre o pop-up na frente para o idoso ler o feedback
 
-                // SE FOR O ÚLTIMO PASSO: Espera 4.5 segundos para o idoso ler e volta pro menu sozinho
+                // 🏁 SE FOR O ÚLTIMO PASSO: Espera o tempo padrão para ler e volta pro menu sozinho
                 if (passoAtual === listaAtual.length) {
-                    setTimeout(function() {
-                        window.location.href = 'menu.html';
-                    }, 4500);
+                    let tempoRestante = 5; // 5 segundos para o encerramento final
+                    
+                    msgFeedback.innerHTML = `
+                        <span class='sucesso'>${feedback}</span>
+                        <p style="margin-top: 20px; font-size: 16px; color: #475569; font-weight: bold;">
+                            🎉 Parabéns! Você concluiu o treinamento.<br>
+                            Retornando ao menu principal em <span id='cronometro-feedback' style='color: #F97316; font-size: 20px;'>${tempoRestante}</span> segundos...
+                        </p>
+                    `;
+
+                    // Intervalo que atualiza o número na tela segundo a segundo
+                    const intervaloFinal = setInterval(function() {
+                        tempoRestante--;
+                        const contadorTexto = document.getElementById('cronometro-feedback');
+                        if (contadorTexto) contadorTexto.innerText = tempoRestante;
+                        
+                        if (tempoRestante <= 0) {
+                            clearInterval(intervaloFinal);
+                            window.location.href = 'menu.html';
+                        }
+                    }, 1000);
+
                 } else {
-                    // FLUXO NORMAL: Espera os 4.5 segundos padrão do jogo, fecha o pop-up e renderiza o próximo cenário
-                    setTimeout(function() {
-                        modal.style.display = 'none';
-                        window.renderizarPasso();
-                    }, 4500);
+                    // ⚡ FLUXO NORMAL: Contador dinâmico regressivo passo a passo
+                    let tempoRestante = 4; // 4 segundos padrão de transição
+                    
+                    msgFeedback.innerHTML = `
+                        <span class='sucesso'>${feedback}</span>
+                        <p style="margin-top: 20px; font-size: 16px; color: #475569; font-weight: bold;">
+                            Carregando o próximo passo em <span id='cronometro-feedback' style='color: #0284C7; font-size: 20px;'>${tempoRestante}</span> segundos...
+                        </p>
+                    `;
+
+                    const intervaloPasso = setInterval(function() {
+                        tempoRestante--;
+                        const contadorTexto = document.getElementById('cronometro-feedback');
+                        if (contadorTexto) contadorTexto.innerText = tempoRestante;
+                        
+                        if (tempoRestante <= 0) {
+                            clearInterval(intervaloPasso);
+                            modal.style.display = 'none';
+                            window.renderizarPasso();
+                        }
+                    }, 1000);
                 }
             }
         }
