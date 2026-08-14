@@ -27,20 +27,19 @@
 
 <body style="height: 100%; margin: 0; padding: 0;">
     
-    <!-- BARRA DE NAVEGAÇÃO RESTRUTURADA COM TÍTULO CENTRAL ABSOLUTO -->
+    <!-- BARRA DE NAVEGAÇÃO RESTRUTURADA COM TÍTULO CENTRAL ABSOLUTO -->    
     <nav class="barra-navegacao" 
         style="background-color: var(--cor-azul-escuro) !important; 
         height: auto; 
-        min-height: 100px; 
-        padding: 20px 30px; 
+        min-height: 60px; 
+        padding: 10px 15px; 
         display: flex; 
         align-items: center; 
         justify-content: space-between; 
-        gap: 20px; 
+        gap: 10px; 
         box-sizing: border-box; 
         border-bottom: 4px solid var(--cor-laranja); 
         width: 100%; 
-        overflow: hidden;
         position: relative;">
         
         <!-- BOTÃO DE CONTROLE (Extrema Esquerda) -->
@@ -48,28 +47,33 @@
             <button onclick="alternarMenuLateral()" 
                 class="btn-controle-menu" 
                 title="Ocultar ou Mostrar o Menu Lateral">
-                <span style="font-size: 22px;"></span> Menu
+                Menu
             </button>
         </div>      
 
-        <!-- TÍTULO  NO CENTRO DA BARRA DE NAVEGAÇÃO -->
-        <div style="position: absolute;
-            left: 50%;
-            transform: translateX(-50%);
+        <!-- TÍTULO CENTRAL FLUTUANTE (MOLDE BLINDADO ANTI-SUMIÇO) -->      
+        <div class="container-titulo-central" 
+            style="position: absolute;
+            left: 0;
+            top: 50%; 
+            transform: translateY(-50%); 
             text-align: center;
-            pointer-events: none; /* Evita que o título atrapalhe cliques na barra */
-            width: auto;
-            max-width: 50%;
-            overflow: hidden;">
-            <h1 style="margin: 0;
-                color: #FFFFFF;
+            pointer-events: none;
+            width: 100%;
+            box-sizing: border-box;
+            padding: 0 90px; 
+            z-index: 1;">
+
+            <h1 class="texto-titulo-responsivo" 
+                style="margin: 0;
+                color: #FFFFFF !important;
                 font-family: system-ui, sans-serif;
-                font-size: 24px;
                 font-weight: 800;
-                letter-spacing: 1.5px;
+                letter-spacing: 0.5px;
                 text-transform: uppercase;
                 text-shadow: 0 2px 4px rgba(0,0,0,0.3);
-                white-space: nowrap;">🌟IDOSO ANTENADO🌟</h1>
+                white-space: nowrap;
+                display: block !important;">🌟IDOSO ANTENADO🌟</h1>
         </div>
 
         <!-- BOTÃO DE VOLTAR AO MENU (Extrema Direita) -->
@@ -88,6 +92,8 @@
             </a>
         </div>
     </nav>
+
+
 
     <!-- Estrutura de Portal Unificada: Agrupa o menu esquerdo e a área útil à direita -->
     <div class="layout-portal">

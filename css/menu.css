@@ -44,6 +44,17 @@ body {
     position: relative !important;
 }
 
+.barra-navegacao h1 {
+    font-size: 22px !important;
+    color: #FFFFFF !important;
+    font-weight: 900 !important;
+    margin: 0 !important;
+    text-align: center !important;
+    flex-grow: 1 !important; /* Faz o título ocupar o centro da barra */
+    display: block !important; /* Garante que ele apareça no PC */
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+}
+
 .menu-logo {
     color: white;
     font-weight: bold;
@@ -56,7 +67,7 @@ body {
     flex-shrink: 0;
 }
 
-/* TÍTULO DO ESPAÇO DE TREINAMENTO NO PC (CRAVADO NO CENTRO GEOGRÁFICO) */
+/* TÍTULO DO ESPAÇO DE TREINAMENTO NO PC */
 .titulo-treinamento-menu {
     font-size: 20px !important;      
     color: #FFFFFF !important;
@@ -136,7 +147,7 @@ body {
     box-shadow: 0 3px 6px rgba(0,0,0,0.1);
 }
 
-/* VISUAL DO SMARTPHONE SIMULADO (CELULAR HOME) */
+/* VISUAL DO SMARTPHONE SIMULADO */
 .tela-celular-home {
     width: 350px;
     height: 620px;
@@ -358,7 +369,7 @@ body {
 }
 
 
-/* Celular */
+/* CELULAR */
 @media (max-width: 768px) {
     .barra-navegacao {
         flex-direction: column !important;
@@ -374,9 +385,7 @@ body {
         text-align: center !important;
         padding: 0 !important;
         margin: 0 !important;
-        display: block !important; 
-        
-        /* Desativa o absoluto no celular para permitir empilhar verticalmente */
+        display: block !important;    
         position: static !important;
         transform: none !important;
         left: auto !important;
@@ -489,7 +498,8 @@ body {
     }
 }
 
-/* Painel Retrátil */
+
+/* PAINEL RETRÁTIL */
 .painel-gatilho-clique {
     cursor: pointer;
     display: inline-block;

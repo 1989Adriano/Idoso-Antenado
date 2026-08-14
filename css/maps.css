@@ -9,11 +9,13 @@
     user-select: none;
     position: relative;
 }
+
 .maps-barra-busca {
     padding: 15px;
     position: relative;
     z-index: 10;
 }
+
 .maps-input-falso {
     background: white;
     padding: 14px 18px;
@@ -28,6 +30,7 @@
     gap: 10px;
     border: 2px solid #4285F4;
 }
+
 .maps-painel-inferior {
     margin-top: auto;
     background: white;
