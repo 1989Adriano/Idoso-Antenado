@@ -22,7 +22,7 @@ body {
     flex-direction: column;
 }
 
-/* ESTRUTURA DE CORPO AND BARRA DE NAVEGAÇÃO */
+/* Eestrutura de corpo and barra de navegação */
 .barra-navegacao {
     background-color: var(--cor-azul-escuro);
     padding: 15px 24px;
@@ -43,11 +43,17 @@ body {
 }
 
 .titulo-treinamento-menu {
-    font-size: 26px !important;      
+    font-size: 20px !important;  
     color: #FFFFFF !important;
-    margin: 0 0 0 40px !important;   
-    flex-grow: 0 !important;         
-    white-space: nowrap;          
+    font-weight: 900;
+    margin: 0 !important;            
+    white-space: nowrap;
+    position: absolute !important;
+    left: 50% !important;
+    top: 50% !important;
+    transform: translate(-50%, -50%) !important; /* Puxa o eixo do texto pro centro perfeito */
+    text-align: center !important;
+    width: auto !important;        
 }
 
 .layout-portal {
@@ -59,7 +65,7 @@ body {
     box-sizing: border-box;
 }
 
-/* MENU LATERAL DE NAVEGAÇÃO INTERNA */
+/* Menu lateral de navegação interna */
 .menu-lateral {
     width: 320px;
     background-color: var(--cor-fundo-menu);
@@ -414,10 +420,11 @@ body {
 @media (max-width: 768px) {
     /* Barra de navegação superior compacta */
     .barra-navegacao {
-        justify-content: space-between !important;
-        padding: 8px 12px !important;    
-        min-height: 55px !important;     
+        flex-direction: column !important;
+        justify-content: flex-start !important;
         height: auto !important;
+        padding: 10px 15px !important;
+        gap: 6px !important;;
     }   
     
     /* Esconde o h1 gigante do topo no celular para sobrar espaço útil */
@@ -427,7 +434,11 @@ body {
         text-align: center !important;
         padding: 0 !important;
         margin: 0 !important;
-        display: block !important; 
+        display: block !important;
+        position: static !important;
+        transform: none !important;
+        left: auto !important;
+        top: auto !important;
     }
 
     .btn-controle-menu {

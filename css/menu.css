@@ -1,4 +1,4 @@
-/*  VARIÁVEIS E CONFIGURAÇÕES GERAIS DE FUNDO DO PORTAL */
+/* VARIÁVEIS E CONFIGURAÇÕES GERAIS DE FUNDO DO PORTAL */
 :root {
     --cor-fundo: #EBF1F7;
     --cor-texto: #1A1A1A;
@@ -13,7 +13,7 @@
 
 body {
     font-family: Arial, Helvetica, sans-serif;
-    background-image: url('../img/fundo.jpeg'); /* Plano de fundo padrão do portal */
+    background-image: url('../img/fundo.jpeg'); 
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
@@ -32,15 +32,16 @@ body {
 /* ESTRUTURA DA BARRA SUPERIOR E CABEÇALHO DO MENU */
 .barra-navegacao {
     background-color: var(--cor-azul-escuro);
-    padding: 8px 24px !important;
+    padding: 8px 24px !important;    
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start !important; 
     align-items: center;
     box-shadow: 0 4px 12px rgba(0,0,0,0.08);
     z-index: 50;
-    height: 55px !important;        
+    height: 55px !important;                
     box-sizing: border-box;
     width: 100%;
+    position: relative !important;
 }
 
 .menu-logo {
@@ -52,6 +53,23 @@ body {
     align-items: center;
     gap: 10px;
     text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+    flex-shrink: 0;
+}
+
+/* TÍTULO DO ESPAÇO DE TREINAMENTO NO PC (CRAVADO NO CENTRO GEOGRÁFICO) */
+.titulo-treinamento-menu {
+    font-size: 20px !important;      
+    color: #FFFFFF !important;
+    font-weight: 900 !important;
+    margin: 0 !important;            
+    white-space: nowrap !important;             
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.5);   
+    position: absolute !important;
+    left: 50% !important;
+    top: 50% !important;
+    transform: translate(-50%, -50%) !important; 
+    text-align: center !important;
+    width: auto !important;
 }
 
 .espaco-treinamento-tag {
@@ -74,7 +92,6 @@ body {
     padding: 5px 20px;
     border-radius: 0 0 35px 35px;
     box-shadow: 0 6px 20px rgba(0,0,0,0.3);
-    margin-top: 0 !important; 
     margin-bottom: 40px;
     box-sizing: border-box;
     border-bottom: 3px solid rgba(255, 255, 255, 0.2);
@@ -90,7 +107,7 @@ body {
     text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
 }
 
-/* ARQUITETURA LADO A LADO DO PORTAL NO COMPUTADOR (Original Intacta) */
+/* ARQUITETURA LADO A LADO DO PORTAL NO COMPUTADOR DE MESA */
 .portal-flex-layout {
     display: flex;
     flex-direction: row;
@@ -243,7 +260,7 @@ body {
 }
 
 .grade-apps-monitor .app-item {
-    transform: scale(1) !important; /* Ícones grandes no monitor quando visto pelo computador */
+    transform: scale(1) !important; 
     transform-origin: center center !important;
 }
 
@@ -340,6 +357,139 @@ body {
     box-shadow: 0 4px 10px rgba(0,0,0,0.2);
 }
 
+
+/* Celular */
+@media (max-width: 768px) {
+    .barra-navegacao {
+        flex-direction: column !important;
+        justify-content: flex-start !important;
+        height: auto !important;
+        padding: 10px 15px !important;
+        gap: 6px !important;
+    }
+
+    .barra-navegacao h1 {
+        font-size: 15px !important; 
+        color: #FFFFFF !important;
+        text-align: center !important;
+        padding: 0 !important;
+        margin: 0 !important;
+        display: block !important; 
+        
+        /* Desativa o absoluto no celular para permitir empilhar verticalmente */
+        position: static !important;
+        transform: none !important;
+        left: auto !important;
+        top: auto !important;
+    }
+
+    .sm-esconder-div {
+        display: none !important;
+    }
+
+    .menu-logo {
+        font-size: 14px !important;
+    }
+
+    .portal-flex-layout {
+        display: flex !important;
+        flex-direction: column !important; 
+        align-items: center !important;
+        justify-content: flex-start !important;
+        width: 100% !important;
+        gap: 30px !important;
+        padding: 10px !important;
+        box-sizing: border-box !important;
+    }
+
+    .coluna-aprendizado {
+        width: 100% !important;
+        max-width: 100% !important;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        box-sizing: border-box !important;
+    }
+
+    .boas-vindas-painel {
+        padding: 15px !important;
+    }
+    
+    .boas-vindas-painel p[style*="font-size: 35px"],
+    .boas-vindas-painel .painel-texto-destaque:first-child {
+        font-size: 20px !important; 
+        line-height: 1.3 !important;
+        margin-bottom: 10px !important;
+    }
+
+    .boas-vindas-painel .painel-texto-destaque {
+        font-size: 14px !important; 
+        line-height: 1.5 !important;
+        color: #FFFFFF !important; 
+        margin: 5px 0 !important;
+        padding: 0 10px !important;
+    }
+
+    .tela-celular-home {
+        width: 290px !important;    
+        height: 440px !important;   
+        padding: 10px !important;
+        box-sizing: border-box !important;
+        margin: 0 auto !important;
+    }
+
+    .grade-apps {
+        gap: 12px 8px !important;   
+        padding: 5px !important;
+    }
+
+    .app-item {
+        transform: scale(0.9) !important; 
+    }
+
+    .app-item span {
+        font-size: 11px !important; 
+    }
+
+    .tela-monitor-pc {
+        width: 320px !important; 
+        height: 250px !important;
+        min-height: 250px !important;
+        transform: scale(1) !important;
+    }
+
+    .suporte-central-monitor {
+        width: 40px !important;
+        height: 20px !important;
+    }
+
+    .base-mesa-monitor {
+        width: 120px !important;
+        height: 8px !important;
+    }
+
+    .grade-apps-monitor {
+        gap: 8px !important;
+        padding: 10px !important;
+    }
+
+    .grade-apps-monitor .app-item {
+        transform: scale(0.85) !important; 
+        margin: -2px !important;
+    }
+
+    .barra-tarefas-inferior {
+        height: 30px !important;
+        font-size: 11px !important;
+    }
+
+    body {
+        background-color: var(--cor-fundo) !important;
+        background-image: none !important;
+    }
+}
+
+/* Painel Retrátil */
 .painel-gatilho-clique {
     cursor: pointer;
     display: inline-block;
@@ -359,163 +509,15 @@ body {
 }
 
 .avisos-painel-conteudo {
-    max-height: 500px; /* Altura máxima limite do texto aberto */
+    max-height: 500px; 
     overflow: hidden;
     transition: max-height 0.35s ease-in-out, opacity 0.3s ease;
     opacity: 1;
 }
 
-/* Classe injetada via JS que faz os textos brancos sumirem de forma suave */
 .avisos-painel-conteudo.recolhido {
     max-height: 0 !important;
     opacity: 0 !important;
     margin: 0 !important;
     padding: 0 !important;
 }
-
-/* Celular */
-@media (max-width: 768px) {   
-    .barra-navegacao {
-        flex-direction: column !important;
-        height: auto !important;
-        padding: 10px 15px !important;
-        gap: 6px !important;
-    }
-
-     /* Diminui o título da barra de navegação do menu para não estourar */
-    .barra-navegacao h1 {
-        font-size: 15px !important; 
-        text-align: center !important;
-        padding: 0 !important;
-        margin: 0 !important;
-        display: block !important; /* Garante que ele apareça embaixo */
-    }
-
-    /* Oculta a div invisível de 250px no celular para liberar espaço real */
-    .sm-esconder-div {
-        display: none !important;
-    }
-
-    /* Torna o logo do menu menor e mais discreto no smartphone */
-    .menu-logo {
-        font-size: 14px !important;
-    }
-
-    /* Altera o layout de lado a lado para empilhado de cima para baixo */
-    .portal-flex-layout {
-        display: flex !important;
-        flex-direction: column !important; /* Empilha as colunas verticalmente */
-        align-items: center !important;
-        justify-content: flex-start !important;
-        width: 100% !important;
-        gap: 30px !important;
-        padding: 10px !important;
-        box-sizing: border-box !important;
-    }
-
-    /* Garante que as colunas ocupem 100% da largura útil da tela */
-    .coluna-aprendizado {
-        width: 100% !important;
-        max-width: 100% !important;
-        display: flex !important;
-        flex-direction: column !important;
-        align-items: center !important;
-        box-sizing: border-box !important;
-    }
-
-    /* Evita que o painel de boas-vindas do topo amasse as letras */
-    .boas-vindas-painel {
-        padding: 15px !important;
-    }
-    
-    /* Calibração do primeiro parágrafo (Laranja) */
-    .boas-vindas-painel p[style*="font-size: 35px"],
-    .boas-vindas-painel .painel-texto-destaque:first-child {
-        font-size: 20px !important; 
-        line-height: 1.3 !important;
-        margin-bottom: 10px !important;
-    }
-
-    /* Força TODOS os parágrafos brancos do painel a ficarem pequenos no celular */
-    .boas-vindas-painel .painel-texto-destaque {
-        font-size: 14px !important; 
-        line-height: 1.5 !important;
-        color: #FFFFFF !important; 
-        margin: 5px 0 !important;
-        padding: 0 10px !important;
-    }
-
-    /* Encolhe a moldura do celular home para caber no smartphone real */
-    .tela-celular-home {
-        width: 290px !important;    
-        height: 440px !important;   
-        padding: 10px !important;
-        box-sizing: border-box !important;
-        margin: 0 auto !important;
-    }
-
-    /* Reajusta as letras e os ícones da grade do celular simulado */
-    .grade-apps {
-        gap: 12px 8px !important;   
-        padding: 5px !important;
-    }
-
-    .app-item {
-        transform: scale(0.9) !important; 
-    }
-
-    .app-item span {
-        font-size: 11px !important; 
-    }
-
-    /* Aumentado a altura de 220px para 240px no celular para acomodar o monitor maior do PC */
-    .tela-monitor-pc {
-        width: 320px !important; 
-        height: 250px !important;
-        min-height: 250px !important;
-        transform: scale(1) !important;
-    }
-
-    /* Ajusta os tamanhos das bases físicas do monitor */
-    .suporte-central-monitor {
-        width: 40px !important;
-        height: 20px !important;
-    }
-
-    .base-mesa-monitor {
-        width: 120px !important;
-        height: 8px !important;
-    }
-
-    /* Encolhe os ícones e letras da grade do monitor */
-    .grade-apps-monitor {
-        gap: 8px !important;
-        padding: 10px !important;
-    }
-
-    /* Reduz os ícones apenas no visor móvel do celular real para libertar a pasta */
-    .grade-apps-monitor .app-item {
-        transform: scale(0.85) !important; 
-        margin: -2px !important;
-    }
-
-    /* Barra de status do Windows compacta */
-    .barra-tarefas-inferior {
-        height: 30px !important;
-        font-size: 11px !important;
-    }
-       
-    /* Barra de status do Windows compacta */
-    .barra-tarefas-inferior {
-        height: 30px !important;
-        font-size: 11px !important;
-    }
-
-    /* Força a cor de fundo padrão e remove a imagem pesada na versão mobile */
-    body {
-        background-color: var(--cor-fundo) !important;
-        background-image: none !important;
-    }
-}
-
-   
