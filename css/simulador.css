@@ -348,6 +348,22 @@ body {
     box-shadow: 0 1px 3px rgba(0,0,0,0.15);
 }
 
+/* Garante o tamanho grande e confortável do botão voltar no PC */
+.btn-voltar-menu {
+    font-size: 18px !important; 
+    padding: 12px 24px !important; 
+    height: auto !important; /* Desfaz a altura travada do celular */
+    display: inline-block !important;
+    line-height: normal !important;
+}
+
+/* Mantém o botão de controle do menu no tamanho padrão do PC */
+.btn-controle-menu {
+    font-size: 17px !important;
+    height: 54px !important;
+    padding: 0 24px !important;
+}
+
 /* POP-UP DE FEEDBACK DINÂMICO (AVANÇO DE PASSO NA FRENTE DA TELA) */
 .feedback-modal-container {
     position: fixed;
