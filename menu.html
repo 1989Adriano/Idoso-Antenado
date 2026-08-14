@@ -26,14 +26,13 @@
     </nav>
    
     <header class="boas-vindas-painel" style="margin-top: 0 !important;">
-        <!-- Título principal que funciona como botão para o idoso clicar -->
-        <div onclick="window.alternarAvisosPainel()" class="painel-gatilho-clique" title="Clique para ocultar ou exibir os avisos">
+        <div onclick="window.alternarAvisosPainel()" class="painel-gatilho-clique" title="Clique para ocultar ou exibir os avisos" style="cursor: pointer;">
             <p class="painel-texto-destaque" style="font-size: 35px; color: #d1850a; font-weight: bold; margin: 0;">
                 Clique no ícone que você deseja aprender a usar hoje. <span id="seta-painel">🔼</span>
             </p>
-        </div>
-   
-        <div id="container-avisos-extras" class="avisos-painel-conteudo">
+        </div>   
+    
+        <div id="container-avisos-extras" class="avisos-painel-conteudo recolhido">
             <p class="painel-texto-destaque" style="margin-top: 15px; font-size: 18px;">
                 Pode haver variações de um aparelho: modelo, computador, celular e marcas diferentes com o que você possui.
             </p>
@@ -154,20 +153,39 @@
             }
         }
 
-        window.alternarAvisosPainel = function() {
+        // Função responsável por abrir e fechar o painel de avisos de forma suave
+         window.alternarAvisosPainel = function() {
             const container = document.getElementById('container-avisos-extras');
             const seta = document.getElementById('seta-painel');
             
             if (container && seta) {
                 if (container.classList.contains('recolhido')) {
                     container.classList.remove('recolhido');
-                    seta.innerHTML = '🔼'; // Seta para cima indica que está aberto
+                    seta.innerHTML = '🔼'; 
                 } else {
                     container.classList.add('recolhido');
-                    seta.innerHTML = '🔽'; // Seta para baixo indica que está fechado
+                    seta.innerHTML = '🔽'; 
                 }
             }
         }
+
+        // Controla o estado inicial exato de cada aparelho na inicialização
+        window.addEventListener('DOMContentLoaded', function() {
+            const container = document.getElementById('container-avisos-extras');
+            const seta = document.getElementById('seta-painel');
+            
+            if (container && seta) {
+                if (window.innerWidth > 768) {
+                    // 💻 COMPUTADOR: Remove o recolhido para nascer 100% aberto e ativo
+                    container.classList.remove('recolhido');
+                    seta.innerHTML = '🔼';
+                } else {
+                    // 📱 CELULAR: Garante que nasça travado com seta para baixo
+                    container.classList.add('recolhido');
+                    seta.innerHTML = '🔽';
+                }
+            }
+        });
     </script>
 </body>
 </html>

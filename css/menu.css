@@ -368,6 +368,22 @@ body {
     box-shadow: 0 4px 10px rgba(0,0,0,0.2);
 }
 
+.avisos-painel-conteudo {
+    max-height: 500px !important; 
+    opacity: 1 !important;
+    overflow: hidden !important;
+    margin-top: 15px !important;
+    transition: max-height 0.35s ease-in-out, opacity 0.3s ease, margin 0.3s ease !important;
+}
+
+.avisos-painel-conteudo.recolhido {
+    max-height: 0 !important;
+    opacity: 0 !important;
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+    padding: 0 !important;
+}
+
 
 /* CELULAR */
 @media (max-width: 768px) {
@@ -431,12 +447,30 @@ body {
         margin-bottom: 10px !important;
     }
 
+    /* Formatação das letras miúdas brancas no smartphone */
     .boas-vindas-painel .painel-texto-destaque {
         font-size: 14px !important; 
         line-height: 1.5 !important;
         color: #FFFFFF !important; 
         margin: 5px 0 !important;
         padding: 0 10px !important;
+    }
+
+    /* Força o painel de avisos extras a iniciar FECHADO no celular */
+    .avisos-painel-conteudo {
+        max-height: 0 !important;
+        opacity: 0 !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        overflow: hidden !important;
+        transition: max-height 0.35s ease-in-out, opacity 0.3s ease !important;
+    }
+
+    /* Quando o idoso clica e o JS remove a classe 'recolhido', o CSS abre a caixa expandindo os textos */
+    .boas-vindas-painel .avisos-painel-conteudo:not(.recolhido) {
+        max-height: 500px !important; 
+        opacity: 1 !important;         
+        margin-top: 15px !important;   
     }
 
     .tela-celular-home {
@@ -531,3 +565,12 @@ body {
     margin: 0 !important;
     padding: 0 !important;
 }
+
+.avisos-painel-conteudo {
+        max-height: 0;
+        opacity: 0;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        transition: max-height 0.35s ease-in-out, opacity 0.3s ease;
+    }
