@@ -384,14 +384,30 @@
             window.renderizarPasso();
         }
 
-        // Função de erro totalmente integrada ao pop-up dinâmico
+        // Função de erro totalmente integrada ao pop-up dinâmico com botão de fechar embutido
         window.mostrarErro = function(tipo) {
             const msg = document.getElementById('mensagem-feedback');
             const modal = document.getElementById('modal-feedback');
             
-            if (msg && modal) {
-                msg.innerHTML = `<span class='erro'>⚠️ Cuidado! Isso pode ser perigoso ou um golpe. No mundo real, evite essa opção.</span>`;
-                modal.style.display = 'flex'; // Força o aviso de erro a saltar na frente da tela na hora!
+            if (msg && modal) {              
+                msg.innerHTML = `
+                    <span class='erro'>⚠️ Cuidado! Isso pode ser perigoso ou um golpe. No mundo real, evite essa opção.</span>
+                    <button onclick="window.fecharModalFeedback()" 
+                        style="margin-top: 20px;
+                        background: #FD7E14;
+                        color: white;
+                        font-weight: bold;
+                        font-size: 16px;
+                        padding: 12px 24px;
+                        border: none;
+                        border-radius: 25px;
+                        cursor: pointer;
+                        box-shadow: 0 4px 0 #C45A00;
+                        width: auto;
+                        display: inline-block;">Tentar Novamente
+                    </button>
+                `;
+                modal.style.display = 'flex';
             }
         }
 
@@ -403,6 +419,7 @@
             }
         }
 
+        // Avança para a proxima instrução
         window.avancarPasso = function() {
             if (!podeAvancar) return; 
             
@@ -444,7 +461,7 @@
 
                 // 🏁 SE FOR O ÚLTIMO PASSO: Espera o tempo padrão para ler e volta pro menu sozinho
                 if (passoAtual === listaAtual.length) {
-                    let tempoRestante = 5; // 5 segundos para o encerramento final
+                    let tempoRestante = 8; // 8 segundos para o encerramento final
                     
                     msgFeedback.innerHTML = `
                         <span class='sucesso'>${feedback}</span>
@@ -468,7 +485,7 @@
 
                 } else {
                     // ⚡ FLUXO NORMAL: Contador dinâmico regressivo passo a passo
-                    let tempoRestante = 4; // 4 segundos padrão de transição
+                    let tempoRestante = 8; // 8 segundos padrão de transição
                     
                     msgFeedback.innerHTML = `
                         <span class='sucesso'>${feedback}</span>
