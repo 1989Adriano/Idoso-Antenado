@@ -87,7 +87,7 @@ const youtube = [
     //  PASSO 2: (Área de Pesquisa / Input Field)
     {
         instrucao: `<strong>PASSO 2:</strong>
-            Clique ou toque no campo cinza onde está escrito 
+            Clique ou toque no campo onde está escrito 
             "Toque aqui para digitar..." para ativar a digitação 
             e começar a escrever.`,
         conteudo: `
@@ -125,7 +125,7 @@ const youtube = [
                     </div>
                 </div>`,
         feedback:
-        "✓ Excelente! No celular, sempre que precisar escrever, um teclado parecido com este vai subir na tela.",
+        "✓ Excelente! Sempre que for procurar algo pra assitir use a barra de pesquisa. ",
     },
 
     //  PASSO 3: (Escolha do Vídeo nos Resultados)

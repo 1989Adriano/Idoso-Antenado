@@ -491,6 +491,6 @@ const comp_imprimir = [
                     </div>
                 </div>`,
         feedback:
-        "Parabéns! Você concluiu com sucesso este tutorial de Impressão! 🎉",
+        "✓ Parabéns! Você concluiu com sucesso este tutorial de Impressão! 🎉",
     },
 ];
