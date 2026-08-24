@@ -324,7 +324,7 @@ const uber = [
                                         color: #000;">Uber Black</strong><br>
                                     <span style="font-size: 11px; 
                                         color: #666;
-                                        white-space: nowrap;">Viagens de luxo em carros pretos</span>
+                                        white-space: nowrap;">Viagens em carro de luxo</span>
                                 </div>
                             </div>
                             

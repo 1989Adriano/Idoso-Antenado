@@ -67,7 +67,7 @@ const pix_pt6 = [
                                 <div style="background: white; padding: 6px; border-radius: 4px;">3</div>
                             </div>
                             
-                            <!-- BOTÃO ALVO CONFIRMAÇÃO DE SENHA COM DESTAQUE PONTILHADO EM LARANJA -->
+                            <!-- BOTÃO CONFIRMAÇÃO DE SENHA -->
                             <button onclick="avancarPasso()" 
                                 style="background: #0056B3; 
                                 color: white; 
@@ -156,7 +156,7 @@ const pix_pt6 = [
                                 chaves manuais agora virou rotina. Você domina o banco com autonomia absoluta!
                         </p>
                         
-                        <!-- BOTÃO DIRECIONADO PARA RETORNAR AO MENU.HTML COM ACESSIBILIDADE PONTILHADA -->
+                        <!-- BOTÃO DIRECIONADO PARA RETORNAR AO MENU.HTML -->
                         <button onclick="window.location.href='menu.html'" 
                             style="background: #0056B3; 
                             color: white; 

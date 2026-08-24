@@ -31,7 +31,7 @@ const pix_pt2 = [
                         box-sizing: border-box; 
                         flex: 1;">
                         
-                        <!-- BOTÃO ALVO CAMPO DE INSERÇÃO COM DESTAQUE PONTILHADO EM AZUL -->
+                        <!-- BOTÃO CAMPO DE INSERÇÃO -->
                         <div onclick="avancarPasso()" 
                             style="background: white; 
                             border: 3px dashed #0056B3; 
@@ -97,7 +97,7 @@ const pix_pt2 = [
                             overflow: hidden;">mercadolivre.pix.compra15674839201938574832...
                         </div>
                         
-                        <!-- BOTÃO ALVO CONFIRMAR CÓDIGO -->
+                        <!-- BOTÃO CONFIRMAR CÓDIGO -->
                         <button onclick="avancarPasso()" 
                             style="background: #0056B3; 
                             color: white; 
@@ -174,7 +174,7 @@ const pix_pt2 = [
                             <div><span style="color: #64748B; font-weight: bold;">INSTITUIÇÃO:</span> <strong>Mercado Pago</strong></div>
                         </div>
                         
-                        <!-- BOTÃO ALVO PROSSEGUIR COM DESTAQUE PONTILHADO LARANJA -->
+                        <!-- BOTÃO PROSSEGUIR -->
                         <button onclick="avancarPasso()" 
                             style="background: #248A3D; 
                             color: white; 
@@ -254,8 +254,8 @@ const pix_pt2 = [
                                 <div style="background: white; padding: 6px; border-radius: 4px;">3</div>
                             </div>
                             
-                            <!-- BOTÃO ALVO CONFIRMAR SENHA (PULA PARA O COMPROVANTE GERAL NO ÍNDICE 19) -->
-                            <button onclick="window.irParaPasso(19)" 
+                            <!-- BOTÃO CONFIRMAR -->
+                            <button onclick="window.irParaPasso(21)" 
                                 style="background: #0056B3; 
                                 color: white; 
                                 font-weight: bold; 
@@ -313,7 +313,7 @@ const pix_pt2 = [
                         position: relative; 
                         background: #1A1A1A;">
                         
-                        <!-- QUADRADO ALVO DO QR CODE COM CONTORNO PONTILHADO ANIMADO -->
+                        <!-- QUADRADO DO QR CODE -->
                         <div onclick="avancarPasso()" 
                             style="width: 160px; 
                             height: 160px; 

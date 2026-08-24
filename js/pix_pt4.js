@@ -45,7 +45,7 @@ const pix_pt4 = [
                             <span style="font-size: 18px;">🪪</span> Chave CPF ou CNPJ
                         </div>
                         
-                        <!-- BOTÃO ALVO TIPO DE CHAVE CELULAR COM CONTORNO PONTILHADO EM AZUL -->
+                        <!-- BOTÃO CHAVE CELULAR -->
                         <div onclick="avancarPasso()" 
                             style="background: white; 
                             border: 3px dashed #0056B3; 
@@ -127,7 +127,7 @@ const pix_pt4 = [
                             <span style="font-size: 18px;">🪪</span> Chave CPF ou CNPJ
                         </div>
                         
-                        <!-- REPLICA DO ALVO PARA EMENDA DE SUB-ROTAS -->
+                        <!-- REPLICA EMENDA DE SUB-ROTAS -->
                         <div onclick="avancarPasso()" 
                             style="background: white; 
                             border: 3px dashed #0056B3; 
@@ -182,7 +182,7 @@ const pix_pt4 = [
                             font-weight: bold; 
                             color: #64748B;">NÚMERO DO DESTINATÁRIO:</label>
                         
-                        <!-- BOTÃO ALVO CAMPO VAZIO COM DESTAQUE PONTILHADO EM AZUL -->
+                        <!-- BOTÃO CAMPO VAZIO -->
                         <div onclick="avancarPasso()" 
                             style="background: white; 
                             border: 3px dashed #0056B3; 
@@ -244,7 +244,7 @@ const pix_pt4 = [
                             border-radius: 6px;">(11) 99999-8888
                         </div>
                         
-                        <!-- BOTÃO ALVO AVANÇAR WITH DESTAQUE PONTILHADO EM AMARELO -->
+                        <!-- BOTÃO AVANÇAR -->
                         <button onclick="avancarPasso()" 
                             style="background: #0056B3; 
                             color: white; 

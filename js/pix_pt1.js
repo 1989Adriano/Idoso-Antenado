@@ -124,8 +124,8 @@ const pix_pt1 = [
     //  PASSO 3: EFETUAR O LOGIN COM SENHA DO APP
     {
         instrucao: `<strong>PASSO 3:</strong> 
-            Dados preenchidos! Agora, para liberar o acesso ao seu saldo, 
-            clique ou toque no botão de "🔑 Confirmar Senha de Acesso"
+            Dados preenchidos! Agora, após digitar sua senha no Aplicativo real. 
+            Clique ou toque no botão de "🔑 Confirmar Senha"
             para entrar na conta.`,
         conteudo: `
                 <div style="background: #0056B3; 
@@ -176,7 +176,7 @@ const pix_pt1 = [
                         </div>
                     </div>
 
-                    <!-- BOTÃO ALVO CONFIRMAR LOGIN -->
+                    <!-- BOTÃO CONFIRMAR LOGIN -->
                     <button onclick="avancarPasso()" 
                         style="background: #FFF; 
                         color: #0056B3; 
@@ -188,7 +188,7 @@ const pix_pt1 = [
                         cursor: pointer; 
                         width: 100%; 
                         box-shadow: 0 4px 10px rgba(0,0,0,0.15); 
-                        margin-top: 10px;">🔑 Confirmar Senha de Acesso
+                        margin-top: 10px;">🔑 Confirmar Senha
                     </button>
                 </div>`,
         feedback:
@@ -241,7 +241,7 @@ const pix_pt1 = [
                         box-sizing: border-box; 
                         margin-top: 15px;">
 
-                        <!-- BOTÃO ALVO ÁREA PIX COM CONTORNO PONTILHADO EM LARANJA -->
+                        <!-- BOTÃO PIX -->
                         <div onclick="avancarPasso()" 
                             style="background: white; 
                             border: 3px dashed #F97316; 
@@ -311,7 +311,7 @@ const pix_pt1 = [
                         box-sizing: border-box; 
                         flex: 1;">
                         
-                        <!-- ROTA 1: COPIA E COLA (Pula para o Passo 6 - Índice 5) -->
+                        <!-- ROTA 1: COPIA E COLA -->
                         <div onclick="window.irParaPasso(5)" 
                             style="background: white; 
                             border: 3px dashed #0056B3; 
@@ -329,7 +329,7 @@ const pix_pt1 = [
                             <span style="color: #0056B3; font-weight: bold;">❯</span>
                         </div>
 
-                        <!-- ROTA 2: QR CODE CÂMERA (Pula para o Passo 10) -->
+                        <!-- ROTA 2: QR CODE CÂMERA -->
                         <div onclick="window.irParaPasso(9)" 
                             style="background: white; 
                             border: 3px dashed #28A745; 
@@ -347,7 +347,7 @@ const pix_pt1 = [
                             <span style="color: #28A745; font-weight: bold;">❯</span>
                         </div>
 
-                        <!-- ROTA 3: CHAVE MANUAL (Pula para o Passo 13 - Índice 12) -->
+                        <!-- ROTA 3: CHAVE MANUAL -->
                         <div onclick="window.irParaPasso(12)" 
                             style="background: white; 
                             border: 3px dashed #FD7E14; 
@@ -360,7 +360,7 @@ const pix_pt1 = [
                             box-shadow: 0 2px 4px rgba(0,0,0,0.04);">
                             <div style="display: flex; align-items: center; gap: 10px;">
                                 <span style="font-size: 22px;">🔑</span>
-                                <strong>Chave Manual (Celular, CPF ou EMAIL)</strong>
+                                <strong>Chave Manual, Celular, CPF ou EMAIL</strong>
                             </div>
                             <span style="color: #FD7E14; font-weight: bold;">❯</span>
                         </div>

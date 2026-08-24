@@ -29,7 +29,7 @@ const golpes = [
                         </div>
                     </div>
                     
-                    <!-- Área de Mensagens -->
+                    <!-- ÁREA DE MENSSAGENS -->
                     <div style="flex: 1; 
                         padding: 20px 15px; 
                         display: flex; 
@@ -47,7 +47,7 @@ const golpes = [
                         </div>
                     </div>
                     
-                    <!-- Botões de Ação Separados -->
+                    <!-- BOTAO AÇÃO SEPARADOS -->
                     <div style="padding: 20px 15px; 
                         display: flex; 
                         flex-direction: column; 
@@ -81,7 +81,7 @@ const golpes = [
                     background: #F4F4F4; 
                     font-family: sans-serif;">
                     
-                    <!-- Barra de SMS Realista -->
+                    <!-- BARRA SMS -->
                     <div style="background: #FFFFFF; 
                         color: #333; 
                         padding: 14px; 
@@ -91,7 +91,7 @@ const golpes = [
                         border-bottom: 1px solid #E0E0E0;">💬 Mensagem de Texto (SMS)
                     </div>
                     
-                    <!-- Caixa de Mensagem Destacada -->
+                    <!-- CAIXA MSG -->
                     <div style="flex: 1; 
                         padding: 25px 15px;">
                         <div style="background: #FFFFFF; 
@@ -117,7 +117,7 @@ const golpes = [
                         </div>
                     </div>
                     
-                    <!-- Botões de Ação Separados -->
+                    <!-- BOTAO AÇÃO SEPARADOS -->
                     <div style="padding: 20px 15px; 
                         display: flex; 
                         flex-direction: column; 
@@ -545,7 +545,7 @@ const golpes = [
                     font-family: sans-serif; 
                     color: white;">
                     
-                    <!-- Simulador de Chamada Telefônica Compactado -->
+                    <!-- SIMULADOR CHAMADA TELEFONICA -->
                     <div style="flex: 1; 
                         display: flex; 
                         flex-direction: column; 
@@ -569,7 +569,7 @@ const golpes = [
                         <div style="font-size: 18px; font-weight: bold; margin-bottom: 2px;">Número Desconhecido</div>
                         <div style="font-size: 12px; color: #8E8E93; margin-bottom: 15px;">Chamada em andamento...</div>
                         
-                        <!-- TEXTO COMPACTADO PARA SUBIR O LAYOUT -->
+                        <!-- TEXTO COMPACTADO -->
                         <p style="font-size: 14px; 
                             background: rgba(255,255,255,0.08); 
                             padding: 12px; 
@@ -631,7 +631,7 @@ const golpes = [
                         </div>
                     </div>
                     
-                    <!-- ÁREA DE TEXTO ENXUTA E COMPACTADA -->
+                    <!-- TEXTO COMPACTADO -->
                     <div style="flex: 1; 
                         padding: 15px 12px;">
                         <div style="background: #FFFFFF; 
@@ -647,9 +647,8 @@ const golpes = [
                                 de R$ 2.500. Para cancelar, confirme aqui sua agência, 
                                 conta e senha eletrônica de acesso.
                         </div>
-                    </div>
-                    
-                    <!-- BOTÕES AJUSTADOS COM AVANÇAR PASSO CORRETO -->
+                    </div>                    
+                 
                     <div style="padding: 15px; 
                         display: flex; 
                         flex-direction: column; 

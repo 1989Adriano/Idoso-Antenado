@@ -287,7 +287,7 @@ const inss = [
                         
                         <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 2px;">
                             
-                            <!-- DESTAQUE PONTILHADO LARANJA HISTÓRICO DE PAGAMENTOS -->
+                            <!-- HISTÓRICO DE PAGAMENTOS -->
                             <div onclick="avancarPasso()" 
                                 style="background: white; 
                                 border: 3px dashed #F97316; 
@@ -348,7 +348,7 @@ const inss = [
                         gap: 10px; 
                         flex-shrink: 0;">
                         
-                        <!-- ALVO: BORDAS PONTILHADAS NO BOTÃO DE RETORNO -->
+                        <!-- BOTÃO DE RETORNO -->
                         <span onclick="avancarPasso()" 
                             style="color: white; 
                             font-size: 16px; 
@@ -477,7 +477,7 @@ const inss = [
                         
                         <p style="margin: 5px 0 0 0; font-size: 14px; font-weight: bold; color: #444; text-align: left;">📋 Outros Serviços do Aplicativo:</p>
                         
-                        <!-- PROVA DE VIDA COM DESTAQUE PONTILHADO EM LARANJA -->
+                        <!-- PROVA DE VIDA -->
                         <div onclick="avancarPasso()" 
                             style="background: white; 
                             border: 3px dashed #F97316; 
@@ -646,7 +646,7 @@ const inss = [
                             <span style="color: #aaa;">❯</span>
                         </div>
 
-                        <!-- DESTAQUE PONTILHADO LARANJA NA CONSULTA DE PROCESSOS -->
+                        <!-- CONSULTA DE PROCESSOS -->
                         <div onclick="avancarPasso()" 
                             style="background: white; 
                             border: 3px dashed #F97316; 
@@ -712,7 +712,7 @@ const inss = [
                         flex-direction: column; 
                         justify-content: center;">
                         
-                        <!-- Caixa simulando a notificação de golpe por SMS -->
+                        <!-- sIMULAÇÃO SMS -->
                         <div style="background: white; 
                             border-radius: 12px; 
                             padding: 20px 15px; 
@@ -832,7 +832,7 @@ const inss = [
                             <p style="margin: 2px 0 0 0; color: #00A650;"><strong>Status:</strong> Concluído com Sucesso</p>
                         </div>
                         
-                        <!-- REDIRECIONANDO DE VOLTA PARA O SEU PAINEL CENTRAL DE ROTAS -->
+                        <!-- REDIRECIONANDO  PARA PAINEL CENTRAL -->
                         <button onclick="window.location.href='menu.html'" 
                             style="background: #002F6C; 
                             color: white; 

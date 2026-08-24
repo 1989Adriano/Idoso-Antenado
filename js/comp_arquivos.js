@@ -7,7 +7,7 @@ const comp_arquivos = [
              Clique ou toque no ícone da 'Pastinha Amarela' ou de arquivos para abrir.`,
         conteudo: `
                 <div class="arqv-desktop-fundo">
-                    <!-- aREA DE TRABALHO -->
+                    <!-- AREA DE TRABALHO -->
                     <div style="flex: 1; 
                         padding: 25px; 
                         display: flex; 

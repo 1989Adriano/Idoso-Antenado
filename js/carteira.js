@@ -47,7 +47,7 @@ const carteira = [
                                         celular com validade nacional.
                         </div>
                         
-                        <!-- ALVO: CONTORNO PONTILHADO LARANJA -->
+                        <!-- CONTORNO PONTILHADO -->
                         <button class="botao-grande" 
                             style="background: #1351B4; 
                             width: 100%; 
@@ -120,7 +120,7 @@ const carteira = [
                             </div>
                         </div>
                         
-                        <!-- ALVO: CONTORNO PONTILHADO AMARELO -->
+                        <!-- CONTORNO PONTILHADO -->
                         <button class="botao-grande" 
                             style="background: #1351B4; 
                             width: 100%; 
@@ -189,7 +189,7 @@ const carteira = [
                             <span style="color: #004B82; font-weight: bold;">❯</span>
                         </div>
 
-                        <!-- ROTA 2: VEÍCULOS (CRLV) -> INDICE 5 -->
+                        <!-- ROTA 2: VEÍCULOS (CRLV) -->
                         <div onclick="window.irParaPasso(5)" 
                             style="background: white; 
                             border: 3px dashed #28A745; 
@@ -210,7 +210,7 @@ const carteira = [
                             <span style="color: #28A745; font-weight: bold;">❯</span>
                         </div>
 
-                        <!-- ROTA 3: INFRAÇÕES (MULTAS) -> INDICE 7 -->
+                        <!-- ROTA 3: INFRAÇÕES (MULTAS) -->
                         <div onclick="window.irParaPasso(7)" 
                             style="background: white; 
                             border: 3px dashed #FD7E14; 
@@ -294,7 +294,7 @@ const carteira = [
                             <p style="margin: 2px 0;"><strong>CATEGORIA:</strong> AB</p>
                         </div>
                         
-                        <!-- CONTORNO PONTILHADO EM AMARELO -->
+                        <!-- CONTORNO PONTILHADO -->
                         <button class="botao-grande" 
                             style="background: #1351B4; 
                             width: 100%; 
@@ -371,7 +371,7 @@ const carteira = [
                             <span style="font-size: 12px; color: #548235; font-weight: bold;">CÓDIGO DE SEGURANÇA NACIONAL</span>
                         </div>
                         
-                        <!-- CONTORNO PONTILHADO LARANJA -->
+                        <!-- CONTORNO PONTILHADO-->
                         <button class="botao-grande" 
                             style="background: #248A3D; 
                             width: 100%; 

@@ -37,7 +37,7 @@ const pix_pt5 = [
                             font-weight: bold; 
                             color: #64748B;">DIGITE A QUANTIDADE:</span>
                         
-                        <!-- BOTÃO ALVO VALOR VAZIO COM DESTAQUE PONTILHADO EM AZUL -->
+                        <!-- BOTÃO VALOR VAZIO -->
                         <div onclick="avancarPasso()" 
                             style="background: #E2E8F0; 
                             border: 3px dashed #0056B3; 
@@ -107,7 +107,7 @@ const pix_pt5 = [
                             box-sizing: border-box;">R$ 50,00
                         </div>
                         
-                        <!-- BOTÃO ALVO CONFIRMAR VALOR COM DESTAQUE PONTILHADO EM AMARELO -->
+                        <!-- BOTÃO CONFIRMAR -->
                         <button onclick="avancarPasso()" 
                             style="background: #0056B3; 
                             color: white; 
@@ -185,7 +185,7 @@ const pix_pt5 = [
                             <div><span style="color: #64748B; font-weight: bold;">INSTITUIÇÃO:</span> <strong>Seu Banco S.A.</strong></div>
                         </div>
                         
-                        <!-- BOTÃO ALVO PROSSEGUIR COM DESTAQUE PONTILHADO LARANJA -->
+                        <!-- BOTÃO PROSSEGUIR -->
                         <button onclick="avancarPasso()" 
                             style="background: #248A3D; 
                             color: white; 

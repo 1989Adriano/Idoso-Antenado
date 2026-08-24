@@ -437,7 +437,7 @@ const whatsapp = [
         instrucao: `<strong>PASSO 6:</strong>
             Olha só! Seu neto acabou de responder com um áudio! 
             Para escutar o que ele mandou, clique ou toque no 
-            botão branco escrito "Ouvir 🎧`,
+            botão "Ouvir 🎧`,
         conteudo: `
                 <div class="wa-container">
                     <div class="wa-topo-chat">
@@ -509,8 +509,7 @@ const whatsapp = [
     {
         instrucao: `<strong>PASSO 7:</strong>
             O áudio está tocando! Aguarde a barra verde preencher 
-            até o final e, depois, clique ou toque na palavra
-            azul "Concluído ✔️" para avançar.`,
+            até o final e, depois, clique ou toque "Concluído ✔️".`,
         conteudo: `
                 <div class="wa-container">
                     <div class="wa-topo-chat">

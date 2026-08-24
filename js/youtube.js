@@ -88,14 +88,14 @@ const youtube = [
     {
         instrucao: `<strong>PASSO 2:</strong>
             Clique ou toque no campo onde está escrito 
-            "Toque aqui para digitar..." para ativar a digitação 
+            "Pesquisar..." para ativar a digitação 
             e começar a escrever.`,
         conteudo: `
                 <div class="yt-container">
                     <div class="yt-topo-busca">
                         <span style="font-size:18px; color:#555;">⬅️</span>
                         
-                        <div onclick="avancarPasso()" class="yt-input-busca">Toque aqui para digitar... ⌨️</div>
+                        <div onclick="avancarPasso()" class="yt-input-busca">Pesquisar... ⌨️</div>
                         <span style="font-size:18px; color:#555;">🎙️</span>
                     </div>
 
@@ -233,7 +233,7 @@ const youtube = [
     //  PASSO 5: (Pausar/Despausar)
     {
         instrucao: `<strong>PASSO 5:</strong>
-            O vídeo começou! Para fingir uma pausa para o cafezinho 
+            O vídeo começou! Para simular uma pausa para o cafezinho 
             ou para fazer uma anotação, clique ou toque no botão redondo
             de Pausa (⏸️) bem no centro da imagem.`,
         conteudo: `

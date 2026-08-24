@@ -15,7 +15,7 @@ const maps = [
                     user-select: none; 
                     position: relative;">
                     
-                    <!-- Simulador de Ruas e Mapa de Fundo -->
+                    <!-- SIMULADOR RUAS -->
                     <div style="position: absolute; 
                         width: 100%; 
                         height: 100%; 
@@ -38,7 +38,7 @@ const maps = [
                         <span style="position: absolute; font-size: 12px; font-weight: bold; color: #555; top: 260px; left: 80px;">Sua Localização</span>
                     </div>
                     
-                    <!-- BARRA DE BUSCA ALVO -->
+                    <!-- BARRA DE BUSCA -->
                     <div style="padding: 15px; 
                         position: relative; 
                         z-index: 10;">
@@ -101,9 +101,8 @@ const maps = [
                         padding: 10px; 
                         display: flex; 
                         flex-direction: column; 
-                        gap: 8px;">
-                        
-                        <!-- BOTÃO ALVO CORRETO -->
+                        gap: 8px;">                        
+                       
                         <div onclick="avancarPasso()" 
                             style="background: white; 
                             padding: 14px; 
@@ -206,7 +205,7 @@ const maps = [
                             <span style="font-size: 11px; font-weight: bold;">15 min</span>
                         </div>
                         
-                        <!-- BOTÃO ALVO DO ÔNIBUS -->
+                        <!-- BOTÃO ÔNIBUS -->
                         <div onclick="avancarPasso()" 
                             style="display: flex; 
                             flex-direction: column; 
@@ -270,9 +269,8 @@ const maps = [
                         display: flex; 
                         flex-direction: column; 
                         gap: 12px; 
-                        overflow-y: auto;">
-                        
-                        <!-- OPÇÃO ALVA INTERATIVA -->
+                        overflow-y: auto;">                        
+                      
                         <div onclick="avancarPasso()" 
                             style="background: white; 
                             padding: 15px; 
@@ -349,9 +347,8 @@ const maps = [
                             <br>Siga na direção Norte 
                                 na Rua das Flores por 2 minutos 
                                 (200 metros) até o ponto regulamentar.
-                        </div>
+                        </div>                        
                         
-                        <!-- BOTÃO ALVO COMPLEMENTAR -->
                         <button onclick="avancarPasso()" 
                             style="background: white; 
                             color: #1A73E8; 
@@ -420,7 +417,7 @@ const maps = [
                                 <span style="font-size: 13px; color: #666;">Caminhe 200m até o ponto</span>
                             </div>
                             
-                            <!-- BOTÃO ALVO INICIAR -->
+                            <!-- BOTÃO INICIAR -->
                             <button class="botao-grande" 
                                 style="background: #1A73E8 !important; 
                                 box-shadow: 0 4px 0 #0D47A1 !important; 
@@ -483,7 +480,7 @@ const maps = [
                                 o itinerário com o cobrador.
                         </div>
                         
-                        <!-- BOTÃO ALVO PREVENTIVO -->
+                        <!-- BOTÃO PREVENTIVO -->
                         <button onclick="avancarPasso()" 
                             style="background: #DC3545; 
                             color: white; 

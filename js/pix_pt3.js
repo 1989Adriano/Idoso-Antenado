@@ -2,9 +2,10 @@ const pix_pt3 = [
     //  PASSO 11: ROTA 2 - REVISAR OS DADOS DO QR CODE
     {
         instrucao: `<strong>PASSO 11:</strong> 
-            Regra de ouro no QR Code! Sempre confira se o valor cobrado 
-            está correto antes de digitar sua senha. Está tudo certo? 
-            Clique ou toque no botão "Avançar para Senha"`,
+            Regra de ouro no QR Code! Sempre confira o valor e o 
+            nome que está na tela! 
+            Está tudo certo? Digite o valor desejado e 
+            Clique ou toque no botão "Continuar"`,
         conteudo: `
                 <div style="background: #F4F7FA; 
                     height: 100%; 
@@ -56,7 +57,7 @@ const pix_pt3 = [
                             <div><span style="color: #64748B; font-weight: bold;">INSTITUIÇÃO:</span> <strong>Mercado Pago</strong></div>
                         </div>
                         
-                        <!-- BOTÃO ALVO PROSSEGUIR COM DESTAQUE PONTILHADO LARANJA -->
+                        <!-- BOTÃO PROSSEGUIR -->
                         <button class="botao-grande" 
                             onclick="avancarPasso()" 
                             style="background: #248A3D !important; 
@@ -69,11 +70,11 @@ const pix_pt3 = [
                             cursor: pointer; 
                             width: 100%; 
                             box-shadow: 0 3px 6px rgba(36,138,61,0.2); 
-                            margin-top: auto;">Avançar para Senha ✔️
+                            margin-top: auto;">Continuar ✔️
                         </button>
                     </div>
                 </div>`,
-        feedback: "✓ Muito bem! Os dados da conta foram conferidos e confirmados.",
+        feedback: "✓ Muito bem! Os dados da conta foram conferidos and confirmados.",
     },
 
     //  PASSO 12: ROTA 2 - DIGITAR A SENHA DE 6 DÍGITOS DO QR CODE
@@ -96,7 +97,6 @@ const pix_pt3 = [
                     <div style="background: #0056B3; 
                         padding: 12px 15px; 
                         color: white; 
-                        font-size: 14px; 
                         font-weight: bold; 
                         flex-shrink: 0;">Segurança do QR Code
                     </div>
@@ -143,8 +143,12 @@ const pix_pt3 = [
                                 <div style="background: white; padding: 6px; border-radius: 4px;">3</div>
                             </div>
                             
-                            <!-- BOTÃO ALVO CONFIRMAR (PULA PARA O COMPROVANTE GERAL NO ÍNDICE 19) -->
-                            <button onclick="window.irParaPasso(19)" 
+                            <!-- BOTÃO CONFIRMAR SENHA  -->
+                            <button onclick="if(window.irParaPasso){ window.irParaPasso(20); }
+                                else if(window.proximoPasso){ window.proximoPasso(); }
+                                else{ typeof passoAtual!=='undefined'?passoAtual=20:indiceAtual=20; 
+                                typeof renderizarPasso==='function'?renderizarPasso():avancarPasso(); }" 
+
                                 style="background: #0056B3; 
                                 color: white; 
                                 font-weight: bold; 
@@ -157,95 +161,10 @@ const pix_pt3 = [
                                 box-shadow: 0 2px 4px rgba(0,0,0,0.15);">Confirmar Senha (6 Dígitos) 🔐
                             </button>
                         </div>
+                        
                     </div>
                 </div>`,
         feedback:
         "✓ Espetacular! A sua senha foi aceita pelo banco. Vamos abrir o comprovante oficial...",
-    },
-
-    //  PASSO 12: ROTA 2 - DIGITAR A SENHA DE 6 DÍGITOS DO QR CODE
-    {
-        instrucao: `<strong>PASSO 12:</strong> 
-            Última etapa de proteção no QR Code! Para confirmar que é você quem está pagando 
-            e liberar a saída do dinheiro, clique ou toque no botão "Confirmar Senha (6 Dígitos)".`,
-        conteudo: `
-                <div style="background: #F4F7FA; 
-                    height: 100%; 
-                    display: flex; 
-                    flex-direction: column; 
-                    font-family: sans-serif; 
-                    box-sizing: border-box; 
-                    user-select: none; 
-                    color: #333; 
-                    text-align: left;">
-
-                    <div style="background: #0056B3; 
-                        padding: 12px 15px; 
-                        color: white; 
-                        font-size: 14px; 
-                        font-weight: bold; 
-                        flex-shrink: 0;">Segurança do QR Code
-                    </div>
-
-                    <div style="padding: 15px; 
-                        display: flex; 
-                        flex-direction: column; 
-                        gap: 12px; 
-                        box-sizing: border-box; 
-                        flex: 1; 
-                        justify-content: space-between;">
-
-                        <div style="text-align: center;">
-                            <span style="font-size: 24px;">🔑</span>
-                            <strong style="font-size: 13px; 
-                                display: block; 
-                                margin-top: 4px; 
-                                color: #475569;">DIGITE OS 6 NÚMEROS DA CONTA:</strong>
-                            <div style="display: flex; 
-                                gap: 10px; 
-                                justify-content: center; 
-                                margin-top: 10px;">
-                                <span style="color: #0056B3; font-size: 20px;">● ● ● ● ● ●</span>
-                            </div>
-                        </div>
-
-                        <div style="display: flex; 
-                            flex-direction: column; 
-                            gap: 6px; 
-                            background: #E2E8F0; 
-                            padding: 10px; 
-                            border-radius: 8px; 
-                            box-sizing: border-box;">
-                            
-                            <div style="display: grid; 
-                                grid-template-columns: repeat(3, 1fr); 
-                                gap: 6px; 
-                                text-align: center; 
-                                font-size: 14px; 
-                                font-weight: bold; 
-                                opacity: 0.5;">
-                                <div style="background: white; padding: 6px; border-radius: 4px;">1</div>
-                                <div style="background: white; padding: 6px; border-radius: 4px;">2</div>
-                                <div style="background: white; padding: 6px; border-radius: 4px;">3</div>
-                            </div>
-                            
-                            // <!-- BOTÃO ALVO CONFIRMAR (PULA DIRETAMENTE PARA O COMPROVANTE GERAL NO ÍNDICE 19) -->
-                            // <button onclick="window.irParaPasso(19)" 
-                            //     style="background: #0056B3; 
-                            //     color: white; 
-                            //     font-weight: bold; 
-                            //     font-size: 13px; 
-                            //     border: 3px dashed #FD7E14; 
-                            //     padding: 8px; 
-                            //     border-radius: 4px; 
-                            //     cursor: pointer; 
-                            //     width: 100%; 
-                            //     box-shadow: 0 2px 4px rgba(0,0,0,0.15);">Confirmar Senha (6 Dígitos) 🔐
-                            // </button>
-                        </div>
-                    </div>
-                </div>`,
-        feedback:
-        "✓ Espetacular! A sua senha secreta foi autenticada e validada pelo banco. Redirecionando para o comprovante...",
     },
 ];

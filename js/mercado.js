@@ -16,7 +16,7 @@ const mercado = [
                     user-select: none; 
                     position: relative;">
                     
-                    <!-- Área de Trabalho do Computador -->
+                    <!-- AREA DE TRABALAHO -->
                     <div style="flex: 1; 
                         padding: 25px; 
                         display: grid; 
@@ -25,7 +25,7 @@ const mercado = [
                         align-content: start; 
                         text-align: center;">
                         
-                        <!-- BOTÃO ALVO MERCADO LIVRE -->
+                        <!-- BOTÃO MERCADO LIVRE -->
                         <div onclick="avancarPasso()" 
                             style="cursor: pointer; 
                             display: flex; 
@@ -57,7 +57,7 @@ const mercado = [
                         </div>
                     </div>
                     
-                    <!-- Barra de Tarefas Inferior -->
+                    <!-- Barra DE TAREFAS -->
                     <div style="background: #1E293B; 
                         height: 36px; 
                         border-top: 1px solid rgba(255,255,255,0.1); 
@@ -305,9 +305,8 @@ const mercado = [
                         flex-direction: column; 
                         gap: 10px; 
                         box-sizing: border-box; 
-                        overflow-y: auto;">
-                        
-                        <!-- Alterado para background white isolado apenas na caixinha do primeiro item do carrinho -->
+                        overflow-y: auto;">                        
+           
                         <div style="background: white !important; 
                             border: 1px solid #eee; 
                             padding: 10px; 
@@ -386,9 +385,8 @@ const mercado = [
                         flex-direction: column; 
                         gap: 12px; 
                         box-sizing: border-box; 
-                        justify-content: center;">
-                        
-                        <!-- Adicionado background white isolado apenas na caixinha do cartão de crédito -->
+                        justify-content: center;">                        
+                    
                         <div style="background: white !important;
                             border: 1px solid #ccc; 
                             padding: 12px; 
@@ -458,9 +456,8 @@ const mercado = [
                         display: flex; 
                         flex-direction: column; 
                         justify-content: space-between; 
-                        box-sizing: border-box;">
+                        box-sizing: border-box;">                        
                         
-                        <!-- Adicionado background white isolado apenas na caixinha de revisão do pedido -->
                         <div style="background: white !important;
                             border: 1px solid #eee;
                             padding: 15px;
@@ -540,9 +537,8 @@ const mercado = [
                         flex-direction: column; 
                         justify-content: center; 
                         gap: 15px; 
-                        box-sizing: border-box;">
+                        box-sizing: border-box;">                        
                         
-                        <!-- Adicionado background white isolado apenas na caixinha do código gerado -->
                         <div style="background: white !important; 
                             text-align: center; 
                             border: 1px dashed #ddd; 
@@ -689,9 +685,8 @@ const mercado = [
                         flex-direction: column; 
                         gap: 10px; 
                         justify-content: space-between;
-                        box-sizing: border-box;">
-                        
-                        <!-- Alterado de #F9FAFB para white para destacar em cima do fundo amarelo claro -->
+                        box-sizing: border-box;">                        
+                       
                         <div style="border: 1px solid #E5E7EB; 
                             border-radius: 8px; 
                             padding: 12px; 
