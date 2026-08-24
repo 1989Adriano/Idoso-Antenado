@@ -329,7 +329,7 @@ const pix_pt1 = [
                             <span style="color: #0056B3; font-weight: bold;">❯</span>
                         </div>
 
-                        <!-- ROTA 2: QR CODE CÂMERA (Pula para o Passo 10 - Índice 9) -->
+                        <!-- ROTA 2: QR CODE CÂMERA (Pula para o Passo 10) -->
                         <div onclick="window.irParaPasso(9)" 
                             style="background: white; 
                             border: 3px dashed #28A745; 
@@ -360,7 +360,7 @@ const pix_pt1 = [
                             box-shadow: 0 2px 4px rgba(0,0,0,0.04);">
                             <div style="display: flex; align-items: center; gap: 10px;">
                                 <span style="font-size: 22px;">🔑</span>
-                                <strong>Chave Manual (Celular)</strong>
+                                <strong>Chave Manual (Celular, CPF ou EMAIL)</strong>
                             </div>
                             <span style="color: #FD7E14; font-weight: bold;">❯</span>
                         </div>

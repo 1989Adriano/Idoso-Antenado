@@ -229,19 +229,19 @@ const pix_pt3 = [
                                 <div style="background: white; padding: 6px; border-radius: 4px;">3</div>
                             </div>
                             
-                            <!-- BOTÃO ALVO CONFIRMAR (PULA DIRETAMENTE PARA O COMPROVANTE GERAL NO ÍNDICE 19) -->
-                            <button onclick="window.irParaPasso(19)" 
-                                style="background: #0056B3; 
-                                color: white; 
-                                font-weight: bold; 
-                                font-size: 13px; 
-                                border: 3px dashed #FD7E14; 
-                                padding: 8px; 
-                                border-radius: 4px; 
-                                cursor: pointer; 
-                                width: 100%; 
-                                box-shadow: 0 2px 4px rgba(0,0,0,0.15);">Confirmar Senha (6 Dígitos) 🔐
-                            </button>
+                            // <!-- BOTÃO ALVO CONFIRMAR (PULA DIRETAMENTE PARA O COMPROVANTE GERAL NO ÍNDICE 19) -->
+                            // <button onclick="window.irParaPasso(19)" 
+                            //     style="background: #0056B3; 
+                            //     color: white; 
+                            //     font-weight: bold; 
+                            //     font-size: 13px; 
+                            //     border: 3px dashed #FD7E14; 
+                            //     padding: 8px; 
+                            //     border-radius: 4px; 
+                            //     cursor: pointer; 
+                            //     width: 100%; 
+                            //     box-shadow: 0 2px 4px rgba(0,0,0,0.15);">Confirmar Senha (6 Dígitos) 🔐
+                            // </button>
                         </div>
                     </div>
                 </div>`,
