@@ -1,4 +1,4 @@
-/* maps.css - Estilos Dedicados ao Simulador do Google Maps */
+/* CONTAINER PRINCIPAL E INFRAESTRUTURA DO SMARTPHONE */
 .maps-container {
     background: #EBF1F5;
     height: 100%;
@@ -8,12 +8,24 @@
     box-sizing: border-box;
     user-select: none;
     position: relative;
+    overflow: hidden;
 }
 
+/* Área que simula o desenho do mapa com as ruas e rotas */
+.maps-area-mapa {
+    flex: 1;
+    position: relative;
+    width: 100%;
+    background: #EBF1F5;
+    box-sizing: border-box;
+}
+
+/* BARRAS DE TOPOS, BUSCAS E PESQUISAS */
 .maps-barra-busca {
     padding: 15px;
     position: relative;
     z-index: 10;
+    flex-shrink: 0;
 }
 
 .maps-input-falso {
@@ -31,11 +43,229 @@
     border: 2px solid #4285F4;
 }
 
+/* PAINÉIS INFERIORES E MODAIS DE ROTAS */
 .maps-painel-inferior {
     margin-top: auto;
     background: white;
-    padding: 20px 15px;
+    padding: 15px;
     border-radius: 24px 24px 0 0;
     box-shadow: 0 -4px 10px rgba(0,0,0,0.1);
     text-align: left;
+    flex-shrink: 0;
+    box-sizing: border-box;
+}
+
+/* BOTÕES DE AÇÕES E INTERAÇÕES PADRONIZADOS (BORDAS LISAS) */
+.maps-btn-grande {
+    width: 100%;
+    padding: 12px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 24px;
+    cursor: pointer;
+    text-align: center;
+    box-sizing: border-box;
+    display: block;
+    border: none;
+}
+
+.maps-btn-sucesso {
+    background: #1A73E8;
+    color: white;
+    box-shadow: 0 4px 0 #1557B0;
+}
+
+/* Linhas de Ruas Cruzadas do Simulador (Passo 1 e seguintes) */
+.maps-rua-vertical {
+    position: absolute; 
+    width: 10px; 
+    height: 100%; 
+    background: white; 
+    left: 120px;
+}
+
+.maps-rua-horizontal {
+    position: absolute; 
+    width: 100%; 
+    height: 10px; 
+    background: white; 
+    top: 200px;
+}
+
+/* Marcador Azul de Posição do Usuário (Passo 1) */
+.maps-marcador-usuario {
+    position: absolute; 
+    width: 24px; 
+    height: 24px; 
+    background: #4285F4; 
+    border: 3px solid white; 
+    border-radius: 50%; 
+    top: 280px; 
+    left: 113px; 
+    box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+}
+
+/* Cabeçalho da Barra de Digitação (Passo 2 e seguintes) */
+.maps-topo-digitacao {
+    background: #FFF; 
+    padding: 12px; 
+    border-bottom: 1px solid #E0E0E0; 
+    display: flex; 
+    align-items: center; 
+    gap: 10px;
+    flex-shrink: 0;
+}
+
+/* Campo de Texto Desabilitado que Mostra a Busca (Passo 2) */
+.maps-input-texto {
+    flex: 1; 
+    padding: 8px; 
+    font-size: 16px; 
+    border: none; 
+    background: transparent; 
+    font-weight: bold; 
+    color: #333;
+}
+
+/* Card de Sugestão Pontilhado Azul da Lista (Passo 2) */
+.maps-card-sugestao {
+    background: white; 
+    padding: 14px; 
+    border-radius: 10px; 
+    border: 2px solid #4285F4; 
+    display: flex; 
+    align-items: center; 
+    gap: 12px; 
+    cursor: pointer; 
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+/* Título do Endereço Selecionado (Passo 3) */
+.maps-titulo-local {
+    margin: 0 0 5px 0; 
+    font-size: 18px; 
+    color: #333;
+}
+
+/* Subtítulo do Endereço (Passo 3) */
+.maps-subtitulo-local {
+    margin: 0 0 15px 0; 
+    font-size: 13px; 
+    color: #666;
+}
+
+/* Barra de Seleção de Modos de Transporte (Passo 4) */
+.maps-topo-meios-transporte {
+    background: white; 
+    padding: 10px; 
+    display: flex; 
+    justify-content: space-around; 
+    align-items: center; 
+    border-bottom: 1px solid #E0E0E0; 
+    flex-shrink: 0;
+}
+
+/* Itens Desativados da Barra de Transporte (Passo 4) */
+.maps-transporte-inativo {
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+    opacity: 0.5;
+}
+
+/* Botão Alvo de Seleção de Ônibus (Passo 4) */
+.maps-btn-transporte-alvo {
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+    border: 2px dashed #1A73E8; 
+    padding: 4px 12px; 
+    border-radius: 8px; 
+    background: rgba(26,115,232,0.05); 
+    cursor: pointer;
+}
+
+/* Cabeçalho Branco Padronizado de Rotas (Passos 5 e 6) */
+.maps-topo-instrucoes {
+    background: white; 
+    padding: 15px; 
+    border-bottom: 1px solid #E0E0E0; 
+    text-align: left; 
+    flex-shrink: 0;
+}
+
+/* Card Alvo Pontilhado de Escolha de Ônibus (Passo 5) */
+.maps-card-linha-alvo {
+    background: white; 
+    padding: 15px; 
+    border-radius: 12px; 
+    border: 3px dashed #1A73E8; 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    cursor: pointer; 
+    box-shadow: 0 3px 6px rgba(0,0,0,0.05);
+}
+
+/* Caixa Cinza de Orientação de Caminhada (Passo 6) */
+.maps-caixa-caminhada {
+    background: #EBF1F5; 
+    padding: 12px; 
+    border-radius: 8px; 
+    text-align: left; 
+    font-size: 14px;
+}
+
+/* Botão Alvo Pontilhado Branco de Ver Etapas (Passo 6) */
+.maps-btn-etapas-alvo {
+    background: white; 
+    color: #1A73E8; 
+    border: 3px dashed #1A73E8; 
+    padding: 12px; 
+    border-radius: 8px; 
+    font-weight: bold; 
+    cursor: pointer; 
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Barra de Alerta Crítica Superior (Passo 8) */
+.maps-alerta-topo {
+    background: #DC3545; 
+    color: white; 
+    padding: 12px 15px; 
+    text-align: left; 
+    font-weight: bold; 
+    font-size: 15px;
+    flex-shrink: 0;
+}
+
+/* Botão Compacto Arredondado de Iniciar (Passo 7) */
+.maps-btn-iniciar {
+    background: #1A73E8; 
+    color: white;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 4px 0 #0D47A1; 
+    width: auto; 
+    padding: 12px 25px; 
+    border-radius: 20px; 
+    font-size: 16px;
+    white-space: nowrap;
+}
+
+/* Botão Preventivo com Borda Pontilhada de Perigo (Passo 8) */
+.maps-btn-perigo-alvo {
+    background: #DC3545; 
+    color: white; 
+    border: 3px dashed #FFC107; 
+    padding: 14px; 
+    border-radius: 8px; 
+    font-weight: bold; 
+    cursor: pointer; 
+    font-size: 16px;
+    width: 100%;
+    box-sizing: border-box;
 }
