@@ -1,4 +1,4 @@
-/* Container Principal do Smartphone */
+/* CONTAINER PRINCIPAL E INFRAESTRUTURA DO SMARTPHONE */
 .yt-container {
     background: white;
     height: 100%;
@@ -9,9 +9,21 @@
     padding: 0;
     margin: 0;
     user-select: none;
+    overflow: hidden;
 }
 
-/* Cabeçalho da Página Inicial (Logo, Lupa e Ícones) */
+/* Base Fixa para as Telas que Usam o Player de Vídeo */
+.yt-player-video {
+    background: #000;
+    height: 180px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+/* CABEÇALHOS, TOPOS E BARRAS DE BUSCA */
 .yt-topo-home {
     display: flex;
     align-items: center;
@@ -21,7 +33,6 @@
     flex-shrink: 0;
 }
 
-/* Barra de Pesquisa Ativa (Com campo de texto cinza) */
 .yt-topo-busca {
     display: flex;
     align-items: center;
@@ -31,7 +42,6 @@
     flex-shrink: 0;
 }
 
-/* Campo de Input Cinza onde o Idoso Clica */
 .yt-input-busca {
     flex: 1;
     background: #f2f2f2;
@@ -45,7 +55,18 @@
     border: 3px dashed #0056B3;
 }
 
-/* Área de resultados e feed de vídeos */
+.yt-busca-digitada {
+    flex: 1; 
+    background: #f2f2f2; 
+    padding: 8px 15px; 
+    border-radius: 20px; 
+    font-size: 14px; 
+    text-align: left; 
+    font-weight: bold; 
+    color: #1a1a1a;
+}
+
+/* FEEDS, CARDS E DETALHES DO VÍDEO */
 .yt-feed {
     padding: 10px;
     text-align: left;
@@ -58,61 +79,188 @@
     overflow: hidden;
 }
 
-/* Card Alvo de Vídeo nos resultados da busca */
-.yt-card-resultado {
-    padding: 12px;
-    display: flex;
-    flex-direction: column;
-    gap: 6px;
-    cursor: pointer;
-    text-align: left;
-    border: 3px dashed #0056B3;
-    margin: 8px;
-    border-radius: 8px;
-    background: #f8f9fa;
-}
-
-/* Player de Vídeo (Área preta do topo) */
-.yt-player-video {
-    background: black;
-    height: 180px;
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-shrink: 0;
-}
-
-/* Barra de Controles Inferior do Player */
-.yt-player-controles {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height: 40px;
-    background: rgba(0,0,0,0.6);
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0 12px;
-}
-
-/* Linha de Informações debaixo do Vídeo */
 .yt-info-video {
-    padding: 15px;
+    padding: 10px;
     text-align: left;
     flex: 1;
     background: #FFF;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    overflow-y: auto;
 }
 
-/* Seção de Canais e Inscrição */
 .yt-linha-canal {
-    padding: 10px 12px;
+    padding: 10px;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    border-bottom: 2px solid #eee;
-    background: #f9f9f9;
+    border-bottom: 1px solid #eee;
+    background: #FFF;
     flex-shrink: 0;
-    gap: 5px;
+}
+
+/* CLASSES EXCLUSIVAS DE CLIQUES DE CADA PASSO */
+/* Botão Lupa de Destaque (Passo 1) */
+.yt-btn-lupa {
+    cursor: pointer; 
+    padding: 3px 6px; 
+    border: 2px dashed #0056B3; 
+    border-radius: 6px; 
+    background: #E7F1FF; 
+    display: inline-block;
+}
+
+/* Card de Vídeo com Borda Pontilhada Azul (Passo 3) */
+.yt-card-resultado-destaque {
+    margin: 0; 
+    padding: 0; 
+    background: transparent; 
+    border: 3px dashed #0056B3;
+    border-radius: 8px; 
+    overflow: hidden;
+}
+
+/* Botão Pontilhado Amarelo de Pular Anúncio (Passo 4) */
+.yt-btn-pular {
+    position: static; 
+    padding: 8px 14px; 
+    font-size: 12px;
+    background: rgba(0,0,0,0.85); 
+    color: white; 
+    border: 3px dashed #FFC107; 
+    border-right: none; 
+    font-weight: bold; 
+    border-radius: 4px 0 0 4px; 
+    cursor: pointer; 
+    font-family: sans-serif;
+}
+
+/* Botão Pontilhado Branco de Pausa Central (Passo 5) */
+.yt-btn-pausa {
+    color: white; 
+    font-size: 40px; 
+    background: rgba(0,0,0,0.7); 
+    width: 70px; 
+    height: 70px; 
+    border-radius: 50%; 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    cursor: pointer; 
+    border: 3px dashed #FFF;
+    z-index: 3;
+}
+
+/* Botão Pontilhado Azul de Inscrição (Passo 6) */
+.yt-btn-inscrever {
+    background: #1A1A1A; 
+    color: white; 
+    border: 3px dashed #0056B3; 
+    padding: 8px 14px; 
+    border-radius: 20px; 
+    font-size: 12px; 
+    font-weight: bold; 
+    cursor: pointer; 
+    flex-shrink: 0; 
+    white-space: nowrap;
+}
+
+/* Botão Pontilhado Amarelo de Tela Cheia (Passo 7) */
+.yt-btn-expandir {
+    color: white; 
+    font-size: 20px; 
+    cursor: pointer; 
+    padding: 3px; 
+    border: 3px dashed #FFC107; 
+    background: rgba(255,255,255,0.2); 
+    border-radius: 4px; 
+    display: inline-block;
+    line-height: 1;
+    font-weight: bold;
+}
+
+/* Botão Pontilhado Amarelo de Sair da Tela Cheia (Passo 8) */
+.yt-btn-recolher {
+    color: white; 
+    font-size: 18px; 
+    cursor: pointer; 
+    padding: 4px 6px; 
+    border: 3px dashed #FFC107; 
+    background: rgba(255,255,255,0.2); 
+    border-radius: 4px; 
+    display: inline-block; 
+    font-weight: bold;
+    line-height: 1;
+    margin-right: 2px;
+    box-sizing: border-box;
+}
+
+/* COMPONENTES VISUAIS COMPLEMENTARES DO APP */
+.yt-barra-interacoes {
+    display: flex; 
+    gap: 15px; 
+    font-size: 12px; 
+    font-weight: bold; 
+    color: #606060; 
+    border-bottom: 1px solid #eee; 
+    padding-bottom: 8px; 
+    opacity: 0.7; 
+    margin-top: 4px;
+}
+
+.yt-caixa-comentarios {
+    background: #f2f2f2; 
+    padding: 8px 10px; 
+    border-radius: 6px; 
+    font-size: 12px; 
+    margin-top: 4px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.yt-avatar-canal {
+    width: 32px; 
+    height: 32px; 
+    border-radius: 50%; 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    font-weight: bold; 
+    color: white; 
+    font-size: 14px; 
+    flex-shrink: 0;
+}
+
+.yt-barra-progresso {
+    position: absolute; 
+    bottom: 0; 
+    left: 0; 
+    right: 0; 
+    height: 3px; 
+    background: rgba(255,255,255,0.3); 
+    z-index: 2;
+}
+
+.yt-badge-video {
+    position: absolute; 
+    background: rgba(0,0,0,0.8); 
+    color: white; 
+    padding: 2px 4px; 
+    font-size: 11px; 
+    font-weight: bold; 
+    border-radius: 3px;
+}
+
+.yt-caixa-dica-educativa {
+    background: #FFF3CD; 
+    border: 1px solid #FFEBAA; 
+    color: #856404; 
+    padding: 8px 10px; 
+    border-radius: 8px; 
+    font-size: 12px; 
+    margin-top: 8px; 
+    line-height: 1.3;
 }
