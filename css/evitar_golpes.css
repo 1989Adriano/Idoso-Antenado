@@ -1,4 +1,4 @@
-/* Container Principal do Celular */
+/*  CONTAINER PRINCIPAL E INFRAESTRUTURA DO CELULAR */
 .golpe-container {
     height: 100%;
     display: flex;
@@ -6,14 +6,24 @@
     font-family: sans-serif;
     box-sizing: border-box;
     user-select: none;
+    overflow: hidden;
 }
 
-/* Telas com fundos variantes */
-.golpe-bg-whatsapp { background: #ECE5DD; }
-.golpe-bg-sms      { background: #F4F4F4; }
-.golpe-bg-telefone { background: #1C1C1E; color: white; }
+/* Telas com fundos variantes ocupando 100% do espaço vertical */
+.golpe-bg-whatsapp { 
+    background: #ECE5DD; 
+}
 
-/* Topos e Barras de Navegação Realistas */
+.golpe-bg-sms { 
+    background: #F4F4F4; 
+}
+
+.golpe-bg-telefone { 
+    background: #1C1C1E; 
+    color: white; 
+}
+
+/* TOPOS E BARRAS DE NAVEGAÇÃO REALISTAS */
 .golpe-topo-wa {
     background: #075E54;
     color: white;
@@ -25,6 +35,7 @@
     align-items: center;
     gap: 10px;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    flex-shrink: 0;
 }
 
 .golpe-topo-sms {
@@ -35,6 +46,7 @@
     font-weight: bold;
     font-size: 16px;
     border-bottom: 1px solid #E0E0E0;
+    flex-shrink: 0;
 }
 
 .golpe-topo-entrega {
@@ -45,35 +57,147 @@
     font-weight: bold;
     font-size: 16px;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    flex-shrink: 0;
 }
 
-/* Áreas Centrais de Mensagens */
+/* ÁREAS CENTRAIS E CORPOS DE MENSAGENS */
 .golpe-corpo {
     flex: 1;
-    padding: 20px 15px;
+    padding: 15px 12px;
     display: flex;
     flex-direction: column;
     gap: 12px;
+    overflow-y: auto;
+    box-sizing: border-box;
 }
 
-/* Rodapés Fixos de Botões */
+/* RODAPÉS FIXOS DE BOTÕES E INTERAÇÕES (BORDAS LISAS E SEM PONTILHADOS) */
 .golpe-rodape-cinza {
-    padding: 20px 15px;
+    padding: 15px 12px;
     display: flex;
     flex-direction: column;
-    gap: 14px;
+    gap: 10px;
     align-items: center;
     width: 100%;
     box-sizing: border-box;
     background: rgba(0,0,0,0.02);
+    flex-shrink: 0;
 }
 
 .golpe-rodape-limpo {
-    padding: 20px 15px;
+    padding: 15px 12px;
     display: flex;
     flex-direction: column;
-    gap: 14px;
+    gap: 10px;
     align-items: center;
     width: 100%;
     box-sizing: border-box;
+    flex-shrink: 0;
 }
+
+/* Botão Grande de Ação com Borda Lisa */
+.golpe-btn-grande {
+    width: 100%;
+    padding: 12px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    text-align: center;
+    box-sizing: border-box;
+    display: block;
+    border: none;
+}
+
+/* Variante Alerta com Borda Sólida Lira */
+.golpe-btn-alerta {
+    background: #DC2626;
+    color: white;
+    box-shadow: 0 4px 0 #991B1B;
+}
+
+/* Variante Sucesso com Borda Sólida Lisa */
+.golpe-btn-sucesso {
+    background: #16A34A;
+    color: white;
+    box-shadow: 0 4px 0 #166534;
+}
+
+/* Balões Auxiliares */
+.golpe-balao-wa {
+    background: #FFFFFF; 
+    padding: 12px 14px; 
+    border-radius: 0 12px 12px 12px; 
+    align-self: flex-start; 
+    max-width: 85%; 
+    font-size: 17px; 
+    font-weight: 600; 
+    box-shadow: 0 1px 2px rgba(0,0,0,0.15); 
+    color: #222;
+}
+
+.golpe-caixa-sms {
+    background: #FFFFFF; 
+    padding: 16px; 
+    border-radius: 16px; 
+    font-size: 17px; 
+    text-align: left; 
+    border: 1px solid #E0E0E0; 
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05); 
+    color: #333; 
+    line-height: 1.4;
+}
+
+/* Nome e Status 'Online' do Topo do WhatsApp (Cenários 1, 3, 4, 5, 6, 8, 10) */
+.golpe-wa-info-usuario {
+    line-height: 1.1;
+}
+
+.golpe-wa-status {
+    font-size: 11px;
+    color: #AFAFAF;
+    font-weight: normal;
+}
+
+/* Ícone Redondo com Sombra do Usuário no Topo (Cenários 1, 3, 4, 5, 6, 8, 10) */
+.golpe-wa-avatar {
+    width: 36px;
+    height: 36px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    flex-shrink: 0;
+}
+
+/* Centralizador de Elementos do Simulador de Chamada (Cenários 9 e 12) */
+.golpe-chamada-avatar-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 15px;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+/* Balão do Texto Falado pelo Criminoso na Ligação (Cenários 9 e 12) */
+.golpe-chamada-balao-texto {
+    font-size: 14px;
+    background: rgba(255,255,255,0.08);
+    padding: 12px;
+    border-radius: 12px;
+    border: 1px solid rgba(255,255,255,0.1);
+    max-width: 90%;
+    color: #EEE;
+    margin: 0;
+    font-style: italic;
+    line-height: 1.3;
+    text-align: left;
+    box-sizing: border-box;
+}
+
+

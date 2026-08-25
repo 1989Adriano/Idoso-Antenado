@@ -5,63 +5,32 @@ const golpes = [
             Um número desconhecido usa a foto de um 
             parente e pede dinheiro. O que você faz?"`,
         conteudo: `
-                <div style="height: 100%; 
-                    display: flex; 
-                    flex-direction: column; 
-                    background: #ECE5DD; 
-                    font-family: sans-serif;">
-                    
-                    <!-- Barra do WhatsApp Realista -->
-                    <div style="background: #075E54; 
-                        color: white; 
-                        padding: 12px 15px; 
-                        text-align: left; 
-                        font-weight: bold; 
-                        font-size: 18px; 
-                        display: flex; 
-                        align-items: center; 
-                        gap: 10px; 
-                        box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
-                        <span>👤</span> 
-                        <div style="line-height: 1.1;">
-                            <span style="display: block; font-size: 16px;">Filho(a) Novo</span>
-                            <span style="font-size: 11px; color: #AFAFAF; font-weight: normal;">online</span>
+                <div class="golpe-container golpe-bg-whatsapp">                                    
+                    <!-- BARRA WHATS -->
+                    <div class="golpe-topo-wa">
+                        <div class="golpe-wa-avatar">👤</div>
+                        
+                        <div class="golpe-wa-info-usuario">
+                            <span style="display: block; 
+                                font-size: 16px;">Filho(a) Novo
+                            </span>
+                            <span class="golpe-wa-status">online</span>
                         </div>
                     </div>
                     
-                    <!-- ÁREA DE MENSSAGENS -->
-                    <div style="flex: 1; 
-                        padding: 20px 15px; 
-                        display: flex; 
-                        flex-direction: column; 
-                        gap: 12px;">
-                        <div style="background: #FFFFFF; 
-                            padding: 12px 14px; 
-                            border-radius: 0 12px 12px 12px; 
-                            align-self: flex-start; 
-                            max-width: 85%; 
-                            font-size: 17px; 
-                            font-weight: 600; 
-                            box-shadow: 0 1px 2px rgba(0,0,0,0.15); 
-                            color: #222;">Oi pai, troquei de número. Me faz um Pix de R$ 200 pra pagar uma conta urgente? 
+                    <!-- ÁREA DE MENSAGENS -->
+                    <div class="golpe-corpo">
+                        <div class="golpe-balao-wa">Oi pai, troquei de número. Me faz um Pix de R$ 200 pra pagar uma conta urgente? 
                         </div>
                     </div>
                     
-                    <!-- BOTAO AÇÃO SEPARADOS -->
-                    <div style="padding: 20px 15px; 
-                        display: flex; 
-                        flex-direction: column; 
-                        gap: 14px; 
-                        align-items: center; 
-                        width: 100%; 
-                        box-sizing: border-box; 
-                        background: rgba(0,0,0,0.02);">
-
-                        <button class="botao-grande botao-alerta" 
+                    <!-- BOTOES DE AÇÃO -->
+                    <div class="golpe-rodape-cinza">
+                        <button class="golpe-btn-grande golpe-btn-alerta" 
                             onclick="mostrarErro('whatsapp')">Responder e Ajudar
                         </button>
 
-                        <button class="botao-grande botao-sucesso" 
+                        <button class="golpe-btn-grande golpe-btn-sucesso" 
                             onclick="avancarPasso()">Bloquear e Ligar no Fixo
                         </button>
                     </div>
@@ -75,34 +44,13 @@ const golpes = [
         instrucao: `<strong>Cenário 2:</strong>
             Você recebeu um SMS dizendo que sua conta do banco será bloqueada. O que fazer?"`,
         conteudo: `
-                <div style="height: 100%; 
-                    display: flex; 
-                    flex-direction: column; 
-                    background: #F4F4F4; 
-                    font-family: sans-serif;">
-                    
+                <div class="golpe-container golpe-bg-sms">                    
                     <!-- BARRA SMS -->
-                    <div style="background: #FFFFFF; 
-                        color: #333; 
-                        padding: 14px; 
-                        text-align: center; 
-                        font-weight: bold; 
-                        font-size: 16px; 
-                        border-bottom: 1px solid #E0E0E0;">💬 Mensagem de Texto (SMS)
-                    </div>
+                    <div class="golpe-topo-sms">💬 Mensagem de Texto (SMS)</div>
                     
                     <!-- CAIXA MSG -->
-                    <div style="flex: 1; 
-                        padding: 25px 15px;">
-                        <div style="background: #FFFFFF; 
-                            padding: 16px; 
-                            border-radius: 16px; 
-                            font-size: 17px; 
-                            text-align: left; 
-                            border: 1px solid #E0E0E0; 
-                            box-shadow: 0 2px 5px rgba(0,0,0,0.05); 
-                            color: #333; 
-                            line-height: 1.4;">
+                    <div class="golpe-corpo" style="padding-top: 25px;">
+                        <div class="golpe-caixa-sms">
 
                             <span style="color: #888; 
                                 font-size: 12px; 
@@ -117,16 +65,15 @@ const golpes = [
                         </div>
                     </div>
                     
-                    <!-- BOTAO AÇÃO SEPARADOS -->
-                    <div style="padding: 20px 15px; 
-                        display: flex; 
-                        flex-direction: column; 
-                        gap: 14px; 
-                        align-items: center; 
-                        width: 100%; 
-                        box-sizing: border-box;">
-                        <button class="botao-grande botao-alerta" onclick="mostrarErro('sms')">Clicar no Link</button>
-                        <button class="botao-grande botao-sucesso" onclick="avancarPasso()">Apagar Mensagem</button>
+                    <!-- BOTOES DE AÇÃO -->
+                    <div class="golpe-rodape-limpo">                        
+                        <button class="golpe-btn-grande golpe-btn-alerta" 
+                            onclick="mostrarErro('sms')">Clicar no Link
+                        </button>
+                        
+                        <button class="golpe-btn-grande golpe-btn-sucesso" 
+                            onclick="avancarPasso()">Apagar Mensagem
+                        </button>
                     </div>
                 </div>`,
         feedback:
@@ -138,59 +85,40 @@ const golpes = [
         instrucao: `<strong>Cenário 3:</strong>
             Uma mensagem diz que você ganhou um prêmio, mas pede dados. O que fazer?"`,
         conteudo: `
-                <div style="height: 100%; 
-                    display: flex; 
-                    flex-direction: column; 
-                    background: #ECE5DD; 
-                    font-family: sans-serif;">
-                    
-                    <div style="background: #075E54; 
-                        color: white; 
-                        padding: 12px 15px; 
-                        text-align: left; 
-                        font-weight: bold; 
-                        font-size: 18px; 
-                        display: flex; 
-                        align-items: center; 
-                        gap: 10px; 
-                        box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
-                        <span>🎁</span>
-                        <div style="line-height: 1.1;">
-                            <span style="display: block; font-size: 16px;">Sorteio Premiado</span>
-                            <span style="font-size: 11px; color: #AFAFAF; font-weight: normal;">online</span>
+                <div class="golpe-container golpe-bg-whatsapp">                    
+                    <!-- BARRA WHATS -->
+                    <div class="golpe-topo-wa">
+                        <div class="golpe-wa-avatar">🎁</div>
+                        
+                        <div class="golpe-wa-info-usuario">
+                            <span style="display: block; 
+                                font-size: 16px;">Sorteio Premiado
+                            </span>
+                            <span class="golpe-wa-status">online</span>
                         </div>
                     </div>
                     
-                    <div style="flex: 1; 
-                        padding: 20px 15px;">
-                        <div style="background: #FFFFFF; 
-                            padding: 12px 14px; 
-                            border-radius: 0 12px 12px 12px; 
-                            align-self: flex-start; 
-                            max-width: 85%; 
-                            font-size: 17px; 
-                            font-weight: 600; 
-                            box-shadow: 0 1px 2px rgba(0,0,0,0.15); 
-                            color: #222;">
-                                Parabéns! Você ganhou R$ 5.000! 
-                                Clique aqui para resgatar agora:
-
-                            <span style="color: 
-                                #0066CC; text-decoration: underline;">http://premio-falso.net
+                    <!-- ÁREA DE MENSAGENS -->
+                    <div class="golpe-corpo">
+                        <div class="golpe-balao-wa">
+                            Parabéns! Você ganhou R$ 5.000!
+                            Clique aqui para resgatar agora:
+                            
+                            <span style="color: #0066CC; 
+                                text-decoration: underline;">http://premio-falso.net
                             </span>
                         </div>
                     </div>
                     
-                    <div style="padding: 20px 15px; 
-                        display: flex; 
-                        flex-direction: column; 
-                        gap: 14px; 
-                        align-items: center; 
-                        width: 100%; 
-                        box-sizing: border-box; 
-                        background: rgba(0,0,0,0.02);">
-                        <button class="botao-grande botao-alerta" onclick="mostrarErro('link')">Clicar no Link</button>
-                        <button class="botao-grande botao-sucesso" onclick="avancarPasso()">Denunciar e Apagar</button>
+                    <!-- BOTOES DE AÇÃO -->
+                    <div class="golpe-rodape-cinza">
+                        <button class="golpe-btn-grande golpe-btn-alerta" 
+                            onclick="mostrarErro('link')">Clicar no Link
+                        </button>
+
+                        <button class="golpe-btn-grande golpe-btn-sucesso" 
+                            onclick="avancarPasso()">Denunciar e Apagar
+                        </button>
                     </div>
                 </div>`,
         feedback:
@@ -202,56 +130,34 @@ const golpes = [
         instrucao: `<strong>Cenário 4: </strong>
             Alguém pede um código de 6 dígitos que chegou por SMS no seu celular. O que você faz?"`,
         conteudo: `
-                <div style="height: 100%; 
-                    display: flex; 
-                    flex-direction: column; 
-                    background: #ECE5DD; 
-                    font-family: sans-serif;">
-                    
-                    <div style="background: #075E54; 
-                        color: white; 
-                        padding: 12px 15px; 
-                        text-align: left; 
-                        font-weight: bold; 
-                        font-size: 18px; 
-                        display: flex; 
-                        align-items: center; 
-                        gap: 10px; 
-                        box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
-                        <span>👤</span>
-                        <div style="line-height: 1.1;">
-                            <span style="display: block; font-size: 16px;">Suporte de Vendas</span>
-                            <span style="font-size: 11px; color: #AFAFAF; font-weight: normal;">online</span>
+                <div class="golpe-container golpe-bg-whatsapp">                    
+                    <!-- BARRA WHATS -->
+                    <div class="golpe-topo-wa">
+                        <div class="golpe-wa-avatar">👤</div>
+                        
+                        <div class="golpe-wa-info-usuario">
+                            <span style="display: block; 
+                                font-size: 16px;">Suporte de Vendas
+                            </span>
+                            <span class="golpe-wa-status">online</span>
                         </div>
                     </div>
                     
-                    <div style="flex: 1; 
-                        padding: 20px 15px; 
-                        display: flex; 
-                        flex-direction: column; 
-                        gap: 12px;">
-                        <div style="background: #FFFFFF; 
-                            padding: 12px 14px; 
-                            border-radius: 0 12px 12px 12px; 
-                            align-self: flex-start; 
-                            max-width: 85%; 
-                            font-size: 17px; 
-                            font-weight: 600; 
-                            box-shadow: 0 1px 2px rgba(0,0,0,0.15); 
-                            color: #222;">Oi! Sem querer mandei um código de confirmação pro seu celular. Pode me passar os 6 números por favor?
+                    <!-- ÁREA DE MENSAGENS -->
+                    <div class="golpe-corpo">
+                        <div class="golpe-balao-wa">Oi! Sem querer mandei um código de confirmação pro seu celular. Pode me passar os 6 números por favor?
                         </div>
                     </div>
                     
-                    <div style="padding: 20px 15px; 
-                        display: flex; 
-                        flex-direction: column; 
-                        gap: 14px; 
-                        align-items: center; 
-                        width: 100%; 
-                        box-sizing: border-box; 
-                        background: rgba(0,0,0,0.02);">
-                        <button class="botao-grande botao-alerta" onclick="mostrarErro('codigo')">Passar o Código</button>
-                        <button class="botao-grande botao-sucesso" onclick="avancarPasso()">Não passar e Bloquear</button>
+                    <!-- BOTOES DE AÇÃO -->
+                    <div class="golpe-rodape-cinza">
+                        <button class="golpe-btn-grande golpe-btn-alerta" 
+                            onclick="mostrarErro('codigo')">Passar o Código
+                        </button>
+
+                        <button class="golpe-btn-grande golpe-btn-sucesso" 
+                            onclick="avancarPasso()">Não passar e Bloquear
+                        </button>
                     </div>
                 </div>`,
         feedback:
@@ -263,59 +169,40 @@ const golpes = [
         instrucao: `<strong>Cenário 5:</strong>
             Você recebe uma mensagem sobre 'dinheiro esquecido' para receber do governo. O que fazer?"`,
         conteudo: `
-                <div style="height: 100%; 
-                    display: flex; 
-                    flex-direction: column; 
-                    background: #ECE5DD; 
-                    font-family: sans-serif;">
-                    
-                    <div style="background: #075E54; 
-                        color: white; 
-                        padding: 12px 15px; 
-                        text-align: left; 
-                        font-weight: bold; 
-                        font-size: 18px; 
-                        display: flex; 
-                        align-items: center; 
-                        gap: 10px; 
-                        box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
-                        <span>🏛️</span>
-                        <div style="line-height: 1.1;">
-                            <span style="display: block; font-size: 16px;">Consulta Brasil</span>
-                            <span style="font-size: 11px; color: #AFAFAF; font-weight: normal;">online</span>
+                <div class="golpe-container golpe-bg-whatsapp">                    
+                    <!-- BARRA WHATS -->
+                    <div class="golpe-topo-wa">
+                        <div class="golpe-wa-avatar">🏛️</div>
+                        
+                        <div class="golpe-wa-info-usuario">
+                            <span style="display: block; 
+                                font-size: 16px;">Consulta Brasil
+                            </span>
+                            <span class="golpe-wa-status">online</span>
                         </div>
                     </div>
                     
-                    <div style="flex: 1; 
-                        padding: 20px 15px;">
-                        <div style="background: #FFFFFF; 
-                            padding: 12px 14px; 
-                            border-radius: 0 12px 12px 12px; 
-                            align-self: flex-start; 
-                            max-width: 85%; 
-                            font-size: 17px; 
-                            font-weight: 600; 
-                            box-shadow: 0 1px 2px rgba(0,0,0,0.15); 
-                            color: #222;">
-                                Você tem valores a receber liberados pelo Banco Central! 
-                                Faça a retirada imediata no link:
-
+                    <!-- ÁREA DE MENSAGENS -->
+                    <div class="golpe-corpo">
+                        <div class="golpe-balao-wa">
+                            Você tem valores a receber liberados pelo Banco Central! 
+                            Faça a retirada imediata no link:
+                            
                             <span style="color: #0066CC; 
                                 text-decoration: underline;">http://resgate-gov.click
                             </span>
                         </div>
                     </div>
                     
-                    <div style="padding: 20px 15px; 
-                        display: flex; 
-                        flex-direction: column; 
-                        gap: 14px; 
-                        align-items: center; 
-                        width: 100%; 
-                        box-sizing: border-box; 
-                        background: rgba(0,0,0,0.02);">
-                        <button class="botao-grande botao-alerta" onclick="mostrarErro('dinheiro')">Acessar e Consultar</button>
-                        <button class="botao-grande botao-sucesso" onclick="avancarPasso()">Ignorar e Apagar Conversa</button>
+                    <!-- BOTOES DE AÇÃO -->
+                    <div class="golpe-rodape-cinza">
+                        <button class="golpe-btn-grande golpe-btn-alerta" 
+                            onclick="mostrarErro('dinheiro')">Acessar e Consultar
+                        </button>
+
+                        <button class="golpe-btn-grande golpe-btn-sucesso" 
+                            onclick="avancarPasso()">Ignorar e Apagar Conversa
+                        </button>
                     </div>
                 </div>`,
         feedback:
@@ -330,56 +217,34 @@ const golpes = [
             produtos de casa, mas pede um pagamento inicial de 
             'treinamento'. O que fazer?"`,
         conteudo: `
-                <div style="height: 100%; 
-                    display: flex; 
-                    flex-direction: column; 
-                    background: #ECE5DD; 
-                    font-family: sans-serif;">
-                    
-                    <div style="background: #075E54; 
-                        color: white; 
-                        padding: 12px 15px; 
-                        text-align: left; 
-                        font-weight: bold; 
-                        font-size: 18px; 
-                        display: flex; 
-                        align-items: center; 
-                        gap: 10px; 
-                        box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
-                        <span>💼</span>
-                        <div style="line-height: 1.1;">
-                            <span style="display: block; font-size: 16px;">Vagas Home Office</span>
-                            <span style="font-size: 11px; color: #AFAFAF; font-weight: normal;">online</span>
+                <div class="golpe-container golpe-bg-whatsapp">                    
+                    <!-- BARA WHATS -->
+                    <div class="golpe-topo-wa">
+                        <div class="golpe-wa-avatar">💼</div>
+                        
+                        <div class="golpe-wa-info-usuario">
+                            <span style="display: block; 
+                                font-size: 16px;">Vagas Home Office
+                            </span>
+                            <span class="golpe-wa-status">online</span>
                         </div>
                     </div>
                     
-                    <div style="flex: 1; 
-                        padding: 20px 15px; 
-                        display: flex; 
-                        flex-direction: column; 
-                        gap: 12px;">
-                        <div style="background: #FFFFFF; 
-                            padding: 12px 14px; 
-                            border-radius: 0 12px 12px 12px; 
-                            align-self: flex-start; 
-                            max-width: 85%; 
-                            font-size: 17px; 
-                            font-weight: 600; 
-                            box-shadow: 0 1px 2px rgba(0,0,0,0.15); 
-                            color: #222;">Vaga Home Office Renda Extra! Ganhe avaliando marcas parceiras. Taxa de inscrição promocional hoje: R$ 29,90.
+                    <!-- ÁREA DE MENSAGENS -->
+                    <div class="golpe-corpo">
+                        <div class="golpe-balao-wa">Vaga Home Office Renda Extra! Ganhe avaliando marcas parceiras. Taxa de inscrição promocional hoje: R$ 29,90.
                         </div>
                     </div>
                     
-                    <div style="padding: 20px 15px; 
-                        display: flex; 
-                        flex-direction: column; 
-                        gap: 14px; 
-                        align-items: center; 
-                        width: 100%; 
-                        box-sizing: border-box; 
-                        background: rgba(0,0,0,0.02);">
-                        <button class="botao-grande botao-alerta" onclick="mostrarErro('emprego')">Pagar Taxa e Começar</button>
-                        <button class="botao-grande botao-sucesso" onclick="avancarPasso()">Ignorar Vaga Falsa</button>
+                    <!-- BOTOES DE AÇÃO -->
+                    <div class="golpe-rodape-cinza">
+                        <button class="golpe-btn-grande golpe-btn-alerta" 
+                            onclick="mostrarErro('emprego')">Pagar Taxa e Começar
+                        </button>
+
+                        <button class="golpe-btn-grande golpe-btn-sucesso" 
+                            onclick="avancarPasso()">Ignorar Vaga Falsa
+                        </button>
                     </div>
                 </div>`,
         feedback:
@@ -393,72 +258,32 @@ const golpes = [
             Um suposto entregador liga dizendo que tem um presente para você, 
             mas cobra uma taxa de R$ 5,00 de entrega na maquininha. O que fazer?"`,
         conteudo: `               
-                <div style="height: 100% !important; 
-                    min-height: 100% !important;
-                    display: flex; 
-                    flex-direction: column; 
-                    background: #F4F4F4; 
-                    font-family: sans-serif;
-                    box-sizing: border-box;
-                    flex: 1 !important;">
+                <div class="golpe-container golpe-bg-sms">                    
+                    <!-- CABEÇALHO ENTREGAS -->
+                    <div class="golpe-topo-entrega">📦 Confirmação de Entrega</div>
                     
-                    <!-- Cabeçalho de aplicativo de entregas -->
-                    <div style="background: #EA1D2C; 
-                        color: white; 
-                        padding: 14px; 
-                        text-align: center; 
-                        font-weight: bold; 
-                        font-size: 16px; 
-                        box-shadow: 0 2px 4px rgba(0,0,0,0.1);">📦 Confirmação de Entrega
-                    </div>
-                    
-                    <div style="flex: 1; 
-                        padding: 25px 15px; 
-                        text-align: center;
-                        box-sizing: border-box;
-                        background: #F4F4F4;">
-                        <div style="text-align:left; 
-                            background: #FFFFFF; 
-                            padding: 16px; 
-                            border-radius: 16px; 
-                            font-size: 17px; 
-                            border: 1px solid #E0E0E0; 
-                            box-shadow: 0 2px 5px rgba(0,0,0,0.05); 
-                            color: #333; 
-                            line-height: 1.4;
-                            box-sizing: border-box;"><strong>Entregador no Portão:</strong>
+                    <!-- ÁREA DE DETALHES DA ENTREGA -->
+                    <div class="golpe-corpo" style="padding-top: 10px; gap: 8px;">                        
+                        <div class="golpe-caixa-sms" style="font-size: 15px;
+                            padding: 12px;
+                            line-height: 1.35;">
+                            
+                            <strong>Entregador no Portão:</strong>
                             <br>"Trouxe um presente surpresa pra você! Só precisa passar o cartão na minha maquininha para pagar a taxa de entrega de R$ 5,00."
                         </div>
                     </div>
                                        
-                    <div style="padding: 0px 15px 20px 15px; 
-                        display: flex; 
-                        flex-direction: column; 
-                        gap: 14px; 
-                        align-items: center; 
-                        width: 100%; 
-                        box-sizing: border-box;
-                        background: #F4F4F4;">                        
+                    <!-- BOTOES DE AÇÃO -->
+                    <div class="golpe-rodape-limpo" style="padding-top: 0px; 
+                        padding-bottom: 14px; gap: 8px;">                        
                        
-                        <button class="botao-grande botao-alerta" 
-                            onclick="mostrarErro('entrega')"
-                            style="width: 100% !important;
-                            padding: 12px 10px !important;
-                            font-size: 16px !important;
-                            white-space: nowrap !important;
-                            overflow: hidden !important;
-                            text-overflow: ellipsis !important;
-                            box-sizing: border-box !important;">Passar o Cartão na Maquininha</button>                            
+                        <button class="golpe-btn-grande golpe-btn-alerta" 
+                            onclick="mostrarErro('entrega')">Passar o Cartão na Maquininha
+                        </button>                            
                       
-                        <button class="botao-grande botao-sucesso" 
-                            onclick="avancarPasso()"
-                            style="width: 100% !important;
-                            padding: 12px 10px !important;
-                            font-size: 16px !important;
-                            white-space: nowrap !important;
-                            overflow: hidden !important;
-                            text-overflow: ellipsis !important;
-                            box-sizing: border-box !important;">Recusar e Não Passar Cartão</button>
+                        <button class="golpe-btn-grande golpe-btn-sucesso" 
+                            onclick="avancarPasso()">Recusar e Não Passar Cartão
+                        </button>
                     </div>
                 </div>`,
         feedback:
@@ -471,60 +296,37 @@ const golpes = [
             Uma mensagem urgente diz que seu CPF está irregular na 
             Receita Federal e dá um link para resolver. O que fazer?"`,
         conteudo: `
-                <div style="height: 100%; 
-                    display: flex; 
-                    flex-direction: column; 
-                    background: #ECE5DD; 
-                    font-family: sans-serif;">
-                    
-                    <div style="background: #075E54; 
-                        color: white; 
-                        padding: 12px 15px; 
-                        text-align: left; 
-                        font-weight: bold; 
-                        font-size: 18px; 
-                        display: flex; 
-                        align-items: center; 
-                        gap: 10px; 
-                        box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
-                        <span>⚖️</span>
-                        <div style="line-height: 1.1;">
-                            <span style="display: block; font-size: 16px;">Alertas Federais</span>
-                            <span style="font-size: 11px; color: #AFAFAF; font-weight: normal;">online</span>
+                <div class="golpe-container golpe-bg-whatsapp">                    
+                    <!-- BARRA WHATS -->
+                    <div class="golpe-topo-wa">
+                        <div class="golpe-wa-avatar">⚖️</div>
+                        
+                        <div class="golpe-wa-info-usuario">
+                            <span style="display: block; 
+                                font-size: 16px;">Alertas Federais
+                            </span>
+                            <span class="golpe-wa-status">online</span>
                         </div>
                     </div>
                     
-                    <div style="flex: 1; 
-                        padding: 20px 15px; 
-                        display: flex; 
-                        flex-direction: column; 
-                        gap: 12px;">
-                        <div style="background: #FFFFFF; 
-                            padding: 12px 14px; 
-                            border-radius: 0 12px 12px 12px; 
-                            align-self: flex-start; 
-                            max-width: 85%; 
-                            font-size: 17px; 
-                            font-weight: 600; 
-                            box-shadow: 0 1px 2px rgba(0,0,0,0.15); 
-                            color: #222;">AVISO DA RECEITA: Seu CPF será cancelado 
-                                em 24h por pendências. Regularize agora no portal: 
+                    <!-- ÁREA DE MENSAGENS -->
+                    <div class="golpe-corpo">
+                        <div class="golpe-balao-wa">AVISO DA RECEITA: Seu CPF será cancelado em 24h por pendências. Regularize agora no portal: 
                             <span style="color: #0066CC; 
                                 text-decoration: underline;">http://receita-regularizar.top
                             </span>
                         </div>
                     </div>
                     
-                    <div style="padding: 20px 15px; 
-                        display: flex; 
-                        flex-direction: column; 
-                        gap: 14px; 
-                        align-items: center; 
-                        width: 100%; 
-                        box-sizing: border-box; 
-                        background: rgba(0,0,0,0.02);">
-                        <button class="botao-grande botao-alerta" onclick="mostrarErro('receita')">Acessar e Preencher</button>
-                        <button class="botao-grande botao-sucesso" onclick="avancarPasso()">Bloquear e Apagar</button>
+                    <!-- BOTOES DE AÇÃO -->
+                    <div class="golpe-rodape-cinza">
+                        <button class="golpe-btn-grande golpe-btn-alerta" 
+                            onclick="mostrarErro('receita')">Acessar e Preencher
+                        </button>
+
+                        <button class="golpe-btn-grande golpe-btn-sucesso" 
+                            onclick="avancarPasso()">Bloquear e Apagar
+                        </button>
                     </div>
                 </div>`,
         feedback:
@@ -538,21 +340,9 @@ const golpes = [
             Uma pessoa desconhecida liga desesperada dizendo ser seu sobrinho,
             que o carro quebrou e precisa de um Pix urgente para o guincho. O que fazer?`,
         conteudo: `
-                <div style="height: 100%; 
-                    display: flex; 
-                    flex-direction: column; 
-                    background: #1C1C1E; 
-                    font-family: sans-serif; 
-                    color: white;">
-                    
+                <div class="golpe-container golpe-bg-telefone">                    
                     <!-- SIMULADOR CHAMADA TELEFONICA -->
-                    <div style="flex: 1; 
-                        display: flex; 
-                        flex-direction: column; 
-                        align-items: center; 
-                        justify-content: center; 
-                        padding: 10px 15px; 
-                        text-align: center;">
+                    <div class="golpe-chamada-avatar-container">
                         
                         <div style="width: 70px; 
                             height: 70px; 
@@ -566,34 +356,30 @@ const golpes = [
                             box-shadow: 0 4px 10px rgba(0,0,0,0.3);">📞
                         </div>
                         
-                        <div style="font-size: 18px; font-weight: bold; margin-bottom: 2px;">Número Desconhecido</div>
-                        <div style="font-size: 12px; color: #8E8E93; margin-bottom: 15px;">Chamada em andamento...</div>
+                        <div style="font-size: 18px; 
+                            font-weight: bold; 
+                            margin-bottom: 2px;">Número Desconhecido
+                        </div>
+                        
+                        <div style="font-size: 12px; 
+                            color: #8E8E93; 
+                            margin-bottom: 15px;">Chamada em andamento...
+                        </div>
                         
                         <!-- TEXTO COMPACTADO -->
-                        <p style="font-size: 14px; 
-                            background: rgba(255,255,255,0.08); 
-                            padding: 12px; 
-                            border-radius: 12px; 
-                            border: 1px solid rgba(255,255,255,0.1); 
-                            max-width: 90%; 
-                            color: #EEE; 
-                            margin: 0;
-                            font-style: italic;
-                            line-height: 1.3;">"Tio! Meu carro quebrou na estrada, faz um Pix urgente para pagar o guincho pra mim?!"
+                        <p class="golpe-chamada-balao-texto">"Tio! Meu carro quebrou na estrada, faz um Pix urgente para pagar o guincho pra mim?!"
                         </p>
                     </div>
                     
-                    <!-- ÁREA DE BOTÕES RESPONSIVA -->
-                    <div style="padding: 15px; 
-                        display: flex; 
-                        flex-direction: column; 
-                        gap: 10px; 
-                        align-items: center; 
-                        width: 100%; 
-                        box-sizing: border-box; 
-                        background: rgba(0,0,0,0.2);">
-                        <button class="botao-grande botao-alerta" onclick="mostrarErro('parente')">Fazer o Pix Urgente</button>
-                        <button class="botao-grande botao-sucesso" onclick="avancarPasso()">Desligar e Ligar Pro Parente Real</button>
+                    <!-- BOTOES DE AÇÃO -->
+                    <div class="golpe-rodape-cinza" style="background: rgba(0,0,0,0.2);">
+                        <button class="golpe-btn-grande golpe-btn-alerta" 
+                            onclick="mostrarErro('parente')">Fazer o Pix Urgente
+                        </button>
+
+                        <button class="golpe-btn-grande golpe-btn-sucesso" 
+                            onclick="avancarPasso()">Desligar e Ligar Pro Parente Real
+                        </button>
                     </div>
                 </div>`,
         feedback:
@@ -608,57 +394,35 @@ const golpes = [
             que há uma compra suspeita no seu cartão e pede para você
             confirmar seus dados e senha. O que fazer?`,
         conteudo: `
-                <div style="height: 100%; 
-                    display: flex; 
-                    flex-direction: column; 
-                    background: #ECE5DD; 
-                    font-family: sans-serif;">
-                    
-                    <div style="background: #002F6C; 
-                        color: white; 
-                        padding: 10px 15px; 
-                        text-align: left; 
-                        font-weight: bold; 
-                        font-size: 16px; 
-                        display: flex; 
-                        align-items: center; 
-                        gap: 10px; 
-                        box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+                <div class="golpe-container golpe-bg-whatsapp">                    
+                    <!-- BARRA WHATS -->
+                    <div class="golpe-topo-wa">
                         <span>🏦</span>
-                        <div style="line-height: 1.1;">
-                            <span style="display: block; font-size: 15px;">Central de Segurança</span>
-                            <span style="font-size: 11px; color: #AFAFAF; font-weight: normal;">online</span>
+                        
+                        <div class="golpe-wa-info-usuario">
+                            <span style="display: block; 
+                                font-size: 16px;">Central de Segurança
+                            </span>
+                            
+                            <span class="golpe-wa-status">online</span>
                         </div>
                     </div>
                     
-                    <!-- TEXTO COMPACTADO -->
-                    <div style="flex: 1; 
-                        padding: 15px 12px;">
-                        <div style="background: #FFFFFF; 
-                            padding: 10px 12px; 
-                            border-radius: 0 12px 12px 12px; 
-                            align-self: flex-start; 
-                            max-width: 85%; 
-                            font-size: 14px; 
-                            font-weight: 600; 
-                            line-height: 1.3;
-                            box-shadow: 0 1px 2px rgba(0,0,0,0.15); 
-                            color: #222;">Prezado cliente, detectamos uma compra suspeita
-                                de R$ 2.500. Para cancelar, confirme aqui sua agência, 
-                                conta e senha eletrônica de acesso.
+                    <!-- ÁREA DE MENSAGENS -->
+                    <div class="golpe-corpo">
+                        <div class="golpe-balao-wa">Prezado cliente, detectamos uma compra suspeita de R$ 2.500. Para cancelar, confirme aqui sua agência, conta e senha eletrônica de acesso.
                         </div>
                     </div>                    
                  
-                    <div style="padding: 15px; 
-                        display: flex; 
-                        flex-direction: column; 
-                        gap: 10px; 
-                        align-items: center; 
-                        width: 100%; 
-                        box-sizing: border-box; 
-                        background: rgba(0,0,0,0.02);">
-                        <button class="botao-grande botao-alerta" onclick="mostrarErro('gerente')">Confirmar Dados e Senha</button>
-                        <button class="botao-grande botao-sucesso" onclick="avancarPasso()">Desligar e Procurar a Agência</button>
+                    <!-- BOTOES DE AÇÃO -->
+                    <div class="golpe-rodape-cinza">
+                        <button class="golpe-btn-grande golpe-btn-alerta" 
+                            onclick="mostrarErro('gerente')">Confirmar Dados e Senha
+                        </button>
+
+                        <button class="golpe-btn-grande golpe-btn-sucesso" 
+                            onclick="avancarPasso()">Desligar e Procurar a Agência
+                        </button>
                     </div>
                 </div>`,
         feedback:
@@ -673,29 +437,21 @@ const golpes = [
             aparelho está infectado por vírus e pede para 
             ligar para um 0800. O que fazer?`,
         conteudo: `
-                <div style="height: 100%; 
-                    display: flex; 
-                    flex-direction: column; 
-                    background: #F8F9FA; 
-                    font-family: sans-serif;">
-                    
-                    <!-- Barra de Alerta Crítica Compactada -->
+                <div class="golpe-container golpe-bg-sms">                    
+                    <!-- BARRA COMPACTADA -->
                     <div style="background: #DC3545; 
                         color: white; 
                         padding: 10px; 
                         text-align: center; 
                         font-weight: bold; 
                         font-size: 15px; 
-                        box-shadow: 0 2px 4px rgba(0,0,0,0.1);">⚠️ ALERTA DO SISTEMA
+                        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+                        flex-shrink: 0;">⚠️ ALERTA DO SISTEMA
                     </div>
                     
-                    <div style="flex: 1; 
-                        padding: 10px 15px; 
-                        text-align: center;
-                        display: flex;
-                        flex-direction: column;
-                        justify-content: center;
-                        gap: 8px;">
+                    <!-- ÁREA CENTRAL DO ALERTA DE VÍRUS -->
+                    <div class="golpe-corpo" style="justify-content: center; 
+                        text-align: center; gap: 8px;">
                         
                         <div style="font-size: 35px; margin: 0;">🚨</div>
                         
@@ -709,8 +465,8 @@ const golpes = [
                             line-height: 1.3;
                             text-align: left;
                             margin: 0;">
-                            <strong>ATENÇÃO:</strong> Seu dispositivo foi bloqueado por vírus! 
-                                                    Ligue imediatamente para a central de remoção:
+                            
+                            <strong>ATENÇÃO:</strong> Seu dispositivo foi bloqueado por vírus! Ligue imediatamente para a central de remoção:
                                                     
                             <span style="color: #DC3545;
                                 font-weight: bold;
@@ -722,16 +478,15 @@ const golpes = [
                         </div>
                     </div>
                     
-                    <div style="padding: 15px; 
-                        display: flex; 
-                        flex-direction: column; 
-                        gap: 10px; 
-                        align-items: center; 
-                        width: 100%; 
-                        box-sizing: border-box;
-                        background: rgba(0,0,0,0.02);">
-                        <button class="botao-grande botao-alerta" onclick="mostrarErro('suporte')">Ligar para o Número</button>
-                        <button class="botao-grande botao-sucesso" onclick="avancarPasso()">Fechar o Navegador ou Desligar</button>
+                    <!-- BOTOES DE AÇÃO -->
+                    <div class="golpe-rodape-cinza">
+                        <button class="golpe-btn-grande golpe-btn-alerta" 
+                            onclick="mostrarErro('suporte')">Ligar para o Número
+                        </button>
+
+                        <button class="golpe-btn-grande golpe-btn-sucesso" 
+                            onclick="avancarPasso()">Fechar o Navegador ou Desligar
+                        </button>
                     </div>
                 </div>`,
         feedback:
@@ -746,26 +501,9 @@ const golpes = [
             foi clonado e que enviarão um motoboy para 
             recolhê-lo na sua casa. O que fazer?`,
         conteudo: `             
-                <div style="height: 100% !important; 
-                    min-height: 100% !important;
-                    display: flex; 
-                    flex-direction: column; 
-                    background: #1C1C1E; 
-                    font-family: sans-serif; 
-                    color: white;
-                    box-sizing: border-box;
-                    flex: 1 !important;">
-                    
-                    <!-- Simulador de Chamada do Banco Compactado -->
-                    <div style="flex: 1; 
-                        display: flex; 
-                        flex-direction: column; 
-                        align-items: center; 
-                        justify-content: center; 
-                        padding: 10px 15px; 
-                        text-align: center;
-                        background: #1C1C1E;
-                        box-sizing: border-box;">
+                <div class="golpe-container golpe-bg-telefone">                    
+                    <!-- SIMULADOR DE CHAMADA -->
+                    <div class="golpe-chamada-avatar-container">
                         
                         <div style="width: 70px; 
                             height: 70px; 
@@ -779,53 +517,30 @@ const golpes = [
                             box-shadow: 0 4px 10px rgba(0,0,0,0.4);">🏦
                         </div>
                         
-                        <div style="font-size: 18px; font-weight: bold; margin-bottom: 2px;">Gerência de Segurança</div>
-                        <div style="font-size: 12px; color: #8E8E93; margin-bottom: 15px;">Chamada em andamento...</div>
+                        <div style="font-size: 18px; 
+                            font-weight: bold; 
+                            margin-bottom: 2px;">Gerência de Segurança
+                        </div>
                         
-                        <p style="font-size: 14px; 
-                            background: rgba(255,255,255,0.08); 
-                            padding: 12px; 
-                            border-radius: 12px; 
-                            border: 1px solid rgba(255,255,255,0.1); 
-                            max-width: 90%; 
-                            color: #EEE; 
-                            margin: 0;
-                            font-style: italic;
-                            line-height: 1.3;
-                            text-align: left;
-                            box-sizing: border-box;">"Detectamos fraudes nas suas compras. Corte o cartão ao
-                                meio e entregue para o nosso motoboy recolher agora em sua residência."
+                        <div style="font-size: 12px; 
+                            color: #8E8E93; 
+                            margin-bottom: 15px;">Chamada em andamento...
+                        </div>
+                        
+                        <!-- TEXTO -->
+                        <p class="golpe-chamada-balao-texto">"Detectamos fraudes nas suas compras. Corte o cartão ao meio e entregue para o nosso motoboy recolher agora em sua residência."
                         </p>
                     </div>                    
              
-                    <div style="padding: 15px; 
-                        display: flex; 
-                        flex-direction: column; 
-                        gap: 10px; 
-                        align-items: center; 
-                        width: 100%; 
-                        box-sizing: border-box; 
-                        background: rgba(0,0,0,0.2);">
-               
-                        <button class="botao-grande botao-alerta" 
-                            onclick="mostrarErro('motoboy')"
-                            style="width: 100% !important;
-                            padding: 12px 10px !important;
-                            font-size: 15px !important;
-                            white-space: nowrap !important;
-                            overflow: hidden !important;
-                            text-overflow: ellipsis !important;
-                            box-sizing: border-box !important;">Entregar Cartão Cortado</button>                            
+                    <!-- BOTOES DE AÇÃO -->
+                    <div class="golpe-rodape-cinza" style="background: rgba(0,0,0,0.2);">               
+                        <button class="golpe-btn-grande golpe-btn-alerta" 
+                            onclick="mostrarErro('motoboy')">Entregar Cartão Cortado
+                        </button>                            
                        
-                        <button class="botao-grande botao-sucesso" 
-                            onclick="avancarPasso()"
-                            style="width: 100% !important;
-                            padding: 12px 10px !important;
-                            font-size: 15px !important;
-                            white-space: nowrap !important;
-                            overflow: hidden !important;
-                            text-overflow: ellipsis !important;
-                            box-sizing: border-box !important;">Recusar e Desligar</button>
+                        <button class="golpe-btn-grande golpe-btn-sucesso" 
+                            onclick="avancarPasso()">Recusar e Desligar
+                        </button>
                     </div>
                 </div>`,
         feedback:
