@@ -548,4 +548,84 @@ const golpes = [
         motoboys para recolher cartões magnéticos na casa de clientes, mesmo 
         que estejam cortados ao meio. O chip continua legível e operante!`,
     },
+
+    // CENÁRIO 13: TELA FINAL DE SUCESSO (VITÓRIA ABSOLUTA)
+    {
+        instrucao: `<strong>PASSO 13:</strong> 
+            Parabéns! Você concluiu com sucesso este tutorial de Segurança Digital! 
+            Você aprendeu com total autonomia a desmascarar falsos parentes, 
+            identificar links perigosos, recusar golpes de maquininha e proteger 
+            suas economias com total segurança.`,
+        conteudo: `
+                <div class="golpe-container" style="background: white; 
+                    padding: 10px; 
+                    align-items: center; 
+                    justify-content: center;">
+                    
+                    <div style="background: #F8FAFC; 
+                        width: 100%; 
+                        padding: 15px 12px; 
+                        border-radius: 12px; 
+                        text-align: center; 
+                        box-shadow: 0 3px 10px rgba(0,0,0,0.1); 
+                        border: 3px solid #16A34A; 
+                        display: flex; 
+                        flex-direction: column; 
+                        align-items: center;
+                        box-sizing: border-box;">
+                        
+                        <div style="background: #16A34A; 
+                            color: white; 
+                            font-weight: bold; 
+                            padding: 4px 12px; 
+                            font-size: 11px; 
+                            border-radius: 4px; 
+                            margin-bottom: 10px; 
+                            letter-spacing: 0.5px;
+                            white-space: nowrap;">ESCUDO DE PROTEÇÃO DIGITAL</div>
+                        
+                        <div style="width: 45px; 
+                            height: 45px; 
+                            background: #DCFCE7; 
+                            color: #16A34A; 
+                            font-size: 24px; 
+                            display: flex; 
+                            align-items: center; 
+                            justify-content: center; 
+                            border-radius: 50%; 
+                            margin-bottom: 10px;">🛡️</div>
+                        
+                        <h2 style="font-size: 18px; 
+                            color: #000; 
+                            margin: 0 0 6px 0; 
+                            font-weight: bold; 
+                            line-height: 1.2;">Golpes Dominados!</h2>
+                        
+                        <p style="margin: 0 0 12px 0; 
+                            font-size: 12px; 
+                            color: #555; 
+                            line-height: 1.3; 
+                            text-align: center;">Parabéns! Você se tornou um especialista em defesa digital. 
+                                                Agora reconhecer mensagens falsas de bancos, falsas promessas de 
+                                                prêmios e ligações de criminosos fingindo emergências virou rotina!
+                        </p>
+                        
+                        <button onclick="window.location.href='menu.html'" 
+                            style="background: #16A34A; 
+                            color: white; 
+                            border: none; 
+                            padding: 10px 20px; 
+                            border-radius: 20px; 
+                            font-size: 14px; 
+                            font-weight: bold; 
+                            cursor: pointer; 
+                            width: 100%; 
+                            box-shadow: 0 3px 0 #166534;
+                            white-space: nowrap;">Finalizar Treino
+                        </button>
+                    </div>
+                </div>`,
+        feedback:
+        "Parabéns! Você concluiu com sucesso este tutorial de Segurança Digital! 🎉",
+    },
 ];

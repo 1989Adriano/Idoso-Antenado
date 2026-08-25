@@ -985,4 +985,85 @@ const youtube = [
         feedback:
             "✓ Parabéns! Você concluiu com sucesso este tutorial do YouTube! Agora você sabe pesquisar, assistir e controlar seus vídeos com total segurança. 🎉",
     },
+
+    //  PASSO 9: TELA FINAL DE SUCESSO (VITÓRIA ABSOLUTA)
+    {
+        instrucao: `<strong>PASSO 9:</strong> 
+            Parabéns! Você concluiu com sucesso este tutorial do YouTube! 
+            Você aprendeu com total autonomia a pesquisar vídeos, pular 
+            anúncios chatos, pausar para o café, inscrever-se em canais 
+            e controlar a tela cheia com total segurança.`,
+        conteudo: `
+                <div class="yt-container" style="background: white; 
+                    padding: 10px; 
+                    align-items: center; 
+                    justify-content: center;">
+                    
+                    <div style="background: #F8FAFC; 
+                        width: 100%; 
+                        padding: 15px 12px; 
+                        border-radius: 12px; 
+                        text-align: center; 
+                        box-shadow: 0 3px 10px rgba(0,0,0,0.1); 
+                        border: 3px solid #FF0000; 
+                        display: flex; 
+                        flex-direction: column; 
+                        align-items: center;
+                        box-sizing: border-box;">
+                        
+                        <div style="background: #FF0000; 
+                            color: white; 
+                            font-weight: bold; 
+                            padding: 4px 12px; 
+                            font-size: 11px; 
+                            border-radius: 4px; 
+                            margin-bottom: 10px; 
+                            letter-spacing: 0.5px;
+                            white-space: nowrap;">ENTRETENIMENTO E CULTURA</div>
+                        
+                        <div style="width: 45px; 
+                            height: 45px; 
+                            background: #FFEAEA; 
+                            color: #FF0000; 
+                            font-size: 24px; 
+                            display: flex; 
+                            align-items: center; 
+                            justify-content: center; 
+                            border-radius: 50%; 
+                            margin-bottom: 10px;">▶️</div>
+                        
+                        <h2 style="font-size: 18px; 
+                            color: #000; 
+                            margin: 0 0 6px 0; 
+                            font-weight: bold; 
+                            line-height: 1.2;">YouTube Dominado!</h2>
+                        
+                        <p style="margin: 0 0 12px 0; 
+                            font-size: 12px; 
+                            color: #555; 
+                            line-height: 1.3; 
+                            text-align: center;">Parabéns! Você se tornou um mestre na navegação de vídeos. 
+                                                Agora buscar receitas de bolo, assistir a músicas antigas, 
+                                                pular propagandas comerciais e deitar a tela do celular 
+                                                para enxergar melhor virou rotina!
+                        </p>
+                        
+                        <button onclick="window.location.href='menu.html'" 
+                            style="background: #FF0000; 
+                            color: white; 
+                            border: none; 
+                            padding: 10px 20px; 
+                            border-radius: 20px; 
+                            font-size: 14px; 
+                            font-weight: bold; 
+                            cursor: pointer; 
+                            width: 100%; 
+                            box-shadow: 0 3px 0 #990000;
+                            white-space: nowrap;">Finalizar Treino
+                        </button>
+                    </div>
+                </div>`,
+        feedback:
+        "Parabéns! Você concluiu com sucesso este tutorial do YouTube! 🎉",
+    },
 ];
