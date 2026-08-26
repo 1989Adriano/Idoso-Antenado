@@ -1,4 +1,4 @@
-/* Container Principal do Celular */
+/* CONTAINER PRINCIPAL E INFRAESTRUTURA DO SMARTPHONE */
 .wa-container {
     height: 100%;
     display: flex;
@@ -7,9 +7,11 @@
     font-family: sans-serif;
     box-sizing: border-box;
     user-select: none;
+    overflow: hidden; /* Evita que o app transborde a tela */
 }
 
-/* Cabeçalhos Verdes Principais */
+/* CABEÇALHOS, TOPOS E BARRAS DE NAVEGAÇÃO */
+
 .wa-topo-agenda {
     background: #007AFF;
     color: white;
@@ -18,8 +20,10 @@
     font-weight: bold;
     font-size: 18px;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    flex-shrink: 0;
 }
 
+/* Topo da Tela Principal */
 .wa-topo-app {
     background: #075E54;
     color: white;
@@ -28,8 +32,10 @@
     font-weight: bold;
     font-size: 20px;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    flex-shrink: 0;
 }
 
+/* Topo Verde de Dentro do Chat de Conversa */
 .wa-topo-chat {
     background: #075E54;
     color: white;
@@ -41,16 +47,19 @@
     align-items: center;
     gap: 10px;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    flex-shrink: 0;
 }
 
-/* Áreas de Corpo e Feeds */
+/* ÁREAS CENTRAIS, CORPOS E FEEDS DE MENSAGENS */
 .wa-corpo-agenda {
     flex: 1;
-    padding: 25px 15px;
+    padding: 15px;
     display: flex;
     flex-direction: column;
     gap: 15px;
     justify-content: center;
+    box-sizing: border-box;
+    overflow-y: auto;
 }
 
 .wa-corpo-app {
@@ -60,18 +69,23 @@
     display: flex;
     flex-direction: column;
     gap: 15px;
+    box-sizing: border-box;
+    overflow-y: auto;
 }
 
 .wa-corpo-chat {
     flex: 1;
-    padding: 20px 15px;
+    padding: 15px 12px;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
     gap: 10px;
+    box-sizing: border-box;
+    overflow-y: auto; /* Permite rolar balões antigos sem estourar */
 }
 
-/* Barras Operacionais Inferiores */
+/* BARRAS OPERACIONAIS E RODAPÉS INFERIORES */
+
 .wa-barra-inferior {
     padding: 10px;
     display: flex;
@@ -79,18 +93,21 @@
     gap: 8px;
     background: transparent;
     box-sizing: border-box;
-    margin-bottom: 10px;
+    flex-shrink: 0;
 }
 
+/* Barra Branca de Ação de Salvar Contato da Agenda */
 .wa-barra-salvar {
-    padding: 20px 15px;
+    padding: 15px;
     display: flex;
     justify-content: center;
     background: white;
     border-top: 1px solid #EEE;
+    flex-shrink: 0;
+    box-sizing: border-box;
 }
 
-/* Botões e Ícones Padronizados */
+/* BOTÕES, ÍCONES E CONTROLES PADRONIZADOS */
 .wa-btn-microfone {
     width: 45px;
     height: 45px;
@@ -103,11 +120,13 @@
     font-size: 20px;
     cursor: pointer;
     box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+    border: none;
+    flex-shrink: 0;
 }
 
 .wa-btn-microfone-ativo {
-    width: 48px;
-    height: 48px;
+    width: 45px;
+    height: 45px;
     background: #00A884;
     border-radius: 50%;
     display: flex;
@@ -118,9 +137,11 @@
     cursor: pointer;
     box-shadow: 0 2px 5px rgba(0,0,0,0.2);
     border: 3px dashed #FFC107;
+    flex-shrink: 0;
+    box-sizing: border-box;
 }
 
-/* Balões de Envio e Recebimento */
+/* BALÕES DE ENVIO E RECEBIMENTO DE MENSAGENS (BORDAS LISAS) */
 .wa-balao-envio {
     background: #DCF8C6;
     padding: 10px 14px;
@@ -132,7 +153,7 @@
     text-align: left;
     color: #222;
     position: relative;
-    margin-bottom: 10px;
+    border: none;
 }
 
 .wa-balao-recebimento {
@@ -145,4 +166,290 @@
     box-shadow: 0 1px 2px rgba(0,0,0,0.15);
     color: #222;
     text-align: left;
+    border: none;
+}
+
+/* Card Branco que envolve o Formulário da Agenda (Passo 1) */
+.wa-card-formulario {
+    text-align: left; 
+    background: white; 
+    padding: 15px; 
+    border-radius: 12px; 
+    border: 1px solid #CBD5E1; 
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    box-sizing: border-box;
+}
+
+/* Etiquetas dos Campos de Texto da Agenda (Passo 1) */
+.wa-label-agenda {
+    font-weight: bold; 
+    font-size: 14px; 
+    color: #666; 
+    display: block; 
+    margin-bottom: 5px;
+}
+
+/* Inputs de Texto Desabilitados da Agenda (Passo 1) */
+.wa-input-agenda {
+    width: 100%; 
+    padding: 10px; 
+    font-size: 18px; 
+    font-weight: bold; 
+    border: 1px solid #CCC; 
+    border-radius: 6px; 
+    background: #F9F9F9; 
+    box-sizing: border-box; 
+    color: #333;
+}
+
+/* Botão Pontilhado de Ação da Agenda (Passo 1) */
+.wa-btn-salvar-alvo {
+    background: #248A3D !important; 
+    box-shadow: 0 6px 0 #185E29 !important; 
+    border: 3px dashed #FFC107 !important;
+    width: 100% !important;
+    padding: 12px 10px !important;
+    font-size: 18px !important;
+    white-space: nowrap !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+    box-sizing: border-box !important;
+    color: white;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+/* Barra de Pesquisa de Contatos (Passo 2) */
+.wa-btn-busca-alvo {
+    background: #E8F5E9; 
+    padding: 14px 18px; 
+    border-radius: 30px; 
+    text-align: left; 
+    font-size: 16px; 
+    color: #1B5E20; 
+    cursor: pointer; 
+    font-weight: bold; 
+    box-shadow: 0 2px 5px rgba(0,0,0,0.08); 
+    border: 3px dashed #075E54; 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+/* Cards das Conversas de Outras Pessoas no Feed (Passo 2) */
+.wa-card-feed-inativo {
+    background: white; 
+    padding: 12px; 
+    border-radius: 12px; 
+    text-align: left; 
+    display: flex; 
+    align-items: center; 
+    gap: 12px; 
+    opacity: 0.6;
+    border: 1px solid #CBD5E1; 
+    box-sizing: border-box;
+}
+
+/* Criptografia ou aviso de segurança (Passo 3) */
+.wa-aviso-criptografia {
+    background: #FFF9C4; 
+    padding: 8px 12px; 
+    border-radius: 8px; 
+    font-size: 12px; 
+    text-align: center; 
+    align-self: center; 
+    max-width: 90%; 
+    color: #555; 
+    box-shadow: 0 1px 1px rgba(0,0,0,0.05); 
+    margin-bottom: 15px; 
+    font-weight: bold;
+}
+
+/* Campo de Digitação Ativa (Passo 3) */
+.wa-input-digitar-alvo {
+    flex: 1; 
+    background: #E8F5E9; 
+    padding: 10px 12px;
+    border-radius: 25px; 
+    text-align: left; 
+    font-size: 14px;
+    color: #1B5E20; 
+    cursor: pointer; 
+    font-weight: bold; 
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1); 
+    border: 3px dashed #075E54;
+    box-sizing: border-box;                      
+    white-space: nowrap !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+}
+
+/* Campo estático que mostra o texto já digitado (Passo 4) */
+.wa-input-digitado-estatico {
+    flex: 1; 
+    background: white; 
+    padding: 10px 12px; 
+    border-radius: 25px; 
+    text-align: left; 
+    font-size: 14px; 
+    color: #333; 
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    box-sizing: border-box;
+    white-space: nowrap !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+    pointer-events: none !important;
+    cursor: default !important;
+}
+
+/* Botão de Enviar Mensagem (Passo 4) */
+.wa-btn-enviar-alvo {
+    width: 45px; 
+    height: 45px; 
+    background: #00A884; 
+    border-radius: 50%; 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    color: white; 
+    font-size: 20px; 
+    cursor: pointer; 
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2); 
+    border: 3px dashed #FFC107;
+    flex-shrink: 0 !important;
+    box-sizing: border-box;
+}
+/* Botão do Tique de Lido (Passo 5) */
+.wa-btn-tique-alvo {
+    font-size: 10px; 
+    color: #34B7F1; 
+    font-weight: bold; 
+    cursor: pointer; 
+    padding: 3px 6px; 
+    background: rgba(0,0,0,0.05); 
+    border-radius: 4px; 
+    display: inline-flex; 
+    align-items: center;
+    border: 2px dashed #34B7F1;
+    white-space: nowrap !important;
+    flex-shrink: 0 !important;
+}
+
+/* Balão de Áudio Recebido (Passo 6) */
+.wa-balao-audio-alvo {
+    background: #FFFFFF; 
+    padding: 12px 14px; 
+    border-radius: 14px 14px 14px 0; 
+    align-self: flex-start; 
+    width: 80%; 
+    font-size: 16px; 
+    box-shadow: 0 1px 2px rgba(0,0,0,0.15); 
+    display: flex; 
+    align-items: center; 
+    gap: 12px; 
+    cursor: pointer; 
+    border: 3px dashed #075E54;
+    box-sizing: border-box;
+}
+
+/* Ícone de Play Redondo dentro do Balão de Áudio (Passo 6) */
+.wa-audio-icone-play {
+    width: 36px; 
+    height: 36px; 
+    background: #075E54; 
+    border-radius: 50%; 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    color: white; 
+    font-size: 14px;
+    flex-shrink: 0;
+}
+
+/* Tag Visual do Texto 'Ouvir 🎧' (Passo 6) */
+.wa-audio-tag-ouvir {
+    font-size: 13px; 
+    color: #075E54; 
+    font-weight: bold; 
+    background: #E7F1FF; 
+    padding: 4px 8px; 
+    border-radius: 6px; 
+    white-space: nowrap;
+}
+
+/* Balão de Áudio Ativo em Reprodução (Passo 7) */
+.wa-balao-audio-reproduzindo {
+    background: #FFFFFF;
+    padding: 10px 14px;
+    border-radius: 14px 14px 14px 0;
+    align-self: flex-start;
+    width: 80%;
+    font-size: 16px;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.15);
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    box-sizing: border-box;
+}
+
+/* Botão de Conclusão do Áudio (Passo 7) */
+.wa-btn-concluido-alvo {
+    font-size: 13px; 
+    color: #0369A1; 
+    font-weight: bold; 
+    background: #E0F2FE; 
+    padding: 6px 10px; 
+    border-radius: 6px; 
+    cursor: pointer; 
+    border: 2px dashed #0284C7; 
+    white-space: nowrap;
+    box-sizing: border-box;
+}
+
+/* Botão Chamada de Vídeo (Passo 9) */
+.wa-btn-camera-alvo {
+    font-size: 24px; 
+    cursor: pointer; 
+    font-weight: bold; 
+    color: white; 
+    background: rgba(255,255,255,0.2); 
+    padding: 4px 8px; 
+    border-radius: 8px; 
+    border: 3px dashed #FFC107;
+    box-sizing: border-box;
+    display: inline-block;
+    line-height: 1;
+}
+
+/* Badge Central de Chamada de Vídeo Encerrada (Passo 10) */
+.wa-badge-chamada-encerrada {
+    background: rgba(255, 255, 255, 0.7); 
+    padding: 6px 12px; 
+    border-radius: 20px; 
+    font-size: 12px; 
+    text-align: center; 
+    align-self: center; 
+    color: #555; 
+    font-weight: bold; 
+    margin-bottom: 15px;
+}
+
+/* Botão Carinha Sorridente (Passo 10) */
+.wa-btn-emoji-alvo {
+    font-size: 24px; 
+    cursor: pointer; 
+    font-weight: bold; 
+    padding: 2px; 
+    background: #FFF3CD; 
+    border-radius: 50%; 
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); 
+    border: 3px dashed #FFC107;
+    flex-shrink: 0 !important;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
 }
