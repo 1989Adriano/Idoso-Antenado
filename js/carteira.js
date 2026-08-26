@@ -5,18 +5,12 @@ const carteira = [
             Para acessar seus documentos com segurança, 
             clique ou toque no botão central escrito "🔑 Entrar com gov.br"."`,
         conteudo: `
-                <div style="background: #FFF; 
-                    height: 100%; 
-                    display: flex; 
-                    flex-direction: column; 
-                    font-family: Arial, sans-serif; 
-                    box-sizing: border-box; 
-                    user-select: none;">
-                    
-                    <div style="background: #004B82; 
-                        padding: 15px; 
-                        text-align: center; 
-                        flex-shrink: 0;">
+                <div class="doc-container">                    
+                    <!-- NAV / TOPO GOVERNAMENTAL CLÁSSICO -->
+                    <div class="doc-topo" 
+                        style="background: #004B82; 
+                        justify-content: center;">
+                        
                         <span style="font-weight: bold; 
                             font-size: 22px; 
                             color: white; 
@@ -24,15 +18,10 @@ const carteira = [
                         </span>
                     </div>
                     
-                    <div style="padding: 20px; 
-                        flex: 1; 
-                        background: #F4F6F9; 
-                        display: flex; 
-                        flex-direction: column; 
-                        align-items: center; 
-                        justify-content: center; 
-                        gap: 25px; 
-                        box-sizing: border-box;">
+                    <!-- CORPO CENTRAL CONFIGURADO -->
+                    <div class="doc-corpo-central" 
+                        style="background: #F4F6F9; 
+                        gap: 25px;">
                         
                         <div style="font-size: 70px;">🪪</div>
                         
@@ -47,13 +36,11 @@ const carteira = [
                                         celular com validade nacional.
                         </div>
                         
-                        <!-- CONTORNO PONTILHADO -->
-                        <button class="botao-grande" 
-                            style="background: #1351B4; 
-                            width: 100%; 
-                            border-radius: 8px; 
-                            box-shadow: 0 4px 0 #0A2F66; 
-                            border: 3px dashed #F97316 !important;" 
+                        <!-- BOTÃO DESTAQUE DO GOVLIMPA -->
+                        <button class="doc-btn-principal-destaque" 
+                            style="border: 3px dashed #F97316 !important;
+                            border-radius: 8px;
+                            box-shadow: 0 4px 0 #0A2F66;" 
                             onclick="avancarPasso()">🔑 Entrar com gov.br
                         </button>
                     </div>
@@ -67,20 +54,9 @@ const carteira = [
         instrucao: `<strong>Passo 2:</strong>
             O sistema já preencheu seu CPF! Para continuar o acesso, clique ou toque no botão "Continuar""`,
         conteudo: `
-                <div style="background: #FFF; 
-                    height: 100%; 
-                    display: flex; 
-                    flex-direction: column; 
-                    font-family: Arial, sans-serif; 
-                    box-sizing: border-box; 
-                    user-select: none;">
-                    
-                    <div style="background: #002F6C; 
-                        padding: 12px 15px; 
-                        display: flex; 
-                        align-items: center; 
-                        justify-content: space-between; 
-                        flex-shrink: 0;">
+                <div class="doc-container">                    
+                    <!-- NAV / TOPO IDENTIFICAÇÃO GOV-->
+                    <div class="doc-topo">
                         <span style="font-weight: bold; 
                             font-size: 16px; 
                             color: white; 
@@ -88,14 +64,10 @@ const carteira = [
                         </span>
                     </div>
                     
-                    <div style="padding: 20px; 
-                        flex: 1; 
-                        background: #FFF; 
-                        display: flex; 
-                        flex-direction: column; 
-                        text-align: left; 
-                        gap: 15px; 
-                        box-sizing: border-box;">
+                    <!-- CORPO COMPACTADO-->
+                    <div class="doc-corpo" 
+                        style="background: #FFF; 
+                        gap: 15px;">
                         
                         <h2 style="font-size: 18px; 
                             color: #002F6C; 
@@ -108,26 +80,22 @@ const carteira = [
                                 display: block; 
                                 margin-bottom: 5px;">Número do CPF:</label>
                             
-                            <div style="background: #F0F4F8; 
-                                padding: 12px 15px; 
-                                border-radius: 6px; 
-                                font-size: 22px; 
-                                font-weight: bold; 
+                            <!-- INPUT DE CPF-->
+                            <div class="doc-input-formulario" 
+                                style="background: #F0F4F8; 
                                 border: 2px solid #002F6C; 
-                                color: #333; 
+                                font-size: 22px; 
                                 text-align: center; 
                                 letter-spacing: 1px;">123.456.789-00
                             </div>
                         </div>
                         
-                        <!-- CONTORNO PONTILHADO -->
-                        <button class="botao-grande" 
-                            style="background: #1351B4; 
-                            width: 100%; 
-                            border-radius: 6px; 
-                            margin-top: 10px; 
-                            box-shadow: 0 4px 0 #0A2F66; 
-                            border: 3px dashed #FFC107 !important;" 
+                        <!-- BOTÃO CONTINUAR REORGANIZADO-->
+                        <button class="doc-btn-principal-destaque" 
+                            style="border: 3px dashed #FFC107 !important;
+                            border-radius: 6px;
+                            margin-top: 10px;
+                            box-shadow: 0 4px 0 #0A2F66;" 
                             onclick="avancarPasso()">Continuar
                         </button>
                     </div>
@@ -142,93 +110,77 @@ const carteira = [
             para ver a CNH, em "🚙 Veículos" para o documento do carro, 
             ou em "⚠️ Infrações" para ver as multas."`,
         conteudo: `
-                <div style="background: #FFF; 
-                    height: 100%; 
-                    display: flex; 
-                    flex-direction: column; 
-                    font-family: Arial, sans-serif; 
-                    box-sizing: border-box; 
-                    user-select: none;">
-                    
-                    <div style="background: #004B82; 
-                        padding: 12px 15px; 
-                        display: flex; 
-                        align-items: center; 
-                        justify-content: space-between; 
-                        flex-shrink: 0;">
-                        <span style="font-weight: bold; font-size: 18px; color: white;">Meus Documentos</span>
-                        <span style="font-size: 20px; color: white;">👤</span>
+                <div class="doc-container">                    
+                    <div class="doc-topo">
+                        <span style="font-weight: bold; 
+                            font-size: 18px; 
+                            color: white;">Meus Documentos</span>
+                        <span style="font-size: 20px; 
+                            color: white;">👤</span>
                     </div>
                     
-                    <div style="padding: 15px; 
-                        flex: 1; 
-                        background: #F4F6F9; 
-                        display: flex; 
-                        flex-direction: column; 
-                        gap: 12px; 
-                        box-sizing: border-box;">
-                        
-                        <!-- ROTA 1: HABILITAÇÃO (CNH) -> INDICE 3 -->
+                    <div class="doc-corpo">                        
+                        <!-- ROTA 1: HABILITAÇÃO (CNH)-->
                         <div onclick="window.irParaPasso(3)" 
-                            style="background: white; 
-                            border: 3px dashed #0056B3; 
-                            padding: 14px; 
-                            border-radius: 10px; 
-                            display: flex; 
-                            align-items: center; 
-                            justify-content: space-between; 
-                            cursor: pointer; 
-                            box-shadow: 0 3px 6px rgba(0,0,0,0.05);">
-                            <div style="display: flex; align-items: center; gap: 12px;">
+                            class="doc-card-menu-selecao"
+                            style="border: 3px dashed #0056B3;">
+                            
+                            <div style="display: flex; 
+                                align-items: center; 
+                                gap: 12px;">
                                 <span style="font-size: 26px;">🚗</span>
+                                
                                 <div style="text-align: left;">
-                                    <strong style="font-size: 16px; color: #004B82;">Habilitação</strong>
-                                    <div style="font-size: 12px; color: #666;">Sua CNH Digital ativa</div>
+                                    <strong style="font-size: 16px; 
+                                        color: #004B82;">Habilitação</strong>
+                                    <div style="font-size: 12px; 
+                                        color: #666;">Sua CNH Digital ativa</div>
                                 </div>
                             </div>
-                            <span style="color: #004B82; font-weight: bold;">❯</span>
+                            <span style="color: #004B82; 
+                                font-weight: bold;">❯</span>
                         </div>
 
-                        <!-- ROTA 2: VEÍCULOS (CRLV) -->
+                        <!-- ROTA 2: VEÍCULOS (CRLV)-->
                         <div onclick="window.irParaPasso(5)" 
-                            style="background: white; 
-                            border: 3px dashed #28A745; 
-                            padding: 14px; 
-                            border-radius: 10px; 
-                            display: flex; 
-                            align-items: center; 
-                            justify-content: space-between; 
-                            cursor: pointer; 
-                            box-shadow: 0 3px 6px rgba(0,0,0,0.05);">
-                            <div style="display: flex; align-items: center; gap: 12px;">
+                            class="doc-card-menu-selecao"
+                            style="border: 3px dashed #28A745;">
+                            
+                            <div style="display: flex; 
+                                align-items: center; 
+                                gap: 12px;">
                                 <span style="font-size: 26px;">🚙</span>
+                                
                                 <div style="text-align: left;">
-                                    <strong style="font-size: 16px; color: #28A745;">Veículos</strong>
-                                    <div style="font-size: 12px; color: #666;">Documento do carro (CRLV)</div>
+                                    <strong style="font-size: 16px; 
+                                        color: #28A745;">Veículos</strong>
+                                    <div style="font-size: 12px; 
+                                        color: #666;">Documento do carro (CRLV)</div>
                                 </div>
                             </div>
-                            <span style="color: #28A745; font-weight: bold;">❯</span>
+                            <span style="color: #28A745; 
+                                font-weight: bold;">❯</span>
                         </div>
 
-                        <!-- ROTA 3: INFRAÇÕES (MULTAS) -->
+                        <!-- ROTA 3: INFRAÇÕES (MULTAS)-->
                         <div onclick="window.irParaPasso(7)" 
-                            style="background: white; 
-                            border: 3px dashed #FD7E14; 
-                            padding: 14px; 
-                            border-radius: 10px; 
-                            display: flex; 
-                            align-items: center; 
-                            justify-content: space-between; 
-                            cursor: pointer; 
-                            box-shadow: 0 3px 6px rgba(0,0,0,0.05);">
-                            <div style="display: flex; align-items: center; gap: 12px;">
+                            class="doc-card-menu-selecao"
+                            style="border: 3px dashed #FD7E14;">
+                            
+                            <div style="display: flex; 
+                                align-items: center; 
+                                gap: 12px;">
                                 <span style="font-size: 26px;">⚠️</span>
+                                
                                 <div style="text-align: left;">
-                                    <strong style="font-size: 16px; color: #FD7E14;">Infrações</strong>
-                                    <div style="font-size: 12px; color: #666;">Multas e boletos com desconto</div>
+                                    <strong style="font-size: 16px; 
+                                        color: #FD7E14;">Infrações</strong>
+                                    <div style="font-size: 12px; 
+                                        color: #666;">Multas e boletos com desconto</div>
                                 </div>
                             </div>
-                            <span style="color: #FD7E14; font-weight: bold;">❯</span>
+                            <span style="color: #FD7E14; 
+                                font-weight: bold;">❯</span>
                         </div>
                     </div>
                 </div>`,
@@ -241,45 +193,21 @@ const carteira = [
             Esta é a frente da sua CNH! Para ver o verso com o código de fiscalização, 
             clique ou toque no botão "🔄 Ver Verso""`,
         conteudo: `
-                <div style="background: #FFF; 
-                    height: 100%; 
-                    display: flex; 
-                    flex-direction: column; 
-                    font-family: Arial, sans-serif; 
-                    box-sizing: border-box; 
-                    user-select: none;">
-                    
-                    <div style="background: #004B82; 
-                        padding: 12px 15px; 
-                        display: flex; 
-                        align-items: center; 
-                        gap: 10px; 
-                        flex-shrink: 0;">
-                        <span style="color: white; font-size: 18px; font-weight: bold;">CNH Digital</span>
+                <div class="doc-container">                    
+                    <div class="doc-topo">
+                        <span style="color: white; 
+                            font-size: 18px; 
+                            font-weight: bold;">CNH Digital</span>
                     </div>
                     
-                    <div style="padding: 15px; 
-
-                        flex: 1; 
-                        background: #E2E8F0; 
-                        display: flex; 
-                        flex-direction: column; 
+                    <div class="doc-corpo" 
+                        style="background: #E2E8F0; 
                         align-items: center; 
                         justify-content: center; 
-                        gap: 15px; 
-                        box-sizing: border-box;">
+                        gap: 15px;">
                         
-                        <div style="background: #FFF3CD; 
-                            border: 2px solid #856404; 
-                            width: 100%; 
-                            padding: 15px; 
-                            border-radius: 8px; 
-                            box-shadow: 0 4px 10px rgba(0,0,0,0.1); 
-                            box-sizing: border-box; 
-                            color: #222; 
-                            text-align: left; 
-                            font-size: 13px; 
-                            line-height: 1.4;">
+                        <!-- SIMULADOR DA CARTEIRA REALISTA-->
+                        <div class="doc-bloco-documento-oficial">
                             
                             <div style="font-weight: bold;
                                 border-bottom: 1px solid #D5A300;
@@ -287,26 +215,23 @@ const carteira = [
                                 font-size: 14px;
                                 margin-bottom: 6px;
                                 color: #856404;
-                                text-align: center;">CARTEIRA NACIONAL DE HABILITAÇÃO
+                                text-align: center;">CARTEIRA NACIONAL DE HABILITATION
                             </div>
+                            
                             <p style="margin: 2px 0;"><strong>NOME:</strong> CONDUTOR DA SILVA</p>
                             <p style="margin: 2px 0;"><strong>REGISTRO:</strong> 01234567890</p>
                             <p style="margin: 2px 0;"><strong>CATEGORIA:</strong> AB</p>
                         </div>
                         
-                        <!-- CONTORNO PONTILHADO -->
-                        <button class="botao-grande" 
-                            style="background: #1351B4; 
-                            width: 100%; 
-                            border-radius: 6px; 
-                            box-shadow: 0 4px 0 #0A2F66; 
-                            border: 3px dashed #FFC107 !important;" 
+                        <!-- BOTÃO DESTAQUE DE NAVEGAÇÃO -->
+                        <button class="doc-btn-principal-destaque"
+                            style="border: 3px dashed #FFC107;
+                            box-shadow: 0 4px 0 #0A2F66;"
                             onclick="avancarPasso()">🔄 Ver Verso
                         </button>
                     </div>
                 </div>`,
-        feedback:
-        "✓ Perfeito! O aplicativo virou o documento para mostrar o verso.",
+        feedback: "✓ Excelente! Você alternou a visualização do documento.",
     },
 
     //  PASSO 5: CNH VERSO
@@ -316,44 +241,21 @@ const carteira = [
             Policiais usam isso para checar o documento. 
             Clique ou toque no botão "Voltar ao Menu" para ver os outros."`,
         conteudo: `
-                <div style="background: #FFF; 
-                    height: 100%; 
-                    display: flex; 
-                    flex-direction: column; 
-                    font-family: Arial, sans-serif; 
-                    box-sizing: border-box; 
-                    user-select: none;">
-                    
-                    <div style="background: #004B82; 
-                        padding: 12px 15px; 
-                        display: flex; 
-                        align-items: center; 
-                        gap: 10px; 
-                        flex-shrink: 0;">
-                        <span style="color: white; font-size: 18px; font-weight: bold;">CNH Digital (Verso)</span>
+                <div class="doc-container">                    
+                    <div class="doc-topo">
+                        <span style="color: white; 
+                            font-size: 18px; 
+                            font-weight: bold;">CNH Digital (Verso)</span>
                     </div>
                     
-                    <div style="padding: 15px; 
-                        flex: 1; 
-                        background: #E2E8F0; 
-                        display: flex; 
-                        flex-direction: column; 
+                    <div class="doc-corpo" 
+                        style="background: #E2E8F0; 
                         align-items: center; 
                         justify-content: center; 
-                        gap: 15px; 
-                        box-sizing: border-box;">
+                        gap: 15px;">
                         
-                        <div style="background: #E2F0D9; 
-                            border: 2px solid #548235; 
-                            width: 100%; 
-                            padding: 15px; 
-                            border-radius: 8px; 
-                            box-shadow: 0 4px 10px rgba(0,0,0,0.1); 
-                            box-sizing: border-box; 
-                            display: flex; 
-                            flex-direction: column; 
-                            align-items: center; 
-                            gap: 10px;">
+                        <!-- SIMULADOR QR CODE-->
+                        <div class="doc-bloco-qrcode-cnh">
                             
                             <div style="width: 100px; 
                                 height: 100px; 
@@ -364,20 +266,28 @@ const carteira = [
                                 gap: 4px; 
                                 padding: 4px; 
                                 box-sizing: border-box;">
-                                <div style="background: white;"></div><div style="background: black;"></div><div style="background: white;"></div>
-                                <div style="background: black;"></div><div style="background: white;"></div><div style="background: black;"></div>
-                                <div style="background: white;"></div><div style="background: black;"></div><div style="background: white;"></div>
+                                <div style="background: white;"></div>
+                                <div style="background: black;"></div>
+                                <div style="background: white;"></div>
+                                <div style="background: black;"></div>
+                                <div style="background: white;"></div>
+                                <div style="background: black;"></div>
+                                <div style="background: white;"></div>
+                                <div style="background: black;"></div>
+                                <div style="background: white;"></div>
                             </div>
-                            <span style="font-size: 12px; color: #548235; font-weight: bold;">CÓDIGO DE SEGURANÇA NACIONAL</span>
+                            
+                            <span style="font-size: 12px; 
+                                color: #548235; 
+                                font-weight: bold;">CÓDIGO DE SEGURANÇA NACIONAL</span>
                         </div>
                         
-                        <!-- CONTORNO PONTILHADO-->
-                        <button class="botao-grande" 
+                        <!-- BOTÃO DESTAQUE DE RETORNO-->
+                        <button class="doc-btn-principal-destaque" 
                             style="background: #248A3D; 
-                            width: 100%; 
-                            border-radius: 6px; 
-                            box-shadow: 0 4px 0 #185E29; 
-                            border: 3px dashed #F97316 !important;" 
+                            border: 3px dashed #F97316; 
+                            box-shadow: 0 4px 0 #185E29;
+                            border-radius: 6px;" 
                             onclick="window.irParaPasso(2)">Voltar ao Menu
                         </button>
                     </div>
@@ -392,51 +302,29 @@ const carteira = [
             Este é o documento oficial do seu carro! Para enviar
             o arquivo para um parente por mensagem, 
             clique ou toque no botão "Mandar por WhatsApp".`,
-
         conteudo: `
-                <div style="background: #FFF; 
-                    height: 100%; 
-                    display: flex; 
-                    flex-direction: column; 
-                    font-family: Arial, sans-serif; 
-                    box-sizing: border-box; 
-                    user-select: none;">
-                    
-                    <div style="background: #28A745; 
-                        padding: 12px 15px; 
-                        display: flex; 
-                        align-items: center; 
-                        gap: 10px; 
-                        flex-shrink: 0;">
-                        <span style="color: white; font-size: 18px; font-weight: bold;">Documento do Veículo</span>
+                <div class="doc-container">                    
+                    <div class="doc-topo" 
+                        style="background: #28A745;">
+                        <span style="color: white; 
+                            font-size: 18px; 
+                            font-weight: bold;">Documento do Veículo</span>
                     </div>
                     
-                    <div style="padding: 15px; 
-                        flex: 1; 
-                        background: #E2E8F0; 
-                        display: flex; 
-                        flex-direction: column; 
+                    <div class="doc-corpo" 
+                        style="background: #E2E8F0; 
                         align-items: center; 
                         justify-content: center; 
-                        gap: 15px; 
-                        box-sizing: border-box;">
+                        gap: 15px;">
                         
-                        <div style="background: #FFF; 
-                            border: 2px solid #28A745; 
-                            width: 100%; 
-                            padding: 15px; 
-                            border-radius: 8px; 
-                            box-shadow: 0 4px 10px rgba(0,0,0,0.1); 
-                            box-sizing: border-box; 
-                            color: #222; 
-                            text-align: left; 
-                            font-size: 13px; 
-                            line-height: 1.4;">
+                        <!-- CARD DO VEÍCULO CONFIGURADO-->
+                        <div class="doc-bloco-crlv-veiculo">
                             
                             <div style="font-weight: bold;
                                 border-bottom: 1px solid #28A745;
                                 padding-bottom: 4px; 
-                                font-size: 14px; margin-bottom: 6px; 
+                                font-size: 14px; 
+                                margin-bottom: 6px; 
                                 color: #1E7E34; 
                                 text-align: center;">CRLV-e DIGITAL VIA
                             </div>
@@ -447,13 +335,11 @@ const carteira = [
                             <p style="margin: 2px 0; color: #28A745;"><strong>SITUAÇÃO:</strong> Licenciado</p>
                         </div>
                         
-                        <!-- ALVO: CONTORNO PONTILHADO AMARELO -->
-                        <button class="botao-grande" 
-                            style="background: #1351B4; 
-                            width: 100%; 
-                            border-radius: 6px; 
-                            box-shadow: 0 4px 0 #0A2F66; 
-                            border: 3px dashed #FFC107 !important;" 
+                        <!-- BOTÃO DESTAQUE WHATSAPP-->
+                        <button class="doc-btn-principal-destaque" 
+                            style="border: 3px dashed #FFC107;
+                            border-radius: 6px;
+                            box-shadow: 0 4px 0 #0A2F66;" 
                             onclick="avancarPasso()">Mandar por WhatsApp
                         </button>
                     </div>
@@ -462,38 +348,28 @@ const carteira = [
         "✓ Excelente! O aplicativo gera um arquivo seguro para você compartilhar com quem dirige o seu carro.",
     },
 
+
     //  PASSO 7: CONFIRMAÇÃO ENVIADA
     {
         instrucao: `<strong>Passo 7 (Veículos):</strong>
             Pronto! O documento foi enviado com sucesso. Para voltar e conferir 
             a tela de multas, clique ou toque no botão "Ir para Multas"."`,
         conteudo: `
-                <div style="background: #FFF; 
-                    height: 100%; 
-                    display: flex; 
-                    flex-direction: column; 
-                    font-family: Arial, sans-serif; 
-                    box-sizing: border-box; 
-                    user-select: none;">
+                <div class="doc-container">
                     
-                    <div style="background: #28A745; 
-                        padding: 12px 15px; 
-                        display: flex; 
-                        align-items: center; 
-                        gap: 10px; 
-                        flex-shrink: 0;">
-                        <span style="color: white; font-size: 18px; font-weight: bold;">Documento Enviado</span>
+                    <!-- NAV DE CONFIRMAÇÃO DE ENVIO-->
+                    <div class="doc-topo" 
+                        style="background: #28A745;">
+                        
+                        <span style="color: white; 
+                            font-size: 18px; 
+                            font-weight: bold;">Documento Enviado</span>
                     </div>
                     
-                    <div style="padding: 20px; 
-                        flex: 1; 
-                        background: #F4F6F9; 
-                        display: flex; 
-                        flex-direction: column; 
-                        align-items: center; 
-                        justify-content: center; 
-                        gap: 20px; 
-                        box-sizing: border-box;">
+                    <!-- CENTRALIZADOR DE SUCESSO DE ENVIO-->
+                    <div class="doc-corpo-central" 
+                        style="background: #F4F6F9; 
+                        gap: 20px;">
                         
                         <div style="width: 60px; 
                             height: 60px; 
@@ -513,13 +389,13 @@ const carteira = [
                             margin: 0;">Envio Concluído!                    
                         </p>
                         
-                        <button class="botao-grande" 
+                        <!-- BOTÃO IR PARA MULTAS -->
+                        <button class="doc-btn-principal-destaque" 
                             style="background: #248A3D; 
-                            width: 100%; 
-                            border-radius: 6px; 
-                            box-shadow: 0 4px 0 #185E29; 
-                            border: 3px dashed #F97316 !important;" 
-                            onclick="window.irParaPasso(7)">Ir para Multas
+                            border: 3px dashed #F97316; 
+                            box-shadow: 0 4px 0 #185E29;
+                            border-radius: 6px;" 
+                            onclick="window.irParaPasso(2)">Ir para Multas
                         </button>
                     </div>
                 </div>`,
@@ -533,53 +409,35 @@ const carteira = [
             Para ver o boleto e conseguir desconto, clique ou 
             toque na opção "⚠️ Velocidade Superior à Máxima"."`,
         conteudo: `
-                <div style="background: #FFF; 
-                    height: 100%; 
-                    display: flex; 
-                    flex-direction: column; 
-                    font-family: Arial, sans-serif; 
-                    box-sizing: border-box; 
-                    user-select: none;">
-                    
-                    <div style="background: #FD7E14; 
-                        padding: 12px 15px; 
-                        display: flex; 
-                        align-items: center; 
-                        gap: 10px; 
-                        flex-shrink: 0;">
-                        <span style="color: white; font-size: 18px; font-weight: bold;">Multas do Veículo</span>
+                <div class="doc-container">                    
+                    <!-- NAV DE INFRAÇÕES SUPERIOR-->
+                    <div class="doc-topo" 
+                        style="background: #FD7E14;">
+                        
+                        <span style="color: white; 
+                            font-size: 18px; 
+                            font-weight: bold;">Multas do Veículo</span>
                     </div>
                     
-                    <div style="padding: 15px; 
-                        flex: 1; 
-                        background: #F4F6F9; 
-                        display: flex; 
-                        flex-direction: column; 
-                        gap: 12px; 
-                        box-sizing: border-box;">
-                        <p style="margin: 0; font-size: 14px; font-weight: bold; color: #666; text-align: left;">Multas por pagar (1):</p>
+                    <!-- CORPO DA LISTAGEM-->
+                    <div class="doc-doc-corpo" 
+                        style="padding: 15px;
+                        background: #F4F6F9;">
                         
+                        <p style="margin: 0 0 12px 0; 
+                            font-size: 14px; 
+                            font-weight: bold; 
+                            color: #666; 
+                            text-align: left;">Multas por pagar (1):</p>
+                        
+                        <!-- CARD DE MULTA DESTAQUE -->
                         <div onclick="avancarPasso()" 
-                            style="background: white; 
-                            border: 3px dashed #FD7E14; 
-                            padding: 12px; 
-                            border-radius: 8px; 
-                            display: flex; 
-                            align-items: center; 
-                            justify-content: space-between; 
-                            cursor: pointer; 
-                            box-shadow: 0 3px 6px rgba(0,0,0,0.05);">
+                            class="doc-card-multa-destaque">
                             
-                            <div style="text-align: left; min-width: 0;">
-                                <span style="background: #FFF3CD; 
-                                    color: #856404; 
-                                    font-size: 11px; 
-                                    font-weight: bold; 
-                                    padding: 2px 6px; 
-                                    border-radius: 4px; 
-                                    display: inline-block;
-                                    margin-bottom: 4px;">⚠️ Infração Média
-                                </span>
+                            <div style="text-align: left; 
+                                min-width: 0;">
+                                
+                                <span class="doc-badge-multa-aviso">⚠️ Infração Média</span>
 
                                 <div style="font-weight: bold; 
                                     font-size: 14px; 
@@ -589,9 +447,16 @@ const carteira = [
                                     white-space: nowrap;">Transitar em velocidade superior à máxima
                                 </div>
 
-                                <div style="font-size: 13px; color: #666; margin-top: 2px;">Valor Original: R$ 130,16</div>
+                                <div style="font-size: 13px; 
+                                    color: #666; 
+                                    margin-top: 2px;">Valor Original: R$ 130,16
+                                </div>
                             </div>
-                            <span style="color: #FD7E14; font-weight: bold; margin-left: 5px;">❯</span>
+                            
+                            <span style="color: #FD7E14; 
+                                font-weight: bold; 
+                                margin-left: 5px;">❯
+                            </span>
                         </div>
                     </div>
                 </div>`,
@@ -605,52 +470,34 @@ const carteira = [
             Excelente! O aplicativo oferece 40% de desconto se você pagar antes do vencimento. 
             Para copiar a chave, clique ou toque no botão "📄 Copiar Código Pix".`,
         conteudo: `
-                <div style="background: #FFF; 
-                    height: 100%; 
-                    display: flex; 
-                    flex-direction: column; 
-
-                    font-family: Arial, sans-serif; 
-                    box-sizing: border-box; 
-                    user-select: none;">
+                <div class="doc-container">
                     
-                    <div style="background: #FD7E14; 
-                        padding: 12px 15px; 
-                        display: flex; 
-                        align-items: center; 
-                        gap: 10px; 
-                        flex-shrink: 0;">
-                        <span style="color: white; font-size: 18px; font-weight: bold;">Detalhes do Boleto</span>
+                    <!-- NAV DE DETALHES DO BOLETO-->
+                    <div class="doc-topo" 
+                        style="background: #FD7E14;">
+                        
+                        <span style="color: white; 
+                            font-size: 18px; 
+                            font-weight: bold;">Detalhes do Boleto</span>
                     </div>
                     
-                    <div style="padding: 15px; 
-                        flex: 1; 
-                        background: #E2E8F0; 
-                        display: flex; 
-                        flex-direction: column; 
+                    <div class="doc-corpo" 
+                        style="background: #E2E8F0; 
                         align-items: center; 
                         justify-content: center; 
-                        gap: 12px; 
-                        box-sizing: border-box;">
+                        gap: 12px;">
                         
-                        <div style="background: #FFF; 
-                            border: 2px solid #FD7E14; 
-                            width: 100%; 
-                            padding: 15px; 
-                            border-radius: 8px; 
-                            box-shadow: 0 4px 10px rgba(0,0,0,0.1); 
-                            box-sizing: border-box; 
-                            color: #222; 
-                            text-align: left; 
-                            font-size: 13px; 
-                            line-height: 1.4;">
+                        <!-- CARD DE DETALHES COM DESCONTO-->
+                        <div class="doc-bloco-multa-desconto">
                             
-                            <div style="font-weight: bold; color: #C55A11; text-align: center; 
+                            <div style="font-weight: bold; 
+                                color: #C55A11; 
+                                text-align: center; 
                                 font-size: 14px;
                                 margin-bottom: 6px; 
                                 border-bottom: 1px solid #FD7E14; 
-                                padding-bottom: 4px;">DESCONTO DO SISTEMA NOTIFICAÇÃO<
-                            /div>
+                                padding-bottom: 4px;">DESCONTO DO SISTEMA NOTIFICAÇÃO
+                            </div>
 
                             <p style="margin: 2px 0;">
                                 <span>Valor Original:</span>
@@ -659,98 +506,108 @@ const carteira = [
                                 </span>
                             </p>
                             
-                            <p style="margin: 2px 0; color: #28A745;"><strong>VALOR COM 40% OFF:</strong> <strong>R$ 78,10</strong></p>
+                            <p style="margin: 2px 0; 
+                                color: #28A745;"><strong>VALOR COM 40% OFF:</strong> <strong>R$ 78,10</strong>
+                            </p>
+                            
                             <p style="margin: 4px 0 0 0; 
                                 font-size: 11px;
                                 color: #666;
-                                font-style: italic;">💡 Dica: Pagar pelo app evita filas
-                                                    e garante descontos reais do Governo.
+                                font-style: italic;">💡 Dica: Pagar pelo app evita filas e garante descontos reais do Governo.
                             </p>
                         </div>
                         
-                        <button class="botao-grande" 
-                            style="background: #1351B4; 
-                            width: 100%; 
-                            border-radius: 6px; 
-                            box-shadow: 0 4px 0 #0A2F66; 
-                            border: 3px dashed #FFC107 !important;" 
+                        <!-- BOTÃO DESTAQUE COPIAR PIX-->
+                        <button class="doc-btn-principal-destaque" 
+                            style="border: 3px dashed #FFC107;
+                            border-radius: 6px;
+                            box-shadow: 0 4px 0 #0A2F66;" 
                             onclick="avancarPasso()">📄 Copiar Código Pix
                         </button>
                     </div>
                 </div>`,
         feedback:
-        "✓ Parabéns! O código Pix Copia e Cola foi copiado com sucesso para a área de transferência!",
+        "✓ Em cima das palavras indicadoras! O código Pix Copia e Cola foi copiado com sucesso para a área de transferência!",
     },
 
-    //  PASSO 10: CONCLUSÃO DO PROCESSO
+    //  PASSO 10: TELA FINAL DE SUCESSO
     {
-        instrucao: `<strong>Treino Concluído!</strong>
-            Parabéns! Você concluiu com sucesso este tutorial! 
-            Você aprendeu a entrar na conta com segurança, ver seus documentos e consultar suas informações. 
-            Clique ou toque no botão "Finalizar" para voltar ao menu principal. "`,
+        instrucao: `<strong>PASSO 10:</strong> 
+            Parabéns! Você concluiu com sucesso este tutorial da Carteira Digital! 
+            Você aprendeu com total autonomia a entrar no gov.br com segurança, 
+            consultar sua CNH frente e verso, compartilhar o documento do carro, 
+            e verificar multas ativas garantindo descontos reais do governo.`,
         conteudo: `
-                <div style="background: white; 
-                    height: 100%; 
-                    display: flex; 
-                    flex-direction: column; 
-                    padding: 20px; 
+                <div class="doc-container" style="background: white; 
+                    padding: 10px; 
                     align-items: center; 
-                    justify-content: center;
-                    box-sizing: border-box;">
+                    justify-content: center;">
                     
-                    <div style="background: #E8F5E9; 
+                    <div style="background: #F8FAFC; 
                         width: 100%; 
-                        padding: 25px 15px; 
+                        padding: 15px 12px; 
                         border-radius: 12px; 
                         text-align: center; 
-                        box-sizing: border-box; 
-                        box-shadow: 0 4px 15px rgba(0,0,0,0.1); 
-                        border: 3px solid #28A745; 
+                        box-shadow: 0 3px 10px rgba(0,0,0,0.1); 
+                        border: 3px solid #1351B4; 
                         display: flex; 
                         flex-direction: column; 
-                        align-items: center;">
+                        align-items: center;
+                        box-sizing: border-box;">
                         
-                        <div style="width: 60px; 
-                            height: 60px; 
-                            background: #28A745; 
+                        <div style="background: #1351B4; 
                             color: white; 
-                            font-size: 32px; 
+                            font-weight: bold; 
+                            padding: 4px 12px; 
+                            font-size: 11px; 
+                            border-radius: 4px; 
+                            margin-bottom: 10px; 
+                            letter-spacing: 0.5px;
+                            white-space: nowrap;">DOCUMENTOS E CIDADANIA</div>
+                        
+                        <div style="width: 45px; 
+                            height: 45px; 
+                            background: #E7F1FF; 
+                            color: #1351B4; 
+                            font-size: 24px; 
                             display: flex; 
                             align-items: center; 
                             justify-content: center; 
                             border-radius: 50%; 
-                            margin-bottom: 15px; 
-                            box-shadow: 0 4px 6px rgba(0,0,0,0.1);">✓
-                        </div>
+                            margin-bottom: 10px;">🪪</div>
                         
-                        <h2 style="font-size: 22px; 
-                            color: #1E7E34; 
-                            margin: 0 0 10px 0; 
-                            font-weight: bold;">Treino de Trânsito Concluído!
-                        </h2>
+                        <h2 style="font-size: 18px; 
+                            color: #1351B4; 
+                            margin: 0 0 6px 0; 
+                            font-weight: bold; 
+                            line-height: 1.2;">Trânsito Dominado!</h2>
                         
-                        <p style="font-size: 14px; 
+                        <p style="margin: 0 0 12px 0; 
+                            font-size: 12px; 
                             color: #555; 
-                            line-height: 1.4; 
-                            margin: 0 0 20px 0; 
-                            padding: 0 10px;">Você está pronto para navegar pela sua 
-                                Carteira Digital e economizar tempo e dinheiro na sua rotina!
+                            line-height: 1.3; 
+                            text-align: center;">Incrível! Você se tornou um mestre na gestão de documentos. 
+                                                Agora abrir a CNH digital em viagens, checar o licenciamento do 
+                                                veículo e pagar infrações com desconto e total independência 
+                                                do governo virou rotina!
                         </p>
                         
                         <button onclick="window.location.href='menu.html'" 
-                            style="background: #248A3D; 
+                            style="background: #1351B4; 
                             color: white; 
-                            border: 3px dashed #FFC107; 
-                            padding: 12px 24px; 
+                            border: none; 
+                            padding: 10px 20px; 
                             border-radius: 20px; 
-                            font-size: 16px; 
+                            font-size: 14px; 
                             font-weight: bold; 
                             cursor: pointer; 
                             width: 100%; 
-                            box-shadow: 0 4px 0 #185E29;">Finalizar
+                            box-shadow: 0 3px 0 #0A2F66;
+                            white-space: nowrap;">Finalizar Treino
                         </button>
                     </div>
                 </div>`,
-        feedback: "✓ Parabéns! Você concluiu com sucesso este tutorial! 🎉",
+        feedback:
+        "Parabéns! Você concluiu com sucesso este tutorial da Carteira Digital! 🎉",
     },
 ];

@@ -61,7 +61,7 @@
     flex-shrink: 0;
 }
 
-/* Botões Grandes Padronizados do Governo */
+/* Botão Azul Padrão do Governo */
 .doc-btn-principal {
     background: #1351B4;
     color: white;
@@ -74,4 +74,120 @@
     width: 100%;
     box-shadow: 0 4px 6px rgba(0,0,0,0.1);
     box-sizing: border-box;
+    text-align: center;
+    display: block;
+}
+
+/* Botão Azul com Destaque Tracejado Pedagógico */
+.doc-btn-principal-destaque {
+    background: #1351B4;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 14px;
+    border-radius: 50px;
+    cursor: pointer;
+    width: 100%;
+    box-sizing: border-box;
+    text-align: center;
+    display: block;
+}
+
+/* Card de Menu para Seleção de Categorias de Documentos (Passo 3) */
+.doc-card-menu-selecao {
+    background: white; 
+    padding: 14px; 
+    border-radius: 10px; 
+    display: flex; 
+    align-items: center; 
+    justify-content: space-between; 
+    cursor: pointer; 
+    box-shadow: 0 3px 6px rgba(0,0,0,0.05);
+    box-sizing: border-box;
+}
+
+/* Simulador do Bloco da CNH / Documentos Oficiais (Passo 4) */
+.doc-bloco-documento-oficial {
+    background: #FFF3CD; 
+    border: 2px solid #856404; 
+    width: 100%; 
+    padding: 15px; 
+    border-radius: 8px; 
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1); 
+    box-sizing: border-box; 
+    color: #222; 
+    text-align: left; 
+    font-size: 13px; 
+    line-height: 1.4;
+}
+
+/* Bloco Verde que simula o QR Code da CNH (Passo 5) */
+.doc-bloco-qrcode-cnh {
+    background: #E2F0D9; 
+    border: 2px solid #548235; 
+    width: 100%; 
+    padding: 15px; 
+    border-radius: 8px; 
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1); 
+    box-sizing: border-box; 
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+    gap: 10px;
+}
+
+/* Bloco que simula o CRLV do Veículo (Passo 6) */
+.doc-bloco-crlv-veiculo {
+    background: #FFF; 
+    border: 2px solid #28A745; 
+    width: 100%; 
+    padding: 15px; 
+    border-radius: 8px; 
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1); 
+    box-sizing: border-box; 
+    color: #222; 
+    text-align: left; 
+    font-size: 13px; 
+    line-height: 1.4;
+}
+
+/* Card de Infração/Multa Ativa na Lista (Passo 8) */
+.doc-card-multa-destaque {
+    background: white; 
+    border: 3px dashed #FD7E14; 
+    padding: 12px; 
+    border-radius: 8px; 
+    display: flex; 
+    align-items: center; 
+    justify-content: space-between; 
+    cursor: pointer; 
+    box-shadow: 0 3px 6px rgba(0,0,0,0.05);
+    box-sizing: border-box;
+}
+
+/* Badge Amarela interna de classificação da multa (Passo 8) */
+.doc-badge-multa-aviso {
+    background: #FFF3CD; 
+    color: #856404; 
+    font-size: 11px; 
+    font-weight: bold; 
+    padding: 2px 6px; 
+    border-radius: 4px; 
+    display: inline-block;
+    margin-bottom: 4px;
+}
+
+/* Card de Detalhes da Infração/Boleto com Desconto (Passo 9) */
+.doc-bloco-multa-desconto {
+    background: #FFF; 
+    border: 2px solid #FD7E14; 
+    width: 100%; 
+    padding: 15px; 
+    border-radius: 8px; 
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1); 
+    box-sizing: border-box; 
+    color: #222; 
+    text-align: left; 
+    font-size: 13px; 
+    line-height: 1.4;
 }
