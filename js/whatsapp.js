@@ -92,7 +92,7 @@ const whatsapp = [
                     </div>
                 </div>`,
         feedback:
-        "✓ Excelente! Sempre que for procurar algo pra assitir use a barra de pesquisa. ",
+        "✓ Excelente! Sempre que for procurar um contato use a barra de pesquisa. ",
     },
 
     //  PASSO 3: (Abertura do Chat e Ativação do Texto)

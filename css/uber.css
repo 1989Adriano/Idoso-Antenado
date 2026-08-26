@@ -1,4 +1,4 @@
-/* Container Principal do Celular */
+/* CONTAINER PRINCIPAL E INFRAESTRUTURA DO CELULAR */
 .ub-container {
     background: #FFFFFF;
     height: 100%;
@@ -9,9 +9,20 @@
     user-select: none;
     position: relative;
     color: #333;
+    overflow: hidden; /* Evita que o app transborde a tela */
 }
 
-/* Barras Superiores e Menus */
+/* Áreas de Mapa e Conteúdo */
+.ub-mapa-fundo {
+    flex: 1;
+    background: #E5E5E5;
+    position: relative;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* BARRAS SUPERIORES E MENUS
+  */
 .ub-topo-preto {
     background: black;
     color: white;
@@ -32,14 +43,7 @@
     gap: 10px;
 }
 
-/* Áreas de Mapa e Conteúdo */
-.ub-mapa-fundo {
-    flex: 1;
-    background: #E5E5E5;
-    position: relative;
-}
-
-/* Painéis de Escolha Inferiores */
+/* PAINÉIS DE ESCOLHA INFERIORES E CATEGORIAS */
 .ub-painel-busca {
     background: white;
     padding: 15px;
@@ -58,4 +62,146 @@
     gap: 10px;
     box-sizing: border-box;
     overflow-y: auto;
+}
+
+/* NOVAS CLASSES DE CLIQUES E BOTÕES PADRONIZADOS (PARA REDUZIR JS) */
+.ub-btn-grande {
+    width: 100%;
+    padding: 12px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    text-align: center;
+    box-sizing: border-box;
+    display: block;
+    border: none;
+}
+
+.ub-btn-preto-alvo {
+    background: black;
+    color: white;
+    border: 3px dashed #FFC107;
+}
+
+/* Card Alvo de Categoria de Carro (UberX, Comfort) */
+.ub-card-carro-alvo {
+    background: white;
+    padding: 12px;
+    border-radius: 10px;
+    border: 3px dashed #0056B3; /* Destaque pontilhado em azul */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    box-sizing: border-box;
+}
+
+/* Entrada de Endereço Falsa (Onde o idoso clica) */
+.ub-input-falso-alvo {
+    background: #F3F3F3;
+    padding: 12px 16px;
+    border-radius: 8px;
+    font-size: 15px;
+    color: #333;
+    font-weight: bold;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border: 3px dashed #0056B3;
+    box-sizing: border-box;
+}
+/* Bloco que envolve os campos de endereço de Origem/Destino (Passo 2) */
+.ub-caixa-campos-busca {
+    padding: 12px; 
+    background: #FFF; 
+    display: flex; 
+    flex-direction: column; 
+    gap: 8px; 
+    border-bottom: 2px solid #eee; 
+    flex-shrink: 0;
+}
+
+/* Inputs de Texto de endereços na tela de busca (Passo 2) */
+.ub-input-endereco {
+    flex: 1; 
+    border: none; 
+    padding: 8px 12px; 
+    border-radius: 4px; 
+    font-size: 13px; 
+    box-sizing: border-box;
+}
+
+/* Card Alvo Pontilhado de Sugestão de Endereço na Lista (Passo 2) */
+.ub-card-endereco-alvo {
+    display: flex; 
+    align-items: center; 
+    gap: 15px; 
+    padding: 15px; 
+    border-bottom: 1px solid #eee; 
+    cursor: pointer; 
+    background: #E7F1FF; 
+    border: 3px dashed #0056B3; /* Destaque azul de clique */
+    box-sizing: border-box;
+}
+
+/* Container de qualquer cartão de carro da lista */
+.ub-item-viagem {
+    padding: 12px; 
+    border-radius: 10px; 
+    display: flex; 
+    align-items: center; 
+    justify-content: space-between; 
+    box-sizing: border-box;
+}
+
+/* Estilo do carro que está ativo (Passo 3) */
+.ub-item-ativo {
+    background: #E7F1FF; 
+    border: 3px dashed #0056B3; 
+    cursor: pointer;
+}
+
+/* Estilo dos carros que estão inativos (Passo 3) */
+.ub-item-inativo {
+    background: white; 
+    border: 1px solid #E0E0E0; 
+    opacity: 0.5;
+    pointer-events: none;
+    user-select: none;
+}
+
+/* Bloco do Alerta ou Escudo Preventivo Pedagógico (Passo 4) */
+.ub-caixa-alerta-pedagogico {
+    background: #FFF3CD; 
+    border: 1px solid #FFEBAA; 
+    padding: 12px; 
+    border-radius: 8px; 
+    font-size: 13px; 
+    color: #856404; 
+    text-align: left; 
+    font-weight: bold; 
+    line-height: 1.4;
+}
+
+/* Barra de Rodapé Branca de Botões Fixos (Passo 4) */
+.ub-barra-confirmar {
+    padding: 15px; 
+    background: white; 
+    border-top: 1px solid #eee;
+    flex-shrink: 0;
+    box-sizing: border-box;
+}
+
+/* Botão Pontilhado com o PIN de Segurança (Passo 7) */
+.ub-btn-pin-alvo {
+    background: #FFF3CD; 
+    border: 3px dashed #FFC107; 
+    padding: 10px; 
+    border-radius: 8px; 
+    display: inline-block; 
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    box-sizing: border-box;
 }

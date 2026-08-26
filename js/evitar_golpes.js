@@ -549,7 +549,7 @@ const golpes = [
         que estejam cortados ao meio. O chip continua legível e operante!`,
     },
 
-    // CENÁRIO 13: TELA FINAL DE SUCESSO (VITÓRIA ABSOLUTA)
+    // CENÁRIO 13: TELA FINAL DE SUCESSO
     {
         instrucao: `<strong>PASSO 13:</strong> 
             Parabéns! Você concluiu com sucesso este tutorial de Segurança Digital! 

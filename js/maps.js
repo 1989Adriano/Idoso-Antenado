@@ -606,7 +606,7 @@ const maps = [
         "✓ Perfeito e seguro! Acompanhar o trajeto no mapa te dá controle total e evita que você desça em lugares desconhecidos.",
     },
 
-    // PASSO 9: TELA FINAL DE SUCESSO (VITÓRIA)
+    // PASSO 9: TELA FINAL DE SUCESSO
     {
         instrucao: `<strong>Passo 9:</strong> 
             Parabéns! Você concluiu com sucesso este tutorial de Viagens! 

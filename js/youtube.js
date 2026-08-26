@@ -986,7 +986,7 @@ const youtube = [
             "✓ Parabéns! Você concluiu com sucesso este tutorial do YouTube! Agora você sabe pesquisar, assistir e controlar seus vídeos com total segurança. 🎉",
     },
 
-    //  PASSO 9: TELA FINAL DE SUCESSO (VITÓRIA ABSOLUTA)
+    //  PASSO 9: TELA FINAL DE SUCESSO
     {
         instrucao: `<strong>PASSO 9:</strong> 
             Parabéns! Você concluiu com sucesso este tutorial do YouTube! 
