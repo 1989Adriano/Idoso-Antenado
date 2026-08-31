@@ -1,4 +1,4 @@
-/* Container Principal do Celular */
+/* CONTAINER PRINCIPAL E INFRAESTRUTURA DO SMARTPHONE */
 .pix-container {
     height: 100%;
     display: flex;
@@ -8,9 +8,10 @@
     user-select: none;
     background: #FFFFFF;
     color: #333;
+    overflow: hidden; /* Garante que o layout fique preso aos limites da tela */
 }
 
-/* Topos e Cabeçalhos de Bancos */
+/* TOPOS, CABEÇALHOS E BARRAS DE NAVEGAÇÃO */
 .pix-topo-banco {
     background: #008037;
     color: white;
@@ -25,7 +26,7 @@
     flex-shrink: 0;
 }
 
-/* Áreas Centrais de Conteúdo */
+/* ÁREAS CENTRAIS, CORPOS E MENUS DE SELEÇÃO */
 .pix-corpo {
     flex: 1;
     padding: 15px;
@@ -34,9 +35,41 @@
     gap: 12px;
     background: #F4F6F9;
     box-sizing: border-box;
+    overflow-y: auto;
 }
 
-/* Rodapés de Botões de Ação */
+/* Card com Contorno Tracejado de Tipo de Chave Pix (CPF, Celular, etc.) */
+.pix-card-opcao-destaque {
+    background: white;
+    padding: 14px;
+    border-radius: 10px;
+    border: 3px dashed #008037;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    box-sizing: border-box;
+    width: 100%;
+}
+
+/* Card Estático / Inativo de Outras Opções de Chaves da Lista */
+.pix-card-opcao-inativo {
+    background: white;
+    padding: 14px;
+    border-radius: 10px;
+    border: 1px solid #E2E8F0;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    opacity: 0.5;
+    pointer-events: none;
+    user-select: none;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+/* RODAPÉS OPERACIONAIS, FIXOS E BARRAS DE CONFIRMAÇÃO */
 .pix-rodape {
     padding: 15px;
     display: flex;
@@ -47,4 +80,146 @@
     box-sizing: border-box;
     background: #FFFFFF;
     border-top: 1px solid #eee;
+    flex-shrink: 0;
+}
+
+/* BOTÕES BANCÁRIOS E CONTROLES DE INTERAÇÃO (BORDAS LISAS)  */
+.pix-btn-grande {
+    width: 100%;
+    padding: 14px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 24px;
+    cursor: pointer;
+    text-align: center;
+    box-sizing: border-box;
+    display: block;
+    border: none;
+}
+
+.pix-btn-verde-destaque {
+    background: #008037;
+    color: white;
+    border: 3px dashed #FFC107;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+/* Caixa de Entrada de Texto Governamental / Chaves */
+.pix-input-formulario {
+    width: 100%;
+    padding: 12px 15px;
+    font-size: 16px;
+    font-weight: bold;
+    border: 1px solid #CBD5E1;
+    border-radius: 8px;
+    background: #F8FAFC;
+    box-sizing: border-box;
+    color: #333;
+}
+
+/* Painel de Exibição do Valor Monetário Grande (R$ 0,00) */
+.pix-caixa-valor-moeda {
+    background: white;
+    padding: 20px 15px;
+    border-radius: 12px;
+    border: 2px solid #E2E8F0;
+    text-align: center;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+/* Bloco que Simula o Comprovante de Sucesso / Transferência */
+.pix-bloco-comprovante-sucesso {
+    background: white;
+    border: 2px solid #008037;
+    width: 100%;
+    padding: 15px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+    box-sizing: border-box;
+    color: #333;
+    text-align: left;
+    font-size: 13px;
+    line-height: 1.4;
+}
+
+/* Cards de Informações Preenchidas de Login (Passo 3) */
+.pix-card-info-login {
+    background: #F1F5F9; 
+    color: #333; 
+    padding: 12px; 
+    border-radius: 8px; 
+    font-size: 14px; 
+    opacity: 0.8;
+}
+
+/* Título de Instrução pequena de Categoria Interna (Passo 3 e 4) */
+.pix-label-pequeno {
+    color: #64748B; 
+    display: block; 
+    font-size: 10px;
+    margin-bottom: 2px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+/* Barra Superior de Boas-Vindas e Saldo (Passo 4) */
+.pix-topo-saldo-cliente {
+    background: #0056B3; 
+    padding: 15px; 
+    color: white; 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    flex-shrink: 0;
+    box-sizing: border-box;
+}
+
+/* Card Branco de Revisão de Informações Bancárias (Passo 8) */
+.pix-caixa-revisao {
+    background: white; 
+    border: 1px solid #E2E8F0; 
+    padding: 12px; 
+    border-radius: 8px; 
+    display: flex; 
+    flex-direction: column; 
+    gap: 4px;
+    box-sizing: border-box;
+}
+
+/* Área Centralizada com os Ícones da Senha (Passo 9) */
+.pix-display-senha-bolinhas {
+    display: flex; 
+    gap: 10px; 
+    justify-content: center; 
+    margin-top: 10px;
+    color: #0056B3; 
+    font-size: 20px;
+}
+
+/* Teclado Virtual Cinza que Envolve os Botões (Passo 9) */
+.pix-teclado-container {
+    display: flex; 
+    flex-direction: column; 
+    gap: 6px; 
+    background: #E2E8F0; 
+    padding: 10px; 
+    border-radius: 8px; 
+    box-sizing: border-box;
+}
+
+/* Quadrado Alvo Tracejado do Leitor de QR Code (Passo 10) */
+.pix-moldura-qrcode-destaque {
+    width: 160px; 
+    height: 160px; 
+    border: 4px dashed #FFC107; 
+    border-radius: 12px; 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    cursor: pointer; 
+    background: rgba(255,255,255,0.05); 
+    box-shadow: 0 0 20px rgba(255,193,7,0.2); 
+    animation: pulsarAlvo 1.2s infinite;
+    box-sizing: border-box;
 }

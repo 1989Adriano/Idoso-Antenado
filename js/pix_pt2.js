@@ -6,41 +6,21 @@ const pix_pt2 = [
             Clique ou toque no campo branco onde está escrito 
             "Toque para inserir o código Pix" para ativar a digitação.`,
         conteudo: `
-                <div style="background: #F4F7FA; 
-                    height: 100%; 
-                    display: flex; 
-                    flex-direction: column; 
-                    font-family: sans-serif; 
-                    box-sizing: border-box; 
-                    user-select: none; 
-                    color: #333; 
-                    text-align: left;">
-
-                    <div style="background: #0056B3; 
-                        padding: 12px 15px; 
-                        color: white; 
-                        font-size: 14px; 
-                        font-weight: bold; 
-                        flex-shrink: 0;">Pix Copia e Cola
+                <div class="pix-container" style="text-align: left;">
+                    <!-- BARRA SUPERIOR DO BANCO  -->
+                    <div class="pix-topo-banco"
+                        style="background: #0056B3 !important;">Pix Copia e Cola
                     </div>
 
-                    <div style="padding: 15px; 
-                        display: flex; 
-                        flex-direction: column; 
-                        gap: 15px; 
-                        box-sizing: border-box; 
-                        flex: 1;">
-                        
+                    <!-- CORPO OPERACIONAL -->
+                    <div class="pix-corpo">                        
                         <!-- BOTÃO CAMPO DE INSERÇÃO -->
                         <div onclick="avancarPasso()" 
-                            style="background: white; 
-                            border: 3px dashed #0056B3; 
-                            padding: 14px; 
-                            border-radius: 8px; 
+                            class="pix-card-opcao-destaque"
+                            style="border: 3px dashed #0056B3;
                             color: #94A3B8; 
                             font-size: 13px; 
-                            font-weight: bold; 
-                            cursor: pointer; 
+                            justify-content: center;
                             text-align: center;">⌨️ Toque para inserir o código Pix copiado...
                         </div>
                     </div>
@@ -56,59 +36,38 @@ const pix_pt2 = [
             Para que o banco leia os dados da fatura, 
             clique ou toque no botão "Confirmar Código"`,
         conteudo: `
-                <div style="background: #F4F7FA; 
-                    height: 100%; 
-                    display: flex; 
-                    flex-direction: column; 
-                    font-family: sans-serif; 
-                    box-sizing: border-box; 
-                    user-select: none; 
-                    color: #333; 
-                    text-align: left;">
-
-                    <div style="background: #0056B3; 
-                        padding: 12px 15px; 
-                        color: white; 
-                        font-size: 14px; 
-                        font-weight: bold; 
-                        flex-shrink: 0;">Pix Copia e Cola
+                <div class="pix-container" style="text-align: left;">
+                    <!-- BARRA SUPERIOR DO BANCO -->
+                    <div class="pix-topo-banco"
+                        style="background: #0056B3 !important;">Pix Copia e Cola
                     </div>
 
-                    <div style="padding: 15px; 
-                        display: flex; 
-                        flex-direction: column; 
-                        gap: 15px; 
-                        box-sizing: border-box; 
-                        flex: 1;">
-                        
-                        <label style="font-size: 12px; 
-                            font-weight: bold; 
-                            color: #64748B;">CÓDIGO LIDO:</label>
-                        
-                        <div style="background: #E2E8F0; 
-                            border: 1px solid #CBD5E1; 
-                            padding: 10px; 
-                            font-size: 12px; 
-                            font-family: monospace; 
-                            color: #334155; 
-                            border-radius: 6px; 
-                            word-break: break-all; 
-                            height: 60px; 
-                            overflow: hidden;">mercadolivre.pix.compra15674839201938574832...
+                    <!-- CORPO OPERACIONAL DO PIX -->
+                    <div class="pix-corpo" style="justify-content: space-between;">                        
+                        <div style="display: flex;
+                            flex-direction: column;
+                            gap: 12px;
+                            width: 100%;">                            
+                            <small class="pix-label-pequeno">CÓDIGO LIDO:</small>
+                            
+                            <!-- CAIXA DE TEXTO -->
+                            <div class="pix-input-formulario"
+                                style="background: #E2E8F0; 
+                                border: 1px solid #CBD5E1; 
+                                font-size: 12px; 
+                                font-family: monospace; 
+                                color: #334155; 
+                                word-break: break-all; 
+                                height: 60px; 
+                                overflow: hidden;">mercadolivre.pix.compra15674839201938574832...
+                            </div>
                         </div>
                         
                         <!-- BOTÃO CONFIRMAR CÓDIGO -->
                         <button onclick="avancarPasso()" 
-                            style="background: #0056B3; 
-                            color: white; 
-                            font-weight: bold; 
-                            font-size: 14px; 
-                            border: 3px dashed #FFC107; 
-                            padding: 12px; 
-                            border-radius: 8px; 
-                            cursor: pointer; 
-                            width: 100%; 
-                            box-shadow: 0 3px 6px rgba(0,86,179,0.2); 
+                            class="pix-btn-grande pix-btn-verde-destaque"
+                            style="background: #0056B3 !important;
+                            border: 3px dashed #FFC107 !important;
                             margin-top: auto;">Confirmar Código ➡️
                         </button>
                     </div>
@@ -124,69 +83,34 @@ const pix_pt2 = [
             cobrado está correto antes de digitar sua senha. 
             Está tudo certo? Clique ou toque no botão "Avançar para Senha".`,
         conteudo: `
-                <div style="background: #F4F7FA; 
-                    height: 100%; 
-                    display: flex; 
-                    flex-direction: column; 
-                    font-family: sans-serif; 
-                    box-sizing: border-box; 
-                    user-select: none; 
-                    color: #333; 
-                    text-align: left;">
-
-                    <div style="background: #0056B3; 
-                        padding: 12px 15px; 
-                        color: white; 
-                        font-size: 14px; 
-                        font-weight: bold; 
-                        flex-shrink: 0;">Revisar Pagamento
+                <div class="pix-container" style="text-align: left;">
+                    <!-- BARRA SUPERIOR DO BANCO -->
+                    <div class="pix-topo-banco"
+                        style="background: #0056B3 !important;">Revisar Pagamento
                     </div>
 
-                    <div style="padding: 15px; 
-                        display: flex; 
-                        flex-direction: column; 
-                        gap: 12px; 
-                        box-sizing: border-box; 
-                        flex: 1;">
-                        
-                        <div style="background: white; 
-                            border: 1px solid #E2E8F0; 
-                            padding: 12px; 
-                            border-radius: 8px; 
-                            display: flex; 
-                            flex-direction: column; 
-                            gap: 4px;">
-                            <small style="color: #64748B; 
-                                font-weight: bold; 
-                                font-size: 11px;">VALOR COBRADO:</small>
-                            <strong style="font-size: 20px; color: #111;">R$ 120,00</strong>
+                    <!-- CORPO OPERACIONAL DO PIX -->
+                    <div class="pix-corpo">                        
+                        <!-- CARD DE REVISÃO DO VALOR -->
+                        <div class="pix-caixa-revisao">
+                            <small class="pix-label-pequeno">VALOR COBRADO:</small>
+                            <strong style="font-size: 20px; 
+                                color: #111;">R$ 120,00</strong>
                         </div>
 
-                        <div style="background: white; 
-                            border: 1px solid #E2E8F0; 
-                            padding: 12px; 
-                            border-radius: 8px; 
-                            font-size: 13px; 
-                            display: flex; 
-                            flex-direction: column; 
-                            gap: 4px;">
+                        <!-- CARD DE REVISÃO DE DESTINATÁRIOS -->
+                        <div class="pix-caixa-revisao"
+                            style="font-size: 13px;">
                             <div><span style="color: #64748B; font-weight: bold;">DESTINO:</span> <strong>Mercado Livre LTDA</strong></div>
                             <div><span style="color: #64748B; font-weight: bold;">INSTITUIÇÃO:</span> <strong>Mercado Pago</strong></div>
                         </div>
                         
-                        <!-- BOTÃO PROSSEGUIR -->
+                        <!-- BOTÃO DESTAQUE DE PROSSEGUIR -->
                         <button onclick="avancarPasso()" 
-                            style="background: #248A3D; 
-                            color: white; 
-                            font-weight: bold; 
-                            font-size: 14px; 
-                            border: 3px dashed #FD7E14; 
-                            padding: 12px; 
-                            border-radius: 8px; 
-                            cursor: pointer; 
-                            width: 100%; 
-                            box-shadow: 0 3px 6px rgba(36,138,61,0.2); 
-                            margin-top: auto;">Avançar para Senha ✔️
+                            class="pix-btn-grande pix-btn-verde-destaque"
+                            style="background: #248A3D !important;
+                            border: 3px dashed #FD7E14 !important;
+                            margin-top: auto;">Avançar para Senha
                         </button>
                     </div>
                 </div>`,
@@ -198,50 +122,29 @@ const pix_pt2 = [
     {
         instrucao: `<strong>PASSO 9:</strong> 
             Hora da segurança máxima! Para aprovar a saída do dinheiro com segurança, 
-            clique ou toque no botão azul "Confirmar Senha (6 Dígitos)".`,
+            clique ou toque no botão "Confirmar Senha (6 Dígitos)".`,
         conteudo: `
-                <div style="background: #F4F7FA; 
-                    height: 100%; 
-                    display: flex; 
-                    flex-direction: column; 
-                    font-family: sans-serif; 
-                    box-sizing: border-box; 
-                    user-select: none; 
-                    color: #333; 
-                    text-align: left;">
-
-                    <div style="background: #0056B3; 
-                        padding: 12px 15px; 
-                        color: white; 
-                        font-size: 14px; 
-                        font-weight: bold; 
-                        flex-shrink: 0;">Validação Eletrônica
+                <div class="pix-container" style="text-align: left;">
+                    <!-- BARRA SUPERIOR DO BANCO -->
+                    <div class="pix-topo-banco"
+                        style="background: #0056B3 !important;">Validação Eletrônica
                     </div>
 
-                    <div style="padding: 15px; 
-                        display: flex; 
-                        flex-direction: column; 
-                        gap: 12px; 
-                        box-sizing: border-box; 
-                        flex: 1; 
-                        justify-content: space-between;">
-                        
-                        <div style="text-align: center;">
+                    <!-- CORPO OPERACIONAL DO PIX -->
+                    <div class="pix-corpo" style="justify-content: space-between;">                        
+                        <div style="text-align: center;
+                            width: 100%;">
                             <span style="font-size: 24px;">🔑</span>
                             <strong style="font-size: 13px; display: block; margin-top: 4px; color: #475569;">INSIRA OS 6 NÚMEROS:</strong>
-                            <div style="display: flex; gap: 10px; justify-content: center; margin-top: 10px;">
-                                <span style="color: #0056B3; font-size: 20px;">● ● ● ● ● ●</span>
+                            
+                            <!-- DISPLAY DE BOLINHAS -->
+                            <div class="pix-display-senha-bolinhas">
+                                <span>● ● ● ● ● ●</span>
                             </div>
                         </div>
 
-                        <div style="display: flex; 
-                            flex-direction: column; 
-                            gap: 6px; 
-                            background: #E2E8F0; 
-                            padding: 10px; 
-                            border-radius: 8px; 
-                            box-sizing: border-box;">
-                            
+                        <!-- TECLADO VIRTUAL -->
+                        <div class="pix-teclado-container">                            
                             <div style="display: grid; 
                                 grid-template-columns: repeat(3, 1fr); 
                                 gap: 6px; 
@@ -254,93 +157,20 @@ const pix_pt2 = [
                                 <div style="background: white; padding: 6px; border-radius: 4px;">3</div>
                             </div>
                             
-                            <!-- BOTÃO CONFIRMAR -->
-                            <button onclick="window.irParaPasso(21)" 
-                                style="background: #0056B3; 
-                                color: white; 
-                                font-weight: bold; 
-                                font-size: 13px; 
-                                border: 3px dashed #FD7E14; 
-                                padding: 8px; 
-                                border-radius: 4px; 
-                                cursor: pointer; 
-                                width: 100%; 
-                                box-shadow: 0 2px 4px rgba(0,0,0,0.15);">Confirmar Senha (6 Dígitos) 🔐
+                            <!-- BOTÃO COM SINCRONISMO -->
+                            <button onclick="if(typeof passoAtual !== 'undefined') { passoAtual = 4; } else { indiceAtual = 4; }
+                                typeof renderizarPasso === 'function' ? renderizarPasso() : window.irParaPasso(4);" 
+                                class="pix-btn-grande pix-btn-verde-destaque"
+                                style="background: #0056B3 !important;
+                                border: 3px dashed #FD7E14 !important;
+                                padding: 8px;
+                                font-size: 13px;
+                                border-radius: 4px;">Confirmar Senha (6 Dígitos) 🔐
                             </button>
                         </div>
                     </div>
                 </div>`,
         feedback:
         "✓ Sensacional! A sua senha foi aceita. Vamos abrir o comprovante oficial do pagamento...",
-    },
-
-    //  PASSO 10: ROTA 2 - ABRIR O LEITOR DE QR CODE COM CÂMERA
-    {
-        instrucao: `<strong>PASSO 10:</strong> 
-            O aplicativo abriu a câmera! No aplicativo real, 
-            basta apontar a câmera para o código quadrado. 
-            Para continuar, clique ou toque no "📦 Quadradinho"
-             que está piscando na tela.`,
-        conteudo: `
-                <div style="background: #000000; 
-                    height: 100%; 
-                    display: flex; 
-                    flex-direction: column; 
-                    font-family: sans-serif; 
-                    box-sizing: border-box; 
-                    user-select: none; 
-                    color: white; 
-                    text-align: left;">
-
-                    <div style="background: #111; 
-                        padding: 12px 15px; 
-                        font-size: 14px; 
-                        font-weight: bold; 
-                        flex-shrink: 0; 
-                        display: flex; 
-                        justify-content: space-between; 
-                        align-items: center;">
-                        <span>Escaneando Código Pix...</span>
-                        <span style="color: #00B1A7;">📷 Câmera Ativa</span>
-                    </div>
-
-                    <div style="flex: 1; 
-                        display: flex; 
-                        flex-direction: column; 
-                        align-items: center; 
-                        justify-content: center; 
-                        padding: 20px; 
-                        position: relative; 
-                        background: #1A1A1A;">
-                        
-                        <!-- QUADRADO DO QR CODE -->
-                        <div onclick="avancarPasso()" 
-                            style="width: 160px; 
-                            height: 160px; 
-                            border: 4px dashed #FFC107; 
-                            border-radius: 12px; 
-                            display: flex; 
-                            align-items: center; 
-                            justify-content: center; 
-                            cursor: pointer; 
-                            background: rgba(255,255,255,0.05); 
-                            box-shadow: 0 0 20px rgba(255,193,7,0.2); 
-                            animation: pulsarAlvo 1.2s infinite;">
-                            <span style="font-size: 40px; opacity: 0.7;">📦</span>
-                        </div>
-                        
-                        <p style="color: #94A3B8; 
-                            font-size: 13px; 
-                            text-align: center; 
-                            margin-top: 25px; 
-                            padding: 0 20px; 
-                            font-weight: bold; 
-                            line-height: 1.4;">Mire o quadrado amarelo centralizado em cima da imagem do código de barras quadrado.
-                        </p>
-                    </div>
-                    <style>@keyframes pulsarAlvo { 0%, 100% { transform: scale(1); } 50% { transform: scale(1.04); } }</style>
-                </div>`,
-        feedback:
-        "✓ Excelente! A câmera leu o código e encontrou os dados da sua conta.",
-    },
+    }, 
 ];

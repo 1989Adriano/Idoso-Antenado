@@ -6,50 +6,28 @@ const pix_pt5 = [
             Clique ou toque na barra central onde está escrito 
             "R$ 0,00" para ativar a digitação do valor.`,
         conteudo: `
-                <div style="background: #F4F7FA; 
-                    height: 100%; 
-                    display: flex; 
-                    flex-direction: column; 
-                    font-family: sans-serif; 
-                    box-sizing: border-box; 
-                    user-select: none; 
-                    color: #333; 
-                    text-align: left;">
+                <div class="pix-container" style="text-align: left;">
 
-                    <div style="background: #0056B3; 
-                        padding: 12px 15px; 
-                        color: white; 
-                        font-size: 14px; 
-                        font-weight: bold; 
-                        flex-shrink: 0;">Valor da Transferência
+                    <!-- BARRA SUPERIOR -->
+                    <div class="pix-topo-banco"
+                        style="background: #0056B3 !important;">Valor da Transferência
                     </div>
 
-                    <div style="padding: 15px; 
-                        display: flex; 
-                        flex-direction: column; 
-                        gap: 15px; 
-                        box-sizing: border-box; 
-                        flex: 1; 
-                        justify-content: center; 
+                    <!-- CORPO DO PIX -->
+                    <div class="pix-corpo"
+                        style="justify-content: center; 
                         align-items: center;">
                         
-                        <span style="font-size: 12px; 
-                            font-weight: bold; 
-                            color: #64748B;">DIGITE A QUANTIDADE:</span>
+                        <small class="pix-label-pequeno">DIGITE A QUANTIDADE:</small>
                         
                         <!-- BOTÃO VALOR VAZIO -->
                         <div onclick="avancarPasso()" 
-                            style="background: #E2E8F0; 
-                            border: 3px dashed #0056B3; 
-                            padding: 12px 30px; 
+                            class="pix-caixa-valor-moeda"
+                            style="border: 3px dashed #0056B3; 
                             font-size: 32px; 
-                            font-weight: bold; 
                             color: #94A3B8; 
-                            border-radius: 8px; 
                             cursor: pointer; 
-                            text-align: center; 
-                            width: 80%; 
-                            box-sizing: border-box;">R$ 0,00
+                            width: 80%;">R$ 0,00
                         </div>
                     </div>
                 </div>`,
@@ -60,65 +38,44 @@ const pix_pt5 = [
     //  PASSO 18: ROTA 3 - CONFIRMAR VALOR DIGITADO
     {
         instrucao: `<strong>PASSO 18:</strong> 
-        Você digitou que vai transferir R$ 50,00! 
-        Para continuar para a tela de revisão, clique ou 
-        toque no botão "Confirmar Valor".`,
+            Você digitou que vai transferir R$ 50,00! 
+            Para continuar para a tela de revisão, clique ou 
+            toque no botão "Confirmar Valor".`,
         conteudo: `
-                <div style="background: #F4F7FA; 
-                    height: 100%; 
-                    display: flex; 
-                    flex-direction: column; 
-                    font-family: sans-serif; 
-                    box-sizing: border-box; 
-                    user-select: none; 
-                    color: #333; 
-                    text-align: left;">
-
-                    <div style="background: #0056B3; 
-                        padding: 12px 15px; 
-                        color: white; 
-                        font-size: 14px; 
-                        font-weight: bold; 
-                        flex-shrink: 0;">Valor da Transferência
+                <div class="pix-container" style="text-align: left;">
+                    <!-- BARRA SUPERIOR DO BANCO -->
+                    <div class="pix-topo-banco"
+                        style="background: #0056B3 !important;">Valor da Transferência
                     </div>
 
-                    <div style="padding: 15px; 
-                        display: flex; 
-                        flex-direction: column; 
-                        gap: 15px; 
-                        box-sizing: border-box; 
-                        flex: 1; 
-                        justify-content: center; 
+                    <!-- CORPO DO PIX -->
+                    <div class="pix-corpo"
+                        style="justify-content: space-between; 
                         align-items: center;">
                         
-                        <span style="font-size: 12px; 
-                            font-weight: bold; 
-                            color: #64748B;">CONFIRME A QUANTIDADE:</span>
-                        
-                        <div style="background: white; 
-                            border: 1px solid #CBD5E1; 
-                            padding: 12px 30px; 
-                            font-size: 32px; 
-                            font-weight: bold; 
-                            color: #0056B3; 
-                            border-radius: 8px; 
-                            text-align: center; 
-                            width: 80%; 
-                            box-sizing: border-box;">R$ 50,00
+                        <div style="display: flex;
+                            flex-direction: column;
+                            align-items: center;
+                            gap: 12px;
+                            width: 100%;
+                            margin-top: auto;
+                            margin-bottom: auto;">
+                            
+                            <small class="pix-label-pequeno">CONFIRME A QUANTIDADE:</small>
+                            
+                            <!-- EXIBIÇÃO DE VALOR -->
+                            <div class="pix-caixa-valor-moeda"
+                                style="font-size: 32px; 
+                                color: #0056B3; 
+                                width: 80%;">R$ 50,00
+                            </div>
                         </div>
                         
                         <!-- BOTÃO CONFIRMAR -->
                         <button onclick="avancarPasso()" 
-                            style="background: #0056B3; 
-                            color: white; 
-                            font-weight: bold; 
-                            font-size: 14px; 
-                            border: 3px dashed #FFC107; 
-                            padding: 12px; 
-                            border-radius: 8px; 
-                            cursor: pointer; 
-                            width: 100%; 
-                            box-shadow: 0 3px 6px rgba(0,86,179,0.2); 
+                            class="pix-btn-grande pix-btn-verde-destaque"
+                            style="background: #0056B3 !important; 
+                            border: 3px dashed #FFC107 !important; 
                             margin-top: auto;">Confirmar Valor ➡️
                         </button>
                     </div>
@@ -134,70 +91,37 @@ const pix_pt5 = [
             nome de quem recebe estão corretos antes de avançar. 
             Está tudo certo com a "Maria da Silva"? Clique ou toque no botão "Avançar para Senha".`,
         conteudo: `
-                <div style="background: #F4F7FA; 
-                    height: 100%; 
-                    display: flex; 
-                    flex-direction: column; 
-                    font-family: sans-serif; 
-                    box-sizing: border-box; 
-                    user-select: none; 
-                    color: #333; 
-                    text-align: left;">
+                <div class="pix-container" style="text-align: left;">
 
-                    <div style="background: #0056B3; 
-                        padding: 12px 15px; 
-                        color: white; 
-                        font-size: 14px; 
-                        font-weight: bold; 
-                        flex-shrink: 0;">Revisar Chave Manual
+                    <!-- BARRA SUPERIOR DO BANCO -->
+                    <div class="pix-topo-banco"
+                        style="background: #0056B3 !important;">Revisar Chave Manual
                     </div>
 
-                    <div style="padding: 15px; 
-                        display: flex; 
-                        flex-direction: column; 
-                        gap: 12px; 
-                        box-sizing: border-box; 
-                        flex: 1;">
-                        
-                        <div style="background: white; 
-                            border: 1px solid #E2E8F0; 
-                            padding: 12px; 
-                            border-radius: 8px; 
-                            display: flex; 
-                            flex-direction: column; 
-                            gap: 6px;">
-                            <small style="color: #64748B; 
-                                font-weight: bold; 
-                                font-size: 11px;">VALOR A SER ENVIADO:</small>
-                            <strong style="font-size: 20px; color: #111;">R$ 50,00</strong>
+                    <!-- CORPO DO PIX -->
+                    <div class="pix-corpo">
+
+                        <!-- CARD DE REVISÃO DO VALOR -->
+                        <div class="pix-caixa-revisao">
+                            <small class="pix-label-pequeno">VALOR A SER ENVIADO:</small>
+                            <strong style="font-size: 20px; 
+                                color: #111;">R$ 50,00</strong>
                         </div>
 
-                        <div style="background: white; 
-                            border: 1px solid #E2E8F0; 
-                            padding: 12px; 
-                            border-radius: 8px; 
-                            font-size: 13px; 
-                            display: flex; 
-                            flex-direction: column; 
-                            gap: 4px;">
+                        <!-- CARD DE REVISÃO DE DESTINATÁRIOS -->
+                        <div class="pix-caixa-revisao"
+                            style="font-size: 13px;">
                             <div><span style="color: #64748B; font-weight: bold;">QUEM RECEBE:</span> <strong>Maria da Silva</strong></div>
                             <div><span style="color: #64748B; font-weight: bold;">CPF DO DESTINO:</span> <strong>***.456.789-**</strong></div>
                             <div><span style="color: #64748B; font-weight: bold;">INSTITUIÇÃO:</span> <strong>Seu Banco S.A.</strong></div>
                         </div>
                         
-                        <!-- BOTÃO PROSSEGUIR -->
+                        <!-- BOTÃO DESTAQUE DE PROSSEGUIR -->
                         <button onclick="avancarPasso()" 
-                            style="background: #248A3D; 
-                            color: white; 
-                            font-weight: bold; 
-                            font-size: 14px; 
-                            border: 3px dashed #FD7E14; 
-                            padding: 12px; 
-                            border-radius: 8px; 
-                            cursor: pointer; 
-                            width: 100%; 
-                            box-shadow: 0 3px 6px rgba(36,138,61,0.2); 
-                            margin-top: auto;">Avançar para Senha ✔️
+                            class="pix-btn-grande pix-btn-verde-destaque"
+                            style="background: #248A3D !important;
+                            border: 3px dashed #FD7E14 !important;
+                            margin-top: auto;">Avançar para Senha
                         </button>
                     </div>
                 </div>`,

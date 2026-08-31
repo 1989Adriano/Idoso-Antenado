@@ -6,72 +6,36 @@ const pix_pt4 = [
             Primeiro, clique ou toque na opção "📱 Chave Celular" para selecionar 
             o tipo de identificação cadastrada.`,
         conteudo: `
-                <div style="background: #F4F7FA; 
-                    height: 100%; 
-                    display: flex; 
-                    flex-direction: column; 
-                    font-family: sans-serif; 
-                    box-sizing: border-box; 
-                    user-select: none; 
-                    color: #333; 
-                    text-align: left;">
-
-                    <div style="background: #0056B3; 
-                        padding: 12px 15px; 
-                        color: white; 
-                        font-size: 14px; 
-                        font-weight: bold; 
-                        flex-shrink: 0;">Transferir por Chave Pix
+                <div class="pix-container" style="text-align: left;">
+                    <!-- BARRA SUPERIOR -->
+                    <div class="pix-topo-banco"
+                        style="background: #0056B3 !important;">Transferir por Chave Pix
                     </div>
 
-                    <div style="padding: 15px; 
-                        display: flex; 
-                        flex-direction: column; 
-                        gap: 10px; 
-                        box-sizing: border-box; 
-                        flex: 1;">
-                        
-                        <div onclick="mostrarErro()" 
-                            style="background: white; 
-                            border: 1px solid #CBD5E1; 
-                            padding: 14px; 
-                            border-radius: 10px; 
-                            display: flex; 
-                            align-items: center; 
-                            gap: 10px; opacity: 0.5; 
-                            font-size: 13px; 
+                    <!-- CORPO OPERACIONAL DO PIX -->
+                    <div class="pix-corpo">                        
+                        <!-- OPÇÃO CPF -->
+                        <div class="pix-card-opcao-inativo"
+                            style="font-size: 13px; 
                             font-weight: bold; 
                             color: #475569;">
                             <span style="font-size: 18px;">🪪</span> Chave CPF ou CNPJ
                         </div>
                         
-                        <!-- BOTÃO CHAVE CELULAR -->
+                        <!-- BOTÃO DESTAQUE CHAVE CELULAR -->
                         <div onclick="avancarPasso()" 
-                            style="background: white; 
-                            border: 3px dashed #0056B3; 
-                            padding: 14px; 
-                            border-radius: 10px; 
-                            display: flex; 
-                            align-items: center; 
-                            gap: 10px; 
-                            cursor: pointer; 
-                            box-shadow: 0 2px 4px rgba(0,0,0,0.04); 
+                            class="pix-card-opcao-destaque"
+                            style="border: 3px dashed #0056B3;
                             font-size: 14px; 
                             font-weight: bold; 
                             color: #0056B3;">
-                            <span style="font-size: 20px; color: #0056B3;">📱</span> Chave Celular
+                            <span style="font-size: 20px; 
+                                color: #0056B3;">📱</span> Chave Celular
                         </div>
                         
-                        <div onclick="mostrarErro()" 
-                            style="background: white; 
-                            border: 1px solid #CBD5E1; 
-                            padding: 14px; 
-                            border-radius: 10px; 
-                            display: flex; 
-                            align-items: center; 
-                            gap: 10px; 
-                            opacity: 0.5; 
-                            font-size: 13px; 
+                        <!-- OPÇÃO EMAIL -->
+                        <div class="pix-card-opcao-inativo"
+                            style="font-size: 13px; 
                             font-weight: bold; 
                             color: #475569;">
                             <span style="font-size: 18px;">✉️</span> Chave E-mail
@@ -88,55 +52,26 @@ const pix_pt4 = [
            Clique ou toque mais uma vez sobre a opção 
            "📱 Chave Celular" para abrir o campo de digitação.`,
         conteudo: `
-                <div style="background: #F4F7FA; 
-                    height: 100%; 
-                    display: flex; 
-                    flex-direction: column; 
-                    font-family: sans-serif; 
-                    box-sizing: border-box; 
-                    user-select: none; 
-                    color: #333; 
-                    text-align: left;">
+                <div class="pix-container" style="text-align: left;">
 
-                    <div style="background: #0056B3; 
-                        padding: 12px 15px; 
-                        color: white; 
-                        font-size: 14px; 
-                        font-weight: bold; 
-                        flex-shrink: 0;">Transferir por Chave Pix
+                    <!-- BARRA SUPERIOR DO BANCO -->
+                    <div class="pix-topo-banco"
+                        style="background: #0056B3 !important;">Transferir por Chave Pix
                     </div>
 
-                    <div style="padding: 15px; 
-                        display: flex; 
-                        flex-direction: column; 
-                        gap: 10px; 
-                        box-sizing: border-box; 
-                        flex: 1;">
-                        
-                        <div onclick="mostrarErro()" 
-                            style="background: white; 
-                            border: 1px solid #CBD5E1; 
-                            padding: 12px; 
-                            border-radius: 8px; 
-                            display: flex; 
-                            align-items: center; 
-                            gap: 10px; 
-                            opacity: 0.5; 
-                            font-size: 13px; 
+                    <!-- CORPO DO PIX -->
+                    <div class="pix-corpo">                        
+                        <!-- OPÇÃO CPF -->
+                        <div class="pix-card-opcao-inativo"
+                            style="font-size: 13px; 
                             font-weight: bold;">
                             <span style="font-size: 18px;">🪪</span> Chave CPF ou CNPJ
                         </div>
                         
-                        <!-- REPLICA EMENDA DE SUB-ROTAS -->
+                        <!-- REPLICA ENTRADA DESTAQUE -->
                         <div onclick="avancarPasso()" 
-                            style="background: white; 
-                            border: 3px dashed #0056B3; 
-                            padding: 12px; 
-                            border-radius: 8px; 
-                            display: flex; 
-                            align-items: center; 
-                            gap: 10px; 
-                            cursor: pointer; 
+                            class="pix-card-opcao-destaque"
+                            style="border: 3px dashed #0056B3;
                             font-size: 13px; 
                             font-weight: bold; 
                             color: #0056B3;">
@@ -153,45 +88,23 @@ const pix_pt4 = [
             O campo do telefone está pronto! Para começar a digitar os números, 
             clique ou toque na barra "📱 Toque para digitar o celular...".`,
         conteudo: `
-                <div style="background: #F4F7FA; 
-                    height: 100%; 
-                    display: flex; 
-                    flex-direction: column; 
-                    font-family: sans-serif; 
-                    box-sizing: border-box; 
-                    user-select: none; 
-                    color: #333; 
-                    text-align: left;">
-
-                    <div style="background: #0056B3; 
-                        padding: 12px 15px; 
-                        color: white; 
-                        font-size: 14px; 
-                        font-weight: bold; 
-                        flex-shrink: 0;">Digitar Celular Pix
+                <div class="pix-container" style="text-align: left;">
+                    <!-- BARRA SUPERIOR DO BANCO -->
+                    <div class="pix-topo-banco"
+                        style="background: #0056B3 !important;">Digitar Celular Pix
                     </div>
 
-                    <div style="padding: 15px; 
-                        display: flex; 
-                        flex-direction: column; 
-                        gap: 15px; 
-                        box-sizing: border-box; 
-                        flex: 1;">
-                        
-                        <label style="font-size: 12px; 
-                            font-weight: bold; 
-                            color: #64748B;">NÚMERO DO DESTINATÁRIO:</label>
+                    <!-- CORPO DO PIX -->
+                    <div class="pix-corpo">                        
+                        <small class="pix-label-pequeno">NÚMERO DO DESTINATÁRIO:</small>
                         
                         <!-- BOTÃO CAMPO VAZIO -->
                         <div onclick="avancarPasso()" 
-                            style="background: white; 
-                            border: 3px dashed #0056B3; 
-                            padding: 14px; 
-                            border-radius: 8px; 
+                            class="pix-card-opcao-destaque"
+                            style="border: 3px dashed #0056B3; 
                             color: #94A3B8; 
                             font-size: 14px; 
-                            font-weight: bold; 
-                            cursor: pointer; 
+                            justify-content: center;
                             text-align: center;">📱 Toque para digitar o celular com DDD...
                         </div>
                     </div>
@@ -205,57 +118,37 @@ const pix_pt4 = [
         instrucao: `<strong>PASSO 16:</strong> 
             O celular "(11) 99999-8888" foi preenchido com sucesso! 
             Para avançar para a tela de escolher o valor, 
-            clique ou toque no botão azul "Avançar".`,
+            clique ou toque no botão "Avançar".`,
         conteudo: `
-                <div style="background: #F4F7FA; 
-                    height: 100%; 
-                    display: flex; 
-                    flex-direction: column; 
-                    font-family: sans-serif; 
-                    box-sizing: border-box; 
-                    user-select: none; 
-                    color: #333; 
-                    text-align: left;">
-
-                    <div style="background: #0056B3; 
-                        padding: 12px 15px; 
-                        color: white; 
-                        font-size: 14px; 
-                        font-weight: bold; 
-                        flex-shrink: 0;">Confirmar Celular Pix
+                <div class="pix-container" style="text-align: left;">
+                    <!-- BARRA SUPERIOR DO BANCO -->
+                    <div class="pix-topo-banco"
+                        style="background: #0056B3 !important;">Confirmar Celular Pix
                     </div>
 
-                    <div style="padding: 15px; 
-                        display: flex; 
-                        flex-direction: column; 
-                        gap: 15px; 
-                        box-sizing: border-box; 
-                        flex: 1;">
-                        
-                        <label style="font-size: 12px; 
-                            font-weight: bold; 
-                            color: #64748B;">NÚMERO DO DESTINATÁRIO:</label>
-                        <div style="background: #E2E8F0; 
-                            border: 1px solid #CBD5E1; 
-                            padding: 12px; 
-                            font-size: 16px; 
-                            font-weight: bold; 
-                            color: #334155; 
-                            border-radius: 6px;">(11) 99999-8888
+                    <!-- CORPO OPERACIONAL DO PIX -->
+                    <div class="pix-corpo" style="justify-content: space-between;">                        
+                        <div style="display: flex;
+                            flex-direction: column;
+                            gap: 12px;
+                            width: 100%;">
+                            
+                            <small class="pix-label-pequeno">NÚMERO DO DESTINATÁRIO:</small>
+                            
+                            <!-- CAIXA DE TEXTO -->
+                            <div class="pix-input-formulario"
+                                style="background: #E2E8F0; 
+                                border: 1px solid #CBD5E1; 
+                                font-size: 16px; 
+                                color: #334155;">(11) 99999-8888
+                            </div>
                         </div>
                         
                         <!-- BOTÃO AVANÇAR -->
                         <button onclick="avancarPasso()" 
-                            style="background: #0056B3; 
-                            color: white; 
-                            font-weight: bold; 
-                            font-size: 14px; 
-                            border: 3px dashed #FFC107; 
-                            padding: 12px; 
-                            border-radius: 8px; 
-                            cursor: pointer; 
-                            width: 100%; 
-                            box-shadow: 0 3px 6px rgba(0,86,179,0.2); 
+                            class="pix-btn-grande pix-btn-verde-destaque"
+                            style="background: #0056B3 !important; 
+                            border: 3px dashed #FFC107 !important; 
                             margin-top: auto;">Avançar ➡️
                         </button>
                     </div>

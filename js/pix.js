@@ -1,1 +1,1 @@
-// exite apenas para chamar os outros pix.
+// exite apenas para chamar os outros pix. Que foram divididos para facilitar a manutenção.

@@ -7,54 +7,32 @@ const pix_pt6 = [
             Para concluir o envio dos R$ 50,00 para a Maria com total segurança, 
             clique ou toque no botão "Confirmar Senha (6 Dígitos)".`,
         conteudo: `
-                <div style="background: #F4F7FA; 
-                    height: 100%; 
-                    display: flex; 
-                    flex-direction: column; 
-                    font-family: sans-serif; 
-                    box-sizing: border-box; 
-                    user-select: none; 
-                    color: #333; 
-                    text-align: left;">
+                <div class="pix-container" style="text-align: left;">
 
-                    <div style="background: #0056B3; 
-                        padding: 12px 15px; 
-                        color: white; 
-                        font-size: 14px; 
-                        font-weight: bold; 
-                        flex-shrink: 0;">Segurança de Chave Manual
+                    <!-- BARRA SUPERIOR -->
+                    <div class="pix-topo-banco"
+                        style="background: #0056B3 !important;">Segurança de Chave Manual
                     </div>
 
-                    <div style="padding: 15px; 
-                        display: flex; 
-                        flex-direction: column; 
-                        gap: 12px; 
-                        box-sizing: border-box; 
-                        flex: 1; 
-                        justify-content: space-between;">
+                    <!-- CORPO OPERACIONAL DO PIX -->
+                    <div class="pix-corpo" style="justify-content: space-between;">
 
-                        <div style="text-align: center;">
+                        <div style="text-align: center;
+                            width: 100%;">
                             <span style="font-size: 24px;">🔑</span>
                             <strong style="font-size: 14px; 
                                 display: block; 
                                 margin-top: 4px; 
                                 color: #475569;">DIGITE SUA SENHA DE 6 DÍGÍTOS:</strong>
-                            <div style="display: flex; 
-                                gap: 10px; 
-                                justify-content: center; 
-                                margin-top: 10px;">
-                                <span style="color: #0056B3; font-size: 20px;">● ● ● ● ● ●</span>
+                            
+                            <!-- DISPLAY DE BOLINHAS -->
+                            <div class="pix-display-senha-bolinhas">
+                                <span>● ● ● ● ● ●</span>
                             </div>
                         </div>
 
-                        <div style="display: flex; 
-                            flex-direction: column; 
-                            gap: 6px; 
-                            background: #E2E8F0; 
-                            padding: 10px; 
-                            border-radius: 8px; 
-                            box-sizing: border-box;">
-                            
+                        <!-- TECLADO VIRTUAL  -->
+                        <div class="pix-teclado-container">                            
                             <div style="display: grid; 
                                 grid-template-columns: repeat(3, 1fr); 
                                 gap: 6px; 
@@ -67,18 +45,11 @@ const pix_pt6 = [
                                 <div style="background: white; padding: 6px; border-radius: 4px;">3</div>
                             </div>
                             
-                            <!-- BOTÃO CONFIRMAÇÃO DE SENHA -->
+                            <!-- BOTÃO DE CONFIRMAÇÃO -->
                             <button onclick="avancarPasso()" 
-                                style="background: #0056B3; 
-                                color: white; 
-                                font-weight: bold; 
-                                font-size: 13px; 
-                                border: 3px dashed #FD7E14; 
-                                padding: 8px; 
-                                border-radius: 4px; 
-                                cursor: pointer; 
-                                width: 100%; 
-                                box-shadow: 0 2px 4px rgba(0,0,0,0.15);">Confirmar Senha (6 Dígitos) 🔐
+                                class="pix-btn-grande pix-btn-verde-destaque"
+                                style="background: #0056B3 !important;
+                                border: 3px dashed #FD7E14 !important;">Confirmar Senha (6 Dígitos) 🔐
                             </button>
                         </div>
                     </div>
@@ -87,24 +58,22 @@ const pix_pt6 = [
         "✓ Perfeito! A sua senha foi aceita e o Pix foi enviado com sucesso.",
     },
 
-    //  PASSO 21: TELA FINAL DE VITÓRIA DO COMPROVANTE UNIFICADO
+    //  PASSO 21: TELA FINAL DE SUCESSO
     {
         instrucao: `<strong>TREINO CONCLUÍDO!</strong> 
+            Faça as 3 Rotas para apreender sobre o PIX. Se você fez as 3 Rotas principais.
             Parabéns! Você concluiu com sucesso este tutorial do Banco! 
             Você aprendeu a entrar na conta, usar a Área Pix e navegar pelas 3 opções 
             (Copia e Cola, QR Code e Chave Manual) com total segurança. 
-            Clique ou toque no botão "Finalizar Treino" para voltar à lista principal.`,
+            Clique ou toque no botão "Finalizar Treino" para voltar.`,
         conteudo: `
-                <div style="background: white; 
-                    height: 100%; 
-                    display: flex; 
-                    flex-direction: column; 
+                <div class="pix-container"
+                    style="background: white; 
                     padding: 20px; 
                     align-items: center; 
-                    justify-content: center; 
-                    box-sizing: border-box; 
-                    user-select: none;">
+                    justify-content: center;">
 
+                    <!-- PAINEL CENTRAL DE CONCLUÍDO -->
                     <div style="background: #EBF5FF; 
                         width: 100%; 
                         padding: 20px 15px; 
@@ -151,12 +120,12 @@ const pix_pt6 = [
                             font-size: 13px; 
                             color: #555; 
                             line-height: 1.4; 
-                            text-align: center;">Parabéns! Pagar com Pix Copia e Cola,
-                                escanear QR Code com a câmera do celular ou transferir por 
-                                chaves manuais agora virou rotina. Você domina o banco com autonomia absoluta!
+                            text-align: center;">Parabéns! Pagar com Pix Copia e Cola, escanear QR Code com a 
+                                câmera do celular ou transferir por chaves manuais agora virou rotina.
+                                Você domina o banco com autonomia absoluta!
                         </p>
                         
-                        <!-- BOTÃO DIRECIONADO PARA RETORNAR AO MENU.HTML -->
+                        <!-- BOTÃO DE ENCERRAMENTO, VOLTA MENU -->
                         <button onclick="window.location.href='menu.html'" 
                             style="background: #0056B3; 
                             color: white; 

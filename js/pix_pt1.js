@@ -1,20 +1,14 @@
 const pix_pt1 = [
-    //  PASSO 1: ABRIR O APLICATIVO DO BANCO
+   //  PASSO 1: ABRIR O APLICATIVO DO BANCO
     {
         instrucao: `<strong>PASSO 1:</strong>
             Vamos simular o pagamento de uma conta ou compra! 
-            Para começar, clique ou toque no ícone azul escrito 
+            Para começar, clique ou toque no ícone escrito 
             "Seu Banco" para abrir o aplicativo.`,
         conteudo: `
-                <div style="background: #1E293B; 
-                    height: 100%; 
-                    display: flex; 
-                    flex-direction: column; 
-                    justify-content: flex-end;
-                    font-family: sans-serif;
-                    box-sizing: border-box;
-                    user-select: none;
-                    position: relative;">
+                <div class="pix-container"
+                    style="background: #1E293B; 
+                    justify-content: flex-end;">
 
                     <div style="flex: 1; 
                         padding: 25px; 
@@ -24,17 +18,14 @@ const pix_pt1 = [
                         align-content: start; 
                         text-align: center;">
                         
-                        <!-- BOTÃO ALVO SEU BANCO -->
+                        <!-- BOTÃO DESTAQUE SEU BANCO -->
                         <div onclick="avancarPasso()" 
-                            style="cursor: pointer; 
-                            display: flex; 
-                            flex-direction: column; 
-                            align-items: center;
-                            gap: 4px; 
+                            class="pix-card-opcao-destaque"
+                            style="background: rgba(255,255,255,0.1); 
                             border: 3px dashed #FFF; 
+                            flex-direction: column; 
+                            justify-content: center;
                             padding: 6px; 
-                            border-radius: 12px; 
-                            background: rgba(255,255,255,0.1); 
                             animation: pulsarFundo 1.5s infinite;">
 
                             <div style="width: 58px; 
@@ -43,7 +34,7 @@ const pix_pt1 = [
                                 background: #0056B3; 
                                 font-size: 30px; 
                                 display: flex; 
-                                align-items: center; 
+                                items-center: center; 
                                 justify-content: center; 
                                 box-shadow: 0 4px 6px rgba(0,0,0,0.2);">💸
                             </div>
@@ -55,6 +46,7 @@ const pix_pt1 = [
                             </span>
                         </div>
                     </div>
+                    
                     <style>@keyframes pulsarFundo { 0%, 100% { background:rgba(255,255,255,0.1); } 50% { background:rgba(255,255,255,0.25); } }</style>
                 </div>`,
         feedback:
@@ -68,13 +60,8 @@ const pix_pt1 = [
             clique ou toque no campo branco onde está escrito 
             "Agência e Conta" para ativar a digitação dos seus dados.`,
         conteudo: `
-                <div style="background: #0056B3; 
-                    height: 100%; 
-                    display: flex; 
-                    flex-direction: column; 
-                    font-family: sans-serif; 
-                    box-sizing: border-box; 
-                    user-select: none; 
+                <div class="pix-container"
+                    style="background: #0056B3; 
                     color: white; 
                     padding: 20px; 
                     justify-content: center; 
@@ -91,26 +78,25 @@ const pix_pt1 = [
                         gap: 12px; 
                         text-align: left;">
                         
-                        <!-- BOTÃO ALVO DA PROXIMA ETAPA -->
+                        <!-- REQUADRO DESTAQUE -->
                         <div onclick="avancarPasso()" 
-                            style="background: white; 
-                            color: #333; 
-                            padding: 12px; 
-                            border-radius: 8px; 
-                            border: 3px dashed #FD7E14; 
-                            font-size: 14px; 
-                            cursor: pointer; 
-                            font-weight: bold;">
+                            class="pix-card-opcao-destaque"
+                            style="border: 3px dashed #FD7E14;
+                            color: #333;
+                            flex-direction: column;
+                            align-items: flex-start;
+                            padding: 12px;">
+                            
                             <small style="color: #64748B; 
                                 display: block; 
                                 font-size: 10px; 
                                 margin-bottom: 2px;">CLIQUE AQUI PARA IDENTIFICAR:</small>Agência e Conta Corrente...
                         </div>
 
-                        <div style="background: rgba(255,255,255,0.1); 
+                        <!-- REQUADRO INATIVO -->
+                        <div class="pix-card-opcao-inativo"
+                            style="background: rgba(255,255,255,0.1); 
                             color: white; 
-                            padding: 12px; 
-                            border-radius: 8px; 
                             border: 1px solid rgba(255,255,255,0.2); 
                             font-size: 14px; 
                             opacity: 0.4;">Senha Eletrônica do App...
@@ -128,13 +114,8 @@ const pix_pt1 = [
             Clique ou toque no botão de "🔑 Confirmar Senha"
             para entrar na conta.`,
         conteudo: `
-                <div style="background: #0056B3; 
-                    height: 100%; 
-                    display: flex; 
-                    flex-direction: column; 
-                    font-family: sans-serif; 
-                    box-sizing: border-box; 
-                    user-select: none; 
+                <div class="pix-container"
+                    style="background: #0056B3; 
                     color: white; 
                     padding: 20px; 
                     justify-content: center; 
@@ -151,42 +132,27 @@ const pix_pt1 = [
                         gap: 12px; 
                         text-align: left;">
                         
-                        <div style="background: #F1F5F9; 
-                            color: #333; 
-                            padding: 12px; 
-                            border-radius: 8px; 
-                            font-size: 14px; 
-                            opacity: 0.8;">
-                            <small style="color: #64748B; 
-                                display: block; 
-                                font-size: 10px;">AGÊNCIA E CONTA:</small>
+                        <!-- CARD DE INFO LOGIN -->
+                        <div class="pix-card-info-login">
+                            <small class="pix-label-pequeno">AGÊNCIA E CONTA:</small>
                             <strong>Ag: 1234 • C/C: 98765-4</strong>
                         </div>
 
-                        <div style="background: #F1F5F9; 
-                            color: #333; 
-                            padding: 12px; 
-                            border-radius: 8px; 
-                            font-size: 14px; 
-                            opacity: 0.8;">
-                            <small style="color: #64748B; 
-                                display: block; 
-                                font-size: 10px;">SENHA DO APP:</small>
+                        <!-- CARD DE INFO LOGIN -->
+                        <div class="pix-card-info-login">
+                            <small class="pix-label-pequeno">SENHA DO APP:</small>
                             <strong>••••••••••••</strong>
                         </div>
                     </div>
 
-                    <!-- BOTÃO CONFIRMAR LOGIN -->
+                    <!-- BOTÃO DESTAQUE CONFIRMAR LOGIN -->
                     <button onclick="avancarPasso()" 
+                        class="pix-btn-grande"
                         style="background: #FFF; 
                         color: #0056B3; 
                         font-weight: bold; 
                         font-size: 15px; 
                         border: 3px dashed #FD7E14; 
-                        padding: 12px; 
-                        border-radius: 8px; 
-                        cursor: pointer; 
-                        width: 100%; 
                         box-shadow: 0 4px 10px rgba(0,0,0,0.15); 
                         margin-top: 10px;">🔑 Confirmar Senha
                     </button>
@@ -200,37 +166,27 @@ const pix_pt1 = [
         instrucao: `<strong>PASSO 4:</strong>
             Esta é a tela inicial da sua conta bancária! 
             Para começar a pagar ou enviar um Pix, 
-            clique ou toque no botão redondo "Área Pix".`,
+            clique ou toque no botão "Área Pix".`,
         conteudo: `
-                <div style="background: #F4F7FA; 
-                    height: 100%; 
-                    display: flex; 
-                    flex-direction: column; 
-                    font-family: sans-serif; 
-                    box-sizing: border-box; 
-                    user-select: none; 
-                    color: #333; 
+                <div class="pix-container"
+                    style="background: #F4F7FA;
                     text-align: left;">
 
                     <!-- CABEÇALHO DO CLIENTE E SALDO CONTA -->
-                    <div style="background: #0056B3; 
-                        padding: 15px; 
-                        color: white; 
-                        display: flex; 
-                        justify-content: space-between; 
-                        align-items: center; 
-                        flex-shrink: 0;">
+                    <div class="pix-topo-saldo-cliente">
                         <div>
                             <span style="font-size: 12px; 
                                 opacity: 0.8; 
                                 display: block;">Olá, Aluno</span>
                             <strong style="font-size: 15px;">Saldo: R$ 500,00 💰</strong>
                         </div>
+                        
                         <span style="font-size: 12px; 
                             background: rgba(255,255,255,0.2); 
                             padding: 4px 8px; 
                             border-radius: 4px; 
-                            font-weight: bold;">Seu Banco</span>
+                            font-weight: bold;">Seu Banco
+                        </span>
                     </div>
                     
                     <!-- MENU PRINCIPAL DE SERVIÇOS FINANCEIROS -->
@@ -243,31 +199,21 @@ const pix_pt1 = [
 
                         <!-- BOTÃO PIX -->
                         <div onclick="avancarPasso()" 
-                            style="background: white; 
-                            border: 3px dashed #F97316; 
-                            padding: 15px 10px; 
-                            border-radius: 12px; 
-                            display: flex; 
-                            flex-direction: column; 
-                            align-items: center; 
-                            gap: 6px; 
-                            cursor: pointer; 
-                            box-shadow: 0 2px 4px rgba(0,0,0,0.05); 
+                            class="pix-card-opcao-destaque"
+                            style="border: 3px dashed #F97316;
+                            flex-direction: column;
+                            justify-content: center;
+                            padding: 15px 10px;
                             text-align: center;">
                             <span style="font-size: 26px; color: #00B1A7;">💸</span>
                             <strong style="font-size: 13px; color: #0056B3;">Área Pix</strong>
                         </div>
 
-                        <div onclick="mostrarErro()" 
-                            style="background: white; 
-                            border: 1px solid #ccc; 
-                            padding: 15px 10px; 
-                            border-radius: 12px; 
-                            display: flex; 
-                            flex-direction: column; 
-                            align-items: center; 
-                            gap: 6px; 
-                            opacity: 0.4; 
+                        <!-- BOTÃO INATIVO -->
+                        <div class="pix-card-opcao-inativo"
+                            style="flex-direction: column;
+                            justify-content: center;
+                            padding: 15px 10px;
                             text-align: center;">
                             <span style="font-size: 24px;">📄</span>
                             <span style="font-size: 13px; font-weight: bold; color: #555;">Pagar Boleto</span>
@@ -286,82 +232,55 @@ const pix_pt1 = [
             para usar códigos, "QR Code" para usar a câmera, 
             ou "Chave Manual" para usar o telefone.`,
         conteudo: `
-                <div style="background: #F4F7FA; 
-                    height: 100%; 
-                    display: flex; 
-                    flex-direction: column; 
-                    font-family: sans-serif; 
-                    box-sizing: border-box; 
-                    user-select: none; 
-                    color: #333; 
-                    text-align: left;">
+                <div class="pix-container"
+                    style="text-align: left;">
+                    <!-- BARRA SUPERIOR DO BANCO -->
+                    <div class="pix-topo-banco">Opções de Pagamento Pix </div>
 
-                    <div style="background: #0056B3; 
-                        padding: 12px 15px; 
-                        color: white; 
-                        font-size: 14px; 
-                        font-weight: bold; 
-                        flex-shrink: 0;">Opções de Pagamento Pix
-                    </div>
-
-                    <div style="padding: 15px; 
-                        display: flex; 
-                        flex-direction: column; 
-                        gap: 12px; 
-                        box-sizing: border-box; 
-                        flex: 1;">
-                        
+                    <!-- CORPO OPERACIONAL DO PIX -->
+                    <div class="pix-corpo">                        
                         <!-- ROTA 1: COPIA E COLA -->
                         <div onclick="window.irParaPasso(5)" 
-                            style="background: white; 
-                            border: 3px dashed #0056B3; 
-                            padding: 12px; 
-                            border-radius: 10px; 
-                            display: flex; 
-                            align-items: center; 
-                            justify-content: space-between; 
-                            cursor: pointer; 
-                            box-shadow: 0 2px 4px rgba(0,0,0,0.04);">
-                            <div style="display: flex; align-items: center; gap: 10px;">
+                            class="pix-card-opcao-destaque"
+                            style="border: 3px dashed #0056B3;">
+                            
+                            <div style="display: flex; 
+                                align-items: center; 
+                                gap: 10px;">
                                 <span style="font-size: 22px;">📋</span>
                                 <strong>Pix Copia e Cola</strong>
                             </div>
+                            
                             <span style="color: #0056B3; font-weight: bold;">❯</span>
                         </div>
 
-                        <!-- ROTA 2: QR CODE CÂMERA -->
+                        <!-- ROTA 2: QR CODE CÂMERA-->
                         <div onclick="window.irParaPasso(9)" 
-                            style="background: white; 
-                            border: 3px dashed #28A745; 
-                            padding: 12px; 
-                            border-radius: 10px; 
-                            display: flex; 
-                            align-items: center; 
-                            justify-content: space-between; 
-                            cursor: pointer; 
-                            box-shadow: 0 2px 4px rgba(0,0,0,0.04);">
-                            <div style="display: flex; align-items: center; gap: 10px;">
+                            class="pix-card-opcao-destaque"
+                            style="border: 3px dashed #28A745;">
+                            
+                            <div style="display: flex; 
+                                align-items: center; 
+                                gap: 10px;">
                                 <span style="font-size: 22px;">📷</span>
                                 <strong>Pagar QR Code</strong>
                             </div>
+                            
                             <span style="color: #28A745; font-weight: bold;">❯</span>
                         </div>
 
                         <!-- ROTA 3: CHAVE MANUAL -->
                         <div onclick="window.irParaPasso(12)" 
-                            style="background: white; 
-                            border: 3px dashed #FD7E14; 
-                            padding: 12px; 
-                            border-radius: 10px; 
-                            display: flex; 
-                            align-items: center; 
-                            justify-content: space-between; 
-                            cursor: pointer; 
-                            box-shadow: 0 2px 4px rgba(0,0,0,0.04);">
-                            <div style="display: flex; align-items: center; gap: 10px;">
+                            class="pix-card-opcao-destaque"
+                            style="border: 3px dashed #FD7E14;">
+                            
+                            <div style="display: flex; 
+                                align-items: center; 
+                                gap: 10px;">
                                 <span style="font-size: 22px;">🔑</span>
                                 <strong>Chave Manual, Celular, CPF ou EMAIL</strong>
                             </div>
+                            
                             <span style="color: #FD7E14; font-weight: bold;">❯</span>
                         </div>
                     </div>
