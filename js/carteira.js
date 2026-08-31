@@ -215,7 +215,7 @@ const carteira = [
                                 font-size: 14px;
                                 margin-bottom: 6px;
                                 color: #856404;
-                                text-align: center;">CARTEIRA NACIONAL DE HABILITATION
+                                text-align: center;">CARTEIRA NACIONAL DE HABILITAÇÂO
                             </div>
                             
                             <p style="margin: 2px 0;"><strong>NOME:</strong> CONDUTOR DA SILVA</p>
@@ -237,7 +237,7 @@ const carteira = [
     //  PASSO 5: CNH VERSO
     {
         instrucao: `<strong>Passo 5 (CNH):</strong>
-            Este é o verso com o código quadrado (QR Code). 
+            Este é o verso com o QR Code. 
             Policiais usam isso para checar o documento. 
             Clique ou toque no botão "Voltar ao Menu" para ver os outros."`,
         conteudo: `
@@ -527,7 +527,7 @@ const carteira = [
                     </div>
                 </div>`,
         feedback:
-        "✓ Em cima das palavras indicadoras! O código Pix Copia e Cola foi copiado com sucesso para a área de transferência!",
+        "✓ O código Pix Copia e Cola foi copiado com sucesso para a área de transferência!",
     },
 
     //  PASSO 10: TELA FINAL DE SUCESSO

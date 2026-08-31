@@ -1,4 +1,4 @@
-/* Container Principal do Celular */
+/* CONTAINER PRINCIPAL E INFRAESTRUTURA DO CELULAR */
 .inss-container {
     background: #FFFFFF;
     height: 100%;
@@ -8,6 +8,7 @@
     box-sizing: border-box;
     user-select: none;
     padding: 15px;
+    overflow: hidden;
 }
 
 /* Container do Hub Principal (Fundo Azul do INSS) */
@@ -19,9 +20,10 @@
     font-family: Arial, sans-serif;
     box-sizing: border-box;
     user-select: none;
+    overflow: hidden;
 }
 
-/* Área de Cabeçalho do Hub */
+/* BARRAS SUPERIORES E DE NAVEGAÇÃO (NAV) */
 .inss-topo-hub {
     background: #002F6C;
     padding: 12px 15px;
@@ -32,7 +34,7 @@
     border-bottom: 1px solid rgba(255,255,255,0.1);
 }
 
-/* Corpo Principal das Telas de Login */
+/* ÁREAS CENTRAIS, CORPOS E GRADES DE CONTEÚDO */
 .inss-corpo-centralizado {
     padding: 20px 10px;
     text-align: justify;
@@ -43,10 +45,9 @@
     align-items: center;
     justify-content: center;
     gap: 15px;
-    box-sizing: border-box; /* Previne vazamentos por causa do padding */
+    box-sizing: border-box;
 }
 
-/* Grid de Serviços do Painel Interno */
 .inss-corpo-hub {
     padding: 12px;
     flex: 1;
@@ -58,7 +59,7 @@
     overflow-y: auto;
 }
 
-/* Rodapés de Botões Fixos */
+/* RODAPÉS FIXOS DE BOTÕES E AÇÕES */
 .inss-rodape-acao {
     padding: 15px 0;
     display: flex;
@@ -69,10 +70,10 @@
     border-radius: 0 0 12px 12px;
 }
 
-/* Botões Azuis Grandes Padronizados */
+/* BOTÕES GOVERNAMENTAIS E CONTROLES DE INTERAÇÃO (BORDAS LISAS) */
 .inss-btn-azul {
-    background: #1351B4;
-    color: white;
+    background: #1351B4 !important;
+    color: white !important;
     font-size: 18px;
     font-weight: bold;
     padding: 15px;
@@ -81,6 +82,69 @@
     width: 95%;
     box-shadow: 0 4px 6px rgba(0,0,0,0.15);
     box-sizing: border-box;
+    border: none;
+    text-align: center;
+    display: block;
+}
+
+/* Botão Azul com Contorno Tracejado de Destaque Pedagógico */
+.inss-btn-azul-destaque {
+    background: #1351B4 !important;
+    color: white !important;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 15px;
+    border-radius: 50px;
+    cursor: pointer;
+    width: 95%;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.15);
+    box-sizing: border-box;
+    text-align: center;
+    display: block;
+}
+
+/*  COMPONENTES VISUAIS AUXILIARES (INPUTS E ALERTAS) */
+/* Campos de Input Governamentais do Gov.br */
+.inss-input-formulario {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 8px;
+    background: #E8F5E9 !important;
+    color: #1B5E20 !important;
+    box-sizing: border-box;
+}
+
+/* Card com Borda Tracejada de Serviço (Extrato de Pagamento) */
+.inss-card-servico-destaque {
+    background: white;
+    padding: 14px;
+    border-radius: 8px;
+    border: 3px dashed #1351B4;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    box-sizing: border-box;
+    width: 100%;
+}
+
+/* Card Estático / Inativo de Outros Serviços do Painel */
+.inss-card-servico-inativo {
+    background: white;
+    padding: 14px;
+    border-radius: 8px;
+    border: 1px solid #E2E8F0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    opacity: 0.5;
+    pointer-events: none;
+    user-select: none;
+    box-sizing: border-box;
+    width: 100%;
 }
 
 /* Efeito de Flutuar do Emoji */
@@ -90,7 +154,7 @@
     animation: inssFlutuar 3s ease-in-out infinite;
 }
 
-/* Força a justificação perfeita em qualquer parágrafo dentro das telas do INSS */
+/* Força a justificação perfeita em qualquer parágrafo dentro das telas */
 .inss-container p, 
 .inss-container-hub p,
 .inss-corpo-centralizado p,
@@ -106,4 +170,129 @@
 @keyframes inssFlutuar {
     0%, 100% { transform: translateY(0); }
     50% { transform: translateY(-10px); }
+}
+
+/* Input do Campo de Senha Mascarado (Passo 3) */
+.inss-input-senha {
+    width: 100%; 
+    padding: 14px; 
+    font-size: 18px; 
+    border: 1px solid #ccc; 
+    border-radius: 8px; 
+    background: #F4F6F9; 
+    box-sizing: border-box; 
+    color: #333; 
+    letter-spacing: 3px;
+}
+
+/* Card de Destaque Tracejado em Grid para o Bloco de Serviço (Passo 4) */
+.inss-card-grid-destaque {
+    background: white; 
+    border: 3px dashed #F97316; 
+    padding: 12px; 
+    border-radius: 12px; 
+    text-align: center; 
+    cursor: pointer; 
+    box-shadow: 0 4px 6px rgba(0,0,0,0.08); 
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+    gap: 5px;
+    box-sizing: border-box;
+}
+
+/* Card Estático / Inativo para Outros Serviços do Grid (Passo 4) */
+.inss-card-grid-inativo {
+    background: white; 
+    border: 1px solid #ccc; 
+    padding: 12px; 
+    border-radius: 12px; 
+    text-align: center;                               
+    opacity: 0.5; 
+    display: flex; 
+    flex-direction: column;
+    align-items: center; 
+    gap: 5px;
+    box-sizing: border-box;
+    pointer-events: none;
+    user-select: none;
+}
+
+/* Botão de Retorno Superior Tracejado (Passo 5) */
+.inss-btn-voltar-destaque {
+    color: white; 
+    font-size: 16px; 
+    cursor: pointer; 
+    font-weight: bold; 
+    background: #1351B4; 
+    padding: 6px 12px; 
+    border-radius: 8px; 
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2); 
+    border: 2px dashed #FFC107;
+    box-sizing: border-box;
+    display: inline-block;
+}
+
+/* Tabela de Detalhes de Valores do Extrato (Passo 5) */
+.inss-tabela-valores {
+    text-align: left; 
+    font-size: 15px; 
+    display: flex; 
+    flex-direction: column; 
+    gap: 6px; 
+    border: 1px solid #ddd; 
+    padding: 10px; 
+    border-radius: 6px;
+    box-sizing: border-box;
+}
+
+/* Tracejado para Enquadramento Facial (Passo 7) */
+.inss-moldura-camera-destaque {
+    width: 200px; 
+    height: 250px; 
+    border: 4px dashed #0056B3; 
+    border-radius: 50% / 50%; 
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+    justify-content: center; 
+    cursor: pointer; 
+    background: rgba(0,86,179,0.1); 
+    box-shadow: 0 0 15px rgba(0,86,179,0.3);
+    
+    box-sizing: border-box;
+}
+
+/* Botão Flutuante Redondo de Fechar 'X' com Destaque (Passo 9) */
+.inss-btn-fechar-destaque {
+    position: absolute; 
+    top: 12px; 
+    right: 15px; 
+    width: 44px; 
+    height: 44px; 
+    background: #C82333; 
+    color: white; 
+    border-radius: 50%; 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    font-size: 22px; 
+    font-weight: bold; 
+    cursor: pointer; 
+    box-shadow: 0 3px 6px rgba(0,0,0,0.2); 
+    border: 2px dashed #FFC107; 
+    z-index: 100;
+    box-sizing: border-box;
+}
+
+/* Caixa de Balão de SMS Falso do Golpe (Passo 9) */
+.inss-caixa-sms-golpe {
+    background: white; 
+    border-radius: 12px; 
+    padding: 20px 15px; 
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1); 
+    border: 1px solid #ddd; 
+    text-align: left; 
+    width: 100%; 
+    box-sizing: border-box;
 }

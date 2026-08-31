@@ -6,37 +6,17 @@ const mercado = [
             Para começar, clique ou toque no ícone escrito 
             "Mercado Livre" para abrir a página de compras.`,
         conteudo: `
-                <div style="background: #2A4365; 
-                    height: 100%; 
-                    display: flex; 
-                    flex-direction: column; 
-                    justify-content: flex-end; 
-                    font-family: sans-serif; 
-                    box-sizing: border-box; 
-                    user-select: none; 
-                    position: relative;">
+                <div class="merc-container merc-bg-desktop"
+                    style="justify-content: flex-end;">
                     
-                    <!-- AREA DE TRABALAHO -->
-                    <div style="flex: 1; 
-                        padding: 25px; 
-                        display: grid; 
-                        grid-template-columns: repeat(4, 1fr); 
-                        gap: 20px; 
-                        align-content: start; 
-                        text-align: center;">
-                        
+                    <!-- AREA DE TRABALHO -->
+                    <div class="merc-corpo-desktop">
+
                         <!-- BOTÃO MERCADO LIVRE -->
                         <div onclick="avancarPasso()" 
-                            style="cursor: pointer; 
-                            display: flex; 
-                            flex-direction: column; 
-                            align-items: center; 
-                            gap: 4px; 
-                            border: 2px dashed #FFF; 
-                            padding: 6px; 
-                            border-radius: 10px; 
-                            background: rgba(255,255,255,0.1); 
-                            animation: pulsarFundo 1.5s infinite;">
+                            class="merc-icone-desktop-destaque"
+                            style="animation: pulsarFundo 1.5s infinite;
+                            padding: 6px;">
                             
                             <div style="width: 58px; 
                                 height: 58px; 
@@ -57,14 +37,8 @@ const mercado = [
                         </div>
                     </div>
                     
-                    <!-- Barra DE TAREFAS -->
-                    <div style="background: #1E293B; 
-                        height: 36px; 
-                        border-top: 1px solid rgba(255,255,255,0.1); 
-                        display: flex; 
-                        align-items: center; 
-                        padding: 0 12px; 
-                        box-sizing: border-box;">
+                    <!-- BARRA DE TAREFAS -->
+                    <div class="merc-barra-tarefas">                        
                         <div style="background: #0066CC; 
                             color: white; 
                             font-weight: bold; 
@@ -74,6 +48,7 @@ const mercado = [
                             opacity: 0.7;">🪟 Iniciar
                         </div>
                     </div>
+                    
                     <style>@keyframes pulsarFundo { 0%, 100% { background:rgba(255,255,255,0.1); } 50% { background:rgba(255,255,255,0.25); } }</style>
                 </div>`,
         feedback:
@@ -84,48 +59,30 @@ const mercado = [
     {
         instrucao: `<strong>Passo 2:</strong> 
             Para procurar o produto que deseja comprar, 
-            clique ou toque no meio da grande 
+            clique ou toque na 
             "Barra de Pesquisa" no topo do site.`,
         conteudo: `
-                <div style="background: #FFFDF0; 
-                    height: 100%; 
-                    display: flex; 
-                    flex-direction: column; 
-                    font-family: sans-serif; 
-                    box-sizing: border-box; 
-                    user-select: none; 
-                    color: #333; 
-                    text-align: left;">
+                <div class="merc-container merc-bg-site"
+                    style="text-align: left;">
                     
-                    <div style="padding: 15px; 
-                        display: flex; 
-                        align-items: center; 
-                        justify-content: center; 
-                        gap: 20px; 
-                        border-bottom: 1px solid #E5D74E; 
-                        background: #FFF159;
-                        flex-shrink: 0;">
-                        <strong style="color: #2D3277; font-size: 20px;">mercado livre</strong>
+                    <!-- TOPO DO SITE -->
+                    <div class="merc-topo-ml">                        
+                        <strong style="color: #2D3277; 
+                            font-size: 20px;">mercado livre
+                        </strong>
                         
-                        <!-- BOTÃO BARRA DE BUSCA ALVO -->
+                        <!-- BARRA DE PESQUISA -->
                         <div onclick="avancarPasso()" 
-                            style="flex: 1; 
-                            max-width: 320px; 
-                            background: white; 
-                            padding: 8px 15px; 
-                            border-radius: 4px; 
-                            box-shadow: 0 1px 2px rgba(0,0,0,0.1); 
-                            cursor: pointer; 
-                            color: #999; 
-                            font-size: 13px; 
-                            border: 2px solid #1A73E8;">Buscar produtos, marcas e muito mais...
+                            class="merc-input-busca-destaque"
+                            style="max-width: 320px;
+                            border: 2px solid #1A73E8;
+                            color: #999;
+                            font-size: 13px;">Buscar produtos
                         </div>
                     </div>
-                    <div style="flex: 1; 
-                        display: flex; 
-                        align-items: center; 
-                        justify-content: center; 
-                        color: #999; font-size: 14px;">Aguardando pesquisa...
+                    
+                    <!-- CORPO CARREGANDO-->
+                    <div class="merc-corpo-carregando">Aguardando pesquisa...
                     </div>
                 </div>`,
         feedback:
@@ -139,50 +96,34 @@ const mercado = [
             clique ou toque no ícone da "🔍 Lupa" para o 
             site mostrar os modelos disponíveis.`,
         conteudo: `
-                <div style="background: #FFFDF0; 
-                    height: 100%; 
-                    display: flex; 
-                    flex-direction: column; 
-                    font-family: sans-serif; 
-                    box-sizing: border-box; 
-                    user-select: none; 
-                    color: #333; 
-                    text-align: left;">
+                <div class="merc-container merc-bg-site"
+                    style="text-align: left;">
                     
-                    <div style="padding: 15px; 
-                        display: flex; 
-                        align-items: center; 
-                        justify-content: center; 
-                        gap: 20px; 
-                        border-bottom: 1px solid #E5D74E; 
-                        background: #FFF159;
-                        flex-shrink: 0;">
-                        <strong style="color: #2D3277; font-size: 20px;">mercado livre</strong>
+                    <!-- TOPO DO SITE -->
+                    <div class="merc-topo-ml">
+                        <strong style="color: #2D3277; 
+                            font-size: 20px;">mercado livre
+                        </strong>
                         
-                        <div style="flex: 1; 
-                            max-width: 320px; 
-                            background: white; 
-                            display: flex; 
-                            border-radius: 4px; 
-                            box-shadow: 0 1px 2px rgba(0,0,0,0.1); 
-                            overflow: hidden; 
-                            border: 2px solid #1A73E8;">
-                            <span style="padding: 8px 12px; font-size: 13px; color: #1A1A1A; font-weight: bold; flex: 1;">Cafeteira Elétrica</span>
-                            <!-- BOTÃO ALVO LUPA -->
+                        <!-- CAIXA DE BUSCA ATIVA -->
+                        <div class="merc-caixa-busca-ativa">                            
+                            <span style="padding: 8px 12px; 
+                                font-size: 13px; 
+                                color: #1A1A1A; 
+                                font-weight: bold; 
+                                flex: 1;">Cafeteira Elétrica
+                            </span>
+                            
+                            <!-- BOTÃO LUPA DESTAQUE -->
                             <div onclick="avancarPasso()" 
-                                style="background: #E2E8F0; 
-                                width: 40px; 
-                                display: flex; 
-                                align-items: center; 
-                                justify-content: center;
-                                cursor: pointer; 
-                                font-size: 14px; 
-                                border-left: 1px solid #ddd; 
-                                font-weight: bold;">🔍
+                                class="merc-btn-lupa-destaque">🔍
                             </div>
                         </div>
                     </div>
-                    <div style="flex: 1;"></div>
+                    
+                    <div class="merc-corpo-carregando"
+                        style="background: #FFFDF0 !important;">
+                    </div>
                 </div>`,
         feedback:
         "✓ Perfeito! O site encontrou as melhores ofertas de cafeteiras para você.",
@@ -195,44 +136,31 @@ const mercado = [
             é vital checar se o vendedor é confiável.
             Clique ou toque no botão "⭐ Ver Opiniões e Reputação"`,
         conteudo: `               
-                <div style="background: #FFFDF0 !important; 
-                    height: 100% !important; 
-                    min-height: 100% !important; 
-                    display: flex; 
-                    flex-direction: column; 
-                    font-family: sans-serif; 
-                    box-sizing: border-box; 
-                    user-select: none; 
-                    color: #333; 
-                    text-align: left;
-                    flex: 1 !important;">
+                <div class="merc-container merc-bg-site"
+                    style="text-align: left;">
                     
-                    <div style="background: #FFF159; 
-                        padding: 10px 15px; 
-                        display: flex; 
-                        align-items: center; 
-                        gap: 15px; 
-                        border-bottom: 1px solid #E5D74E; 
-                        flex-shrink: 0;">
-                        <strong style="color: #2D3277; font-size: 16px;">mercado livre</strong>
+                    <!-- TOPO DO SITE -->
+                    <div class="merc-topo-ml"
+                        style="padding: 10px 15px;">
+                        <strong style="color: #2D3277; 
+                            font-size: 16px;">mercado livre
+                        </strong>
                     </div>                    
                   
-                    <div style="flex: 1; 
-                        background: #FFFDF0 !important; 
-                        padding: 15px; 
-                        display: flex; 
-                        flex-direction: column; 
-                        gap: 10px; 
-                        box-sizing: border-box; 
-                        overflow-y: auto;">
+                    <!-- CORPO DO PRODUTO -->
+                    <div class="merc-corpo-site"
+                        style="background: #FFFDF0 !important;">
                         
-                        <h3 style="margin: 0; font-size: 14px; font-weight: bold;">Cafeteira Elétrica Premium 15 Xícaras</h3>
-                        <div style="font-size: 18px; font-weight: bold; color: #111;">R$ 120,00</div>
+                        <h3 style="margin: 0; 
+                            font-size: 14px; 
+                            font-weight: bold;">Cafeteira Elétrica Premium 15 Xícaras</h3>
                         
-                        <div style="border: 1px solid #eee;
-                            padding: 10px; 
-                            border-radius: 6px; 
-                            background: #FAFAFA;">
+                        <div style="font-size: 18px; 
+                            font-weight: bold; 
+                            color: #111;">R$ 120,00</div>
+                        
+                        <!-- CONTÊINER DA REPUTAÇÃO -->
+                        <div class="merc-caixa-reputacao">
 
                             <span style="font-size: 11px; 
                                 font-weight: bold;
@@ -241,99 +169,75 @@ const mercado = [
                                 margin-bottom: 4px;">Informações sobre o vendedor:
                             </span>
 
-                            <div style="display: flex; gap: 2px; margin-bottom: 4px;">
+                            <!-- TERMÔMETRO DE REPUTAÇÃO OFICIAL -->
+                            <div style="display: flex; 
+                                gap: 2px; 
+                                margin-bottom: 4px;">
                                 <div style="flex: 1; height: 6px; background: #FF4D4D;"></div>
                                 <div style="flex: 1; height: 6px; background: #FFAD4D;"></div>
                                 <div style="flex: 1; height: 6px; background: #FFFF4D;"></div>
                                 <div style="flex: 1; height: 6px; background: #85E685;"></div>
                                 <div style="flex: 1; height: 6px; background: #00A650;"></div>
                             </div>
-                            <span style="font-size: 12px; color: #00a650; font-weight: bold;">✔ Vendedor Indicado (Reputação Verde)</span>
+                            
+                            <span style="font-size: 12px; 
+                                color: #00a650; 
+                                font-weight: bold;">✔ Vendedor Indicado (Reputação Verde)
+                            </span>
                         </div>
                         
+                        <!-- BOTÃO DESTAQUE DE OPINIÕES -->
                         <button onclick="avancarPasso()" 
-                            style="background: #FFF159; 
-                            color: #2D3277; 
-                            font-weight: bold; 
-                            font-size: 14px; 
-                            border: 3px dashed #1A73E8; 
-                            padding: 12px; 
-                            border-radius: 6px; 
-                            cursor: pointer; 
-                            width: 100%; 
-                            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
-                            box-sizing: border-box !important;">⭐ Ver Opiniões de Compradores
+                            class="merc-btn-opinioes-destaque">⭐ Ver Opiniões de Compradores
                         </button>
                     </div>
                 </div>`,
         feedback:
-        `✓ Sensasional! Comentários como "Entrega rápida" e "Produto original" confirmam que a compra é segura.`,
+        "✓ Sensacional! Comentários como \"Entrega rápida\" e \"Produto original\" confirmam que a compra é segura.",
     },
 
     // PASSO 5: CORRIGIR ITEM DUPLICADO NO CARRINHO
     {
         instrucao: `<strong>Passo 5:</strong> 
             Atenção! Por erro, duas cafeteiras foram adicionadas ao carrinho. 
-            Para evitar pagar o dobro, clique ou toque no texto
-            escrito "❌ Excluir" na segunda unidade.`,
+            Para evitar pagar o dobro, clique ou toque "❌ Excluir" na segunda unidade.`,
         conteudo: `               
-                <div style="background: #FFFDF0 !important; 
-                    height: 100% !important; 
-                    min-height: 100% !important; 
-                    display: flex; 
-                    flex-direction: column; 
-                    font-family: sans-serif; 
-                    box-sizing: border-box; 
-                    user-select: none; 
-                    color: #333; 
-                    text-align: left;
-                    flex: 1 !important;">
+                <div class="merc-container merc-bg-site"
+                    style="text-align: left;">
                     
-                    <div style="background: #FFF159; 
-                        padding: 10px 15px; 
-                        display: flex; 
-                        align-items: center; 
-                        border-bottom: 1px solid #E5D74E; 
-                        flex-shrink: 0;">
-                        <strong style="color: #2D3277; font-size: 16px;">Carrinho de Compras (2)</strong>
+                    <!-- TOPO DO CARRINHO -->
+                    <div class="merc-topo-ml"
+                        style="padding: 10px 15px;">
+                        
+                        <strong style="color: #2D3277; 
+                            font-size: 16px;">Carrinho de Compras (2)
+                        </strong>
                     </div>                    
                    
-                    <div style="flex: 1; 
-                        background: #FFFDF0 !important; 
-                        padding: 12px; 
-                        display: flex; 
-                        flex-direction: column; 
-                        gap: 10px; 
-                        box-sizing: border-box; 
-                        overflow-y: auto;">                        
+                    <!-- CORPO DO FEED DO CARRINHO -->
+                    <div class="merc-corpo-site"
+                        style="background: #FFFDF0 !important;">                        
            
-                        <div style="background: white !important; 
-                            border: 1px solid #eee; 
-                            padding: 10px; 
-                            border-radius: 6px; 
-                            display: flex; 
-                            justify-content: space-between; 
-                            align-items: center; 
-                            box-sizing: border-box;">
-
+                        <!-- CARD DO ITEM -->
+                        <div class="merc-item-carrinho">
                             <div>
-                                <strong style="font-size: 13px; display: block;">Cafeteira Elétrica Premium</strong>
+                                <strong style="font-size: 13px; 
+                                    display: block;">Cafeteira Elétrica Premium
+                                </strong>
+                                
                                 <span style="font-size: 12px; color: #666;">Quantidade: 1</span>
-                            </div>
+                            </div>                            
                             <strong>R$ 120,00</strong>
                         </div>
                         
-                        <div style="border: 2px dashed #DC3545; 
-                            padding: 8px; 
-                            border-radius: 6px; 
-                            background: #FFF5F5; 
-                            display: flex; 
-                            justify-content: space-between; 
-                            align-items: center;
-                            box-sizing: border-box;">
-
+                        <!-- CARD DO ITEM REPETIDO -->
+                        <div class="merc-item-duplicado-destaque">
                             <div>
-                                <strong style="font-size: 13px; display: block; color: #C82333;">Cafeteira Elétrica (Cópia)</strong>
+                                <strong style="font-size: 13px; 
+                                    display: block; 
+                                    color: #C82333;">Cafeteira Elétrica (Cópia)
+                                </strong>
+                                
                                 <span onclick="avancarPasso()" 
                                     style="color: #1A73E8; 
                                     font-size: 12px; 
@@ -342,6 +246,7 @@ const mercado = [
                                     cursor: pointer;">❌ Excluir do Carrinho
                                 </span>
                             </div>
+                            
                             <strong style="color: #C82333;">R$ 120,00</strong>
                         </div>
                     </div>
@@ -428,41 +333,24 @@ const mercado = [
             Com o carrinho correto e o Pix escolhido, confirme o pedido! 
             Clique ou toque no botão "Comprar Agora" para gerar o pagamento.`,
         conteudo: `               
-                <div style="background: #FFFDF0 !important; 
-                    height: 100% !important; 
-                    min-height: 100% !important; 
-                    display: flex; 
-                    flex-direction: column; 
-                    font-family: sans-serif; 
-                    box-sizing: border-box; 
-                    user-select: none; 
-                    color: #333; 
-                    text-align: left;
-                    flex: 1 !important;">
+                <div class="merc-container merc-bg-site"
+                    style="text-align: left;">
                     
-                    <div style="background: #FFF159; 
-                        padding: 10px 15px; 
-                        display: flex; 
-                        align-items: center; 
-                        gap: 15px; 
-                        border-bottom: 1px solid #E5D74E; 
-                        flex-shrink: 0;">
-                        <strong style="color: #2D3277; font-size: 16px;">mercado livre</strong>
+                    <!-- TOPO DO SITE -->
+                    <div class="merc-topo-ml"
+                        style="padding: 10px 15px;">
+                        <strong style="color: #2D3277; 
+                            font-size: 16px;">mercado livre
+                        </strong>
                     </div>                    
                     
-                    <div style="flex: 1; 
-                        background: #FFFDF0 !important; 
-                        padding: 15px; 
-                        display: flex; 
-                        flex-direction: column; 
-                        justify-content: space-between; 
-                        box-sizing: border-box;">                        
+                    <!-- CORPO COMPACTADO -->
+                    <div class="merc-corpo-site"
+                        style="background: #FFFDF0 !important;
+                        justify-content: space-between;">                        
                         
-                        <div style="background: white !important;
-                            border: 1px solid #eee;
-                            padding: 15px;
-                            border-radius: 8px;
-                            box-sizing: border-box;">
+                        <!-- CARD DE REVISÃO DO PEDIDO -->
+                        <div class="merc-caixa-informacoes-pedido">                            
                             <span style="color: #00a650; 
                                 font-size: 11px; 
                                 font-weight: bold; 
@@ -476,7 +364,9 @@ const mercado = [
                                 line-height: 1.2;">Cafeteira Elétrica Premium 15 Xícaras
                             </h3>
 
-                            <div style="font-size: 22px; font-weight: bold; color: #111;">R$ 120,00</div>
+                            <div style="font-size: 22px; 
+                                font-weight: bold; 
+                                color: #111;">R$ 120,00</div>
 
                             <small style="color: #00a650; 
                                 font-weight: bold;
@@ -485,17 +375,9 @@ const mercado = [
                             </small>
                         </div>
                         
+                        <!-- BOTÃO AZUL -->
                         <button onclick="avancarPasso()" 
-                            style="background: #3483FA; 
-                            color: white; 
-                            font-weight: bold; 
-                            font-size: 15px; 
-                            border: 2px dashed #002B5C; 
-                            padding: 12px; 
-                            border-radius: 6px; 
-                            cursor: pointer; 
-                            width: 100%;
-                            box-sizing: border-box !important;">Comprar Agora 🛒
+                            class="merc-btn-principal merc-btn-azul-destaque">Comprar Agora 🛒
                         </button>
                     </div>
                 </div>`,
@@ -509,42 +391,27 @@ const mercado = [
             O site gerou as informações do Pix! Para simular o pagamento, 
             clique ou toque no botão "📋 Copiar Código Pix".`,
         conteudo: `               
-                <div style="background: #FFFDF0 !important; 
-                    height: 100% !important; 
-                    min-height: 100% !important; 
-                    display: flex; 
-                    flex-direction: column; 
-                    font-family: sans-serif; 
-                    box-sizing: border-box; 
-                    user-select: none; 
-                    color: #333; 
-                    text-align: left;
-                    flex: 1 !important;">
+                <div class="merc-container merc-bg-site"
+                    style="text-align: left;">
                     
-                    <div style="background: #FFF159; 
-                        padding: 10px 15px; 
-                        display: flex; 
-                        align-items: center; 
-                        border-bottom: 1px solid #E5D74E; 
-                        flex-shrink: 0;">
-                        <strong style="color: #2D3277; font-size: 16px;">mercado livre</strong>
+                    <!-- TOPO DO SITE -->
+                    <div class="merc-topo-ml"
+                        style="padding: 10px 15px;">
+                        <strong style="color: #2D3277; 
+                            font-size: 16px;">mercado livre
+                        </strong>
                     </div>                    
                  
-                    <div style="flex: 1; 
-                        background: #FFFDF0 !important; 
-                        padding: 15px; 
-                        display: flex; 
-                        flex-direction: column; 
+                    <!-- CORPO CENTRALIZADO -->
+                    <div class="merc-corpo-site"
+                        style="background: #FFFDF0 !important;
                         justify-content: center; 
-                        gap: 15px; 
-                        box-sizing: border-box;">                        
+                        gap: 15px;">                        
                         
-                        <div style="background: white !important; 
-                            text-align: center; 
-                            border: 1px dashed #ddd; 
-                            padding: 12px; 
-                            border-radius: 6px; 
-                            box-sizing: border-box;">
+                        <!-- CARD DO CODIGO PIX -->
+                        <div class="merc-caixa-informacoes-pedido"
+                            style="text-align: center;
+                            border: 1px dashed #ddd;">
 
                             <span style="font-size: 13px; 
                                 font-weight: bold; 
@@ -556,26 +423,20 @@ const mercado = [
                             <div style="background: #F4F6F9; 
                                 padding: 8px; 
                                 font-family: monospace; 
-                                font-size: 11px; color: #333; 
+                                font-size: 11px; 
+                                color: #333; 
                                 word-break: break-all;">://mercadolivre.com.br/pagamento/cafeteira1209384
                             </div>
                         </div>
 
+                        <!-- BOTÃO COPIAR -->
                         <button onclick="avancarPasso()" 
-                            style="background: #3483FA; 
-                            color: white; 
-                            font-weight: bold; 
-                            font-size: 15px; 
-                            border: 2px dashed #002B5C; 
-                            padding: 12px; 
-                            border-radius: 6px; 
-                            width: 100%;
-                            box-sizing: border-box !important;">📋 Copiar Código Pix
+                            class="merc-btn-principal merc-btn-azul-destaque">📋 Copiar Código Pix
                         </button>
                     </div>
                 </div>`,
         feedback:
-        "✓ Perfeito! O código foi copiado. Agora, vamos finalizar o seu tutorial de compras com total segurança.",
+        "✓ Perfeito! O código foi copiado e você pode colar no seu pix.",
     },
 
     // PASSO 9: CONFIRMAÇÃO DE PAGAMENTO APROVADO
@@ -584,36 +445,23 @@ const mercado = [
             O pagamento foi identificado com sucesso! Para avançar para a área 
             de rastreamento, clique ou toque no botão "📦 Ver Meus Pedidos".`,
         conteudo: `               
-                <div style="background: #FFFDF0 !important; 
-                    height: 100% !important; 
-                    min-height: 100% !important; 
-                    display: flex; 
-                    flex-direction: column; 
-                    font-family: sans-serif; 
-                    box-sizing: border-box; 
-                    user-select: none; 
-                    color: #333; 
-                    text-align: left;
-                    flex: 1 !important;">
+                <div class="merc-container merc-bg-site"
+                    style="text-align: left;">
                     
-                    <div style="background: #FFF159; 
-                        padding: 10px 15px; 
-                        display: flex; 
-                        align-items: center; 
-                        border-bottom: 1px solid #E5D74E; 
-                        flex-shrink: 0;">
-                        <strong style="color: #2D3277; font-size: 15px;">Sucesso</strong>
+                    <!-- TOPO DE SUCESSO -->
+                    <div class="merc-topo-ml"
+                        style="padding: 10px 15px;">
+                        <strong style="color: #2D3277; 
+                            font-size: 15px;">Sucesso
+                        </strong>
                     </div>
                     
-                    <div style="flex: 1; 
-                        background: #FFFDF0 !important; 
+                    <!-- CORPO CENTRALIZADO -->
+                    <div class="merc-corpo-site"
+                        style="background: #FFFDF0 !important;
                         padding: 20px; 
-                        display: flex; 
-                        flex-direction: column; 
-                        gap: 15px; 
                         justify-content: center; 
-                        align-items: center;
-                        box-sizing: border-box;">
+                        align-items: center;">
                         
                         <div style="width: 50px; 
                             height: 50px; 
@@ -625,7 +473,11 @@ const mercado = [
                             justify-content: center; 
                             border-radius: 50%;">✓
                         </div>
-                        <h4 style="margin: 0; font-size: 18px; color: #03543F; font-weight: bold;">¡Pagamento Aprovado!</h4>
+                        
+                        <h4 style="margin: 0; 
+                            font-size: 18px; 
+                            color: #03543F; 
+                            font-weight: bold;">¡Pagamento Aprovado!</h4>
 
                         <p style="margin: 0 0 10px 0; 
                             font-size: 13px; 
@@ -634,16 +486,10 @@ const mercado = [
                             line-height: 1.4;">Já avisamos o vendedor e ele está preparando o embrulho da sua cafeteira.
                         </p>
                      
+                        <!-- BOTÃO DESTAQUE DE PEDIDOS -->
                         <button onclick="avancarPasso()" 
-                            style="background: #3483FA; 
-                            color: white; 
-                            font-weight: bold; 
-                            font-size: 14px; 
-                            border: 2px dashed #002B5C; 
-                            padding: 12px; 
-                            border-radius: 6px; 
-                            width: 100%;
-                            box-sizing: border-box !important;">📦 Ver Meus Pedidos
+                            class="merc-btn-principal merc-btn-azul-destaque"
+                            style="font-size: 14px;">📦 Ver Meus Pedidos
                         </button>
                     </div>
                 </div>`,
@@ -657,79 +503,49 @@ const mercado = [
             Esta é a tela de rastreamento! Ela mostra onde o pacote está. 
             Para verificar a entrega, clique ou toque no botão "Confirmar e Acompanhar Compra ✔️".`,
         conteudo: `               
-                <div style="background: #FFFDF0 !important; 
-                    height: 100% !important; 
-                    min-height: 100% !important; 
-                    display: flex; 
-                    flex-direction: column; 
-                    font-family: sans-serif; 
-                    box-sizing: border-box; 
-                    user-select: none; 
-                    color: #333; 
-                    text-align: left;
-                    flex: 1 !important;">
+                <div class="merc-container merc-bg-site"
+                    style="text-align: left;">
                     
-                    <div style="background: #FFF159; 
-                        padding: 10px 15px; 
-                        display: flex; 
-                        align-items: center; 
-                        border-bottom: 1px solid #E5D74E; 
-                        flex-shrink: 0;">
-                        <strong style="color: #2D3277; font-size: 15px;">Minhas Compras</strong>
+                    <!-- TOPO DE COMPRAS -->
+                    <div class="merc-topo-ml"
+                        style="padding: 10px 15px;">
+                        <strong style="color: #2D3277; 
+                            font-size: 15px;">Minhas Compras
+                        </strong>
                     </div>                    
                     
-                    <div style="flex: 1; 
-                        background: #FFFDF0 !important; 
-                        padding: 15px; 
-                        display: flex; 
-                        flex-direction: column; 
-                        gap: 10px; 
-                        justify-content: space-between;
-                        box-sizing: border-box;">                        
+                    <!-- CORPO DO RASTREIO -->
+                    <div class="merc-corpo-site"
+                        style="background: #FFFDF0 !important;
+                        justify-content: space-between;">                        
                        
-                        <div style="border: 1px solid #E5E7EB; 
-                            border-radius: 8px; 
-                            padding: 12px; 
-                            background: white !important; 
-                            display: flex; 
-                            gap: 12px; 
-                            align-items: center;
-                            box-sizing: border-box;">
+                        <!-- CARD DO ITEM -->
+                        <div class="merc-caixa-rastreio-item">
                             <span style="font-size: 28px;">📦</span>
                             <div>
-                                <strong style="font-size: 13px; color: #111; display: block;">Cafeteira Elétrica Premium</strong>
-                                <span style="font-size: 12px; color: #00a650; font-weight: bold;">🚚 Chegará amanhã na sua casa!</span>
+                                <strong style="font-size: 13px; 
+                                    color: #111; 
+                                    display: block;">Cafeteira Elétrica Premium
+                                </strong>
+                                <span style="font-size: 12px; 
+                                    color: #00a650; 
+                                    font-weight: bold;">🚚 Chegará amanhã na sua casa!
+                                </span>
                             </div>
                         </div>
                         
-                        <!-- Alterado de #FAFAFA para white para destacar em cima do fundo amarelo claro -->
-                        <div style="padding: 10px 12px; 
-                            display: flex; 
-                            flex-direction: column; 
-                            gap: 10px; 
-                            font-size: 12px; 
-                            color: #555; 
-                            background: white !important; 
-                            border-radius: 6px; 
-                            border: 1px solid #eee;
-                            box-sizing: border-box;">
+                        <!-- HISTÓRICO DE HORÁRIOS -->
+                        <div class="merc-caixa-historico-etapas">
                             <div>🟢 <strong>14:10</strong> - Pacote enviado pelo vendedor</div>
                             <div style="color: #00a650; 
-                                font-weight: bold;">🟡 
-                                <strong>16:30</strong> - O caminhão saiu do centro de distribuição rumo à sua cidade
+                                font-weight: bold;">
+                                🟡 <strong>16:30</strong> - O caminhão saiu do centro de distribuição rumo à sua cidade
                             </div>
                         </div>
                         
+                        <!-- BOTÃO VERDE -->
                         <button onclick="avancarPasso()" 
-                            style="background: #00a650; 
-                            color: white; 
-                            font-weight: bold; 
-                            font-size: 14px; 
-                            border: 2px dashed #004D26; 
-                            padding: 12px; 
-                            border-radius: 6px; 
-                            width: 100%;
-                            box-sizing: border-box !important;">Confirmar e Acompanhar Compra ✔️
+                            class="merc-btn-verde-destaque">Confirmar e Acompanhar Compra ✔️
                         </button>
                     </div>
                 </div>`,
@@ -737,7 +553,7 @@ const mercado = [
         "✓ Excelente! Saber ler esse mapa de envio te dá total segurança de que o seu produto já está a caminho.",
     },
 
-    //  PASSO 11: TELA FINAL DE SUCESSO (VITÓRIA)
+    //  PASSO 11: TELA FINAL DE SUCESSO
     {
         instrucao: `<strong>Passo 11:</strong> 
             Parabéns! Você concluiu com sucesso este tutorial de Compras! 
@@ -746,24 +562,18 @@ const mercado = [
             com total segurança. Clique ou toque no botão para 
             voltar ao menu principal.`,
         conteudo: `               
-                <div style="background: #FFFDF0 !important; 
-                    height: 100% !important; 
-                    min-height: 100% !important; 
-                    display: flex; 
-                    flex-direction: column; 
+                <div class="merc-container"
+                    style="background: #FFFDF0 !important; 
                     padding: 20px; 
                     align-items: center; 
-                    justify-content: center; 
-                    box-sizing: border-box; 
-                    user-select: none;
-                    flex: 1 !important;">
+                    justify-content: center;">
                     
-                    <div style="background: white !important; /* Alterado para fundo branco puro para destacar o painel central */
+                    <!-- PAINEL CENTRAL -->
+                    <div style="background: white !important;
                         width: 100%; 
                         padding: 20px 15px; 
                         border-radius: 12px; 
                         text-align: center; 
-                        box-sizing: border-box; 
                         box-shadow: 0 4px 15px rgba(0,0,0,0.1); 
                         border: 3px solid #FFF159; 
                         display: flex; 
@@ -803,12 +613,12 @@ const mercado = [
                             font-size: 14px; 
                             color: #555; 
                             line-height: 1.4; 
-                            text-align: center;">Parabéns! Encontrar mercadorias,
-                                avaliar a reputação de lojas, resolver erros do carrinho
-                                e rastrear as entregas agora ficou simples.
+                            text-align: center;">Parabéns! Encontrar mercadorias, avaliar a reputação de lojas, 
+                                resolver erros do carrinho e rastrear as entregas agora ficou simples. 
                                 Você já domina as compras online com total autonomia!
                         </p>
                        
+                        <!-- BOTÃO DESTAQUE DE ENCERRAMENTO -->
                         <button onclick="window.location.href='menu.html'" 
                             style="background: #3483FA; 
                             color: white; 

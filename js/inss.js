@@ -5,34 +5,34 @@ const inss = [
             Para entrar no Meu INSS com segurança, clique ou toque
             no botão escrito "🔑 Entrar com gov.br".`,
         conteudo: `
-                <div style="background: #FFFFFF; 
-                    height: 100%; 
-                    display: flex; 
-                    flex-direction: column; 
-                    font-family: Arial, sans-serif; 
-                    box-sizing: border-box; 
-                    user-select: none; 
-                    padding: 15px;">
+                <div class="inss-container" style="padding: 0;">                    
+                    <!-- BARRA SUPERIOR -->
+                    <div class="inss-topo-hub">
+                        <span style="font-weight: bold; 
+                            font-size: 20px; 
+                            color: white;">Meu INSS</span>
+                        
+                        <div style="background: #1351B4; 
+                            color: white; 
+                            font-size: 12px;
+                            padding: 4px 8px; 
+                            border-radius: 4px; 
+                            font-weight: bold;">gov.br
+                        </div>
+                    </div>
                     
-                    <div style="padding: 20px 10px; 
-                        text-align: center; 
-                        flex: 1; 
-                        display: flex; 
-                        flex-direction: column; 
-                        align-items: center; 
-                        justify-content: center; 
-                        gap: 15px;">
-                        
-                        <span style="font-size: 45px; 
-                            animation: flutuar 3s ease-in-out infinite;">🏛️
-                        </span>
-                        
+                    <!-- CORPO CENTRALIZADO -->
+                    <div class="inss-corpo-centralizado" style="padding: 15px;">
+
+                        <!-- TEXTO E EMOJI -->
+                        <div class="inss-emoji-flutuar">🏛️</div>                        
                         <h2 style="color: #002F6C; 
-                            margin: 0; 
+                            margin: 0 0 5px 0; 
                             font-size: 22px; 
                             font-weight: bold;">Central de Serviços
                         </h2>
                         
+                        <!-- ESCUDO DE SEGURANÇA -->
                         <div style="background: #FFF3CD; 
                             border: 2px solid #FFEBAA; 
                             color: #856404; 
@@ -51,25 +51,12 @@ const inss = [
                         </div>
                     </div>
                     
-                    <div style="padding: 15px 0; 
-                        display: flex; 
-                        justify-content: center; 
-                        background: #F4F6F9; 
-                        border-top: 1px solid #EEE; 
-                        flex-shrink: 0; 
-                        border-radius: 0 0 12px 12px;">
-                        
+                    <!-- RODAPÉ DE AÇÃO -->
+                    <div class="inss-rodape-acao">                        
+                        <!-- BOTÃO DESTAQUE -->
                         <button onclick="avancarPasso()" 
-                            style="background: #1351B4; 
-                            color: white; 
-                            font-size: 18px; 
-                            font-weight: bold; 
-                            padding: 15px; 
-                            border: 3px dashed #F97316; 
-                            border-radius: 50px; 
-                            cursor: pointer; 
-                            width: 95%; 
-                            box-shadow: 0 4px 6px rgba(0,0,0,0.15);">🔑 Entrar com gov.br
+                            class="inss-btn-azul-destaque"
+                            style="border: 3px dashed #F97316;">🔑 Entrar com gov.br
                         </button>
                     </div>
                 </div>`,
@@ -82,24 +69,17 @@ const inss = [
     {
         instrucao: `<strong>PASSO 2:</strong> 
             Agora, precisamos digitar o número do seu CPF! Clique ou toque 
-            na barra de preenchimento para ativar o teclado.`,
+            na barra de preenchimento.`,
         conteudo: `
-                <div style="background: #FFFFFF; 
-                    height: 100%; 
-                    display: flex; 
-                    flex-direction: column; 
-                    font-family: Arial, sans-serif; 
-                    box-sizing: border-box; 
-                    user-select: none;">                    
+                <div class="inss-container" 
+                    style="padding: 0;">                    
                    
-                    <div style="background: #002F6C; 
-                        padding: 12px 15px; 
-                        display: flex; 
-                        align-items: center; 
-                        justify-content: space-between; 
-                        flex-shrink: 0; 
-                        border-bottom: 1px solid rgba(255,255,255,0.1);">
-                        <span style="font-weight: bold; font-size: 20px; color: white;">Meu INSS</span>
+                    <!-- BARRA SUPERIOR DO GOV -->
+                    <div class="inss-topo-hub">
+                        <span style="font-weight: bold; 
+                            font-size: 20px; 
+                            color: white;">Meu INSS</span>
+                        
                         <div style="background: #1351B4; 
                             color: white; 
                             font-size: 12px;
@@ -109,29 +89,32 @@ const inss = [
                         </div>
                     </div>
                     
-                    <div style="flex: 1; 
-                        padding: 15px; 
-                        display: flex; 
-                        flex-direction: column; 
-                        justify-content: center; 
+                    <!-- ÁREA DE FORMULÁRIO DO INSS -->
+                    <div class="inss-corpo-centralizado" 
+                        style="justify-content: center; 
+                        padding: 15px;
                         gap: 10px;">
-                        <label style="font-weight: bold; font-size: 13px; color: #444; text-align: left; display: block;">NÚMERO DO CPF:</label>
                         
-                        <!-- BARRA DE CPF PONTILHADA -->
+                        <label style="font-weight: bold; 
+                            font-size: 12px; 
+                            color: #444; 
+                            text-align: left; 
+                            display: block;
+                            width: 100%;">NÚMERO DO CPF:</label>
+                        
+                        <!-- BARRA DE CPF COMPACTADA -->
                         <div onclick="avancarPasso()" 
+                            class="inss-input-formulario"
                             style="background: #E8F5E9; 
-                            padding: 14px; 
-                            border-radius: 8px; 
                             border: 3px dashed #F97316; 
-                            font-size: 16px; 
-                            font-weight: bold; 
                             color: #1B5E20; 
                             text-align: left; 
                             cursor: pointer; 
-                            box-shadow: inset 0 1px 3px rgba(0,0,0,0.1);">Toque aqui para preencher o CPF... ⌨️
+                            box-shadow: inset 0 1px 3px rgba(0,0,0,0.1);">Simule o CPF digitado...
                         </div>
                     </div>
                     
+                    <!-- BLOCO DE INFORMAÇÕES SECUNDÁRIAS -->
                     <div style="background: #F4F6F9; 
                         padding: 10px; 
                         margin: 15px; 
@@ -151,77 +134,48 @@ const inss = [
             Sua senha já foi preenchida! Para entrar na sua 
             conta com segurança, clique ou toque no botão "Continuar".`,
         conteudo: `
-                <div style="background: #FFFFFF; 
-                    height: 100%; 
-                    display: flex; 
-                    flex-direction: column; 
-                    font-family: Arial, sans-serif; 
-                    box-sizing: border-box; 
-                    user-select: none;">                    
-                   
-                    <div style="background: #002F6C; 
-                        padding: 12px 15px; 
-                        display: flex; 
-                        align-items: center; 
-                        justify-content: space-between; 
-                        flex-shrink: 0; 
-                        border-bottom: 1px solid rgba(255,255,255,0.1);">
-                        <span style="font-weight: bold; font-size: 20px; color: white;">Meu INSS</span>
+                <div class="inss-container" style="padding: 0;">                   
+                    <!-- BARRA SUPERIOR DO GOV -->
+                    <div class="inss-topo-hub">
+                        <span style="font-weight: bold; 
+                            font-size: 20px; 
+                            color: white;">Meu INSS</span>
+                        
                         <div style="background: #1351B4; 
                             color: white; 
                             font-size: 12px;
                             padding: 4px 8px; 
-                            border-radius: 4px; f
-                            ont-weight: bold;">gov.br
+                            border-radius: 4px; 
+                            font-weight: bold;">gov.br
                         </div>
                     </div>
                     
-                    <div style="flex: 1; 
-                        padding: 15px; 
-                        display: flex; 
-                        flex-direction: column; 
-                        justify-content: center; 
+                    <!-- CORPO DO FORMULÁRIO DE SENHA -->
+                    <div class="inss-corpo-centralizado"
+                        style="padding: 15px;
+                        justify-content: center;
                         gap: 10px;">
 
                         <label style="font-weight: bold; 
                             font-size: 13px; 
                             color: #444; 
                             text-align: left; 
-                            display: block;">SUA SENHA DO GOV.BR:
+                            display: block;
+                            width: 100%;">SUA SENHA DO GOV.BR:
                         </label>
 
+                        <!-- INPUT DE SENHA -->
                         <input type="password" 
                             value="••••••••••••" 
                             disabled 
-                            style="width: 100%; 
-                            padding: 14px; 
-                            font-size: 18px; 
-                            border: 1px solid #ccc; 
-                            border-radius: 8px; 
-                            background: #F4F6F9; 
-                            box-sizing: border-box; 
-                            color: #333; 
-                            letter-spacing: 3px;">
+                            class="inss-input-senha">
                     </div>
                     
-                    <!-- BOTÃO CONTINUAR -->
-                    <div style="padding: 15px; 
-                        display: flex; 
-                        justify-content: center; 
-                        background: white; 
-                        border-top: 1px solid #EEE; 
-                        flex-shrink: 0;">
+                    <!-- RODAPÉ DE AÇÃO -->
+                    <div class="inss-rodape-acao" style="background: white;">                        
+                        <!-- BOTÃO CONTINUAR -->
                         <button onclick="avancarPasso()" 
-                            style="background: #1351B4; 
-                            color: white; 
-                            font-size: 18px; 
-                            font-weight: bold; 
-                            padding: 15px; 
-                            border: 3px dashed #FFC107; 
-                            border-radius: 50px; 
-                            cursor: pointer; 
-                            width: 100%; 
-                            box-shadow: 0 4px 6px rgba(0,0,0,0.15);">Continuar ➔
+                            class="inss-btn-azul-destaque">Continuar ➔
                         </button>
                     </div>
                 </div>`,
@@ -235,24 +189,13 @@ const inss = [
             Para conferir o extrato e a data de pagamento do seu benefício, 
             clique ou toque no botão "💵 Extrato de Pagamento".`,
         conteudo: `              
-                <div style="background: #002F6C !important; 
-                    height: 100% !important; 
-                    min-height: 100% !important; 
-                    display: flex; 
-                    flex-direction: column; 
-                    font-family: Arial, sans-serif; 
-                    box-sizing: border-box; 
-                    user-select: none;
-                    flex: 1 !important;">
-                    
-                    <div style="background: #002F6C; 
-                        padding: 10px 15px; 
-                        display: flex; 
-                        align-items: center; 
-                        justify-content: space-between; 
-                        flex-shrink: 0; 
-                        border-bottom: 1px solid rgba(255,255,255,0.1);">
-                        <span style="font-weight: bold; font-size: 20px; color: white;">Meu INSS</span>
+                <div class="inss-container-hub">                    
+                    <!-- CABEÇALHO DO HUB PREVIDENCIÁRIO -->
+                    <div class="inss-topo-hub">
+                        <span style="font-weight: bold; 
+                            font-size: 20px; 
+                            color: white;">Meu INSS</span>
+                        
                         <div style="background: #1351B4; 
                             color: white; 
                             font-size: 10px; 
@@ -262,15 +205,8 @@ const inss = [
                         </div>
                     </div>
                     
-                    <div style="padding: 12px; 
-                        flex: 1; 
-                        background: #F4F6F9 !important; 
-                        display: flex; 
-                        flex-direction: column; 
-                        gap: 10px; 
-                        box-sizing: border-box; 
-                        overflow-y: auto;">                        
-                        
+                    <!-- GRID DE SERVIÇOS DO PAINEL-->
+                    <div class="inss-corpo-hub">                        
                         <div style="background: white; 
                             padding: 10px; 
                             border-radius: 8px; 
@@ -280,51 +216,42 @@ const inss = [
                             white-space: nowrap !important;
                             overflow: hidden !important;
                             text-overflow: ellipsis !important;">
-                            <span style="font-size: 12px; color: #777;">🔍 O que você precisa? Digite aqui...</span>
+                            <span style="font-size: 12px; 
+                                color: #777;">🔍 O que você precisa? Digite aqui...</span>
                         </div>
                         
-                        <p style="margin: 5px 0 0 0; font-size: 14px; font-weight: bold; color: #444; text-align: left;">🎯 Serviços Principais:</p>
+                        <p style="margin: 5px 0 0 0; 
+                            font-size: 14px; 
+                            font-weight: bold; 
+                            color: #444; 
+                            text-align: left;">🎯 Serviços Principais:</p>
                         
-                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 2px;">
+                        <div style="display: grid; 
+                            grid-template-columns: 1fr 1fr; 
+                            gap: 10px; 
+                            margin-top: 2px;">
                             
-                            <!-- HISTÓRICO DE PAGAMENTOS -->
+                            <!-- EXTRATO DE PAGAMENTO -->
                             <div onclick="avancarPasso()" 
-                                style="background: white; 
-                                border: 3px dashed #F97316; 
-                                padding: 12px; 
-                                border-radius: 12px; 
-                                text-align: center; 
-                                cursor: pointer; 
-                                box-shadow: 0 4px 6px rgba(0,0,0,0.08); 
-                                display: flex; 
-                                flex-direction: column; 
-                                align-items: center; 
-                                gap: 5px;
-                                box-sizing: border-box;">
+                                class="inss-card-grid-destaque">
                                 <span style="font-size: 28px;">💵</span>
-                                <strong style="font-size: 13px; color: #002F6C; line-height: 1.2;">Extrato de<br>Pagamento</strong>
+                                <strong style="font-size: 13px; 
+                                    color: #002F6C; 
+                                    line-height: 1.2;">Extrato de<br>Pagamento</strong>
                             </div>                            
                          
-                            <div style="background: white; 
-                                border: 1px solid #ccc; 
-                                padding: 12px; 
-                                border-radius: 12px; 
-                                text-align: center;                               
-                                opacity: 0.5; 
-                                display: flex; 
-                                flex-direction: column; 
-                                align-items: center; 
-                                gap: 5px;
-                                box-sizing: border-box;">
-                                <span style="font-size: 28px;">📅</span>
-                                <strong style="font-size: 13px; color: #333; line-height: 1.2;">Meus<br>Agendamentos</strong>
+                            <!-- OUTRO SERVIÇO SECUNDÁRIO -->
+                            <div class="inss-card-grid-inativo">
+                                <span style="font-size: 28px;">📄</span>
+                                <strong style="font-size: 13px; 
+                                    color: #002F6C; 
+                                    line-height: 1.2;">Declaração<br>Benefício</strong>
                             </div>
-                            
                         </div>
                     </div>
                 </div>`,
         feedback:
-        "✓ Excelente! A tela abriu e shows o extrato detalhado de pagamento do seu benefício.",
+        "✓ Maravilhoso! Clicar nessa opção te dá acesso completo a todos os valores e contracheques depositados.",
     },
 
     // PASSO 5: (Demonstrativo Financeiro)
@@ -333,32 +260,15 @@ const inss = [
             Analise o seu recibo na tela! Para retornar à página inicial, 
             clique ou toque no botão "⬅️ Voltar".`,
         conteudo: `
-                <div style="background: #002F6C; 
-                    height: 100%; 
-                    display: flex; 
-                    flex-direction: column; 
-                    font-family: Arial, sans-serif; 
-                    box-sizing: border-box; 
-                    user-select: none;">
-                    
-                    <div style="background: #002F6C; 
-                        padding: 12px 15px; 
-                        display: flex; 
-                        align-items: center; 
-                        gap: 10px; 
-                        flex-shrink: 0;">
+                <div class="inss-container-hub">                    
+                    <!-- TOPBAR COM BOTÃO -->
+                    <div class="inss-topo-hub"
+                        style="justify-content: flex-start;
+                        gap: 10px;">
                         
-                        <!-- BOTÃO DE RETORNO -->
+                        <!-- BOTÃO VOLTAR -->
                         <span onclick="avancarPasso()" 
-                            style="color: white; 
-                            font-size: 16px; 
-                            cursor: pointer; 
-                            font-weight: bold; 
-                            background: #1351B4; 
-                            padding: 6px 12px; 
-                            border-radius: 8px; 
-                            box-shadow: 0 2px 4px rgba(0,0,0,0.2); 
-                            border: 2px dashed #FFC107;">⬅️ Voltar
+                            class="inss-btn-voltar-destaque">⬅️ Voltar
                         </span>
                         
                         <span style="font-weight: bold; 
@@ -367,23 +277,22 @@ const inss = [
                         </span>
                     </div>
                     
-                    <div style="padding: 15px; 
-                        flex: 1; 
-                        background: #FFF; 
-                        display: flex; 
-                        flex-direction: column; 
-                        gap: 12px; 
-                        box-sizing: border-box; 
-                        overflow-y: auto; 
-                        color: #333;">
+                    <!-- CORPO BRANCO DETALHADO DO COMPROVANTE -->
+                    <div class="inss-corpo-hub"
+                        style="background: #FFF !important;
+                        color: #333;
+                        padding: 15px;
+                        gap: 12px;">
                         
                         <div style="border-bottom: 2px solid #002F6C; 
                             padding-bottom: 8px; 
                             text-align: left;">
+                            
                             <span style="font-size: 13px; 
                                 color: #666; 
                                 font-weight: bold;">COMPROVANTE DE RENDIMENTOS
                             </span>
+                            
                             <h3 style="margin: 2px 0 0 0; 
                                 font-size: 16px; 
                                 color: #002F6C;">Competência: Junho/2026
@@ -401,14 +310,8 @@ const inss = [
                             <p style="margin: 3px 0 0 0;"><strong>Situação:</strong> Ativo / Pago</p>
                         </div>
                         
-                        <div style="text-align: left; 
-                            font-size: 15px; 
-                            display: flex; 
-                            flex-direction: column; 
-                            gap: 6px; 
-                            border: 1px solid #ddd; 
-                            padding: 10px; 
-                            border-radius: 6px;">
+                        <!-- TABELA DE VALORES -->
+                        <div class="inss-tabela-valores">
                             <div style="display: flex; justify-content: space-between;"><span>(+) Valor Bruto:</span><strong>R$ 1.412,00</strong></div>
                             <div style="display: flex; justify-content: space-between; color: red;"><span>(-) Descontos:</span><strong>R$ 0,00</strong></div>
 
@@ -439,24 +342,15 @@ const inss = [
     {
         instrucao: `<strong>PASSO 6:</strong> 
             Agora vamos realizar a Prova de Vida! Para iniciar o procedimento, 
-            clique ou toque no botão escrito "👤 Prova de Vida".`,
+            clique ou toque no botão "👤 Prova de Vida".`,
         conteudo: `
-                <div style="background: #002F6C; 
-                    height: 100%; 
-                    display: flex; 
-                    flex-direction: column; 
-                    font-family: Arial, sans-serif; 
-                    box-sizing: border-box; 
-                    user-select: none;">
-                    
-                    <div style="background: #002F6C; 
-                        padding: 12px 15px; 
-                        display: flex; 
-                        align-items: center; 
-                        justify-content: space-between; 
-                        flex-shrink: 0; 
-                        border-bottom: 1px solid rgba(255,255,255,0.1);">
-                        <span style="font-weight: bold; font-size: 20px; color: white;">Meu INSS</span>
+                <div class="inss-container-hub">                    
+                    <!-- BARRA SUPERIOR DO HUB -->
+                    <div class="inss-topo-hub">
+                        <span style="font-weight: bold; 
+                            font-size: 20px; 
+                            color: white;">Meu INSS</span>
+                        
                         <div style="background: #1351B4; 
                             color: white; 
                             font-size: 12px; 
@@ -466,52 +360,65 @@ const inss = [
                         </div>
                     </div>
                     
-                    <div style="padding: 12px; 
-                        flex: 1; 
-                        background: #F4F6F9; 
-                        display: flex; 
-                        flex-direction: column; 
-                        gap: 10px; 
-                        box-sizing: border-box; 
-                        overflow-y: auto;">
+                    <!-- LISTA COMPLETA DE SERVIÇOS -->
+                    <div class="inss-corpo-hub">                        
+                        <p style="margin: 5px 0 0 0; 
+                            font-size: 14px; 
+                            font-weight: bold; 
+                            color: #444; 
+                            text-align: left;">📋 Outros Serviços do Aplicativo:</p>
                         
-                        <p style="margin: 5px 0 0 0; font-size: 14px; font-weight: bold; color: #444; text-align: left;">📋 Outros Serviços do Aplicativo:</p>
-                        
-                        <!-- PROVA DE VIDA -->
-                        <div onclick="avancarPasso()" 
-                            style="background: white; 
-                            border: 3px dashed #F97316; 
-                            padding: 15px; 
-                            border-radius: 8px; 
-                            display: flex; 
-                            align-items: center; 
-                            justify-content: space-between; 
-                            cursor: pointer; 
-                            box-shadow: 0 4px 6px rgba(0,0,0,0.05);">
-                            <div style="display: flex; align-items: center; gap: 12px;">
+                        <!-- CARD PROVA DE VIDA (INTERATIVO) -->
+                        <div onclick="avancarPasso()" class="inss-card-servico-destaque">                            
+                            <div style="display: flex; 
+                                align-items: center; 
+                                gap: 12px;">
                                 <span style="font-size: 24px;">👤</span>
-                                <strong style="font-size: 16px; color: #002F6C;">Prova de Vida</strong>
+                                <strong style="font-size: 16px; 
+                                    color: #002F6C;">Prova de Vida</strong>
                             </div>
-                            <span style="color: #0056B3; font-weight: bold;">❯</span>
+                            
+                            <span style="color: #0056B3;font-weight: bold;">❯</span>
                         </div>
-                        
-                        <div style="background: white; 
-                            border: 1px solid #ccc; 
-                            padding: 15px; 
-                            border-radius: 8px; 
-                            display: flex; 
-                            align-items: center; 
-                            justify-content: space-between;                            
-                            opacity: 0.6;">
-                            <div style="display: flex; align-items: center; gap: 12px;">
+
+                        <!-- SECUNDÁRIO 1: -->
+                        <div class="inss-card-servico-inativo">
+                            <div style="display: flex; 
+                                align-items: center; 
+                                gap: 12px;">
+                                <span style="font-size: 24px;">📄</span>
+                                <strong style="font-size: 16px; 
+                                    color: #002F6C;">Resultado de Benefício</strong>
+                            </div>
+                            <span style="color: #aaa;">❯</span>
+                        </div>
+
+                        <!-- SECUNDÁRIO 2: BLOQUEADO E OFUSCADO -->
+                        <div class="inss-card-servico-inativo">
+                            <div style="display: flex; 
+                                align-items: center; 
+                                gap: 12px;">
                                 <span style="font-size: 24px;">📅</span>
-                                <strong style="font-size: 16px; color: #002F6C;">Consultar Pedidos</strong>
+                                <strong style="font-size: 16px; 
+                                    color: #002F6C;">Agendamentos / Solicitações</strong>
+                            </div>
+                            <span style="color: #aaa;">❯</span>
+                        </div>
+
+                        <!-- SECUNDÁRIO 3: BLOQUEADO E OFUSCADO -->
+                        <div class="inss-card-servico-inativo">
+                            <div style="display: flex; 
+                                align-items: center; 
+                                gap: 12px;">
+                                <span style="font-size: 24px;">🧮</span>
+                                <strong style="font-size: 16px; 
+                                    color: #002F6C;">Simular Aposentadoria</strong>
                             </div>
                             <span style="color: #aaa;">❯</span>
                         </div>
                     </div>
                 </div>`,
-        feedback: "✓ Muito bem! O aplicativo recebeu a sua escolha e agora vai ligar a câmera do aparelho.",
+        feedback: "✓ Excelente! Clicar nessa opção inicia o processo oficial de validação cadastral.",
     },
 
     // PASSO 7: (Reconhecimento Facial / Câmera)
@@ -520,48 +427,30 @@ const inss = [
             A câmera abriu! Centralize seu rosto na tela e clique ou toque no centro do círculo 
             pontilhado, para tirar a foto de confirmação.`,
         conteudo: `
-                <div style="background: #000; 
-                    height: 100%; 
-                    display: flex; 
-                    flex-direction: column; 
-                    font-family: Arial, sans-serif; 
-                    box-sizing: border-box; 
-                    user-select: none;">
+                <div class="inss-container"
+                    style="background: #000;
+                    padding: 0;">
                     
-                    <div style="background: #1A1A1A; 
-                        padding: 12px 15px; 
-                        display: flex; 
-                        align-items: center; 
-                        justify-content: space-between; 
-                        flex-shrink: 0;">
-                        <span style="font-weight: bold; font-size: 16px; color: white;">Validação Facial gov.br</span>
-                        <span style="font-size: 14px; color: #FFF3CD;">Mire no centro 📷</span>
+                    <!-- BARRA SUPERIOR MODO CÂMERA DE SEGURANÇA -->
+                    <div class="inss-topo-hub"
+                        style="background: #1A1A1A;">
+                        <span style="font-weight: bold; 
+                            font-size: 16px; 
+                            color: white;">Validação Facial gov.br</span>
+                        <span style="font-size: 14px; 
+                            color: #FFF3CD;">Mire no centro 📷</span>
                     </div>
                     
-                    <div style="flex: 1; 
-                        display: flex; 
-                        flex-direction: column; 
-                        align-items: center; 
-                        justify-content: center; 
-                        padding: 15px; 
-                        position: relative; 
-                        background: #222;">
+                    <!-- CORPO DA LENTE FILMADORA -->
+                    <div class="inss-corpo-centralizado"
+                        style="background: #222;
+                        padding: 15px;">
                         
+                        <!-- MOLDURA OVAL INTEGRADA -->
                         <div onclick="avancarPasso()" 
-                            style="width: 200px; 
-                            height: 250px; 
-                            border: 4px dashed #0056B3; 
-                            border-radius: 50% / 50%; 
-                            display: flex; 
-                            flex-direction: column; 
-                            align-items: center; 
-                            justify-content: center; 
-                            cursor: pointer; 
-                            background: rgba(0,86,179,0.1); 
-                            box-shadow: 0 0 15px rgba(0,86,179,0.3); 
-                            transition: all 0.2s;">
-
+                            class="inss-moldura-camera-destaque">
                             <span style="font-size: 50px;">👵👴</span>
+                            
                             <span style="color: white; 
                                 font-size: 14px; 
                                 font-weight: bold; 
@@ -592,38 +481,24 @@ const inss = [
             Para terminar, vamos conferir se uma solicitação deu certo! 
             Clique ou toque no botão "📅 Consultar Pedidos".`,
         conteudo: `
-                <div style="background: #002F6C; 
-                    height: 100%; 
-                    display: flex; 
-                    flex-direction: column; 
-                    font-family: Arial, sans-serif; 
-                    box-sizing: border-box; 
-                    user-select: none;">
-                    
-                    <div style="background: #002F6C; 
-                        padding: 12px 15px; 
-                        display: flex; 
-                        align-items: center; 
-                        justify-content: space-between; 
-                        flex-shrink: 0;">
-                        <span style="font-weight: bold; font-size: 20px; color: white;">Meu INSS</span>
+                <div class="inss-container-hub">                    
+                    <!-- TOPO DO HUB PREVIDENCIÁRIO -->
+                    <div class="inss-topo-hub">
+                        <span style="font-weight: bold; 
+                            font-size: 20px; 
+                            color: white;">Meu INSS</span>
+                        
                         <div style="background: #1351B4; 
                             color: white; 
-                            font-size: 12px; padding: 4px 8px; 
+                            font-size: 12px; 
+                            padding: 4px 8px; 
                             border-radius: 4px; 
                             font-weight: bold;">gov.br
                         </div>
-                    </div>
+                    </div>                    
                     
-                    <div style="padding: 12px; 
-                        flex: 1; 
-                        background: #F4F6F9; 
-                        display: flex; 
-                        flex-direction: column; 
-                        gap: 10px; 
-                        box-sizing: border-box; 
-                        overflow-y: auto;">
-                        
+                    <!-- LISTA COMPLETA DE SERVIÇOS -->
+                    <div class="inss-corpo-hub">                        
                         <p style="margin: 5px 0 0 0;
                             font-size: 14px; 
                             font-weight: bold; 
@@ -631,37 +506,55 @@ const inss = [
                             text-align: left;">📋 Outros Serviços do Aplicativo:
                         </p>
                         
-                        <div style="background: white; 
-                                border: 1px solid #ccc; 
-                                padding: 15px; 
-                                border-radius: 8px; 
-                                display: flex; 
+                        <!-- CARD PROVA DE VIDA -->
+                        <div class="inss-card-servico-inativo">
+                            <div style="display: flex; 
                                 align-items: center; 
-                                justify-content: space-between;                                
-                                opacity: 0.6;">
-                            <div style="display: flex; align-items: center; gap: 12px;">
+                                gap: 12px;">
                                 <span style="font-size: 24px;">👤</span>
-                                <strong style="font-size: 16px; color: #002F6C;">Prova de Vida</strong>
+                                <strong style="font-size: 16px; 
+                                    color: #002F6C;">Prova de Vida</strong>
                             </div>
                             <span style="color: #aaa;">❯</span>
                         </div>
 
-                        <!-- CONSULTA DE PROCESSOS -->
+                        <!-- CARD CONSULTAR PEDIDOS (INTERATIVO) -->
                         <div onclick="avancarPasso()" 
-                            style="background: white; 
-                            border: 3px dashed #F97316; 
-                            padding: 15px; 
-                            border-radius: 8px; 
-                            display: flex; 
-                            align-items: center; 
-                            justify-content: space-between; 
-                            cursor: pointer; 
-                            box-shadow: 0 4px 6px rgba(0,0,0,0.05);">
-                            <div style="display: flex; align-items: center; gap: 12px;">
+                            class="inss-card-servico-destaque"
+                            style="border: 3px dashed #F97316;">
+                            
+                            <div style="display: flex; 
+                                align-items: center; 
+                                gap: 12px;">
                                 <span style="font-size: 24px;">📅</span>
-                                <strong style="font-size: 16px; color: #002F6C;">Consultar Pedidos</strong>
+                                <strong style="font-size: 16px; 
+                                    color: #002F6C;">Consultar Pedidos</strong>
+                            </div>                            
+                            <span style="color: #0056B3;font-weight: bold;">❯</span>
+                        </div>
+
+                        <!-- SECUNDÁRIO 1: BLOQUEADO E OFUSCADO -->
+                        <div class="inss-card-servico-inativo">
+                            <div style="display: flex; 
+                                align-items: center; 
+                                gap: 12px;">
+                                <span style="font-size: 24px;">➕</span>
+                                <strong style="font-size: 16px; 
+                                    color: #002F6C;">Novo Pedido / Requerimento</strong>
                             </div>
-                            <span style="color: #0056B3; font-weight: bold;">❯</span>
+                            <span style="color: #aaa;">❯</span>
+                        </div>
+
+                        <!-- SECUNDÁRIO 2: BLOQUEADO E OFUSCADO -->
+                        <div class="inss-card-servico-inativo">
+                            <div style="display: flex; 
+                                align-items: center; 
+                                gap: 12px;">
+                                <span style="font-size: 24px;">🩺</span>
+                                <strong style="font-size: 16px; 
+                                    color: #002F6C;">Laudos Médicos (Perícia)</strong>
+                            </div>
+                            <span style="color: #aaa;">❯</span>
                         </div>
                     </div>
                 </div>`,
@@ -676,35 +569,10 @@ const inss = [
             Nunca clique em links de mensagens! Clique ou toque no botão de fechar "❌" 
             no canto superior para rejeitar o golpe.`,
         conteudo: `
-                <div style="background: #F4F6F9; 
-                    height: 100%; 
-                    display: flex; 
-                    flex-direction: column; 
-                    font-family: Arial, sans-serif; 
-                    box-sizing: border-box; 
-                    user-select: none; 
-                    padding: 15px; 
-                    position: relative;">
-                    
-                    <!-- ÍCONE '❌' DE ALTO CONTRASTE COM BORDA PONTILHADA AMARELA -->
+                <div class="inss-container" style="position: relative;">                    
+                    <!-- BOTÃO FLUTUANTE DE FECHAR -->
                     <div onclick="avancarPasso()" 
-                        style="position: absolute; 
-                        top: 12px; 
-                        right: 15px; 
-                        width: 44px; 
-                        height: 44px; 
-                        background: #C82333; 
-                        color: white; 
-                        border-radius: 50%; 
-                        display: flex; 
-                        align-items: center; 
-                        justify-content: center; 
-                        font-size: 22px; 
-                        font-weight: bold; 
-                        cursor: pointer; 
-                        box-shadow: 0 3px 6px rgba(0,0,0,0.2); 
-                        border: 2px dashed #FFC107; 
-                        z-index: 100;">❌
+                        class="inss-btn-fechar-destaque">❌
                     </div>
 
                     <div style="flex: 1; 
@@ -712,21 +580,14 @@ const inss = [
                         flex-direction: column; 
                         justify-content: center;">
                         
-                        <!-- sIMULAÇÃO SMS -->
-                        <div style="background: white; 
-                            border-radius: 12px; 
-                            padding: 20px 15px; 
-                            box-shadow: 0 4px 10px rgba(0,0,0,0.1); 
-                            border: 1px solid #ddd; 
-                            text-align: left; 
-                            width: 100%; 
-                            box-sizing: border-box;">
-                            
+                        <!-- SIMULAÇÃO SMS CONFIGURADA -->
+                        <div class="inss-caixa-sms-golpe">                            
                             <div style="display: flex; 
                                 align-items: center; 
                                 gap: 8px; 
                                 margin-bottom: 10px;">
                                 <span style="font-size: 20px;">💬</span>
+                                
                                 <strong style="color: #C82333; 
                                     font-size: 14px; 
                                     text-transform: uppercase;">Mensagem Suspeita
@@ -768,15 +629,13 @@ const inss = [
             realizar a Prova de Vida e se defender de golpes com total segurança. 
             Clique ou toque no botão para voltar ao menu principal.`,
         conteudo: `
-                <div style="background: white; 
-                    height: 100%; 
-                    display: flex; 
-                    flex-direction: column; 
-                    padding: 20px; 
-                    align-items: center; 
-                    justify-content: center;
-                    box-sizing: border-box;">
+                <div class="inss-container"
+                    style="background: white;
+                    padding: 20px;
+                    align-items: center;
+                    justify-content: center;">
                     
+                    <!-- PAINEL CENTRAL DE CONCLUÍDO -->
                     <div style="background: #E6F0FA; 
                         width: 100%; 
                         padding: 20px 15px; 
@@ -832,7 +691,7 @@ const inss = [
                             <p style="margin: 2px 0 0 0; color: #00A650;"><strong>Status:</strong> Concluído com Sucesso</p>
                         </div>
                         
-                        <!-- REDIRECIONANDO  PARA PAINEL CENTRAL -->
+                        <!-- BOTÃO DIRECIONADO PARA O MENU -->
                         <button onclick="window.location.href='menu.html'" 
                             style="background: #002F6C; 
                             color: white; 

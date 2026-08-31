@@ -1,4 +1,4 @@
-/* Container Principal da Área de Trabalho / Navegador */
+/* CONTAINER PRINCIPAL E INFRAESTRUTURA DO SIMULADOR */
 .merc-container {
     height: 100%;
     display: flex;
@@ -7,37 +7,69 @@
     box-sizing: border-box;
     user-select: none;
     position: relative;
+    overflow: hidden; /* Evita que o app transborde a tela vertical */
 }
 
 /* Fundos variantes de sistema */
-.merc-bg-desktop { background: #2A4365; }
-.merc-bg-site    { background: #F5F5F5; }
-.merc-bg-amarelo { 
-    background: #d8c10f;
-    color: #333; 
-    text-align: left; 
+.merc-bg-desktop { 
+    background: #2A4365; 
 }
 
-/* Elementos de Cabeçalhos e Topos do Site */
+.merc-bg-site { 
+    background: #F5F5F5; 
+}
+
+.merc-bg-amarelo { 
+    background: #FFF159; /* Amarelo do Mercado Livre */
+    color: #333; 
+}
+
+/*  ELEMENTOS DE CABEÇALHOS E TOPOS DO SITE */
 .merc-topo-ml {
-    padding: 15px;
+    background: #FFF159;
+    padding: 12px 15px;
     display: flex;
     align-items: center;
-    justify-content: center;
-    gap: 20px;
+    justify-content: space-between;
+    gap: 15px;
     border-bottom: 1px solid #E5D74E;
+    flex-shrink: 0;
+    box-sizing: border-box;
+}
+
+/* Barra de Tarefas do Computador Simulador */
+.merc-barra-tarefas {
+    background: #1E293B;
+    height: 36px;
+    border-top: 1px solid rgba(255,255,255,0.1);
+    display: flex;
+    align-items: center;
+    padding: 0 12px;
+    box-sizing: border-box;
     flex-shrink: 0;
 }
 
-/* Áreas Internas de Corpo e Exibição */
+/*  ÁREAS INTERNAS DE CORPO E EXIBIÇÃO */
 .merc-corpo-desktop {
     flex: 1;
-    padding: 25px;
+    padding: 20px;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 20px;
     align-content: start;
     text-align: center;
+    box-sizing: border-box;
+    overflow-y: auto;
+}
+
+.merc-corpo-site {
+    flex: 1;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    box-sizing: border-box;
+    overflow-y: auto;
 }
 
 .merc-corpo-carregando {
@@ -48,15 +80,214 @@
     justify-content: center;
     color: #999;
     font-size: 14px;
+    box-sizing: border-box;
 }
 
-/* Barra de Tarefas do Computador */
-.merc-barra-tarefas {
-    background: #1E293B;
-    height: 36px;
-    border-top: 1px solid rgba(255,255,255,0.1);
+/* NOVAS CLASSES DE COMPONENTES E CLIQUES (Tracejadas/Lisas unificadas) */
+/* Ícone de Navegador de Internet na Área de Trabalho (Destaque) */
+.merc-icone-desktop-destaque {
+    background: rgba(255, 255, 255, 0.15);
+    border: 3px dashed #FFF;
+    border-radius: 8px;
+    padding: 10px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+    color: white;
+    font-weight: bold;
+    box-sizing: border-box;
+}
+
+/* Input Falso de Busca do Mercado Livre (Onde o idoso clica) */
+.merc-input-busca-destaque {
+    flex: 1;
+    background: white;
+    padding: 10px 14px;
+    border-radius: 4px;
+    font-size: 14px;
+    color: #333;
+    font-weight: bold;
+    cursor: pointer;
     display: flex;
     align-items: center;
-    padding: 0 12px;
+    gap: 10px;
+    border: 3px dashed #0056B3;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.1);
     box-sizing: border-box;
+}
+
+/* Card Destaque de Produto na Lista de Resultados */
+.merc-card-produto-destaque {
+    background: white;
+    padding: 12px;
+    border-radius: 8px;
+    border: 3px dashed #0056B3;
+    display: flex;
+    gap: 15px;
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    box-sizing: border-box;
+}
+
+/* Card Estático / Inativo para Outros Produtos do Feed */
+.merc-card-produto-inativo {
+    background: white;
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #E2E8F0;
+    display: flex;
+    gap: 15px;
+    opacity: 0.5;
+    pointer-events: none;
+    user-select: none;
+    box-sizing: border-box;
+}
+
+/* Botões Grandes Padronizados de Ação (Comprar/Adicionar) */
+.merc-btn-principal {
+    width: 100%;
+    padding: 12px;
+    font-size: 15px;
+    font-weight: bold;
+    border-radius: 6px;
+    cursor: pointer;
+    text-align: center;
+    box-sizing: border-box;
+    display: block;
+    border: none;
+}
+
+.merc-btn-azul-destaque {
+    background: #3483FA; /* Azul padrão de botões do Mercado Livre */
+    color: white;
+    border: 3px dashed #FFC107;
+}
+
+/* Bloco que envolve a entrada de texto e a lupa (Passo 3) */
+.merc-caixa-busca-ativa {
+    flex: 1; 
+    max-width: 320px; 
+    background: white; 
+    display: flex; 
+    border-radius: 4px; 
+    box-shadow: 0 1px 2px rgba(0,0,0,0.1); 
+    overflow: hidden; 
+    border: 2px solid #1A73E8;
+}
+
+/* Botão Lupa de Clique com Destaque no Topo (Passo 3) */
+.merc-btn-lupa-destaque {
+    background: #E2E8F0; 
+    width: 40px; 
+    display: flex; 
+    align-items: center; 
+    justify-content: center;
+    cursor: pointer; 
+    font-size: 14px; 
+    border-left: 1px solid #ddd; 
+    font-weight: bold;
+    border: 3px dashed #0056B3;
+    box-sizing: border-box;
+}
+
+/* Contêiner da Reputação e Termômetro do Vendedor (Passo 4) */
+.merc-caixa-reputacao {
+    border: 1px solid #eee;
+    padding: 10px; 
+    border-radius: 6px; 
+    background: #FAFAFA;
+}
+
+/* Botão Amarelo de Destaque para Ver Opiniões (Passo 4) */
+.merc-btn-opinioes-destaque {
+    background: #FFF159; 
+    color: #2D3277; 
+    font-weight: bold; 
+    font-size: 14px; 
+    border: 3px dashed #1A73E8; 
+    padding: 12px; 
+    border-radius: 6px; 
+    cursor: pointer; 
+    width: 100%; 
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    box-sizing: border-box;
+    display: block;
+    text-align: center;
+}
+
+/* Card de item normal dentro do Carrinho de Compras (Passo 5) */
+.merc-item-carrinho {
+    background: white !important; 
+    border: 1px solid #eee; 
+    padding: 10px; 
+    border-radius: 6px; 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    box-sizing: border-box;
+}
+
+/* Bloco Alvo Tracejado do item duplicado para exclusão (Passo 5) */
+.merc-item-duplicado-destaque {
+    border: 2px dashed #DC3545; 
+    padding: 8px; 
+    border-radius: 6px; 
+    background: #FFF5F5; 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center;
+    box-sizing: border-box;
+}
+
+/* Card Branco de Informações do Pedido ou do Pix (Passos 7 e 8) */
+.merc-caixa-informacoes-pedido {
+    background: white !important;
+    border: 1px solid #eee;
+    padding: 15px;
+    border-radius: 8px;
+    box-sizing: border-box;
+}
+
+/* Card Branco com Informações e Ícone de Encomenda (Passo 10) */
+.merc-caixa-rastreio-item {
+    border: 1px solid #E5E7EB; 
+    border-radius: 8px; 
+    padding: 12px; 
+    background: white !important; 
+    display: flex; 
+    gap: 12px; 
+    align-items: center;
+    box-sizing: border-box;
+}
+
+/* Bloco de Histórico de Entregas e Linhas de Horário (Passo 10) */
+.merc-caixa-historico-etapas {
+    padding: 10px 12px; 
+    display: flex; 
+    flex-direction: column; 
+    gap: 10px; 
+    font-size: 12px; 
+    color: #555; 
+    background: white !important; 
+    border-radius: 6px; 
+    border: 1px solid #eee;
+    box-sizing: border-box;
+}
+
+/* Botão Verde de Destaque para Rastreamento Seguro (Passo 10) */
+.merc-btn-verde-destaque {
+    background: #00a650; 
+    color: white; 
+    font-weight: bold; 
+    font-size: 14px; 
+    border: 2px dashed #004D26; 
+    padding: 12px; 
+    border-radius: 6px; 
+    width: 100%;
+    box-sizing: border-box !important;
+    cursor: pointer;
+    display: block;
+    text-align: center;
 }
